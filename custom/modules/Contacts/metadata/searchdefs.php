@@ -86,16 +86,7 @@ array (
                 'width' => '10%',
                 'default' => true,
                 'name' => 'prefer_level',
-            ),
-            'type' => 
-            array (
-                'type' => 'enum',
-                'default' => true,
-                'studio' => 'visible',
-                'label' => 'LBL_TYPE',
-                'width' => '10%',
-                'name' => 'type',
-            ), 
+            ),  
             'portal_active' => 
             array (
                 'type' => 'bool',
@@ -103,17 +94,7 @@ array (
                 'label' => 'LBL_PORTAL_ACTIVE',
                 'width' => '10%',
                 'name' => 'portal_active',
-            ),    
-            'j_school_contacts_1_name' => 
-            array (
-                'type' => 'relate',
-                'link' => true,
-                'label' => 'LBL_J_SCHOOL_CONTACTS_1_FROM_J_SCHOOL_TITLE',
-                'id' => 'J_SCHOOL_CONTACTS_1J_SCHOOL_IDA',
-                'width' => '10%',
-                'default' => true,
-                'name' => 'j_school_contacts_1_name',
-            ),
+            ),            
             'birthdate' => 
             array (
                 'type' => 'date',
@@ -137,17 +118,7 @@ array (
                 ),
                 'default' => true,
                 'width' => '10%',
-            ),
-            'campaign_name' => 
-            array (
-                'type' => 'relate',
-                'link' => true,
-                'label' => 'LBL_CAMPAIGN',
-                'id' => 'CAMPAIGN_ID',
-                'width' => '10%',
-                'default' => true,
-                'name' => 'campaign_name',
-            ), 
+            ),     
             'date_entered' => 
             array (
                 'type' => 'datetime',
@@ -167,22 +138,6 @@ array (
                 'width' => '10%',
                 'default' => true,
                 'name' => 'created_by',
-            ),    
-            'team_name' => 
-            array (
-                'type' => 'relate',
-                'link' => true,
-                'studio' => 
-                array (
-                    'portallistview' => false,
-                    'portaldetailview' => false,
-                    'portaleditview' => false,
-                ),
-                'label' => 'LBL_TEAMS',
-                'id' => 'TEAM_ID',
-                'width' => '10%',
-                'default' => true,
-                'name' => 'team_name',
             ),  
             'date_modified' => 
             array (

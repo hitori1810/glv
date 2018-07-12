@@ -24,7 +24,7 @@ class C_Class_sugar extends Basic {
 	var $module_dir = 'C_Class';
 	var $object_name = 'C_Class';
 	var $table_name = 'c_class';
-	var $importable = false;
+	var $importable = true;
 		var $id;
 		var $name;
 		var $date_entered;

@@ -51,11 +51,11 @@ $app_list_strings['student_type_list'] = array (
 );
 
 $app_list_strings['contact_status_list'] = array (
-    'Waiting for class' => 'Đang chờ lớp',
-    'In Progress' => 'Đang học',
-    'Delayed' => 'Tạm ngừng',
-    'Finished' => 'Đã học xong',
-    'OutStanding' => 'Học nợ',
+    'no_class' => 'Không học',
+    'waiting_class' => 'Đang chờ lớp',
+    'in_process' => 'Đang học',
+    'over_grade' => 'Quá tuối',           
+    'graduated' => 'Đã tốt nghiệp',           
 );
 
 $app_list_strings['number_of_payments_list'] = array (
