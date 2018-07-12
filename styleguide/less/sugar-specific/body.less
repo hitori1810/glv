@@ -1,0 +1,35 @@
+/* Body and structure
+-------------------------------------------------- */
+body {
+
+}
+
+body > div:first-child {
+  position: relative;
+}
+
+.link {
+margin-top: 6px;
+display: inline-block;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.tcenter {
+  text-align: center;
+}
+.tleft {
+  text-align: left;
+    .rtlTextAlign(@direction,right !important);
+}
+.tright {
+  text-align: right;
+    .rtlTextAlign(@direction,left !important);
+}
+
+#content {
+  padding-bottom: 40px;
+}

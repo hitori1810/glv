@@ -1,0 +1,112 @@
+<div id="{{callbox_id}}" class="callbox">
+    <div class="callboxhead">
+        <div class="callboxtitle">{{title}}</div>
+        <div class="callboxoptions">
+            <a href="#" class="callbox_close">X</a>
+        </div>
+    </div>
+    <div class="control_panel">
+        <button class="transfer_panel"></button>
+        <button class="hold_panel"></button>
+        <button class="hangup_panel"></button>
+        <button class="operator_panel"></button>
+        <!--<button class="callbox_action" data-dropdown="#dropdown-1_{{callbox_id}}"></button>-->
+        <button class="callbox_action"></button>
+    </div>
+    <div id="dropdown-1_{{callbox_id}}" class="asterisk-dropdown-menu has-tip dropdown-hidden"> <!-- left: 746px; top: 631px; display: block; -->
+        <ul>
+            <li class="ul_relate_to_contact"><a href="#" class="relate_to_contact">{{relate_to_contact_label}}</a></li>
+            <li class="ul_relate_to_account"><a href="#" class="relate_to_account">{{relate_to_account_label}}</a></li>
+             <li class="ul_relate_to_case"><a href="#" class="relate_to_case">{{relate_to_case_label}}</a></li>
+            <li class="ul_create_lead"><a href="#" class="create_lead">{{create_new_lead_label}}</a></li>
+            <li class="ul_create_case"><a href="#" class="create_case">{{create_new_case_label}}</a></li>
+            <li class="ul_open_account"><a href="#" class="open_account">{{open_new_account_label}}</a></li>
+            <li class="ul_create_account"><a href="#" class="create_account">{{create_new_account_label}}</a></li>
+            <li class="ul_create_contact"><a href="#" class="create_contact">{{create_new_contact_label}}</a></li>
+            <li class="ul_open_contact"><a href="#" class="open_contact">{{open_new_contact_label}}</a></li>
+            <li class="ul_open_lead"><a href="#" class="open_lead">{{open_new_lead_label}}</a></li>
+            
+            
+        </ul>
+    </div>
+    <div class="callboxcontent">
+        <div class="asterisk_info">
+            <h4 class="call_type">{{call_type}}</h4>
+            <div>
+                <table class="asterisk_data">
+                    <tr class="multiplematchingcontacts">
+                        <td colspan="2">
+                            <b>{{select_contact_label}}</b>
+                            {{#each beans}}
+                            <p class="select_contact" id="contact_{{bean_id}}">
+                                <input type="radio" name="contactSelect" class={{bean_module}} value={{bean_id}}  />
+                                <a class="multiplecontacts" title="{{parent_name}}" href={{bean_link}}>{{bean_name}}</a>
+                            </p>
+                            {{/each}}
+                        </td>
+                    </tr>
+                    <tr class="singlematchingcontact">
+                        <td>{{name_label}}</td>
+                        <td><a class="contact_id" href="{{bean_link}}">
+                            <span class="call_contacts">{{bean_name}}</span>
+                        </a>
+                            <!-- <button class="unrelate_contact"></button> -->
+                        </td>
+                    </tr>
+                    <tr class="parent_name_box">
+                        <td>{{company_label}}</td>
+                        <td><a class="company" href="{{parent_link}}">{{parent_name}}</a></td>
+                    </tr>
+                    <tr class="caller_id_box">
+                        <td class="caller_id_label">{{caller_id_label}}:</td>
+                        <td class="caller_id">{{caller_id}}</td>
+                    </tr>
+                    <tr class="phone_number_box">
+                        <td class="phone_number_label">{{phone_number_label}}:</td>
+                        <td class="phone_number">{{phone_number}}</td>
+                    </tr>
+                    <tr class="call_duration_box">
+                        <td class="call_duration_label">{{duration_label}}:</td>
+                        <td>
+                            <span class="call_duration">{{duration}}</span>
+                        </td>
+                    </tr>
+					<tr class="call_description_box">
+                        <td class="call_description_label">{{duration_label}}:</td>
+                        <td>
+                            <span class="call_description">{{description}}</span>
+                        </td>
+                    </tr>
+                    <!--<tr class="call_time_box">-->
+                        <!--<td class="call_time_label">{{call_time_label}}:</td>-->
+                        <!--<td>-->
+                            <!--<span class="call_duration">{{call_time}}</span>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="callboxinput">
+        <textarea rows="4" cols="30" class="callboxtextarea callboxtextareaselected"></textarea>
+        <div class="callboxbuttons">
+            <table width="100%">
+                <tbody>
+                <tr>
+                    <td valign="bottom">
+                        <button class="save_memo">{{save_label}}</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <form class="call_record_id" name="{{call_record_id}}">
+        <input type='hidden' name="relateContactId"/>
+        <input type='hidden' name="relateContactFirstName"/>
+        <input type='hidden' name="relateContactLastName"/>
+        <input type='hidden' name="relateAccountId"/>
+        <input type='hidden' name="relateAccountName"/>
+    </form>
+</div>
+

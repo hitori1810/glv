@@ -1,0 +1,62 @@
+<!--
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+/*********************************************************************************
+ * {APP.LBL_CURRENCY_SYM}Header: /cvsroot/sugarcrm/sugarcrm/modules/Opportunities/SubPanelView.html,v 1.5 2004/06/16 17:49:36 sugarclint Exp {APP.LBL_CURRENCY_SYM}
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+			<form name="AddDataSetEditView" method="POST" action="index.php">
+			<input type="hidden" name="module" value="DataSets">
+			<input type="hidden" name="report_id" value="{REPORT_ID}">
+			<input type="hidden" name="action" value="Save">
+			<input type="hidden" name="return_module" value="ReportMaker">
+			<input type="hidden" name="return_id" value="{REPORT_ID}">
+			<input type="hidden" name="return_action" value="DetailView">
+			<input type="hidden" name="name">
+			<input type="hidden" name='data_set_id' >
+			</form>
+</table>
+
+<table cellpadding="0" cellspacing="0" width="100%" border="0" class="list view">
+	<tr height="20" >
+	<td scope="col" width="20%"  nowrap><slot>{MOD.LBL_LIST_NAME}</slot></td>
+	<td scope="col" width="15%"  nowrap><slot>{MOD.LBL_LIST_OUTPUT_DEFAULT}</slot></td>
+	<td scope="col" width="10%"  nowrap><slot>{MOD.LBL_LIST_LIST_ORDER_Y}</slot></td>
+	<td scope="col" width="10%"  nowrap><slot>{MOD.LBL_LIST_EXPORTABLE}</slot></td>
+	<td scope="col" width="20%"  nowrap><slot>{MOD.LBL_LIST_HEADER}</slot></td>
+	<td scope="col" width="10%" ><slot>&nbsp;</slot></td>
+	</tr>
+	
+<!-- BEGIN: row -->
+<tr height="20" class="{ROW_COLOR}S1">
+				<td scope="row" nowrap valign=TOP ><slot>{DATA_SET.NAME}</slot></td>
+    	    	<td nowrap valign=TOP ><slot>{DATA_SET.OUTPUT_DEFAULT}</slot></td>
+    			<td nowrap valign=TOP ><slot>{DATA_SET.LIST_ORDER_Y}</slot></td>
+    			<td valign=TOP ><slot><input type='checkbox' disabled=disabled class='checkbox' {DATA_SET.EXPORTABLE} /></slot></td>
+    			<td valign=TOP ><slot><input type='checkbox' disabled=disabled class='checkbox' {DATA_SET.HEADER} /></slot></td>
+    		<td nowrap align="center" valign=TOP>
+    		<slot>
+    		<a href="{URL_PREFIX}index.php?module=DataSets&action=Save&data_set_id={DATA_SET.ID}&direction=Up&return_action=DetailView&return_module=ReportMaker&return_id={REPORT_ID}" class="listViewTdToolsS1">{UPARROW_INLINE} {UPARROW_TEXT}</a>&nbsp;&nbsp; 
+    		<a href="{URL_PREFIX}index.php?module=DataSets&action=Save&data_set_id={DATA_SET.ID}&direction=Down&return_action=DetailView&return_module=ReportMaker&return_id={REPORT_ID}" class="listViewTdToolsS1">{DOWNARROW_INLINE} {DOWNARROW_TEXT}</a>&nbsp;&nbsp; 
+    		<a class="listViewTdToolsS1" href="{URL_PREFIX}index.php?action=EditView&module=DataSets&record={DATA_SET.ID}&return_action=DetailView&return_module=ReportMaker&return_id={REPORT_ID}">{EDIT_INLINE_PNG}{APP.LNK_EDIT}</a>&nbsp;&nbsp;
+    		<a href="{URL_PREFIX}index.php?module=DataSets&action=Save&record={DATA_SET.ID}&return_action=DetailView&return_module=ReportMaker&return_id={REPORT_ID}&rem_dataset=Y" class="listViewTdToolsS1" onclick="{DELETE_ONCLICK}">{DELETE_INLINE} {DELETE_TEXT}</a>
+    		</slot></td>
+</tr>
+
+<!-- END: row -->
+
+</table>
+<!-- END: main -->

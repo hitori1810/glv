@@ -1,0 +1,146 @@
+/* Icons
+------------------------- */
+[class^="icon-"] {
+  font-size: 15px;
+}
+.actions [class^="icon-"] {
+  .opacity(50);
+}
+.actions a [class^="icon-"] {color: @black;}
+.actions a.btn.active [class^="icon-"] {color: @white;}
+
+a [class^="icon-"] {
+  .opacity(80);
+}
+a:hover [class^="icon-"]{
+  .opacity(90);
+}
+
+a.active [class^="icon-"]{
+  .opacity(100);
+}
+
+table [class^="icon-star"] {
+  margin: 0 16px
+}
+
+table .icon-star, .subnav .icon-star {
+  color: @grayLight;
+}
+table .active .icon-star, .subnav .active .icon-star  {
+  color: @orange;
+}
+/*
+.active .icon-ban-circle, .active .icon-exclamation-sign {
+color: @red;
+} */
+
+.the-icons {
+  margin-left: 0;
+  list-style: none;
+}
+.the-icons i:hover {
+  background-color: rgba(255,0,0,.25);
+}
+
+.control-group {
+    clear: both;
+}
+
+.btn-small .caret  {
+  margin-top: 6px;
+}
+
+.btn-fixed {
+  width: 178px;
+  margin-right: 10px;
+}
+.wide {
+  width: 98%;
+  text-align: center;
+}
+.thumbnav {
+#gradient > .vertical(lighten(@black, 20%), lighten(@black, 15%));
+@shadow: inset -2px 0 2px rgba(0,0,0,1),  0 -1px 0 rgba(0,0,0,1);
+.box-shadow(@shadow);
+height: 100% !important;
+position: fixed;
+z-index: 10;
+top: 49px;
+left: 0;
+width: 72px !important;
+}
+
+/*.thumbnav ul {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+.thumbnav ul li {
+  display: block;
+  margin: 0;
+}
+.thumbnav ul li i {
+  font-size: 26px;
+  padding-top: 16px
+}
+.thumbnav ul li a {
+  font-size: 11px;
+  color: @white;
+  width: 70px;
+  height: 72px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  #gradient > .vertical(lighten(@black, 20%), lighten(@black, 15%));
+  @shadow: inset 0 -1px 1px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.1);
+  .box-shadow(@shadow);
+}
+.thumbnav ul li a:hover {
+  font-size: 11px;
+  color: @white;
+  width: 72px;
+  height: 72px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  @shadow: inset 0 0 20px rgba(0,0,0,1);
+  .box-shadow(@shadow);
+}
+.thumbnav ul li a.active {
+  #gradient > .vertical(lighten(@black, 10%), lighten(@black, 15%));
+  @shadow: inset 0 -1px 20px rgba(0,0,0,1), inset 0 -12px 0 @red, inset 0 1px 0 rgba(255,255,255,.1);
+  .box-shadow(@shadow);
+}*/
+
+#moduleActivity .avatar {
+  margin: 0;
+  padding: 0; 
+}
+
+.omnibar input.sayit  {  position: relative; z-index: 1; border: dashed 1px @grayLight;  min-height: 42px !important;}
+.omnibar.active input.sayit {border: solid 1px @grayLight;  min-height: 42px !important;}
+.omnibar .inputactions {margin: -14px 0 0 52px;}
+.omnibar .inputactions {
+  background: @grayLighter;
+  padding: 10px 4px 4px 4px;
+  z-index: 0;
+  position: relative;
+  border: solid 1px @grayLight;  
+  .border-radius(3px);
+}
+.omnibar .inputactions a i {
+  color: @gray;
+  padding: 4px 8px 0;
+  font-size: 18px;
+}
+
+.icon-phone {
+    background: url('@{baseUrl}/img/phone.png') no-repeat 50% 50%;
+    background-size: 80%;
+    height: 26px;
+    width: 26px;
+    display: block;
+    margin-bottom: -22px;
+}

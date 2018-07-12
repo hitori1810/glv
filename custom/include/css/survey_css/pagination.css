@@ -1,0 +1,14 @@
+/**
+ * 
+ * LICENSE: The contents of this file are subject to the license agreement ("License") which is included
+ * in the installation package (LICENSE.txt). By installing or using this file, you have unconditionally
+ * agreed to the terms and conditions of the License, and you may not use this file except in compliance
+ * with the License.
+ *
+ * @author     Original Author Biztech Co.
+ */
+.numbers {width: 100%;  display: inline-block;  text-align: center;   padding: 20px 0;}
+.numbers a{display: inline-block;  background: #508dd0;    padding: 7px 12px;    color: #fff;   text-decoration: none;    font-size: 13px;    font-weight: 600;    margin: 0 2px;}
+.numbers a:hover,
+.numbers a.selected { background: #3C75B3;}
+#indivisual_report .ans .highlight, #indivisual_report .ans .selected {color:#F4B30A; text-shadow: 0 0 1px #F48F0A; font-size: x-large;}

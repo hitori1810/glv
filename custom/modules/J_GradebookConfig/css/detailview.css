@@ -1,0 +1,17 @@
+.table-border td, .table-border th{
+    border: 1px solid cadetblue !important;
+    border-collapse:collapse !important;
+    line-height: 18px !important;
+    padding: 6px !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+}   
+.table-border, #markdetail_content {
+    border-collapse:collapse;
+}
+.no-bottom-border {
+    border-bottom: 0px solid cadetblue !important;
+}
+.no-top-border {
+    border-top: 0px solid cadetblue !important;
+}

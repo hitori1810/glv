@@ -1,0 +1,146 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+/* Responsive Docs
+-------------------------------------------------- */
+@media all {
+  .page-break  { display: none; }
+}
+
+@media (max-width: 480px) {
+
+  .span2 .block > * {
+    display: none !important;
+  }
+
+  table th:gt(3), table td:gt(3)  {
+    display: none !important;
+  }
+
+  .span2 .block > h4 {
+    display: block !important;
+  }
+
+  #stream tbody tr td {
+    #gradient > .vertical(@white, lighten(@grayLighter, 1%));
+    border-top: 1px solid @white;
+    border-bottom: 1px solid darken(@white, 10%);
+    vertical-align: middle;
+  }
+
+  /* Change up some type stuff */
+  h2 {
+    margin-top: 27px;
+  }
+  h2 small {
+    display: block;
+    line-height: 18px;
+  }
+  h3 {
+    margin-top: 18px;
+  }
+
+  /* Don't space out quick links so much */
+  .quick-links {
+    margin: 40px 0 0;
+  }
+  /* hide the bullets on mobile since our horizontal space is limited */
+  .quick-links .divider {
+    display: none;
+  }
+
+  table code {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  /* Modal example */
+  .modal-example .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.row-fluid [class*="span"] {
+    .rtlFloat(@direction,right);
+}
+
+@media (max-width: 768px) {
+  #forecasts #contentflex > .row-fluid > .span8 {
+    width: auto;
+    float: none;
+    height: auto !important;
+  }
+  #forecasts #contentflex #folded {
+    width: auto;
+    float: none;
+    margin: 0;
+    .tab-pane.active {
+      padding: 20px 20px 58px;
+      top: auto;
+      right: auto;
+      width: auto;
+      position: relative !important;
+      border: none;
+      .box-shadow(~"inset 0 6px 6px rgba(0, 0, 0, .2)");
+      .viz,
+      .block.thumbnail {
+        margin-left: 0 !important;
+        width: 100% !important;
+        overflow: auto;
+        .rtlMargin(@direction,0);
+      }
+      div.dataTables_wrapper {
+         overflow: visible;
+      }
+      .row-fluid > [class*="span"] {
+        float: left;
+        .rtlFloat(@direction,right);
+        display: block;
+        //Bug 60317: data columns not right justified
+        //margin: 0;
+      }
+      .spanX (@index) when (@index > 0) {
+        (~".row-fluid > .span@{index}") { .span(@index); }
+        .spanX(@index - 1);
+      }
+      .spanX (0) {}
+      .span (@columns) {
+        width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+        *width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
+      }
+      .spanX (@gridColumns);
+    }
+  }
+  #dcmenuSearchDiv {
+    width: 200px;
+    #sugar_spot_search {
+      width: 141px;
+      padding: 4px 9px 5px;
+      margin: 1px 0;
+    }
+    #sugar_spot_search_div {
+      width: auto;
+    }
+    #glblSearchBtn {
+      right: 10px;
+    }
+    #close_spot_search {
+      right: 8px;
+    }
+  }
+}

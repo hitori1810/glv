@@ -1,0 +1,3 @@
+function displayMap($this){latitude=jQuery($this).parent().find('input[id *="_latitude"]').val();longitude=jQuery($this).parent().find('input[id *="_longitude"]').val();if(latitude!=''&&longitude!=''){url='https://www.google.com/maps/place/'+latitude+','+longitude;}
+else{url='https://maps.google.it/maps/place/'+jQuery($this).parent().find('input[id *="_address_street"]').val();}
+window.open(url,'',600,400)}

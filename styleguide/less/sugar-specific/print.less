@@ -1,0 +1,94 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+@media print {
+    /* Your styles here */
+    body {
+      padding: 0;
+        font-family: "Arial";
+    }
+
+    #arrow {
+        display: none;
+    }
+    #forecasts #contentflex div.dataTables_wrapper {
+        overflow: visible;
+        @page {size: landscape}
+        table.dataTable td {
+            white-space: nowrap;
+        }
+    }
+
+    #forecasts #contentflex > .row-fluid > .span8 {
+      width: 100%;
+      float: none;
+      margin: 0;
+      border: 2px solid #fff !important;
+      overflow: visible;
+      display: inline;
+    }
+    #forecasts #contentflex #folded {
+      width: 100%;
+      float: none;
+      margin: 0;
+      page-break-before: always;
+    }
+    #dcmenutop {
+      background: url('@{baseUrl}/img/sugar-red-sm.png') 0 0 no-repeat;
+      display: block;
+      margin: 0px;
+      padding-bottom: 8px;
+      height: 20px;
+      width: 100%;
+      border: 1px solid #fff;
+      border-bottom: 3px solid @red;
+    }
+    #dcmenu,
+    .btn,
+    .toggle,
+    .dropdown-menu,
+    .btn-group,
+    .btn-group.open .dropdown-menu,
+    footer {
+      display: none;
+    }
+    #forecasts #contentflex #folded .tab-pane.active {
+      background: none;
+      border: none;
+      .box-shadow(none);
+    }
+    .dataTables_wrapper {
+        overflow-x: visible;
+    }
+    .chartCanvas,
+    .sorting,
+    .chzn-container-single .chzn-single div b {
+      background: none;
+      filter: none;
+    }
+    :root {
+      -webkit-print-color-adjust: exact;
+    }
+    #sales_stage_filter_chzn {
+      background: none;
+      .chzn-choices {
+        box-shadow: none;
+        .search-choice {
+          box-shadow: none;
+        }
+        .chzn-select-legend {
+          display: none !important;
+        }
+      }
+    }
+}

@@ -1,0 +1,97 @@
+
+/* breadcrumbs */
+.breadcrumb {
+	padding: 0;
+	margin: 0;
+	background: 0;
+	border: none;
+  .border-radius(0px);
+  .box-shadow(inset 0 0 0 @transparent);
+}
+
+.breadcrumb.two{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+
+    li{
+        float: left;
+        margin: 0 .5em 0 .8em;
+    }
+
+    li:first-child {
+        margin-left: 0px;
+    }
+
+    li:last-child {
+        margin-right: 0px;
+    }
+    li:first-child a::before, li:last-child a::after {
+        border-width: 0px;
+    }
+
+    a{
+        background: #ddd;
+        padding: 1.2em 0;
+        float: left;
+        text-decoration: none;
+        color: #444;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        position: relative;
+        text-align: center;
+
+        div {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+
+    a:hover{
+        background: @blueLight;
+    }
+
+    a::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        border-width: 25px 2px 25px 12px;
+        border-style: solid;
+        border-color: #ddd #ddd #ddd @transparent;
+        left: -12px;
+    }
+
+    a:hover::before{
+        border-color: @blueLight @blueLight @blueLight @transparent;
+    }
+
+    a::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        right: -12px;
+        border-width: 25px 0px 25px 13px;
+        border-style: solid;
+        border-color: @transparent @transparent @transparent #ddd;
+    }
+
+    a:hover::after{
+        border-left-color: @blueLight;
+    }
+
+    li.active a, li.active a:hover{
+        background-color: @blueLight;
+    }
+
+    li.active a::after {
+        border-color: @transparent @transparent @transparent @blueLight;
+    }
+
+    li.active a::before{
+        border-color: @blueLight @blueLight @blueLight @transparent;
+    }
+
+}

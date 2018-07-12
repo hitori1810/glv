@@ -1,0 +1,45 @@
+{{!
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+}}
+<div class="btn-toolbar pull-right">
+    {{#if showCommitButton}}
+    <div class="btn-group pull-left">
+        <a id="save_draft" class="btn disabled">{{str "LBL_SAVE_DRAFT" "Forecasts"}}</a>
+    </div>
+    <div class="btn-group pull-left">
+        <a class="btn btn-primary disabled" id="commit_forecast">
+            <i class="icon-upload"></i> {{str "LBL_QC_COMMIT_BUTTON" "Forecasts"}}</a>
+    </div>
+    {{/if}}
+    <div class="btn-group pull-left">
+        <a id="export" class="btn">{{str "LBL_EXPORT_CSV" "Forecasts"}}</a>
+        <a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
+            <i class="caret"></i>
+        </a>
+
+        <ul class="dropdown-menu">
+        {{#if showConfigButton}}
+            <li><a href="#config" id="forecastSettings">{{str "LBL_FORECAST_SETTINGS" "Forecasts"}}</a></li>
+        {{/if}}
+            <li><a id="print">{{str "LBL_PRINT" "Forecasts"}}</a></li>
+        </ul>
+    </div>
+    <div class="btn-group pull-left">
+    <a class="btn btn-invisible drawerTrig" href="#">
+        <i class="icon-chevron-right one"></i>
+        <i class="icon-chevron-right two"></i>
+    </a>
+    </div>
+</div>

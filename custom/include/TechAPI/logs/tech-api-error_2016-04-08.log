@@ -1,0 +1,15 @@
+[08-04-2016 05:32:46] ERROR(1010): Scope không hợp lệ cho request này.
+[08-04-2016 05:33:13] ERROR(1010): Scope không hợp lệ cho request này.
+[08-04-2016 05:34:06] ERROR(1010): Scope không hợp lệ cho request này.
+[08-04-2016 05:34:36] ERROR(1010): Scope không hợp lệ cho request này.
+[08-04-2016 05:36:05] ERROR(1010): Scope không hợp lệ cho request này.
+[08-04-2016 05:38:56] ERROR(1010): Scope không hợp lệ cho request này.
+[08-04-2016 05:39:19] ERROR(1010): Scope không hợp lệ cho request này.
+[08-04-2016 05:50:44] ERROR(1016): BrandName không tồn tại.
+[08-04-2016 05:50:55] ERROR(1016): BrandName không tồn tại.
+[08-04-2016 05:57:10] ERROR(1017): Quota-over
+[08-04-2016 05:58:08] ERROR(1017): Quota-over
+[08-04-2016 05:58:11] ERROR(1017): Quota-over
+[08-04-2016 05:58:40] ERROR(1015): Can't not send message.
+[08-04-2016 05:59:03] ERROR(1017): Quota-over
+[08-04-2016 06:01:35] ERROR(1015): Can't not send message.

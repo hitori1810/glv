@@ -1,0 +1,25 @@
+<?php
+// created: 2018-05-24 16:09:27
+$mod_strings = array (
+  'LBL_J_COURSEFEE_CONTRACTS_1_FROM_CONTRACTS_TITLE' => 'Hợp đồng',
+  'LBL_J_COURSEFEE_J_PAYMENT_1_FROM_J_PAYMENT_TITLE' => 'Khoản thu',   
+  'LNK_NEW_RECORD' => 'Tạo mới',
+  'LNK_LIST' => 'Danh sách',
+  'LBL_MODULE_NAME' => 'Đơn giá',
+  'LBL_NEW_FORM_TITLE' => 'Tạo mới',
+  'LNK_IMPORT_J_COURSEFEE' => 'Nhập đơn giá',
+  'LBL_LIST_FORM_TITLE' => 'Danh sách',
+  'LBL_SEARCH_FORM_TITLE' => 'Tìm kiếm',
+  'LBL_HOMEPAGE_TITLE' => 'Bản tin của tôi',
+  'LBL_UNIT_PRICE' => 'Giá áp dụng',
+  'LBL_UNIT_PRICE_PER_HOUR' => 'Đơn giá',
+  'LBL_PER_HOUR' => ' / Giờ',
+  'LBL_STATUS' => 'Trạng thái',
+  'LBL_APPLY_DATE' => 'Áp dụng từ ngày',
+  'LBL_CURENCY_VND' => 'VND',
+  'LBL_HOURS' => 'Giờ',
+  'LBL_INACTIVE_DATE' => 'Đến ngày',
+  'LBL_TYPE_OF_COURSE_FEE' => 'Loại đơn giá',
+  'LBL_DESCRIPTION' => 'Mô tả',
+  'LBL_CODE' => 'Code',
+);

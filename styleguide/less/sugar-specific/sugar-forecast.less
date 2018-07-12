@@ -1,0 +1,570 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+/* Typography
+--------------*/
+html, #main, #contentTable, #forecasts, #forecasts>.layout_Forecasts, #contentflex, #contentflex>.row-fluid {
+  height: 100%;
+    .rtl(@direction,rtl);
+}
+
+#main {
+  overflow-x: hidden;
+}
+
+footer {
+  height: 44px;
+
+  .copyright {
+    color: #A0A0A0;
+    text-decoration: none;
+    font-size: 11px;
+    padding-top: 16px;
+    display: inline-block;
+  }
+
+}
+
+#forecasts {
+
+  > div.container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+
+/*  h1 {
+    font-size: 26px !important;
+  }*/
+
+/*main-pane in master_7_0*/
+  #contentflex .row-fluid .span8 {
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden; //keep hidden, bug 61604
+    top: 47px;
+    padding-bottom: 30px;
+     .rtlFloat(@direction,right);
+  }
+
+#contentflex > .row-fluid > .span12 {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* Tables
+--------------*/
+  table th {
+    white-space: nowrap;
+  }
+
+  tfoot th,
+  table.datatable tbody td {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  td div {
+    word-break: break-word;
+  }
+
+/* Activity Stream
+--------------*/
+
+  #folded {
+    margin-left: 0px;
+    width: 34.04%;
+    overflow: inherit;
+
+    .viz {
+      padding-top: 0px;
+      margin-bottom: 40px !important;
+        .view-forecastsChart h4 {
+            .rtl(@direction,ltr);
+            .rtlTextAlign(@direction,right);
+        }
+    }
+
+    .block h4 {
+      padding: 7px 80px 7px 10px;
+      .rtlPadding(@direction,7px 20px 7px 80px);
+    }
+  }
+
+
+/* Editable
+--------------*/
+  .card2 div [class^="span"] {
+    position: relative;
+  }
+  .card2 .icon-pencil {
+    position: absolute;
+    left: -16px;
+    top: 0px;
+    padding: 0 2px !important;.opacity(60);
+  }
+
+  .card2 form, .card2 input, .card2 select, .card2 textarea {
+    margin: -5px 0 0 -2px !important;
+  }
+
+/* Misc
+-------------------------------------------------- */
+  .modal-body .tab-content {
+    overflow: auto;
+    height: 310px;
+  }
+  .modal-body textarea {
+    text-align: left;
+  }
+
+  .modal-wizard-start {
+    padding-top: 6px;
+  }
+
+/* Icons
+------------------------- */
+  .navbar a [class^="icon-"] {
+    color: @white !important;
+    font-size: 14px;
+  }
+  .navbar .advanced {
+    position: absolute;
+    right: 2px;
+    top: -2px;
+  }
+  .navbar .advanced .dropdown-menu {
+    right: 35px;
+  }
+
+  .navbar .nav > li > a.btn {
+    padding: 4px 8px;
+    margin-top: 8px;
+  }
+
+/* CSS for forecasts subnav
+------------------------- */
+/*  #headerbar h1 {
+    float: left;
+    margin-right: 5px;
+    margin-left: 12px;
+  }*/
+
+/* Bug 55601 - fix for IE9 so that tree menu is properly rendered */
+  .view-forecastsSubnav {
+    z-index: auto;
+  }
+
+/* Buttons
+------------------------- */
+  .btn-invisible {
+    background: none;
+    border: 1px solid transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .btn-invisible:hover {
+    border: 1px solid #d0cfce;
+    *border: 0;
+    border-top-color: #c1bfbe;
+  }
+
+  #forecastsCommitButtons {
+    float: right;
+    padding: 15px 0px;
+  }
+
+  /*a#save_draft {
+    margin-right: 8px;
+  }*/
+
+  .label, .badge {
+    font-size: 10.152px;
+    line-height: 12px;
+    color: #000;
+    vertical-align: baseline;
+    white-space: nowrap;
+    background-color: #cdcccb;
+    height: 12px;
+    display: inline-block;
+  }
+  .label {
+    padding: 1px 4px 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  .badge {
+    padding: 1px 9px 2px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+  a.label:hover, a.badge:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .view-forecastsChart {
+    .dropdown.form-horizontal,
+    .btn-toolbar.pull-right {
+      margin: 1px;
+      position: absolute \9;
+      right: 0px \9;
+
+    }
+    .btn-toolbar .btn {
+      padding: 6px 8px 1px;
+    }
+    .chartContainer {
+    }
+  }
+
+  .thumbnail.viz.expanded {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    z-index: 1000;
+    .nv-chart {
+      padding: 20px 20px 10px;
+    }
+    svg text {
+      font-size: 14px;
+    }
+    .nvd3 .nv-x.nv-axis text {
+      font-size: 12px;
+    }
+  }
+
+  .control-group.datefilter {
+    select {
+      width: 350px;
+    }
+  }
+  .control-group.filter .chzn-container, #date_filter_chzn {
+    .chzn-drop {
+      padding: 10px;
+      border: 1px solid @grayLight;
+    }
+
+    .chzn-single-with-drop div b {
+      background-position: 0px 0px;
+    }
+  }
+
+  .control-group.filter {
+    .indicator {
+      cursor: pointer;
+    }
+    .chzn-container {
+      .chzn-drop {
+        .caret-top(auto,auto,12px,11px);
+      }
+    }
+  }
+
+  #date_filter_chzn.chzn-container {
+    .chzn-drop {
+      .caret-top(auto,auto,24px,23px);
+    }
+  }
+
+  .legend .label {
+    background-color: transparent !important;
+  }
+
+  .modal-wizard-start {
+    position: relative;
+    top: 5px;
+  }
+
+  .modal-body {
+    height: 300px;
+    padding: 0;
+    &.with-nav {
+      margin-top: 56px;
+    }
+    &.with-tab-nav {
+      margin-top: 36px;
+    }
+  }
+
+  .modal-navigation {
+    position: absolute;
+    top: 46px;
+    width: 100%;
+    background-color: @grayLighter;
+    border-bottom: 1px solid @grayLight;
+    padding: 3px 0 0;
+
+    .breadcrumb.two {
+      padding-bottom: 3px;
+
+      li {
+        padding: 0 1em;
+        width: 34%;
+        margin: 0;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        &:first-child {
+          padding-left: 0;
+          width: 33%;
+        }
+        &:last-child {
+          padding-right: 0;
+          width: 33%;
+        }
+        a {
+          padding: 16px;
+          width: 100%;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          line-height: 18px;
+        }
+        &.highlight {
+          a {
+            background-color: @blueLight;
+          }
+          a::after {
+            border-color: @transparent @transparent @transparent @blueLight;
+          }
+          a::before{
+            border-color: @blueLight @blueLight @blueLight @transparent;
+          }
+        }
+        &.disabled {
+          a {
+            cursor: default;
+          }
+          a:hover {
+            background: @grayLighter !important;
+          }
+          a:hover::before {
+            border-color: @grayLighter @grayLighter @grayLighter @transparent;
+          }
+          a:hover::after {
+            border-left-color: @grayLighter;
+          }
+        }
+      }
+    }
+    .nav-tabs {
+      margin: 0 4px;
+      border-bottom: 0 none @trasparent;
+    }
+  }
+
+    div.dataTables_wrapper {
+        overflow-x: auto;
+        min-height: 260px;
+        .rtl(@direction,ltr);
+        table.dataTable {
+            .rtl(@direction,rtl);
+            .input-prepend, .control-group {
+                margin-bottom: 0px;
+                input {
+                    width: 60px;
+                    padding: 0px 4px;
+                    white-space: nowrap;
+                    word-break: normal;
+                    margin-bottom: 0px;
+                }
+                .add-on {
+                    padding: 0px 5px;
+                }
+            }
+        }
+
+    }
+
+/* make the datatable have no top margin */
+  table.dataTable {
+    margin-top: 0px !important;
+
+    th {
+        .rtl(@direction,ltr);
+        border-color: darken(@grayLighter,5%);
+    }
+
+    td {
+        .rtl(@direction,ltr);
+    }
+    td.number, tfoot th.number {
+      text-align: right;
+      .rtlTextAlign(@direction,left);
+      white-space: nowrap;
+    }
+
+    th.header-quota {
+      min-width: 80px;
+    }
+    .converted {
+      display: inline-block;
+      margin-left: 16px;
+      .rtlMargin(@direction,0 16px 0 0);
+    }
+    label.original {
+      margin-bottom: 0px;
+      display: inline-block;
+      background-color: @grayLight;
+      .border-radius(4px);
+      padding: 2px 4px;
+    }
+
+  }
+
+  div.sugareditable {
+    display: inline-block;
+  }
+
+  div.sugareditable.focus {
+    display: inline-block;
+  }
+
+/* New Filter https://sugarcrm.atlassian.net/browse/UIUX-117 */
+  #sales_stage_filter_chzn {
+    width: 100% !important;
+    margin-bottom: 4px;
+    .search-choice {
+      border-radius: 10px !important;
+      -webkit-border-radius: 10px !important;
+      border: none !important;
+    }
+    .search-choice {
+      background: #E4E4E4;
+      &>a {
+        height: 12px;
+        width: 12px;
+        .border-radius(6px);
+        background-color: #908f8e;
+        background-image: url('@{baseUrl}/img/chosen-sprite-invert.png');
+      }
+    }
+    .chzn-results {
+      .icon-ok {
+        position: absolute;
+        margin-top: -22px;
+        margin-left: 2px;
+        z-index: 1;
+      }
+      &> li {
+        position: relative;
+        text-indent: 22px;
+        z-index: 1;
+        &.active-result {
+          z-index: 2;
+        }
+        &:not(:hover) {
+          background: @white;
+          color: @black;
+        }
+      }
+    }
+  }
+
+  .filter {
+    position: relative;
+    .chzn-container-multi .chzn-drop .result-selected {
+      display: block;
+      font-weight: bold;
+
+      &:before { //content:"✓\00a0\00a0\00a0";
+      //content:"\f00c\00a0\00a0\00a0";
+      }
+    }
+    &.forecast {
+      .chzn-container-active .chzn-drop {
+        right: 0px !important;
+        left: auto !important;
+      }
+    }
+  }
+
+  .chzn-select-legend {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    float: right;
+    display: inline-block !important;
+    width: auto;
+    font-size: 12px;
+    border: 0;
+    margin: 0;
+    line-height: 2.2em;
+    color: #999;
+    cursor: pointer;
+    .icon-caret-down {
+      margin-left: 6px;
+      margin-right: 15px;
+      line-height: 4px;
+      .rtlMargin(@direction,0 6px 0 15px);
+    }
+    .rtlFloat(@direction,left);
+    .rtlRight(@direction,auto);
+    .rtlLeft(@direction,0px);
+  }
+
+  //UIUX-130
+  &.preview #folded {
+    z-index: 1;
+    position: absolute;
+    right: 1px;
+    .box-shadow( ~"3px -1px 14px 2px rgba(0, 0, 0, .25)" );
+    height: 100%
+  }
+  &.preview #folded .tab-pane.active {
+    .box-shadow(none);
+    padding: 0;
+    border: none;
+  }
+
+
+  .topline {
+
+    div.divider {
+      float: left;
+      right: auto;
+      .rtlFloat(@direction,right);
+    }
+
+    .datapoints {
+      float: right;
+      text-align: right;
+      .rtlFloat(@direction,left);
+    }
+
+    .datapoint {
+      float: left;
+      margin-top: 10px;
+      min-width: 120px;
+      .rtlFloat(@direction,right);
+    }
+
+    .datapoint:last-child {
+      padding-right: 20px;
+      .rtlPadding(@direction,0px 0px 0px 20px);
+    }
+  }
+
+    .modal-footer .btn           {
+        margin-left: 5px;
+    }
+}
+
+.yui3-overlay {
+    z-index: 1031 !important;
+}

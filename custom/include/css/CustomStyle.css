@@ -1,0 +1,1130 @@
+/* Added by Phu Vo on 2018-05-04 to add Roboto Font Family */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../../custom/include/fonts/Roboto-Regular.ttf');
+}
+/* End Phu Vo*/
+.stickytooltip{
+    box-shadow: 5px 5px 8px #818181; /*shadow for CSS3 capable browsers.*/
+    -webkit-box-shadow: 5px 5px 8px #818181;
+    -moz-box-shadow: 5px 5px 8px #818181;
+    display:none;
+    position:absolute;
+    display:none;
+    border:5px solid black; /*Border around tooltip*/
+    background:white;
+    z-index:3000;
+}
+
+
+.stickytooltip .stickystatus{ /*Style for footer bar within tooltip*/
+    background:black;
+    color:white;
+    padding-top:5px;
+    text-align:center;
+    font:bold 11px Arial;
+}
+
+
+#tooltip {
+    position:absolute;
+    z-index:9999;
+    color:#000;
+    font-size:10px;
+    width:700px;
+
+}
+
+/*#tooltip .tipHeader {
+height:2px;
+width:600px;
+background:url(images/tipHeader.gif) no-repeat;
+}*/
+
+
+#tooltip .tipBody {
+    background-color:#FFFFFF;
+    padding:5px 5px 5px 15px;
+    border: 1px solid;
+    border-color: red;
+    font-size: 12pt !important;
+    border-collapse: collapse;
+    border-radius:3px;
+}
+
+/*#tooltip .tipFooter {
+height:2px;
+width:600px;
+background:url(images/tipFooter.gif) no-repeat;
+}*/
+
+/* end tooltip */
+
+.new{
+    color :lime !important;
+    font-weight: bold;
+}
+
+.lead_source{
+    color :orange !important;
+    font-weight: bold;
+}
+
+.in_process{
+    color :red !important;
+    font-weight: bold;
+}
+
+.dead{
+    color :black !important;
+    font-weight: bold;
+}
+
+.converted{
+    color :blue !important;
+    font-weight: bold;
+}
+
+.recycled{
+    color :#FF6600 !important;
+    font-weight: bold;
+}
+
+#divNotification{
+    background:#777;
+    border:1px solid #ccc;
+    width:200px;
+    height:100px;
+    position: fixed;
+    bottom:100px;
+    left: 150px;
+    border-radius: 3px;
+    transition: bottom 1s ease-out;
+    -moz-transition:bottom 1s ease-out;
+    -webkit-transition:bottom 1s ease-out;
+}
+#divNotification #toggleClose{
+    display:block;
+    position:absolute;
+    top:0px;
+    right: 0;
+    /* width:50px;
+    height:30px;*/
+
+}
+.divNotificationhide{
+    bottom:-50px !important;
+}
+div#divNotification div#dataList{
+    height: 170px;
+    overflow: auto !important;
+}
+
+
+/* Custom Subpanel: make the extra lines separated from the first line */
+#groupTabs li {
+    margin-bottom: 12px !important;
+}
+
+/* Duplication table */
+.duplicationStatus, .helpTextButton, .quickEditButton {
+    display: inline-table;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background-position: center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+}
+
+.duplicationStatus.loading {
+    background-image: url('../../../index.php?entryPoint=getImage&themeName=default&imageName=img_loading.gif');
+}
+
+.duplicationStatus.duplicated {
+    background-image: url('../../../index.php?entryPoint=getImage&themeName=RacerX&imageName=icon_caution.gif');
+}
+
+.duplicationStatus.verified {
+    background-image: url('../../../index.php?entryPoint=getImage&themeName=RacerX&imageName=icon_verified.gif');
+}
+
+#dialogDuplication {
+    border: 1px solid #AFAFAE;
+    margin-top: 5px;
+    display: none;
+}
+
+#dialogDuplication #dialogTitle {
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #ffffff), color-stop(.02, #eeeeee), color-stop(1, #dfdfdf) );
+    font-size: 14px;
+    color: red;
+    padding-top: 4px;
+    text-shadow: 0px 1px #fff;
+    padding: 5px;
+}
+
+#dialogDuplication #dialogTitle #btnCloseDialog {
+    background: url('../../../index.php?entryPoint=getImage&themeName=RacerX&imageName=dashlet-header-close.png');
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin-top: -3px;
+    margin-right: -5px;
+    cursor: pointer;
+}
+
+#dialogDuplication #criteria {
+    padding: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#dialogDuplication #dialogContent table {
+    width: 100%;
+}
+
+.helpTextButton {
+    background-image: url('../../../index.php?entryPoint=getImage&themeName=RacerX&imageName=help-dashlet.png');
+    cursor: pointer;
+}
+
+.quickEditButton {
+    background-image: url('../../../index.php?entryPoint=getImage&themeName=RacerX&imageName=edit_inline.png');
+    cursor: pointer;
+}
+
+#basic_search_link {
+    padding-right: 15px;
+    display: inline-block;
+    background: url('../../../index.php?entryPoint=getImage&themeName=default&imageName=dropdown_menu_toggle_more.gif') no-repeat;
+}
+
+#basic_search_link.collapsed {
+    background-position: right -12px;
+
+}
+
+#basic_search_link.expanded {
+    background-position: right 4px;
+}
+
+.highlight_blue {
+    background:#115CAB;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_blue * {
+    color: #fff !important;
+}
+
+.highlight_bluelight {
+    background:#04ADEC;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_bluelight * {
+    color: #fff !important;
+}
+
+.highlight_red {
+    background:#A8141B;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_red * {
+    color: #fff !important;
+}
+
+.highlight_redlight {
+    background:#FF0000;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_redlight * {
+    color: #fff !important;
+}
+
+.highlight_black {
+    background:#272727;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_black * {
+    color: #fff !important;
+}
+
+.highlight_yellow {
+    background:#F1D44A;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_yellow * {
+    color: #fff !important;
+}
+
+.highlight_yellowlight {
+    background:#e8b71a;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_yellowlight * {
+    color: #fff !important;
+}
+
+.highlight_green {
+    background:#468931;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_green * {
+    color: #fff !important;
+}
+
+.highlight_violet {
+    background:#aa68ff;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_violet * {
+    color: #fff !important;
+}
+
+.highlight_orange {
+    background:#FF8C00;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_orange * {
+    color: #fff !important;
+}
+
+.highlight_crimson {
+    background:#DC143C;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_crimson * {
+    color: #fff !important;
+}
+
+.highlight_blood {
+    background:#db3340;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_blood * {
+    color: #fff !important;
+}
+
+.highlight_dream {
+    background:#32CD32;
+    color: #fff !important;
+    border-radius:5px;
+    padding:2px 5px 2px 5px;
+    font-weight: bold;
+}
+
+.highlight_dream * {
+    color: #fff !important;
+}
+
+.highlight_bold {
+    font-weight: bold;
+}
+
+.highlight_bolditalic {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.highlight_boldunderline {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.highlight_italic {
+    font-style: italic;
+}
+
+.highlight_underline {
+    text-decoration: underline;
+}
+
+.highlight_greencolor, .highlight_greencolor * {
+    color: green !important;
+}
+
+.highlight_bluecolor, .highlight_bluecolor * {
+    color: blue !important;
+}
+
+.highlight_redcolor, .highlight_redcolor * {
+    color: red !important;
+}
+
+.highlight_violetcolor, .highlight_violetcolor * {
+    color: violet !important;
+}
+
+.highlight_yellowcolor, .highlight_yellowcolor * {
+    color: yellow !important;
+}
+
+.highlight_orangecolor, .highlight_orangecolor * {
+    color: orange !important;
+}
+
+.highlight_browncolor, .highlight_browncolor * {
+    color: brown !important;
+}
+
+.firstLetterCapital {
+    display: inline-block !important;
+}
+
+.firstLetterCapital:first-letter {
+    text-transform: uppercase !important;
+}
+
+.closed_won{
+    color: blue !important;
+    font-weight: bold;
+}
+.closed_lost{
+    color: gray !important;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+.prospecting{
+    color: red !important;
+    font-weight: bold;
+}
+.qualification{
+    color: rgb(15, 252, 45) !important;
+    font-weight: bold;
+}
+
+.needs_analysis{
+    color: rgb(253, 232, 7);
+    font-weight: bold;
+}
+
+#name_editblock #first_name, #name_editblock #last_name {
+    width: 150px !important;
+}
+
+/* Custom Report */
+#report_results .detailInfo {
+    margin-top: 10px !important;
+}
+
+#report_results .detailInfo .lnkShowLess, #report_results .detailInfo .lnkShowMore {
+    color: red !important;
+}
+
+#report_results .tblDetailInfo {
+    width: 100% !important;
+    margin-top: 5px !important;
+    border-collapse: collapse !important;
+}
+
+#report_results .tblDetailInfo th {
+    background: #f6f6f6 !important;
+}
+
+#report_results .tblDetailInfo td, .tblDetailInfo th {
+    border: 1px solid gray !important;
+}
+
+#report_results .tblDetailInfo td {
+    padding: 5px !important;
+}
+/* End Custom Report */
+
+/* Begin Hai Nguyen */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../../custom/include/fonts/fontawesome-webfont.eot?v=4.3.0');
+    src: url('../../../custom/include/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+    url('../../../custom/include/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
+    url('../../../custom/include/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),
+    url('../../../custom/include/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
+    url('../../../custom/include/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.fa-bell-o:before {
+    content: "\f0a2";
+}
+.fa-2 {
+    font-size: 1.5em;
+}
+
+.fa-3 {
+    font-size: 1.8em;
+}
+
+.fa-calendar:before {
+    content: "\f073";
+}
+.fa-birthday-cake:before {
+    content: "\f1fd";
+}
+
+.fa-gift:before {
+    content: "\f06b";
+}
+.fa-envelope-o:before {
+    content: "\f003";
+}
+.fa-phone-square{
+    content: "\f098";
+}
+
+#dcmenuSugarCube .navbar-nav {
+    padding: 0;
+    margin: 0px 10px 0px 10px;
+    display: block;
+    height: inherit;
+}
+
+.badge {
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    font-size: 11px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
+    padding: 4px 6px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+}
+
+.badge-plus {
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    top: 6px;
+    margin-left: -11px;
+    font-size: 11px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    border-radius: 10px !important;
+    padding: 2px 3px 4px 4px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+}
+
+.badge-default {
+    background-color: #d64635 !important;
+    background-image: none;
+}
+
+div#dcmenu div#dcmenuSugarCube ul li.dropdown {
+    display: inline;
+    margin: 0px;
+    padding: 0px 7px 0px 7px;
+    height: 40px;
+    position: relative;
+    float: left;
+    height: inherit;
+}
+div#dcmenu div#dcmenuSugarCube ul li i {
+    padding-top: 14px !important;
+    position: relative;
+    color: #FFF;
+}
+
+div#dcmenu div#dcmenuSugarCube ul li ul.dropdown-menu {
+    display:none;
+    position:absolute;
+    background-color: #fff;
+    text-align: left;
+    font-size: 14px;
+    list-style: none;
+    /*    margin-left: -190px;*/
+    width: 350px;
+    top: 41px;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+    margin-bottom: 0px;
+    left : -175px;
+
+}
+div#dcmenu div#dcmenuSugarCube ul li:hover ul.dropdown-menu {
+    display:block;
+}
+
+li.dropdown-menu-title {
+    height:40px;
+    background-color: #eaedf2;
+    text-align: center;
+    list-style: none;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+}
+
+li.dropdown-menu-title span {
+    padding-top: 13px !important;
+    display: inline-block;
+}
+
+.dropdown-menu-list {
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
+li.dropdown-content {
+    line-height: 40px;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    margin-left: -4px !important;
+    display: inline-block;
+}
+ul.dropdown-menu li {
+    list-style: none;
+    width: 100%;
+    margin-left: 0px !important;
+}
+
+li.dropdown-content span {
+    margin-left: 8px;
+}
+
+div.time {
+    float: right;
+}
+
+div.time span {
+    font-size: 12px;
+    opacity: 0.7;
+    padding: 4px 5px;
+    background: rgb(241, 241, 241);
+    margin-left: 0px;
+}
+.dropdown-menu-list ul {
+    margin-bottom: 0px;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+}
+
+.dropdown-div-content{
+    float: left;
+    width: 250px;
+}
+
+.dropdown-subject a{
+    font-size: 13px;
+}
+div.dropdown-content-subject{
+    padding:0px 13px 0px 3px;
+}
+
+.pac-container{
+    z-index: 100000000 !important;
+}
+
+span.displaytime {
+    font-size: 12px;
+    opacity: 0.7;
+    padding: 4px 5px;
+    /*    background: rgb(241, 241, 241);*/
+    color: #696868;
+}
+
+/* END Hai Nguyen */
+
+.fancyScrollbar::-webkit-scrollbar{height:9px !important; width:9px !important}
+.fancyScrollbar::-webkit-scrollbar-track-piece{background:#d6dadc !important}
+.fancyScrollbar::-webkit-scrollbar-track-piece:vertical:start{border-radius:5px 5px 0 0 !important}
+.fancyScrollbar::-webkit-scrollbar-track-piece:vertical:end{border-radius:0 0 5px 5px !important}
+.fancyScrollbar::-webkit-scrollbar-track-piece:horizontal:start{border-radius:5px 0 0 5px !important}
+.fancyScrollbar::-webkit-scrollbar-track-piece:horizontal:end{border-radius:0 5px 5px 0 !important}
+.fancyScrollbar::-webkit-scrollbar-thumb:horizontal, .fancyScrollbar::-webkit-scrollbar-thumb:vertical{background:#c4c9cc !important; border-radius:5px !important; display:block; height:50px !important}
+.fancyScrollbar::-webkit-scrollbar-button:end:increment, .fancyScrollbar::-webkit-scrollbar-button:start:decrement{background:0 0 !important; display:none !important}
+
+#dcmenu #moduleList li.home ul.megamenu {
+    margin-left: 2px !important;
+}
+
+#dcmenu .moduleTabExtraMenu.more {
+    display: none;
+}
+
+#dcmenu .MMShortcuts li.current a {
+    /*background: #293E69 !important;*/ /*MTN*/
+    outline: 0 !important;
+    color: white;
+}
+
+/*ADD by MTN*/
+.yui-skin-sam{
+    margin: 0px;
+}
+/*END by MTN*/
+
+#subpanel_list tr.highlight_key_contact td {
+    background-color: #bdc3c7 !important;
+}
+
+.yui-content .detail.view:hover{
+    box-shadow: 0px 0px 10px #ADADAD;
+}
+
+#loadingPage {
+    font-size: 13px;
+}
+
+.moduleTitle + table[border="1"] {
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.moduleTitle + table[border="1"]:hover {
+    box-shadow: 0px 0px 10px #ADADAD;
+}
+
+.detail.view td.data{
+    overflow: hidden;
+}
+
+.detail.view td.data > div{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+.left {
+    text-align: left !important;
+}
+
+.right {
+    text-align: right !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.dynamicTable {
+    border-collapse: collapse;
+}
+
+.dynamicTable thead th {
+    text-align: center;
+    background: #f6f6f6 !important;
+    padding: 5px !important;
+}
+
+.dynamicTable th:last-child, .dynamicTable td:last-child {
+    text-align: center;
+}
+
+.dynamicTable th, .dynamicTable td {
+    border: 1px solid silver !important;
+}
+
+.dynamicTable td {
+    position: relative;
+}
+
+.dynamicTable td input, .dynamicTable td select, .dynamicTable td textarea {
+    width: 100%;
+    padding: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.dynamicTable td input {
+    height: 30px !important;
+}
+
+.dynamicTable .template {
+    display: none;
+}
+
+.dynamicTable tfoot td {
+    padding: 2px !important;
+}
+
+.dynamicTable .btnAddRow {
+    margin-right: 5px;
+}
+
+#line_items_c_span{
+    display: block;
+}
+
+/* add by hai nguyen */
+span.contact-birthday-count{
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: super;
+    border-radius: 4px;
+    padding: 1px 3px 1px 3px;
+    position: absolute;
+    top: -14px;
+    left: 20px;
+}
+
+a.birthday-calendar-link {
+  position: relative;
+}
+
+/*Add By  Hai Nguyen*/
+div#footer div#help{
+    display:none !important;
+}
+
+div#footer div#productTour{
+    display:none !important;
+}
+
+/* end Add By Hai Nguyen */
+
+/* Added by Hieu Nguyen on 2015-10-30 to fix the sport search preview popup's title bar */
+.sugar_spot_search .hd {
+    cursor: default !important;
+    text-align: right !important;
+    padding-top: 5px !important;
+    height: 25px !important;
+}
+
+.sugar_spot_search .hd #dcmenu_close_link .icon-remove {
+    color: white !important;
+}
+/* End Hieu Nguyen */
+
+textarea{
+    width: 250px;
+    height: 60px;
+}
+/* End Hieu Nguyen */
+
+/* Simple Switch. Added by Hieu Nguyen on 2016-03-22 */
+.switch {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 56px;
+    height: 20px;
+    padding: 3px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #eeeeee, white 25px);
+    background-image: -moz-linear-gradient(top, #eeeeee, white 25px);
+    background-image: -o-linear-gradient(top, #eeeeee, white 25px);
+    background-image: linear-gradient(to bottom, #eeeeee, white 25px);
+}
+
+.switch-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.switch-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #eceeef;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+    -webkit-transition-property: opacity background;
+    -moz-transition-property: opacity background;
+    -o-transition-property: opacity background;
+    transition-property: opacity background;
+}
+
+.switch-label:before, .switch-label:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+}
+
+.switch-label:before {
+    content: attr(data-off);
+    right: 11px;
+    color: #aaa;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+    content: attr(data-on);
+    left: 11px;
+    color: white;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.switch-input:checked ~ .switch-label {
+    background: #47a8d8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch-input:checked ~ .switch-label:before {
+    opacity: 0;
+}
+
+.switch-input:checked ~ .switch-label:after {
+    opacity: 1;
+}
+
+.switch-handle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
+    background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
+    background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
+    background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+}
+
+.switch-handle:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+    background-image: -webkit-linear-gradient(top, #eeeeee, white);
+    background-image: -moz-linear-gradient(top, #eeeeee, white);
+    background-image: -o-linear-gradient(top, #eeeeee, white);
+    background-image: linear-gradient(to bottom, #eeeeee, white);
+}
+
+.switch-input:checked ~ .switch-handle {
+    left: 40px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-green > .switch-input:checked ~ .switch-label {
+    background: #4fb845;
+}
+
+#ajaxStatusDiv{
+    z-index: 99999;
+    top:0 !important;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;  
+    left: -15px !important;
+    padding-top: 143px;
+    padding-left: 49%;
+    background-color: black;
+    background-image: url('../../../custom/include/images/loading-transparent.gif');
+    background-repeat: no-repeat;
+    background-position: 45.5% 137px;
+    background-size: 28px 28px;
+    background-attachment: fixed;
+    color: white;
+    position : fixed!important
+}   
+
+/* End Simple Switch */
+            
+
+/*Add by Phu Vo on 11.04.2018 to header fix notification */
+
+#dcmenu #dcmenuSugarCube .notifNoneCount {
+    background-color: #B22F22;
+}
+
+/*End Phu Vo*/
+
+/* Add by Phu Vo on 12.04.2018 to fix Tracker Reports header background color */
+
+.yui-skin-sam div[id ^=trackercontent].yui-module .hd {
+    background-color: #fff;
+    border-bottom: none;
+    color: #4f4f4f;
+}
+
+div#main input[type=button][id ^=calbutton] {
+  background-color: transparent!important;
+  box-shadow:none!important;
+  background-repeat: no-repeat;
+}
+
+div#main .yui-skin-sam div[id ^=trackercontent].yui-module .hd input[type=button][id ^=clearbutton] {
+  margin-left: 5px!important;
+}
+
+div#main .yui-skin-sam div[id ^=trackercontent].yui-module .hd > * {
+  vertical-align: middle;
+  margin-top: 3px;
+}
+
+div#main .yui-skin-sam div[id ^=trackercontent].yui-module .hd span[id ^=sinceLabel] {
+  margin-left: 6px;
+}
+
+/* Fix max width */
+
+body.yui-skin-sam {
+    min-width: 960px;
+}
+
+/* End Phu Vo */
+
+/* Begin Hai Nguyen */
+
+#EditView select, #ConvertLead select, form[id ^="form_SubpanelQuickCreate"] select, form[id ^="form_DCQuickCreate"] select{
+    width:auto;
+}
+
+select#salutation, select#contact_salutation,select[name='Contactssalutation']{
+    width:50px !important;
+}
+
+select[name="reminder_time"]{
+    width: 150px !important;
+}
+
+select#duration_minutes, select[name="Callsduration_minutes"], select[name="Meetingsduration_minutes"]{
+    width: 60px;
+}
+
+/* End Hai Nguyen */
+
+/* Added by Phu Vo on 2018.05.08 */
+
+.click-to-call, 
+.click-to-sms {
+    font-family: FontAwesome;
+    font-size: 16px!important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 3px;
+    cursor: pointer;      
+    color: white!important;
+    box-shadow: 1px 1px 1px #bec3c7;
+    font-style: normal;
+}
+
+.click-to-call:hover,
+.click-to-sms:hover {
+    border:none;
+    background-color: #219453;
+}
+
+.click-to-call::before {
+    content: '\f095';
+}
+
+.click-to-sms::before {
+    content: '\f0e6';
+    position: relative;
+    top: -1px;
+}
+
+/* End Phu Vo */
+
+.moduleTitle {
+    display: flex;
+}

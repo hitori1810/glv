@@ -1,0 +1,64 @@
+<!--
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+-->
+<div class="longHelpTitle">Attaches a file to a field in a record</div>
+<div class="summary">
+    <h2>Summary:</h2>
+    <p>This endpoint takes a file or image and saves it to a record.</p>
+</div>
+<div class="params">
+<h2>Query Parameters:</h2>
+    <table>
+        <tr><th>Param</th><th>Description</th><th>Optional</th></tr>
+        <tr><td>format</td><td>sugar-html-json</td><td>Required</td></tr>
+        <tr><td>delete_if_fails</td><td>Boolean indicating whether the API is to mark related record deleted if the file upload fails.</td><td>Optional (if used oauth_token is also required)</td></tr>
+        <tr><td>oauth_token</td><td>oauth_token_value</td><td>Optional (Required if delete_if_fails is true)</td></tr>
+    </table>
+</div>
+<div class="input">
+    <h2>Input Example:</h2>
+    <code class="codesample">
+        POST /rest/v10/Notes/abcd-1234/file/filename?format=sugar-html-json&delete_if_fails=true&oauth_token=<token> HTTP/1.1
+
+        Host: localhost
+        Connection: keep-alive
+        Content-Length: 10263
+        Cache-Control: max-age=0
+        Content-Type: multipart/form-data; boundary=---WebKitFormBoundarybThnfMCVqnkSxLCl
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+        Accept-Encoding: gzip
+        Accept-Language: en-US,en;q=0.8
+
+        ------WebKitFormBoundarybThnfMCVqnkSxLCl
+        Content-Disposition: form-data; name="file"; filename="my-awesome-document.xyz"
+        Content-Type: application/document-xyz
+
+        ...<span class="note">This is where the bin data would be</span>
+
+    </code>
+</div>
+<div class="output">
+    <h2>Output Example:</h2>
+    <code class="codesample">
+        {
+          "field": {
+            "content-type": "application/document-xyz",
+            "content-length": "657483",
+            "name": "my-awesome-document.xyz",
+            "uri": "http://your.sugarcrm.install/rest/v10//Notes/abc-1234/file/field"
+          }
+        }
+    </code>
+</div>

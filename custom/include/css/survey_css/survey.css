@@ -1,0 +1,177 @@
+/**
+ * 
+ * LICENSE: The contents of this file are subject to the license agreement ("License") which is included
+ * in the installation package (LICENSE.txt). By installing or using this file, you have unconditionally
+ * agreed to the terms and conditions of the License, and you may not use this file except in compliance
+ * with the License.
+ *
+ * @author     Original Author Biztech Co.
+ */
+/*.zebra td, .zebra th {padding: 10px; width: 100%; }
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+}
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee);
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+}
+.zebra th:first-child {-moz-border-radius: 6px 0 0 0;-webkit-border-radius: 6px 0 0 0;border-radius: 6px 0 0 0;}
+.zebra th:last-child {-moz-border-radius: 0 6px 0 0;-webkit-border-radius: 0 6px 0 0;border-radius: 0 6px 0 0;}
+.zebra th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0;border-radius: 6px 6px 0 0;}
+.zebra tfoot td {border-bottom: 0;border-top: 1px solid #fff;background-color: #f1f1f1;}
+.zebra tfoot td:first-child {-moz-border-radius: 0 0 0 6px;-webkit-border-radius: 0 0 0 6px;border-radius: 0 0 0 6px;}
+.zebra tfoot td:last-child {-moz-border-radius: 0 0 6px 0;-webkit-border-radius: 0 0 6px 0;border-radius: 0 0 6px 0;}
+.zebra tfoot td:only-child{-moz-border-radius: 0 0 6px 6px;-webkit-border-radius: 0 0 6px 6px;border-radius: 0 0 6px 6px}
+*/
+/*
+Pop up styles
+*/
+
+#backgroundpopup {background:none repeat scroll 0 0 #000000; opacity: .25;z-index: 19;display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;}
+#survey_main_div {width: 700px;background: #FDFDFD;top: 15%;left: 26%;position: fixed;z-index: 9999;min-width: 30%;box-shadow: 0 0 10px 1px #424142;-moz-box-shadow: 0 0 10px 1px #424142;-webkit-box-shadow: 0 0 10px 1px #424142;}
+#survey_main_div a {position: absolute;top: -25px;right: -25px;width: 45px;height: 45px;background: transparent url('../../images/close.png') -40px 0px;cursor: pointer;display: inline;}
+.cursor{cursor: pointer;}
+
+.survey_search_form > input[type="text"]{vertical-align: top !important;padding: 4px 5px 5px;margin-top: 2px;}
+
+
+.suite-model-table thead,
+.suite-model-table tfoot{background: #eee;display: block;}
+
+.suite-model-table tbody{max-height: 400px;overflow-y:auto;display: block;width: 100%;max-width: 100%;padding: 0 50px;box-sizing:border-box; }
+.suite-model-table tbody tr {width: 100%;/*display: block;width: 100%;*/}
+
+
+/*.zebra thead, .zebra tbody, .zebra tr, .zebra td, .zebra th { display: block; font-size: 14px;}
+.zebra tr:after { content: ' '; display: block; visibility: hidden; clear: both;}
+.zebra thead th { height: 30px; text-align: left;}
+.zebra tbody { height: 400px; overflow-y: auto;}
+.zebra tbody td, thead th {width: 97.2%; float: left;}*/
+
+
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee);
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra thead, .zebra tbody, .zebra tr, .zebra td, .zebra th { display: block; font-size: 14px;}
+.zebra tfoot td {border-bottom: 0;border-top: 1px solid #fff;background-color: #f1f1f1;}
+.zebra thead th { height: 30px; text-align: center;}
+
+
+/*.zebra tr:after { content: ' '; display: block; visibility: hidden; clear: both;}
+.zebra thead th { height: 30px; text-align: left;}
+.zebra tbody { height: 400px; overflow-y: auto;}
+.zebra tbody td, thead th {width: 97.2%; float: left;}*/
+
+
+
+
+.survey-auto-table{border: 0;}
+
+.survey-auto-table thead th {border: 0;}
+
+.survey-auto-table tr{width: 100%;}
+
+.survey-auto-table tr td.lable{width: 35%;}
+
+.survey-auto-table tr td.table-desc{width:64%;}
+
+.survey-auto-table tr td.table-desc > * {width: 334px;box-sizing: border-box;}
+
+.survey-auto-table tr td.table-desc > i{width: 2%;}
+
+
+@media only screen and (min-width: 0) and (max-width: 1000px) {
+    #survey_main_div { max-width: 80%; left: 0; right: 0; margin: auto;}
+    #survey_main_div #survey_content { overflow: auto; }
+    #survey_main_div #survey_content table { min-width: 770px;}
+}
+// Survey Custom SMTP View css
+.form-heading-label{
+    width: 25.2%; 
+}
+.form-field{
+    width: 74.8%;
+}
+.form-inner-table table > tbody > tr{
+    display: inline-block;
+    width: 49%;
+}
+.form-inner-table table > tbody > tr > td.form-heading-label{
+    width: 50%;
+    float: left;
+}
+tr.btn-container{
+    text-align: center;
+    padding: 10px 0;
+    line-height: 30px;
+}
+
+/*----------------(17-11-2016)----------------*/
+
+.Add_Supported_language.table.view{margin:0;}
+.Add_Supported_language thead,
+.Add_Supported_language tfoot{
+    padding: 5px 13px;
+}
+.individual_report_table.retrive_language td input[type="button"],
+.individual_report_table.retrive_language td .delete_lang{
+    vertical-align: top;
+    display: inline-block;
+}
+.survey_component_content,
+.messages,
+.advanced_content{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+/*.survey_component_content table,
+.messages table,
+.advanced_content table{
+    margin-bottom: 0;
+}*/
+.lang-prev,
+.lang-next,
+.lang-save{
+    position: absolute;
+    float: none;
+    bottom: -2px;
+}
+.lang-next,
+.lang-save{
+    right: 0;
+}
+.lang-prev{
+    left:0;
+}
+.survey_component_content table td{
+    box-sizing: border-box;
+}
+.lang-content input[type="text"]{
+    width: 94%;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+// End

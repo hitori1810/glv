@@ -1,0 +1,91 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+
+.jstree-sugar ins:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+.jstree-sugar {
+    padding: 10px;
+    a {
+        .rtl(@direction,ltr);
+    }
+    .jstree-icon {
+        .rtl(@direction,rtl);
+        .rtlFloat(@direction,right);
+    }
+}
+.jstree-sugar li.jstree-last { background:transparent; }
+.jstree-sugar li.jstree-open > a > ins,
+.jstree-sugar li.jstree-closed > a > ins,
+.jstree-sugar li.jstree-leaf > ins {display: none;}
+.jstree-sugar .jstree-open > ins:before { content: "\f07c"; }
+.jstree-sugar .jstree-closed > ins:before { content: "\f07b"; }
+.jstree-sugar .jstree-leaf > ins:before {}
+.jstree-sugar .jstree-closed > ins:hover,
+.jstree-sugar .jstree-open > ins:hover {cursor: pointer;}
+.jstree-sugar ins {margin-right: 5px !important;}
+.jstree-sugar .jstree-open > ins,
+.jstree-sugar .jstree-leaf > ins { }
+
+.jstree-sugar .jstree-hovered { background-color: transparent !important; }
+.jstree-sugar .jstree-clicked { color: @gray !important; }
+.jstree-sugar li, .jstree-sugar a  {color: @blueDark !important;}
+.jstree-sugar a .jstree-icon:before { content: "\f007"; }
+.jstree-sugar .jstree-leaf.parent a .jstree-icon:before {content: "\f062";}
+.jstree-sugar a.jstree-loading .jstree-icon { background:url("@{baseUrl}/img/throbber.gif") center center no-repeat !important; }
+
+.jstree-sugar.jstree-focused {  }
+
+.jstree-sugar .jstree-no-dots li,
+.jstree-sugar .jstree-no-dots .jstree-leaf > ins { background:transparent; }
+.jstree-sugar .jstree-no-dots .jstree-open > ins { background-position:-18px 0; }
+.jstree-sugar .jstree-no-dots .jstree-closed > ins { background-position:0 0; }
+
+.jstree-sugar .jstree-no-icons a .jstree-icon { display:none; }
+
+.jstree-sugar .jstree-search { font-style:italic; }
+
+.jstree-sugar .jstree-no-icons .jstree-checkbox { display:inline-block; }
+.jstree-sugar .jstree-no-checkboxes .jstree-checkbox { display:none !important; }
+.jstree-sugar .jstree-checked > a > .jstree-checkbox { background-position:-38px -19px; }
+.jstree-sugar .jstree-unchecked > a > .jstree-checkbox { background-position:-2px -19px; }
+.jstree-sugar .jstree-undetermined > a > .jstree-checkbox { background-position:-20px -19px; }
+.jstree-sugar .jstree-checked > a > .jstree-checkbox:hover { background-position:-38px -37px; }
+.jstree-sugar .jstree-unchecked > a > .jstree-checkbox:hover { background-position:-2px -37px; }
+.jstree-sugar .jstree-undetermined > a > .jstree-checkbox:hover { background-position:-20px -37px; }
+
+#vakata-dragged.jstree-sugar ins { background:transparent !important; }
+#vakata-dragged.jstree-sugar .jstree-ok { background:url("@{baseUrl}/img/.png") -2px -53px no-repeat !important; }
+#vakata-dragged.jstree-sugar .jstree-invalid { background:url("@{baseUrl}/img/.png") -18px -53px no-repeat !important; }
+#jstree-marker.jstree-sugar { background:url("@{baseUrl}/img/.png") -41px -57px no-repeat !important; text-indent:-100px; }
+
+.jstree-sugar a.jstree-search { color:aqua; }
+.jstree-sugar .jstree-locked a { color:silver; cursor:default; }
+
+#vakata-contextmenu.jstree-sugar-context,
+#vakata-contextmenu.jstree-sugar-context li ul { background:#f0f0f0; border:1px solid #979797; -moz-box-shadow: 1px 1px 2px #999; -webkit-box-shadow: 1px 1px 2px #999; box-shadow: 1px 1px 2px #999; }
+#vakata-contextmenu.jstree-sugar-context li { }
+#vakata-contextmenu.jstree-sugar-context a { color:black; }
+#vakata-contextmenu.jstree-sugar-context a:hover,
+#vakata-contextmenu.jstree-sugar-context .vakata-hover > a { padding:0 5px; background:#e8eff7; border:1px solid #aecff7; color:black; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; }
+#vakata-contextmenu.jstree-sugar-context li.jstree-contextmenu-disabled a,
+#vakata-contextmenu.jstree-sugar-context li.jstree-contextmenu-disabled a:hover { color:silver; background:transparent; border:0; padding:1px 4px; }
+#vakata-contextmenu.jstree-sugar-context li.vakata-separator { background:white; border-top:1px solid #e0e0e0; margin:0; }
+#vakata-contextmenu.jstree-sugar-context li ul { margin-left:-4px; }

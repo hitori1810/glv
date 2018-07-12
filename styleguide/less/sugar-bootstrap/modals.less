@@ -1,0 +1,76 @@
+/*sugar mods*/
+.modal {
+  border: 1px solid @grayLight;
+  border: 1px solid rgba(0,0,0,.1);
+  *border: 1px solid @grayLight; /* IE6-7 */
+  .box-shadow(0 4px 6px rgba(0,0,0,0.6));
+  .border-radius(8px);
+}
+/*
+.modal.span10 {
+  width: 900px;
+  margin-left: -450px;
+  .modal-body {
+    height: 350px;
+  }
+}*/
+
+
+//Generate fixed spanX modal widths
+.spanModalX (@index) when (@index > 0) {
+  (~".modal.span@{index},.row-fluid .modal.span@{index}") { .spanModal(@index); }
+  .spanModalX(@index - 1);
+}
+.spanModalX (0) {}
+
+.spanModal (@columns) {
+  width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1)) ;
+  margin-left: -( (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1)) )/2;
+}
+
+.spanModalX (@gridColumns);
+
+
+//bootstomp
+.modal-header {
+  color: @white !important;
+  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  .border-radius(3px 3px 0 0);
+  h3, .close {
+    color: @white !important;
+    font-weight: normal;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.8)
+  }
+}
+
+.modal-body {
+  margin-bottom: 58px;
+}
+
+.modal-content {
+  padding: 15px;
+}
+
+.modal-scroll {
+  overflow-y: scroll;
+}
+
+.modal-footer {
+  position: absolute;
+  bottom: 0;
+  padding: 14px 8px 15px 0;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  background-color: @grayLighter;
+  border-top: 1px solid @grayLight;
+}
+
+.modal-footer span:last-child {
+margin-right: 6px;
+}
+
+.modal-backdrop, .modal-backdrop.fade.in
+{
+  opacity: 0.5;
+}

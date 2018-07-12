@@ -1,0 +1,95 @@
+.tbl_info {
+  width: 100%;
+  margin: auto;
+  background-color: white;
+}
+
+.tbl_info td {
+  padding: 10px;     
+  white-space: nowrap;       
+}
+
+#tbl_matching td {  
+  white-space: nowrap;
+}
+
+.tbl_info .td_1 {
+  width: 20%;
+  text-align: right;
+}
+
+.tbl_info .td_2 {
+  margin-left: 20px;
+  text-align: left;
+  width: 30%;
+}
+
+.tbl_info th {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #cfcfcf;
+  background: #cfcfcf;
+  color: #666;
+}
+.tbl_attendance_list {
+  width: 98%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+.tbl_attendance_list td{
+  padding: 10px !important;
+  text-align: center;
+}
+
+#tbl_attendance_list th {
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 10px !important;
+  background: rgb(207, 207, 207) !important;
+}
+
+.tbl_attendance_list .inner_td{
+  background: #f5f5f5 !important;
+}
+
+.tbl_attendance_list td, .tbl_attendance_list th {
+  border: 1px solid white !important;
+}
+.ms-choice div{
+  right:-17px !important;
+}
+.div_action{
+  text-align: center;
+  margin-top: 20px;
+}
+.tbl_attendance_list .makeup td{
+  background: #ffced7 !important;  
+}
+.tbl_attendance_list .makeup .inner_td{
+  background: rgba(255, 206, 215, 0.5) !important;  
+}
+
+.td_student_info {
+  background:#e2e2e2 !important;
+}
+
+.td_checkbox {
+  max-width  : 50px !important;
+}
+.td_makeup_date {
+  max-width  : 100px !important;
+}
+.td_leave_reason {
+  max-width  : 150px !important;
+}
+#tbl_attendance_list .total td{
+  background: white !important;
+}
+
+.hidden_td{
+  display:none !important;
+}
+.hidden_checkall{
+  display:none !important;
+}

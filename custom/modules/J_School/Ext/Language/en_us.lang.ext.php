@@ -1,0 +1,48 @@
+<?php 
+ //WARNING: The contents of this file are auto-generated
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_SCHOOL_LEADS_1_FROM_LEADS_TITLE'] = 'Leads';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_L_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE_ID'] = 'J_School ID';
+$mod_strings['LBL_J_SCHOOL_CONTACTS_1_FROM_CONTACTS_TITLE'] = 'Students';
+$mod_strings['LBL_J_SCHOOL_C_CONTACTS_1_FROM_C_CONTACTS_TITLE'] = 'Contacts';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_SCHOOL_LEADS_1_FROM_LEADS_TITLE'] = 'Leads';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_L_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE_ID'] = 'J_School ID';
+$mod_strings['LBL_J_SCHOOL_CONTACTS_1_FROM_CONTACTS_TITLE'] = 'Students';
+$mod_strings['LBL_J_SCHOOL_C_CONTACTS_1_FROM_C_CONTACTS_TITLE'] = 'Contacts';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_SCHOOL_LEADS_1_FROM_LEADS_TITLE'] = 'Leads';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_L_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE_ID'] = 'J_School ID';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_SCHOOL_LEADS_1_FROM_LEADS_TITLE'] = 'Leads';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_L_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE_ID'] = 'J_School ID';
+$mod_strings['LBL_J_SCHOOL_CONTACTS_1_FROM_CONTACTS_TITLE'] = 'Students';
+$mod_strings['LBL_J_SCHOOL_C_CONTACTS_1_FROM_C_CONTACTS_TITLE'] = 'Contacts';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_SCHOOL_LEADS_1_FROM_LEADS_TITLE'] = 'Leads';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_L_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE_ID'] = 'J_School ID';
+$mod_strings['LBL_J_SCHOOL_CONTACTS_1_FROM_CONTACTS_TITLE'] = 'Students';
+$mod_strings['LBL_J_SCHOOL_C_CONTACTS_1_FROM_C_CONTACTS_TITLE'] = 'Contacts';
+$mod_strings['LBL_J_SCHOOL_PROSPECTS_1_FROM_PROSPECTS_TITLE'] = 'Targets';
+
+?>

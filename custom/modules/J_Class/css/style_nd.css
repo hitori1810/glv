@@ -1,0 +1,11 @@
+.block_demo {
+    vertical-align: top;
+    width: 43.5%;
+    background-color: rgba(245, 245, 245, 1);
+    padding: 1% 2% 2%;
+    border-radius: 10px;
+}
+.timeslot_input {
+    width: 70px !important; 
+    text-align: center;
+}

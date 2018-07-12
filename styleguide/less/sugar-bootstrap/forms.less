@@ -1,0 +1,142 @@
+/*sugar mods*/
+
+form[name="signupView"] { 
+    .control-group.error input,
+    .control-group.error textarea {
+        width: 180px;
+    }
+}
+
+//changes below have not been modified from first styleguide commit; 
+//however, bootstrap has changed from these values
+//preserved for now until effect can be accepted
+
+legend {
+  border-bottom: 1px solid #eee;
+}
+
+label {
+  color: @grayDark;
+}
+
+.form-actions {
+  border-top: 1px solid #ddd;
+}
+
+// Reset the file input to browser defaults
+input[type="file"] {
+  width: auto;
+  padding: initial;
+  line-height: initial;
+  background-color: @inputBackground;
+  background-color: initial;
+  border: initial;
+  .box-shadow(none);
+}
+
+// Reset line-height for IE
+input[type="file"] {
+  line-height: 18px \9;
+}
+
+// Chrome on Linux and Mobile Safari need background-color
+select {
+  background-color: @inputBackground;
+  border: inherit;
+}
+
+input[type="image"] {
+  border: 0;
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"],
+input[type="image"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0; /* IE7 */
+  line-height: normal;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0 \9; /* IE9 and down */
+  .border-radius(0);
+}
+
+// Reset width of input buttons, radios, checkboxes
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  height: auto;
+}
+
+// Inputs within a label
+label input,
+label textarea,
+label select {
+  display: block;
+}
+
+// Remove shadow from image inputs
+input[type="image"] {
+  .box-shadow(none);
+}
+
+// Focus for select, file, radio, and checkbox
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  .box-shadow(none); // override for file inputs
+}
+
+// Hidden inputs
+input[type="hidden"] {
+  display: none;
+}
+
+// Placeholder text gets special styles; can't be bundled together though for some reason
+.placeholder(@grayLight);
+
+//commit 54580: enhance error icons next to input fields, do not change size
+//Revert "54580: one more css fix"
+/*.input-prepend,
+.input-append {
+  margin-bottom: 5px;
+  input,
+  select,
+  .uneditable-input {
+    .border-radius(0 0 0 0);
+  }
+}*/
+
+.error .input-append > .add-on {
+  position:absolute; 
+  right:40px;
+}
+
+.control-group.error > .input-append > input {
+ .border-radius(@inputBorderRadius);
+}
+
+//54580: use media queries to also position symbol properly
+//43d1a253e5dae2f5d02b9273f527f9e43ff2dd6c
+@media (max-width: 768px) {
+  .error .input-append > .add-on {
+    position: relative !important;
+    margin-right: -28px;
+    right: 27px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .error .input-append > .add-on {
+    position: relative !important;
+    margin-right: -28px;
+    right: 27px !important;
+  }
+}

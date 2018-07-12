@@ -1,0 +1,51 @@
+<!--
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+-->
+<div class="longHelpTitle">Gets a file attached to a field in a record</div>
+<div class="summary">
+    <h2>Summary:</h2>
+    <p>This endpoint retrieves an attached file for a field in a record. The response
+    from this request is an HTTP response with a forced download. This can be
+    used in rendering images through the API or in offering immediate file downloads.</p>
+</div>
+<div class="params">
+<h2>Query Parameters:</h2>
+    <table>
+        <tr><th>Param</th><th>Description</th><th>Optional</th></tr>
+        <tr><td colspan="3">This endpoint does not accept any parameters.</td></tr>
+    </table>
+</div>
+<div class="input">
+    <h2>Input Example:</h2>
+    <p>This endpoint does not accept any input.</p>
+</div>
+<div class="output">
+    <h2>Output Example:</h2>
+    <code class="codesample">
+Cache-Control: no-cache, must-revalidate
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/octet-stream
+Date: Mon, 30 Jan 2012 17:00:46 GMT
+Expires: Mon, 30 Jan 2012 17:00:45 GMT
+Last-Modified: Thu, 10 Nov 2011 19:01:31 GMT
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+.
+.
+.
+.
+    </code>
+</div>

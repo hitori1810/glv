@@ -1,0 +1,1 @@
+$(document).ready(function(){$('#quickCreate ul.subnav li a').click(function(){SUGAR.util.doWhen(function(){return $('#dcboxbody').find(".email").length>0;},function(){$('#dcboxbody').css('width','940px');});})})

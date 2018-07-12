@@ -1,0 +1,216 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.loading {
+    display: inline;
+}
+
+.loading span {
+    background-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #efefef #efefef #eee #eee;
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    margin-right: 1px;
+    opacity: 0.1;
+    margin-top: 0.3em;
+    -moz-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-animation: move 1s infinite linear;
+    -webkit-animation: move 1s infinite linear;
+    animation: move 1s infinite linear;
+}
+
+.loading .l1 {
+    -moz-animation-delay: .1s;
+    -webkit-animation-delay: .1s;
+}
+
+.loading .l2 {
+    -moz-animation-delay: .2s;
+    -webkit-animation-delay: .2s;
+}
+
+.loading .l3 {
+    -moz-animation-delay: .3s;
+    -webkit-animation-delay: .3s;
+}
+
+@-moz-keyframes move{
+    0%{-moz-transform: scale(1.2);opacity:1;}
+    100%{-moz-transform: scale(0.5);opacity:0.1;}
+}
+@-webkit-keyframes move{
+    0%{-webkit-transform: scale(1.2);opacity:1;}
+    100%{-webkit-transform: scale(0.5);opacity:0.1;}
+} ​
+
+/* ALERTS */
+.alert-heading {
+      color: inherit;
+  }
+
+.alert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    line-height: 18px;
+    float:right;
+    font-size:20px;
+    font-weight:bold;
+    opacity:0.2;
+}
+
+.alert-success {
+    background-color: #DFF0D8;
+    border-color: #8CC66A;
+    color: #28481C;
+}
+
+.alert-danger,
+.alert-error {
+    background-color: #FFE9E9;
+    border-color: #B60000;
+    color: #B81213;
+}
+
+.alert-info {
+    background-color: #D9EDF7;
+    border-color: #5BBCDC;
+    color: #134158;
+}
+
+.alert-block {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.alert-block > p,
+.alert-block > ul {
+    margin-bottom: 0;
+}
+
+.alert-block p + p {
+    margin-top: 5px;
+}
+
+/* old portal */
+.alert {
+    padding: 8px 20px 8px 10px;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #f5f5f5;
+    border: 1px solid #cdcccb;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.alert [class^=icon-] {
+    margin: 0 5px 0 0;
+}
+
+.alert, .alert-heading {
+    color: #58595b;
+}
+
+.alert .close {
+    position: relative;
+    top: -2px;
+    right: -10px;
+    line-height: 18px;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #8cc66a;
+}
+
+.alert-success, .alert-success .alert-heading {
+    color: #28481c;
+}
+
+.alert-danger, .alert-error {
+    background: #ffe9e9;
+    border-color: #b60000;
+}
+
+.alert-danger, .alert-error, .alert-danger .alert-heading, .alert-error .alert-heading {
+    color: #b81213;
+}
+
+.alert-warning {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid #edc959;
+    background-color: #fcf8e3;
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #5bbcdc;
+}
+
+.alert-info, .alert-info .alert-heading {
+    color: #134158;
+}
+
+.alert-block > p, .alert-block > ul {
+    margin-bottom: 0;
+}
+
+.alert-block p + p {
+    margin-top: 5px;
+}
+
+.alert-top {
+    position: fixed;
+    top: 38px;
+    width: 100%;
+    z-index: 1060;
+    text-align: center;
+}
+
+.alert-top .alert {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 50%;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.alert-top .alert-process {
+    min-width: 120px;
+    display:inline-block;
+}
+
+.alert-top .alert:first-child {
+    margin-top: 0;
+}
+
+.alert-top .alert {
+    margin-top: 18px;
+    margin-bottom: 0;
+}

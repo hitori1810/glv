@@ -1,0 +1,38 @@
+div#field_panels {
+	margin-top:10px;
+}
+
+div.field_panel {
+	float:left;
+	min-width:200px;
+	min-height:50px;
+	border:#CCCCCC solid 1px;
+	margin-top:5px; 
+	padding:3px;
+	}
+div.mover {
+	float:left; 
+}
+div.mover div {
+	text-align:center;
+	padding:2px 10px 2px 10px;
+	border:#CCC solid 1px;
+	cursor:pointer;
+	margin:10px;
+	font-size:15px;
+	font-weight:bold;
+}
+select#module {
+	width:200px; 
+}
+#response {
+	color:red;
+}
+
+div.item {
+	padding:3px;border:#CCC solid 1px;margin:2px 1px 2px 1px;cursor:pointer;
+}
+div.item_sel {
+	padding:3px;border:#CCC solid 1px;margin:2px 1px 2px 1px;cursor:pointer;background-color:#FFCCFF;
+}
+

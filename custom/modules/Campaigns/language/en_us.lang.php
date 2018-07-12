@@ -1,0 +1,26 @@
+<?php
+// created: 2018-06-05 09:25:17
+$mod_strings = array (
+  'LBL_CONTACTS' => 'Student',
+  'LBL_LOG_ENTRIES_CONTACT_TITLE' => 'Student Created',
+  'LBL_OPPORTUNITIES' => 'Enrollment',
+  'LBL_OPPORTUNITY_SUBPANEL_TITLE' => 'Enrollment',
+  'LBL_ACCOUNTS' => 'Corporate',
+  'LBL_CAMPAIGN_ACCOUNTS_SUBPANEL_TITLE' => 'Corporate',
+  'LBL_SPONSOR_LINK' => 'Sponsor Link',
+  'LBL_OTHER_TYPE' => 'Other Type',
+  'LBL_LEAD_SOURCE' => 'Source',
+  'LBL_CAMPAIGN_CONTACT_SUBPANEL_TITLE' => 'Student',
+  'LNK_NEW_CAMPAIGN' => 'Create Campaign',
+  'LBL_MODULE_NAME' => 'Campaign',
+  'LBL_MODULE_NAME_SINGULAR' => 'Campaign',
+  'LBL_NEW_FORM_TITLE' => 'New Campaign',
+  'LNK_CAMPAIGN_LIST' => 'View Campaign',
+  'LBL_LIST_FORM_TITLE' => 'Campaign List',
+  'LBL_SEARCH_FORM_TITLE' => 'Campaign Search',
+  'LBL_LEADS' => 'Lead',
+  'LBL_PROSPECT_LIST_SUBPANEL_TITLE' => 'Marketing List',
+  'LBL_CAMPAIGN_LEAD_SUBPANEL_TITLE' => 'Lead',
+  'LBL_TOP_CAMPAIGNS' => 'Top Campaign',
+  'LBL_LOG_ENTRIES_LEAD_TITLE' => 'Lead Created',
+);

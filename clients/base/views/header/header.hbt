@@ -1,0 +1,70 @@
+{{!
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+}}
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <div class="nav-collapse">
+                <ul class="nav" id="module_list">
+                    <li class="Home"><a class="cube" href="#" rel="tooltip" title="{{str "LBL_TABGROUP_HOME"}}"></a></li>
+                    {{#each module_list}}
+                    <li class="{{this}}{{#eq this ../currentModule}} active{{/eq}}">
+                        <a href="#{{this}}">{{str "LBL_MODULE_NAME" this}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+                <ul class="nav pull-right" id="userList">
+                    <li class="divider-vertical medialarge"></li>
+                    <li class="dropdown medialarge" id="userActions">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">{{fullName}} <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="profile"><a href="#profile">{{str "LBL_PROFILE"}}</a></li>
+                            <li class="divider"></li>
+                            <li class="logout"><a href="#logout/?clear=1">{{str "LBL_LOGOUT"}}</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown" id="createList">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-plus icon-md"></i>
+                            <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            {{#each createListLabels}}
+                            <li class="{{this}}"><a href="#{{this}}/create">{{str "LNK_CREATE" this}}</a></li>
+                            {{/each}}
+                            <li class="divider mediasmall"></li>
+                            <li class="profile mediasmall"><a href="#profile">{{str "LBL_PROFILE"}}</a></li>
+                            <li class="divider mediasmall"></li>
+                            <li class="logout mediasmall"><a href="#logout/?clear=1">{{str "LBL_LOGOUT"}}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="searchForm">
+                    <form class="navbar-search pull-right" action="">
+                        <div class="control-group">
+                            <label class="control-label hide" for="appendedInput">{{str "LBL_PORTAL_SEARCH"}}</label>
+                            <div class="controls">
+                                <div class="input-append">
+                                    <input type="text" class="search-query span3" placeholder="{{str "LBL_PORTAL_SEARCH"}}" data-items="10"><div class="btn btn-inverse"><i class="icon icon-search"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.nav-collapse -->
+        </div>
+    </div>
+    <!-- /navbar-inner -->
+</div>

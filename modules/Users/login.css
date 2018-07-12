@@ -1,0 +1,315 @@
+/*********************************************************************************
+* By installing or using this file, you are confirming on behalf of the entity
+* subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+* the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+* http://www.sugarcrm.com/master-subscription-agreement
+*
+* If Company is not bound by the MSA, then by installing or using this file
+* you are agreeing unconditionally that Company will be bound by the MSA and
+* certifying that you have authority to bind Company accordingly.
+*
+* Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+********************************************************************************/
+
+.body { 
+    font-size: 12px;
+}
+
+.buttonLogin {
+    border: 1px solid #444444;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #666666;
+    font-weight: bold;
+}
+
+table.tabForm td {
+    border: none;
+}
+
+p {
+    MARGIN-TOP: 0px;
+    MARGIN-BOTTOM: 10px;
+}
+
+form {
+    margin: 0px;
+}
+
+input[type="text"], input[type="password"], textarea {
+    width: 200px !important;
+}
+
+#recaptcha_image {
+    height: 47.5px !important;
+    width: 250px !important;
+}
+
+#recaptcha_image img {
+    height: 47.5px;
+    width: 250px;
+} 	
+
+.loginBox {
+    background-color: rgba(255,255,255, 0.4);
+    padding: 30px 5px 5px 5px;
+    border-radius: 3px;
+    display: inherit;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.password {
+    padding: 5px 20px 5px 20px;
+    border: 1px solid #999;
+    border-top: 0px none;
+    background-color: #fff;
+}
+
+.password .login_more div:first-child {
+    text-align: right;
+}
+
+.password a { 
+    text-decoration: none;
+}
+
+.password a img {
+    margin-right: 5px;
+}	
+
+#forgot_password_dialog table {
+    margin-top: 10px;	
+}
+
+.dashletPanelMenu .bd .bd-center {
+    padding-top: 0px;
+}
+
+.loginBoxShadow {
+    -moz-box-shadow:0 0 10px #aaa;
+    box-shadow:0 0 10px #aaa;
+    -webkit-box-shadow:0 0 10px #aaa;
+    background-color:rgba(204,204,204,.8);
+    width:100%;
+    text-align:center;
+}
+
+.loginBoxShadow .last {
+    border-bottom-color:#999999;
+}
+
+.loginBoxLeft{
+    float:left;
+    width:46.5%;
+    height: 250px; 
+    display: table;
+    margin: 0 auto;     
+}
+
+.loginBoxLeft table{
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.loginBoxLeft table td{
+    text-align: center;
+} 
+
+.loginBoxCenter { 
+    float:left;
+    margin-left: 10px;    
+}
+
+.loginBoxRight{
+    float:right;
+    width:50%;        
+}
+
+.loginBoxTop{
+    position: relative;
+    top: -55px;
+    right: 2px;
+}
+
+.loginBoxBottom{
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;        
+}
+
+.loginBoxError{
+    /*text-align: center;*/
+}
+
+#spnBrandName{
+    font-family: verdana;
+    font-size: 29px;
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
+#lblBrandName{
+    font-family: cursive;
+    font-size: 23px;
+}
+
+.spacerVertical .mark {
+    overflow: hidden;
+    width: 1px;
+    height: 250px;
+    background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(78, 105, 162,1) 25%, rgba(78, 105, 162,1) 75%, rgba(30,87,153,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,0)), color-stop(25%,rgba(78, 105, 162,1)), color-stop(75%,rgba(78, 105, 162,1)), color-stop(100%,rgba(30,87,153,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(78, 105, 162,1) 25%,rgba(78, 105, 162,1) 75%,rgba(30,87,153,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(78, 105, 162,1) 25%,rgba(78, 105, 162,1) 75%,rgba(30,87,153,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(78, 105, 162,1) 25%,rgba(78, 105, 162,1) 75%,rgba(30,87,153,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(78, 105, 162,1) 25%,rgba(78, 105, 162,1) 75%,rgba(30,87,153,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#001e5799',GradientType=0 ); /* IE6-9 */
+} 
+
+#user_name, #user_password, #fp_user_name, #fp_user_mail, #recaptcha_response_field{
+    width: 95% !important;
+    padding: 5px 0px 5px 10px;
+    margin-top: 10px;
+}
+
+#login_language{
+    width: 99% !important;
+    padding: 5px 0px 5px 10px !important;
+    height: 35px;
+    margin-top: 10px;
+}
+
+#login_button, #generate_pwd_button{
+    width: 100% !important;
+    padding: 10px 0px 10px 0px !important;
+}
+
+#message_remember{
+    margin-top: 10px;
+    color: #e74c3c;
+    font-size: 13px;
+}
+
+#recaptcha_image{
+    margin-top: 10px;
+}
+
+/*-------MTN-----------*/
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../../custom/include/fonts/fontawesome-webfont.eot?v=4.3.0');
+    src: url('../../custom/include/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../../custom/include/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../../custom/include/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../../custom/include/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa-user, .fa-envelope, .fa-exclamation-triangle, .fa-smile-o, .fa-check-square, .fa-times, .fa-lock, .fa-map-marker, .fa-edit, .fa-pencil-square-o{
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-size: 16px;
+}
+
+.fa-user:before {
+    content: "\f007";
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+
+.fa-exclamation-triangle:before {
+    content: "\f071";
+}
+
+.fa-check-square:before {
+    content: "\f14a";
+}
+
+.fa-smile-o:before {
+    content: "\f118";
+}
+
+.fa-lock:before {
+    content: "\f023";
+}
+
+.fa-times:before {
+    content: "\f00d";
+    cursor:pointer;
+}
+
+.fa-map-marker:before {
+    content: "\f041";
+}
+
+.fa-edit:before,
+.fa-pencil-square-o:before {
+    content: "\f044";
+}
+
+.login-field-icon {
+    color: #bfc9ca;
+    position: absolute;
+    right: 5%;
+    top: 46%;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+
+.login-field:focus {
+    border-color: #4E69A2;
+}
+.login-field:focus + .login-field-icon {
+    color: #4E69A2;
+}
+
+/*-----------------------------------------Cloud------------------------------------*/
+.cloud {
+    width: 150px;
+    height: 50px;
+    background-color: #4E69A2;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 1;
+    top: -8%;
+    left: 36%;
+}
+.cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background-color: #4E69A2;
+    border-radius: 50%;
+    z-index: -1;
+}
+.cloud::after {
+    top: -30px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    border: none;
+}
+.cloud::before {
+    top: -50px;
+    right: 10px;
+    width: 90px;
+    height: 90px;
+}
+.loginBox .error{
+    font-size: 13px
+}
+
+.loginBox .button.primary{
+    background-color: #4e69a2 !important;
+    background-repeat: repeat-x !important;
+    border-color: #435a8b #3c5488 #334c83 !important;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25) !important;
+    color: #ffffff !important;
+    background-image: none !important;
+}
+
+.loginBox .button.primary:hover, .loginBox .button.primary:focus, .loginBox button.primary[selected]{
+    background-color: #5A77B5 !important;
+}
+

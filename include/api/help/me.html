@@ -1,0 +1,56 @@
+<!--
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+-->
+<div class="longHelpTitle">Provides an Current User endpoint</div>
+<div class="summary">
+<h2>Summary:</h2>
+  This endpoint returns the current user object.
+</div>
+<div class="params">
+<h2>Query Parameters:</h2>
+<table>
+  <tr><th>Param</td><th>Description</td><th>Optional</td></tr>
+  <tr><td colspan="3">This endpoint does not accept any parameters.</td></tr>
+</table>
+</div>
+<div class="input">
+<h2>Input Example:</h2>
+</div>
+<div class="output">
+  <h2>Output Example:</h2>
+<code class="codesample">
+{"current_user": {
+    "type":"user",
+    "id":"1",
+    "full_name":"Administrator",
+    "timepref":"h:ia",
+    "timezone":"America/Los_Angles",
+    "user_name":"admin"
+}}
+</code>
+  Or, for portal users:
+<code class="codesample">
+{"current_user": {
+    "type":"support_portal",
+    "id":"1234-567",
+    "user_id":"abcd-123",
+    "full_name":"Bill Williamson",
+    "timepref":"h:ia",
+    "timezone":"America/Denver",
+    "user_name":"SupportPortalApi"
+}}
+</code>
+  
+</div>

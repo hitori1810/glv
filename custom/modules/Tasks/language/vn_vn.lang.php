@@ -1,0 +1,25 @@
+<?php
+// created: 2017-09-04 16:44:40
+$mod_strings = array (
+  'LNK_NEW_TASK' => 'Tạo tác vụ',
+  'LBL_MODULE_NAME' => 'Tác vụ',
+  'LBL_MODULE_NAME_SINGULAR' => 'Tác vụ',
+  'LBL_NEW_FORM_TITLE' => ' Tạo tác vụ',
+  'LNK_TASK_LIST' => 'Xem danh sách',
+  'LNK_IMPORT_TASKS' => 'Import từ file',
+  'LBL_LIST_FORM_TITLE' => 'Danh sách Tác vụ',
+  'LBL_SEARCH_FORM_TITLE' => 'Tìm kiếm Tác vụ',
+  'LBL_CONTACT_NAME' => 'Học viên',
+  'LBL_CONTACT' => 'Học viên:',
+  'LBL_ACCOUNT' => 'Corporate',
+  'LBL_OPPORTUNITY' => 'Cơ hội bán hàng',
+  'LBL_CASE' => 'Vụ việc',
+  'LBL_LEADS' => 'HV Tiềm năng',
+  'LBL_NOTES' => 'Ghi chú',
+  'LBL_QUOTES' => 'Báo giá',
+  'LBL_LIST_MY_TASKS' => 'Tác vụ của tôi',
+  'LBL_CONTACT_ID' => 'Học viên ID:',
+  'LBL_CONTACT_PHONE' => 'Học viên Phone:',
+  'LBL_BUGS' => 'Lỗi',
+  'LBL_PROJECTS' => 'Dự án',
+);

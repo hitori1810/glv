@@ -1,0 +1,136 @@
+<?php
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+$relationships = array (
+  'c_contacts_modified_user' => 
+  array (
+    'id' => '3c9c1b1a-3807-332b-cc51-5625ad3d41f2',
+    'relationship_name' => 'c_contacts_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'C_Contacts',
+    'rhs_table' => 'c_contacts',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => NULL,
+    'lhs_subpanel' => NULL,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => true,
+  ),
+  'c_contacts_created_by' => 
+  array (
+    'id' => '3ccdd33f-72e1-1896-d645-5625ad201cbb',
+    'relationship_name' => 'c_contacts_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'C_Contacts',
+    'rhs_table' => 'c_contacts',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => NULL,
+    'lhs_subpanel' => NULL,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => true,
+  ),
+  'c_contacts_assigned_user' => 
+  array (
+    'id' => '3d9b638a-48aa-6a33-6b29-5625aded90d5',
+    'relationship_name' => 'c_contacts_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'C_Contacts',
+    'rhs_table' => 'c_contacts',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => NULL,
+    'lhs_subpanel' => NULL,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => true,
+  ),
+  'c_contacts_contacts_1' => 
+  array (
+    'id' => '9f8456da-1256-11ea-e241-5625ad12b16a',
+    'relationship_name' => 'c_contacts_contacts_1',
+    'lhs_module' => 'C_Contacts',
+    'lhs_table' => 'c_contacts',
+    'lhs_key' => 'id',
+    'rhs_module' => 'Contacts',
+    'rhs_table' => 'contacts',
+    'rhs_key' => 'id',
+    'join_table' => 'c_contacts_contacts_1_c',
+    'join_key_lhs' => 'c_contacts_contacts_1c_contacts_ida',
+    'join_key_rhs' => 'c_contacts_contacts_1contacts_idb',
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => 'default',
+    'lhs_subpanel' => NULL,
+    'from_studio' => true,
+    'is_custom' => true,
+    'relationship_only' => false,
+    'for_activities' => false,
+  ),
+  'c_contacts_leads_1' => 
+  array (
+    'rhs_label' => 'Leads',
+    'lhs_label' => 'Contacts',
+    'rhs_subpanel' => 'default',
+    'lhs_module' => 'C_Contacts',
+    'rhs_module' => 'Leads',
+    'relationship_type' => 'one-to-many',
+    'readonly' => true,
+    'deleted' => false,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => true,
+    'relationship_name' => 'c_contacts_leads_1',
+  ),
+);

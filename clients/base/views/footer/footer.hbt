@@ -1,0 +1,73 @@
+{{!
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+}}
+<footer>
+    <div class="row-fluid">
+        <div class="span3"><a href="" class="logo"{{#if logoURL}} style="background: url({{logoURL}}) 50% 50% no-repeat; "{{/if}}>SugarCRM</a></div>
+        <div class="span9">
+            <div class="btn-toolbar pull-right">
+                {{#if isAuthenticated}}
+                <div class="btn-group">
+                    <a title="{{str "LBL_ACTIVITY_VIEW_TOUR"}}" class="btn btn-invisible" id="tour"><i class="icon-road"></i> {{str "LNK_TOUR"}}</a>
+                </div>
+                <div class="btn-group">
+                    <a id="print" class="btn btn-invisible"><i class="icon-print"></i> {{str "LBL_PRINT"}}</a>
+                    <a id="top" class="btn btn-invisible"><i class="icon-arrow-up"></i> {{str "LBL_TOP"}}</a>
+                </div>
+                {{/if}}
+                {{#unless isAuthenticated}}
+                <div class="btn-group dropdown" id="languageList">
+                        <a href="javascript:void(0)" title="{{str "LBL_LANGUAGE"}}" class="btn" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i>
+                            {{str "LBL_LANGUAGE"}}</a>
+                        <ul class="dropdown-menu bottom-up">
+                            <li class="dropdown-caret right">
+                                <span class="caret-outer"></span>
+                                <span class="caret-inner"></span>
+                            </li>
+                            {{#each languageList}}
+                            <li><a data-lang-key="{{key}}" href="javascript:void(0)">{{#eq ../currentLang key}}<strong>{{value}}</strong>{{else}}{{value}}{{/eq}}</a></li>
+                            {{/each}}
+                        </ul>
+                </div>
+                {{/unless}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Tour Guide -->
+<div class="modal hide" id="systemTour">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal"><i class="icon-cog"></i></a>
+    <h3>Tour the Portal</h3>
+  </div>
+  <div class="modal-body">
+    <p>The primary actions to get things done in the portal.</p>
+  </div>
+  <div class='pointsolight'>
+  <div id="tourCube" class="tourSee"><span>Dashboard</span></div>
+  <div id="tourCreate" class="tourSee"><span>Quick create</span></div>
+  <div id="tourUser" class="tourSee"><span>User admin</span></div>
+  <div id="tourModules" class="tourSee"><span>Modules</span></div>
+  <div id="tourUSearch" class="tourSee"><span>Universal search</span></div>
+  <div id="tourSort" class="tourSee"><span>Sort columns</span></div>
+  <div id="tourRefine" class="tourSee"><span>Filter items</span></div>
+  <div id="tourAdd" class="tourSee"><span>Add item</span></div>
+  </div>
+</div>
+<style>
+    .bottom-up {top: auto; bottom: 100%; }
+</style>

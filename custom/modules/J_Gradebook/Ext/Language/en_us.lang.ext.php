@@ -1,0 +1,16 @@
+<?php 
+ //WARNING: The contents of this file are auto-generated
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_CLASS_J_GRADEBOOK_1_FROM_J_CLASS_TITLE'] = 'Class';
+$mod_strings['LBL_J_CLASS_J_GRADEBOOK_1_FROM_J_GRADEBOOK_TITLE_ID'] = 'Class ID';
+$mod_strings['LBL_C_TEACHERS_J_GRADEBOOK_1_FROM_C_TEACHERS_TITLE'] = 'Teacher';
+$mod_strings['LBL_C_TEACHERS_J_GRADEBOOK_1_FROM_J_GRADEBOOK_TITLE_ID'] = 'Teachers ID';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_CLASS_J_GRADEBOOK_1_FROM_J_CLASS_TITLE'] = 'Class';
+$mod_strings['LBL_J_CLASS_J_GRADEBOOK_1_FROM_J_GRADEBOOK_TITLE_ID'] = 'Class ID';
+
+?>

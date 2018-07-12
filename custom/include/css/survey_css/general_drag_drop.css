@@ -1,0 +1,470 @@
+/**
+ *
+ * LICENSE: The contents of this file are subject to the license agreement ("License") which is included
+ * in the installation package (LICENSE.txt). By installing or using this file, you have unconditionally
+ * agreed to the terms and conditions of the License, and you may not use this file except in compliance
+ * with the License.
+ *
+ * @author     Original Author Biztech Co.
+ */
+#left-nav{
+    width: 28%;
+    display: inline-block;
+    vertical-align: top;
+}
+.component{
+    margin-bottom: 5px;
+    padding: 10px;
+    background: #c5c5c5;
+}
+img.zoom{
+    visibility: hidden;
+    scale :0;
+    opacity: 0;
+    position: absolute;
+    width: 403px;
+    height: auto;
+    left: -430px;
+    /*margin-top: 0px;*/
+    top: -10px;
+    //border: 7px solid #fff;
+    border-radius: 5px;
+    transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+}
+.accordion-inner .theme_selection .SurveyTheme > label:hover img.zoom{
+    visibility: visible;
+    scale:1;
+    opacity: 1;
+}
+.accordion-inner .theme_selection .SurveyTheme {
+    width: 24%;
+    padding: 2px;
+    margin: 0 !important;
+    float: left;
+}
+
+#right-nav .ui-sortable .survey-body{
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0;
+}
+
+#right-nav .ui-sortable .survey-body .right-close-add-div{
+    margin-top: -29px;
+    margin-bottom: 30px;
+}
+
+#right-nav .ui-sortable .survey-body .right-close-add-div a{
+    display: inline-block;
+    border: 1px solid #d5d5d5;
+    border-bottom: 0;
+}
+#right-nav .ui-sortable .survey-body .right-close-add-div a i{
+    font-size: 14px;
+    margin: 5px 7px !important;
+}
+#right-nav .ui-sortable .survey-body .right-close-add-div a:first-child{
+    margin-right: -3px;
+    border-right: 0;
+}
+#right-nav .ui-sortable .survey-body .right-close-add-div a:last-child{
+    margin-right: -4px;
+}
+
+
+.accordion-inner .theme_selection .SurveyTheme > label{
+    padding:0px;
+    color:#fff;
+    height: 70px;
+    cursor: pointer;
+    width: auto;
+    max-width: 100%;
+    background-size: cover !important;
+    /*position: relative;*/
+    /*border: 1px solid #e1e1e1;*/
+}
+.accordion-inner{
+   background-color: #fff;
+   border-bottom:1px solid #ccc;
+   padding: 5px;
+}
+.accordion .accordion-heading{
+    border-bottom : 1px solid #ccc;
+    height:60px;
+}
+.theme_selection{
+    margin-top:5px;
+    display: inline-block;
+    position: relative;
+}
+.SurveyTheme .theme-radio,
+.SurveyTheme .theme-label{
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+}
+.SurveyTheme label{
+
+    border-radius:3px;
+    padding : 3px;
+}
+.survey_theme_image{
+ display: inline-block;
+}
+#is_progress{
+    cursor: pointer;
+}
+
+.row{
+    margin: 10px 10px;
+}
+.section{
+    padding: 8px;
+    border: 1px solid #d5d5d5;
+    background-color: #f6f6f6;
+    margin: 10px 5px;
+    width: 97.5%;
+}
+.other_option_div {
+    padding-left: 0px;
+    margin-left: 15px;
+}
+#right-nav{
+    width: 70%;
+    display: inline-block;
+    height: auto;
+    margin-right: 20px;
+}
+.close_btn {
+    cursor: pointer;
+}
+ .Textbox, .CommentTextbox, .MultiSelectList, .RadioButton, .Checkbox, .DrodownList, .ContactInformation, .Rating , .Matrix,.Scale,.Image,.Video,.Date {
+    border: 2px solid #4e8ccf !important;
+  //  border-radius: 5px;
+    padding-left: 10px;
+    padding: 5px;
+    margin: 5px;
+    background: #f6f6f6;
+    width:42%;
+    cursor: move;
+}
+.new-page{
+    border: 2px solid #4e8ccf !important;
+    //  border-radius: 5px;
+    padding-left: 10px;
+    padding: 5px;
+    margin: 5px;
+    background: #f6f6f6;
+    cursor: move;
+}
+.add-page-title{
+    //border: 1px solid black;
+    display:block;
+}
+.btn_icon{
+    background-color: #4e8ccf;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: top;
+ //   border-radius: 3px;
+}
+.btn_icon i {
+    color: #fff;
+    margin: 8px;
+    font-size: 16px;
+}
+.question{
+    border: 1px solid #d5d5d5;
+   // border-radius: 10px;
+    min-height: 100px;
+    margin: 5px;
+    padding: 3px;
+    font-size: 11px;
+    //color: #747474;
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+}
+input.requiredfields{
+       margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 42px;
+}
+.contact-info.first{width: 85%;padding: 0 0 10px 0;display: inline-block;}
+.contact-info{width: 85%;float: right;}
+.contact-info > span{padding: 0 10px 0 0; width: 20%;display: inline-block;box-sizing:border-box;}
+.contact-info > span > input{ margin: 0 4px 0 0;}
+
+
+.data-page{
+    // border: 1px solid black;
+    padding: 10px;
+    height: 250px;
+    margin: 10px;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+    //max-height:750px;
+    overflow-y:auto;
+    // margin: 100px;
+
+}
+.add-page-title{
+    /*width: 80%;*/
+    overflow-y: auto;
+    /*border-radius: 6px;*/
+    padding:10px;
+    height: auto;
+    min-height: 110px;
+    margin: 10px auto;
+    border: 1px solid #4e8ccf !important;
+}
+.add-pages{
+    // border: 1px solid black;
+    max-height: auto;
+    min-height: 150px;
+    width: 100%;
+    //border-radius: 15px;
+}
+.SurveyPage{
+    border: 2px dashed #858585;
+    height: 100px;
+    padding: 0;
+    -webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+    position: relative;
+    margin-bottom: 0 !important;
+    background: #fff;
+    color:#858585;
+    margin-top:10px;
+}
+.add-survey-page{
+    margin-top: 19px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.add_question{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.add-que{
+    border: 1px dashed #858585;
+    padding: 0;
+    -webkit-box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+    position: relative;
+    margin-bottom: 0 !important;
+    background: #fff;
+    color:#858585;
+    padding:10px 0 0;
+    margin-top:10px;
+}
+.answer_div{
+    padding-left: 0;
+    margin-left: 0;
+
+}
+
+.error-msg {
+    color: #ff0000;
+    margin-top: 8px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.placeholder-pages{
+    border: 3px dashed #747474;
+    min-height: 250px;
+}
+
+.placeholder-question{
+     border: 3px dashed #747474;
+     min-height: 100px;
+}
+/*.upgraded-survey-layout .survey-body .question-section .column{
+    margin-left: 570px;
+    margin-top: -93px;
+}
+.upgraded-survey-layout .survey-body .question-section .column [type=text]{
+    width:65%;
+}*/
+.upgraded-survey-layout{}
+.upgraded-survey-layout .survey-body .question-section {color: #000!important;}
+.upgraded-survey-layout .row{margin: 10px 5px;padding: 8px;width: 97.8%;display: inline-block;vertical-align: top;}
+.upgraded-survey-layout .row label{width: 8%!important;display: inline-block !important;vertical-align: middle;}
+.upgraded-survey-layout .row input{padding: 5px;width: 87%!important;display: inline-block; }
+.upgraded-survey-layout .row a{margin-left:0!important;width: 2.5%;display: inline-block;text-align: right;vertical-align: top;}/*
+.upgraded-survey-layout #left-nav{width: 17%;}*/
+.upgraded-survey-layout  #right-nav .survey-body .question-section i{color: #fff;padding: 5px;font-size: 14px;background-color: #4e8ccf; display: inline-block;vertical-align: middle;margin-right: 8px;}
+.upgraded-survey-layout .survey-body .question-section ,
+.upgraded-survey-layout .survey-body .answer-section{margin: 0;padding-left: 15px;}
+.upgraded-survey-layout .survey-body .question-section li ,
+.upgraded-survey-layout .survey-body  li{padding: 5px 0;}
+.upgraded-survey-layout .survey-body [type=text]{width: 30%;padding: 5px;}
+.survey-body select {width: 31%;padding: 5px;}
+.upgraded-survey-layout .survey-body .answer-section li{margin: 0;}
+.upgraded-survey-layout .survey-body .answer-section{padding-left: 0;}
+.detail .panelContainer .survey-view-section{width: 100% !important;}
+.survey-view-section table.panel-inner td{padding: 10px; border-bottom : 1px solid #cbdae6;margin-bottom: 10px;}
+/*.survey-view-section table.panel-inner tr.first td table.panel-sub tbody tr{width: 50%;display: inline-block;}
+.survey-view-section table.panel-inner tr.first td table.panel-sub td{padding: 10px;width: 25%;display: inline-block;}*/
+.survey-view-section table.panel-inner tr.first td table.panel-sub td{padding: 10px;}
+.survey-view-section table.panel-inner tr.first td {padding: 10px 0 0 0;}
+.theme-option{background: none!important;padding: 0;}
+label.left-label{width: 15%;display: inline-block;color: #000;}
+ ul li {list-style-type: none;}
+a.advance_tab{
+    background: #e9e9e9;
+    border: 1px solid #DFDFDF;
+    margin: 0 3px;
+    color: #000 !important;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    text-decoration: none !important;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+}
+
+li.matrix-body-row{
+    display: inline-block;
+    width: 100%;
+}
+.answer-section.matrix-row,
+.answer-section.matrix-column{
+    width: 55%;
+    float: left;
+}
+.answer-section.matrix-column{
+    width: 45%;
+}
+.answer-section.matrix-row li .left-label{
+    width: 27%;
+}
+.answer-section.matrix-column li .left-label{
+    width: 25%;
+}
+.answer-section.matrix-row span > input,
+.answer-section.matrix-column span > input{
+    width: 55% !important;
+}
+
+a.advance_tab:hover, a.active {
+    cursor: pointer;
+    background: #fff;
+    color: #000 !important;
+    position: relative;
+    top: 1px;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+}
+/*#left-nav .component{
+    width: 100%;
+    box-sizing:border-box;
+}*/
+#left-nav .component a{
+    width: 42% !important;
+    margin: 0;
+    margin-right: 2%;
+}
+#left-nav .component .tab-right{
+    margin-right: 0;
+}
+.logic-data-table th{
+    text-align: left;
+}
+/*.edit tr td table tr td{
+    padding-left: 7px !important;
+}*/
+.logic-data-table .ms-search,
+.logic-data-table .ms-search input{
+    width: 100% !important;
+}
+.logic-data-table .logic-table-first-column{
+    width: 150px;
+    max-width: 150px !important;
+    word-wrap: break-word;
+}
+.logic-data-table .logic-page-select{
+    width: 302px !important;
+    max-width: 302px;
+    cursor: pointer;
+}
+.logic-data-table .logic-url-box{
+    width: 291px !important;
+    max-width: 291px;
+}
+.logic-data-table .logic-page-select option{
+    word-wrap: break-word;
+}
+.warning{
+    color: #000000;
+    padding: 10px;
+    background: #ffc04d;
+}
+.other_option{
+    color: #000000;
+    padding: 10px;
+    background: #ddd;
+}
+.upgraded-survey-layout .section_title [type=text]{width: 30%;padding: 5px;}
+@media only screen and (min-width: 0) and (max-width: 1280px) {
+
+    .component{
+        margin-bottom: 5px;
+        padding: 7px 5px 7px 7px;
+        background: #c5c5c5;
+    }
+    a.advance_tab{
+        font-size: 12px;
+        padding: 5px;
+    }
+    .file_upload{
+        margin-left: 80px;
+    }
+}
+
+/*// Create/Edit Survey theme responsive css*/
+@media only screen and (min-width:1120px) and (max-width: 1460px){
+
+    .accordion-inner .theme_selection .SurveyTheme{
+        width: 31%;
+    }
+    .SurveyTheme .theme-label{font-size: 11px;margin-left: -4px;}
+    img.zoom{top: 0px;width: 358px;left: -380px;}
+
+    #right-nav{margin-right: 10px;}
+    #left-nav{width: 27%;}
+}
+@media only screen and (min-width:1024px) and (max-width: 1119px){
+
+     .accordion-inner .theme_selection .SurveyTheme{
+        width: 48%;
+    }
+    img.zoom{top: 0;width: 300px;left: -318px;}
+    #right-nav{margin-right: 10px;}
+
+}
+@media only screen and (min-width:769px) and (max-width: 1023px){
+    .accordion-inner .theme_selection .SurveyTheme{
+        width: 48%;
+    }
+    img.zoom{top: 850px;width: 300px;left: 15px;}
+}
+
+@media only screen and (min-width:0) and (max-width: 768px){
+    #right-nav,
+    #left-nav{width: 100%;}
+}

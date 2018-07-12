@@ -1,0 +1,73 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+
+README.txt for silentupgrade.php
+SugarCRM Inc.
+Version 6.4.4
+
+What is silentupgrade.php?
+---------------------------
+
+The silentupgrade.php is a stand-alone PHP script that can be run from the command prompt for upgrading a Sugar instance.
+SugarCRM comes with built-in Upgrade Wizard as part of the application that you invoke through a browser.  The Silent Upgrader is executed at the
+commmand line on the server where the Sugar instance is installed.
+
+Why is silentupgrade.php useful for Upgrades?
+------------------------------------------------------
+
+Sugar upgrades can potentially require resources that are sometimes beyond the Web execution environment settings.
+Using the Silent Upgrader enables you to avoid some of the limitations that the Web application environment may have
+that prevent the Upgrade Wizard from completing the upgrade.  The upload size limit (by PHP and sometimes even by Web server),
+the CGI (or equivalent) timeout limit, and the MySQL (or equivalent) session timeout limit are some of the challenges people run into when upgrading.  The Silent Upgrader either avoids the limitations or better controls the settings in its stand-alone
+execution environment.
+
+Note: After upgrading, you will need to rebuild the relationship metadata. To do this, log in as the administrator. On the Administration Home page, select the Repair option in the Systems sub-panel and click Rebuild Relationships
+
+How do you run silentupgrade.php?
+---------------------------------
+
+To execute the silentupgrade.php script, you need to supply the three parameters, as described in the Arguments section below.
+
+
+Usage: php -f silentUpgrade.php [upgradeZipFile] [logFile] [pathToSugarInstance] [adminUser]
+
+Arguments:
+
+    upgradeZipFile      Full path to the upgrade zip file.
+                        Such as SugarCE-Upgrade-6.3.X-to-6.4.4.zip
+
+    logFile             Full path to an alternate log file.
+
+    pathToSugarInstance Full path to the instance being upgraded.
+                        
+    adminUser           A valid admin user name 
+
+Upgrading the Sugar Database Schema:
+-------------------------------------
+The Silent Upgrader will automatically replace the current database schema with the 6.4.4 schema.
+
+
+Compatibility matrix for the Silent Upgrader:
+----------------------------------------------
+  PHP  versions     			:  5.2,5.3
+  Databases              		:  MySQL, MSSQL, Oracle, DB2
+  Operating systems    			:  Windows, Linux, Mac, IBM i
+  Upgrade from Sugar Instances      :  6.3.x, and 6.4.x
+
+You can also view the compatibility matrix online at:
+http://www.sugarcrm.com/crm/products/supported-platforms/6.4.x
+
+Note: The silentUpgrade.php script creates new files for the user who is running it. For example, for
+the root user it create files as user/group root. Because Apache cannot read this, you must ensure that
+the Web server user has the permissions to read and write the script.

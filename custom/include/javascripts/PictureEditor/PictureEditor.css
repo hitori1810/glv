@@ -1,0 +1,41 @@
+div.pictureDialog{
+    position: absolute;
+    z-index: 100000;
+    width: 700px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+    box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+    padding: 10px;
+    display: none;
+}
+
+div.pictureDialog div.existingPhotoList{
+    height: 100px;
+    overflow: auto;
+}
+
+div.pictureDialog div.pictureContainer{
+    padding: 0;
+    margin: auto;
+    text-align: center !important;
+}
+
+div.pictureDialog img.existingPhoto{
+    width: 100px;
+}
+
+div.pictureDialog img.editorPreview{
+    width: 200px;
+}
+
+div.imagePreview {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+div.imagePreview img {
+    position: absolute;
+}

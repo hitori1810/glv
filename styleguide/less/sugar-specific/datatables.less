@@ -1,0 +1,40 @@
+table.table.dataTable td.details {
+    padding: 0px;
+
+    .extend {
+        background-color: @grayLight;
+        text-shadow: none;
+
+        article {
+            color: @grayDark;
+            date {
+                color:  @gray;
+            }
+        }
+
+        article:first-child {
+            .box-shadow(~"inset 0 4px 6px rgba(0,0,0,.2)");
+        }
+
+        article:nth-child(even), article:nth-child(odd) {
+            border-top: 1px solid @grayLighter;
+            border-bottom-color: @gray;
+
+        }
+
+    }
+}
+
+table.table.dataTable td.highlighted {
+     background-color: @infoBackground;
+}
+.dataTables_filter {display: none;}
+.dataTables_filter input {width: 100%;}
+
+.morecol {
+  text-align: center !important;
+  padding: 8px 23px !important;
+}
+.morecol .dropdown-menu {
+  text-align: left !important;
+}

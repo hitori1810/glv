@@ -1,0 +1,6 @@
+<?php
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_SCHOOL_LEADS_1_FROM_LEADS_TITLE'] = 'Leads';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_L_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE'] = 'School';
+$mod_strings['LBL_J_SCHOOL_J_SCHOOL_1_FROM_J_SCHOOL_R_TITLE_ID'] = 'J_School ID';

@@ -1,0 +1,20 @@
+.atable{
+    border-collapse:collapse;
+    border:1px solid #AAA;
+    margin-left:10px;
+}
+.atable th{
+    border:1px solid #AAF;
+    background:#BFBFFF;
+    font-weight:bold;
+}
+.atable td{
+    padding:4px;
+    border:1px solid #AAF;
+}
+.oddRow{
+    background:#FFFFFF;
+}
+.evenRow{
+    background:#DFDFFF;
+}

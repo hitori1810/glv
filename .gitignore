@@ -1,0 +1,17 @@
+/cache
+/config.php
+/*.log
+*.zip
+index.php
+.idea
+upload
+/.htaccess
+/uploadImage
+/custom/uploads/ExportStudent
+/custom/uploads/imagesResize
+/custom/uploads/InvoiceExcel
+/custom/uploads/pdf
+/custom/uploads/ReportAttendance
+/custom/uploads/exportExcel
+/custom/history
+/custom/modulebuilder

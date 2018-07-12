@@ -1,0 +1,59 @@
+<!--
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+-->
+<div class="longHelpTitle">Provides an OAuth 2.0 compliant token endpoint</div>
+<div class="summary">
+<h2>Summary:</h2>
+  This endpoint provides the token portion of the OAuth 2.0 specification. Currently the only supported grant types are "password" and "refresh_token". The client_id of "sugar" will automatically create an OAuth Key in the system and can be used for "password" authentication. The client_id of "support_portal" will create an OAuth Key if the portal system is enabled and will allow for portal authentication. Other client_id's can be created by the administrator in the OAuthKeys section in the Administration section and can be used in the future for additional grant types, if the client secret is filled in, it will be checked to validate use of the client id.
+</div>
+<div class="params">
+<h2>Query Parameters:</h2>
+<table>
+  <tr><th>Param</td><th>Description</td><th>Optional</td></tr>
+  <tr><td colspan="3">This endpoint does not accept any parameters.</td></tr>
+</table>
+</div>
+<div class="input">
+<h2>Input Example:</h2>
+<code class="codesample">
+<b>For "password" grant types:</b>
+{
+    "grant_type":"password",
+    "username":"bwayne",
+    "password":"i_am_batman",
+    "client_id":"sugar",
+    "client_secret":"",
+}
+<b>For "refresh_token" grant types:</b>
+{
+    "grant_type":"refresh_token",
+    "refresh_token":"abc123",
+    "client_id":"sugar",
+    "client_secret":"",
+}
+</code>
+</div>
+<div class="output">
+  <h2>Output Example:</h2>
+<code class="codesample">
+{
+    "access_token":"993de20f-43d4-fbf7-8fe9-4fc6a6a7bb4b",
+    "expires_in":3600,
+    "token_type":"bearer",
+    "scope":null,
+    "refresh_token":"a39a7c6d-7276-fcf0-da64-4fc6a6976a10"
+}
+</code>
+</div>

@@ -1,0 +1,147 @@
+@-moz-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@-o-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@keyframes rotate-loading {
+    0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+
+@-moz-keyframes loading-text-opacity {
+    0%  {opacity: 0}
+20% {opacity: 0}
+50% {opacity: 1}
+100%{opacity: 0}
+}
+
+@-o-keyframes loading-text-opacity {
+    0%  {opacity: 0}
+20% {opacity: 0}
+50% {opacity: 1}
+100%{opacity: 0}
+}
+
+@-webkit-keyframes loading-text-opacity {
+    0%  {opacity: 0}
+20% {opacity: 0}
+50% {opacity: 1}
+100%{opacity: 0}
+}
+
+@keyframes loading-text-opacity {
+    0%  {opacity: 0}
+20% {opacity: 0}
+50% {opacity: 1}
+100%{opacity: 0}
+}
+
+#spinner {
+	display: none;
+}
+
+#spinner #spinner-background{
+    opacity: 0.5;
+    visibility: visible;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100000;
+    background-color: black;
+}
+
+#slide-wrapper {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    overflow: auto;
+    z-index: 100001;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    display: block;
+}
+
+#slide-wrapper #slide {
+    opacity: 1;
+    visibility: visible;
+    display: inline-block;
+    outline: none;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+}
+
+#slide #loading-container, #loading-container #loading {
+    height: 100px;
+    position: relative;
+    width: 100px;
+    border-radius: 100%;
+}
+
+#slide #loading-container { 
+	margin: 40px auto; 
+}
+
+#loading-container #loading {
+    border: 2px solid transparent;
+    border-color: transparent #fff transparent #FFF;
+    -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -moz-transform-origin: 50% 50%;
+    -o-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -o-transform-origin: 50% 50%;
+    -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+    -webkit-transform-origin: 50% 50%;
+    animation: rotate-loading 1.5s linear 0s infinite normal;
+    transform-origin: 50% 50%;
+}
+
+#loading-container:hover #loading {
+    border-color: transparent #E45635 transparent #E45635;
+}
+
+#loading-container:hover #loading, #loading-container #loading {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#loading-container #message {
+    -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -o-animation: loading-text-opacity 2s linear 0s infinite normal;
+    -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
+    animation: loading-text-opacity 2s linear 0s infinite normal;
+    color: #ffffff;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 40px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 100px;
+}
+
+#slide-wrapper #align  {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}

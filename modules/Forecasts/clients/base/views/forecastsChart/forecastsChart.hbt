@@ -1,0 +1,47 @@
+{{!
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+}}
+<div class="btn-toolbar pull-right">
+    <form class="dropdown form-horizontal btn-group" id="forecastsChartDisplayOptions">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle btn btn-mini btn-invisible"><span class="icon-cog"></span></a>
+        <ul class="dropdown-menu left carettop" id="chartDisplayOptions">
+            <div class="datasetOptions">
+            {{#eachOptions chartDataSet}}
+            <li><a href="#"><label data-set="{{this.key}}" class="radio{{#eq this.key ../defaultDataset}} checked{{/eq}}"><i class="icon-ok"></i>&nbsp;{{this.value}}</label></a></li>
+            {{/eachOptions}}
+            </div>
+            {{#if chartGroupByOptions}}
+            <div class="groupByOptions">
+            <li class="divider"></li>
+            {{#eachOptions chartGroupByOptions}}
+            <li><a href="#"><label data-set="{{this.key}}" class="radio{{#eq this.key ../defaultGroupBy}} checked{{/eq}}"><i class="icon-ok"></i>&nbsp;{{this.value}}</label></a></li>
+            {{/eachOptions}}
+            </div>
+            {{/if}}
+        </ul>
+    </form>
+</div>
+<h4>{{str_format "LBL_CHART_FORECAST_FOR" "Forecasts" timeperiod_label}}</h4>
+<div class="tcenter">
+
+    <div id="chart" class="tcenter">
+        <div class="chartContainer">
+            <div id="sbdb620e51-8350-c596-06d1-4f866bfcfd5b" class="scrollBars">
+                <div id="legenddb620e51-8350-c596-06d1-4f866bfcfd5b" class="legend"></div>
+                <div id="db620e51-8350-c596-06d1-4f866bfcfd5b" class="chartCanvas" style="width: 99%; height: 300px;"></div>
+            </div>
+        </div>
+    </div>
+</div>

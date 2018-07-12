@@ -1,0 +1,160 @@
+/**
+ * 
+ * LICENSE: The contents of this file are subject to the license agreement ("License") which is included
+ * in the installation package (LICENSE.txt). By installing or using this file, you have unconditionally
+ * agreed to the terms and conditions of the License, and you may not use this file except in compliance
+ * with the License.
+ *
+ * @author     Original Author Biztech Co.
+ */
+#main { width: 1170px !important; margin: 0 auto;}
+
+table { border-collapse: collapse; border-spacing: 0;}
+.report_table_title { background: #ffffff; padding: 0px 10px 0 20px; border-bottom: 1px solid #ddd; margin-bottom: 20px;}
+
+a.report_title { background: #EEEEEE; border: 1px solid #DFDFDF; border-bottom: none; margin: 0 3px; color: #747474 !important; display: inline-block; font-size: 14px; font-weight: bold; padding: 8px;text-decoration: none !important; text-transform: uppercase; display: inline-block; position: relative; top: 1px; cursor: pointer;}
+
+a.report_title:hover,
+a.report_title.active { background: #fff; color: #000 !important; position: relative; top: 1px; border: 1px solid #ddd; border-bottom: 1px solid #fff;cursor: pointer;}
+
+.report-tab-content { background: #fff; padding: 0;}
+.respond_con { margin-bottom: 10px}
+.respond_time { margin-left: 10px}
+.respond_ans { margin-left: 10px}
+
+.report_question_table { width: 100%; margin-bottom: 20px;}
+.report_question_table:last-child { margin-bottom: 0px}
+.report_question_table tr { background: #fff}
+.report_question_table tr.question { background: #e9e9e9}
+.report_question_table tr.question td { font-weight: bold; color: #333;}
+.report_question_table .thead { background: #f8f8f8}
+.report_question_table .thead th { font-size: 14px}
+.report_question_table td,
+.report_question_table th { border: 1px solid #dddddd; color: #444444; font-size: 13px; padding: 8px; text-align: left; text-shadow: 1px 1px #ffffff;}
+.report_question_table td.report-question-inner { padding: 0}
+
+.report-question-inner table { width: 100%; border: none;}
+.report-question-inner table td:last-child { border-right: none}
+.report-question-inner table tr:first-child td { border: none}
+
+.select-que { background: #f4f4f4; border: 1px solid #dddddd; display: inline-block; margin-bottom: 20px; padding: 1%; width: 98%;}
+.select-que select { border: 1px solid #dddddd; font-size: 13px; padding: 5px 0; width: 250px;}
+
+.que-rwo { border-bottom: 1px solid #eeeeee; display: inline-block; margin:15px 0; padding-bottom: 5px; width: 94%;}
+.que-rwo p { display: inline-block; font-size: 13px; margin-bottom: 5px; width: 100%;}
+.que-rwo p label,
+.que-rwo span label { background: #F6F6F6; border-radius: 3px; display: inline-block; font-size: 12px; font-weight: bold; margin-right: 5px; padding: 3px 5px; width: 51px;}
+.que-rwo:last-child { border-bottom: medium none; margin-bottom: 0px; padding-bottom: 0px;}
+
+.report_header { border-bottom: 1px solid #dddddd; display: inline-block; font-size: 15px; font-weight: bold; margin-bottom: 20px; margin-top: 10px; padding-bottom: 10px; text-align: center; width: 100%;}
+
+.survey-report-title { background: #c9dfec; padding: 8px 10px; display: inline-block; width: 99%;}
+.survey-report-title .f-left { float: left}
+.survey-report-title .f-right { float: right}
+.survey-report-title .f-left label { color: #0d0d0d; display: inline-block; font-size: 14px; margin-right: 10px; padding-top: 5px; text-transform: uppercase;}
+.survey-report-title .back-to-survey{ border: medium none; color: #333333; font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 12px; height: 30px; line-height: 30px; margin-left: 10px; padding: 8px; text-decoration: none; text-transform: uppercase;}
+.survey-report-title .back-to-survey:hover{ border: medium none; color: #333333; font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 12px; height: 30px; line-height: 30px; margin-left: 10px; padding: 8px; text-decoration: none; text-transform: uppercase; background-color: #4e8ccf; }
+.survey-form-body { width: 98%; padding: 15px; border: 1px solid #ddd;}
+
+.report_question_table tr.respond_con th:first-child { border-left: medium none ;  background: #f5f5f5;  border-right:1px solid #dedede; color: #555555; }
+.report_question_table tr.respond_con:first-child th { border-top: medium none}
+
+.report_question_table tr.respond_con:last-child th,
+.report_question_table tr.respond_con:last-child td { border-bottom: 1px solid #ddd;}
+
+.report_question_table tr.respond_con td,
+.report_question_table tr.respond_con th { border:none;}
+
+.report_question_table tr.total {background: #f5f5f5;  font-weight: bold;}
+
+.report-tab-content .search-block > input#name { height: 22px; width: 24%; }
+
+.report-tab-content .search-block select { height: 26px; width: 24%; }
+    
+/*.report-tab-content .search-block input#Search, 
+.report-tab-content .search-block input#Clear, 
+.report-tab-content .search-block input#Export { background: #508dd0 none repeat scroll 0 0; color: #fff; height: 24px; line-height: 16px; padding: 2px 4px; vertical-align: top;font-weight: bold }*/
+
+
+.two-col-table { padding:0 !important;}
+.two-col-table table {  
+    border: 1px solid #dddddd;
+    margin: 0.5%;
+    padding: 0;
+    width: 48.5%;
+    display: inline-block;
+    vertical-align: top;
+}
+.two-col-table table th { width:30%;}
+
+.report-tab-content .search-block{margin-bottom: 20px;}
+.individual_report_table { width: 100%; margin-bottom: 20px;}
+.individual_report_table:last-child { margin-bottom: 0px}
+.individual_report_table tr { background: #fff}
+/*.individual_report_table tr.question { background: #e9e9e9}
+.individual_report_table tr.question td { font-weight: bold; color: #333;}*/
+.individual_report_table .thead { background: #f8f8f8}
+.individual_report_table .thead th { font-size: 14px}
+.individual_report_table td,
+.individual_report_table th { border: 1px solid #dddddd; color: #444444; font-size: 13px; padding: 8px; text-align: left; text-shadow: 1px 1px #ffffff;}
+.individual_report_table td.report-question-inner { padding: 0}
+#indivisual_report_main_div #individual{font-size: 14px; text-align: center; padding-top: 20px;}
+#indivisual_report h2.title{ background: #508dd0 none repeat scroll 0 0; color: #fff; padding: 10px 10px 10px 20px;}
+.report_header span{float: right;}
+
+/*
+Pop up styles
+*/
+
+#backgroundpopup {background:none repeat scroll 0 0 #000000; opacity: .25;z-index: 19;display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;}
+#indivisual_report_main_div{width: 700px;background: #F6F6F6;top: 15%;left: 26%;position: fixed;z-index: 9999;min-height: 15%;min-width: 30%;box-shadow: 0 0 10px 1px #424142;-moz-box-shadow: 0 0 10px 1px #424142;-webkit-box-shadow: 0 0 10px 1px #424142;}
+#indivisual_report_main_div .close_link{position: absolute;top: -25px;right: -25px;width: 45px;height: 45px;background: transparent url('../../images/close.png') -40px 0px;cursor: pointer;display: inline;}
+.cursor{cursor: pointer;}
+
+.rating-block{margin-bottom: 10px; display: inline-block; vertical-align: middle; width: 100%;}
+.rating-bar.ui-progressbar.ui-widget.ui-widget-content.ui-corner-all { display: inline-block; vertical-align: middle; width: 90%; border-radius: 1px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset, 0 0 0 1px rgba(0, 0, 0, 0.02) inset; height: 30px;margin-top: 0 !important;}
+
+.rating{display: inline-block; vertical-align: middle; width: 5%;  font-size: 14px;}
+.rating-count{display: inline-block; vertical-align: middle; width: 3%; font-size: 14px; padding-left: 1%;margin-top: 0 !important;}
+.ui-widget-header { background: #f4b30a url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50%; border: 1px solid #d6d6d6;}
+.ui-widget-content {border: 1px solid #d6d6d6;}
+.total-rating{margin: 20px 0;}
+.total-rating .title{font-size: 16px;}
+#indivisual_report .middle-content{max-height: 350px; overflow: auto; padding: 10px 1%;}
+#indivisual_report .send-receive-time { background: #e4f0fc none repeat scroll 0 0; border-bottom: 1px solid #508dd0; font-size: 14px; padding: 10px 20px; }
+#indivisual_report .send-receive-time .send-date,
+#indivisual_report .send-receive-time .receive-date{font-size: 14px; margin-bottom: 5px;}
+#indivisual_report .send-receive-time .send-date label { float: left; min-width: 158px; }
+.report_title{
+     color: #000;   
+}
+.que-rwo table,.que-rwo th,.que-rwo td {
+   border: 1px solid #808080;
+}
+#question{
+    text-align: center;
+    padding-top: 15px;
+    height: 30px;
+    background-color: #ddd;
+    color:red;
+}
+
+.report_answer_table {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+.answer_skipp,
+.btm-answer-label{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+.btm-answer-label{
+    margin: 0;
+}
+.multi_report_table{
+    margin-left: 10px;
+}

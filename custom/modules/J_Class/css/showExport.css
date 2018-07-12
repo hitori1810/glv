@@ -1,0 +1,19 @@
+#change_template {
+    margin-bottom: 30px;
+}
+.studentList {
+    width: 680px;
+    background-color: #fff;
+}
+
+.studentList tr {
+    vertical-align:top;
+}
+
+.studentList th {
+    text-align: left;
+}
+
+.studentName {
+    font-weight: bold;
+}

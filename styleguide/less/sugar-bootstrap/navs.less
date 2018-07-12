@@ -1,0 +1,87 @@
+/*sugar mods*/
+
+//These changes are an override of bootstrap native colors
+.nav > li > a:hover {
+  background-color: @grayLight;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid @grayLight;
+}
+
+// Actual tabs (as links)
+.nav-tabs > li > a {
+  &:hover {
+    border-color: @grayLight @grayLight @grayLight;
+  }
+}
+
+// Active state, and it's :hover to override normal :hover
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  border: 1px solid @grayLight;
+}
+
+.nav-tabs.nav-stacked > li > a {
+  border: 1px solid @grayLight;
+}
+
+.nav-tabs.nav-stacked > li > a:hover {
+  border-color: @grayLight;
+}
+
+// Make carets use linkColor to start
+.nav-tabs .dropdown-toggle .caret,
+.nav-pills .dropdown-toggle .caret {
+  border-top-color: @gray;
+  border-bottom-color: @gray;
+}
+
+.tabs-below > .nav-tabs {
+  border-top: 1px solid @grayLight;
+}
+.tabs-below > .nav-tabs > li > a {
+  &:hover {
+    border-top-color: @grayLight;
+  }
+}
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover {
+  border-color: transparent @grayLight @grayLight @grayLight;
+}
+
+// Tabs on the left
+.tabs-left > .nav-tabs {
+  border-right: 1px solid @grayLight;
+}
+.tabs-left > .nav-tabs > li > a:hover {
+  border-color: @grayLight @grayLight @grayLight @grayLight;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover {
+  border-color: @grayLight transparent @grayLight @grayLight;
+}
+
+// Tabs on the right
+.tabs-right > .nav-tabs {
+  border-left: 1px solid @grayLight;
+}
+.tabs-right > .nav-tabs > li > a:hover {
+  border-color: @grayLight @grayLight @grayLight @grayLight;
+}
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover {
+  border-color: @grayLight @grayLight @grayLight transparent;
+}
+
+//These changes are from the initial bs commit but have changed in new bs
+.nav-list {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+// Actual tabs (as links)
+.nav-tabs > li > a {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}

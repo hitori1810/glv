@@ -1,0 +1,195 @@
+#header {
+    height: 47px;
+}
+
+#searchForm .btn {
+    right: 11px;
+    position: relative;
+}
+
+#portal .navbar-inner {
+    //background: #fff !important;
+    color: #444;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 4px 0 #cdcccb;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 4px 0 #cdcccb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 4px 0 #cdcccb;
+}
+
+#portal .navbar-inner a,
+#portal .navbar a [class^="icon-"],
+#portal .navbar a .caret {
+    color: #58595b !important;
+    text-shadow: none;
+}
+
+#portal .navbar .dropdown-menu li:hover a {
+    color: #fff !important;
+}
+
+#portal .navbar a .caret {
+    border-top-color: #58595b;
+}
+
+#portal .navbar .divider-vertical {
+    background-color: #cdcccb;
+    border-right: 1px solid #f5f5f5;
+}
+
+#portal .cube {
+    background: url('@{baseUrl}/img/badge_256g.png') 50% 50% no-repeat;
+}
+
+#portal .container-fluid {
+    position: relative;
+}
+
+#portal .search-query {
+    border-color: #cdcccb !important;
+}
+
+#portal .search-query:hover {
+    border-color: #cdcccb !important;
+}
+
+#portal .navbar .nav > li > a:hover {
+    background-color: #f5f5f5;
+    color: #58595b;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+#portal .navbar .nav .active > a,
+#portal .navbar .nav .active > a:hover {
+    color: #58595b;
+    background-color: #e8e8e8;
+    border-bottom: 3px solid #58595b;
+    padding-bottom: 14px;
+}
+
+/* override CSS for Forecasting*/
+#folded .tab-pane.active {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  background-image: url('@{textureSecondary}');
+  height: 100%;
+  width: inherit;
+  padding: 20px 0;
+  border-left: 2px solid @grayLight;
+  overflow:auto;
+  &>div {
+    padding-top: 92px;
+    padding-bottom: 40px;
+  }
+  .actions {
+    top: 95px;
+    color: @grey;
+  }
+}
+
+.block span.label {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: inherit !important;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+#footer > footer .dropdown {
+  // Different positioning for bottom up menu
+  .dropdown-menu.bottom-up {
+    top: auto;
+    bottom: 100%;
+  }
+}
+
+@media print{
+
+    body{
+        overflow: hidden !important;
+        color: black;
+    }
+
+    html{
+        overflow: hidden;
+    }
+
+    .container-fluid{
+        width: 99%;
+        padding: 2px !important;
+        margin: 0;
+        overflow: hidden !important;
+    }
+
+    a{
+        color: inherit;
+    }
+
+// Show all fields on Details view
+    .card2 > .row-fluid{
+        display: inherit !important;
+    }
+
+    .btn,
+    .nav-pills,
+    .actions,
+    .navbar,
+    .toggle,
+    .dropdown-menu,
+    .btn-group,
+    .btn-group.open .dropdown-menu,
+    .block-footer,
+    .extend,
+    footer {
+        display: none !important;
+    }
+
+    .thumbnail{
+        width: 100%;
+        background: none !important;
+        overflow: hidden !important;
+        box-shadow: 0 !important;
+        -webkit-box-shadow: 0 !important;
+        border: 1px solid !important;
+    }
+
+    .thumbnail h1 a{
+        color: black !important;
+    }
+
+    .table{
+        margin: 0;
+        overflow: hidden;
+        page-break-after: auto;
+        overflow: hidden !important;
+        box-shadow: 0 !important;
+        -webkit-box-shadow: 0 !important;
+    }
+
+    .table th{
+        background-color: none !important;
+        border: 1px solid !important;
+        color: black !important;
+    }
+
+// Tighten up the table spacing so that more fits on a page
+    .table td{
+        margin: 0;
+        padding: 2px;
+        border-top: 1px solid !important;
+        line-height: 12px;
+    }
+
+    .sorting{
+        background: none;
+        padding-right: 8px !important;
+    }
+
+    :root {
+        -webkit-print-color-adjust: exact;
+    }
+}

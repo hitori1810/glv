@@ -1,0 +1,190 @@
+/* Misc
+-------------------------------------------------- */
+.modal-body .tab-content {
+  overflow: auto;
+  height: 310px;
+}
+.modal-body textarea {
+  text-align: left;
+}
+.content {
+  //padding-left: 72px;
+  position: relative;
+}
+.content.span12 {
+    padding-right: 20px;
+}
+.content .btn-toolbar {
+  //breaks styleguide
+  //margin: 0 -20px 8px !important;
+  //margin: 0 0 8px!important;
+}
+.content .vcard2 {
+  z-index: 0;
+  position: relative;
+}
+
+.drag:hover {
+  cursor: move;
+}
+
+img.pull-right {
+  margin: 0 0 8px 8px;
+}
+img.pull-left {
+  margin: 0 8px 8px 0;
+}
+
+.ui-sortable-helper {
+  .opacity(30);
+}
+.ui-sortable .ui-sortable-placeholder:first-child {margin:0;}
+.ui-sortable .ui-sortable-placeholder { 
+visibility: visible !important; 
+height: 320px !important;
+background: @grayLighter;
+@shadow: inset 0 3px 5px rgba(0,0,0,.1), inset 2px 2px 0 rgba(0,0,0,.05), inset -2px -2px 0 rgba(0,0,0,.05);
+.box-shadow(@shadow);
+}
+.ui-sortable-placeholder * { visibility: hide; }
+
+.titlebar {
+  .buttonBackground(@white, @grayLight);
+  .border-radius(3px 3px 0 0);
+}
+ .dataTables_filter {display: none;}
+  .dataTables_filter input {width: 100%;}
+.form-search, .form-addit, .dataTables_filter {
+position: relative;
+margin: 0;
+text-align: center;
+padding: 5px;
+#gradient > .vertical(darken(@grayLighter, 4%), @grayLighter);
+@shadow: inset 0 1px 0 rgba(0,0,0,.2), inset 0 -1px 0 rgba(0,0,0,.1);
+.box-shadow(@shadow);
+z-index: 1000;
+}
+.form-search {
+  margin: -11px 0 20px;
+  z-index: 0;
+}
+
+.block .tab-content {
+  margin-top: -18px;
+  padding: 10px;
+  background: @white;
+  border: 1px solid @grayLight;
+  border-top: none;
+  @shadow: 0 1px 3px rgba(0,0,0,.1);
+  .box-shadow(@shadow);
+}
+
+.thumbnail {
+  position: relative; 
+  margin-bottom: 20px !important;
+  background: #fff;
+}
+.thumbnail h2,
+.thumbnail p {
+  padding: 0 5px;
+  margin: 0;
+}
+
+.thumbnail h4, .thumbnail h1 {
+  font-size: 14px !important;
+  line-height: @baseLineHeight;
+  #gradient > .vertical(@white, @grayLighter);
+  .border-radius(4px 4px 0 0);
+  @shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+  .box-shadow(@shadow);
+  font-weight: 600;
+  border-bottom: 2px solid @grayLight;
+  padding: 7px 80px 7px 10px;
+  .rtlPadding(@direction,7px 10px 7px 80px);
+}
+.thumbnail h4 a, .thumbnail h1 a {
+  color: @textColor;
+}
+
+.thumbnail .actions a:hover {
+  color: @white;
+}
+
+.thumbnail h1 small{
+  font-size: 12px;
+}
+
+.thumbnail .btn.loading {
+  .center-block();
+  .clearfix();
+  width: 200px;
+  float: none;
+  margin-bottom: 20px;
+}
+
+.thumbnail .scroll {
+  overflow: auto;
+  min-height: 280px;
+}
+
+.browser-support {
+  max-width: 100%;
+}
+
+/* Make tables spaced out a bit more */
+h2 + table,
+h3 + table,
+h4 + table,
+h2 + .row {
+  margin-top: 5px;
+}
+
+/* Example sites showcase */
+.example-sites img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.marketing-byline {
+  margin: -18px 0 27px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #999;
+  text-align: center;
+}
+
+.scrollspy-example {
+  height: 200px;
+  overflow: auto;
+  position: relative;
+}
+
+/* Remove bottom margin on example forms in wells */
+form.well {
+  padding: 14px;
+}
+
+/* Tighten up spacing */
+.well hr {
+  margin: 18px 0;
+}
+
+/* Fake the :focus state to demo it */
+.focused {
+  border-color: rgba(82,168,236,.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+     -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+          box-shadow: inset 0 1px 3px rgba(0,0,0,.1), 0 0 8px rgba(82,168,236,.6);
+  outline: 0;
+}
+
+/* For input sizes, make them display block */
+.docs-input-sizes select,
+.docs-input-sizes input[type=text] {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.width-auto {
+  width: auto;
+}

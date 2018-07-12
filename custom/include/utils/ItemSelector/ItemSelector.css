@@ -1,0 +1,55 @@
+#tblItemSelector thead {
+    background: #258CD1;
+    color: #fff;
+}
+
+#tblItemSelector tr.odd, #tblItemSelector tr.even {
+  border-bottom: 1px dotted #d3d3d8 !important;
+}
+
+#tblItemSelector thead tr {
+    border: 10px solid gray !important;
+}
+
+#tblItemSelector thead th {
+    padding: 10px 5px;
+    border: none;
+}
+
+#tblItemSelector tbody tr {
+    font-size: 90%;    
+}
+
+#tblItemSelector tfoot {
+    display: table-header-group;
+}
+
+#tblItemSelector tfoot td {
+    padding: 0px;
+}
+
+#tblItemSelector_info, #tblItemSelector_paginate {
+    margin: 10px 0px;    
+}
+
+#btnHolder {
+    display: block;
+    clear: both;
+}
+
+#btnHolder.normal {
+    position: static;
+}
+
+#btnHolder.normal .button {
+    border: 1px solid #aaa;
+}
+
+#btnHolder.fixed {
+    position: fixed; 
+    bottom: 0px;
+}
+
+#btnHolder.fixed .button {
+    border: 1px solid red;
+}

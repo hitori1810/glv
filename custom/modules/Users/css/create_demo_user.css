@@ -1,0 +1,55 @@
+.tbl_info {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+.tbl_info td {
+    padding: 10px;
+    white-space: nowrap;
+}
+    
+.tbl_info .td_1 {
+    width: 20%;
+    text-align: right;
+}
+
+.tbl_info .td_2 {
+    margin-left: 20px;
+    text-align: left;
+    width: 20%;
+}
+
+.tbl_info th {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #cfcfcf;
+    background: #cfcfcf;
+    color: #666;
+}            
+.ms-choice div{
+    right:-17px !important;
+}      
+.td_checkbox {
+    max-width  : 50px !important;
+}     
+.hidden_td{
+    display:none !important;
+}   
+h1 {
+    text-align: center;
+    padding: 15px;
+}    
+.div_user_list {
+    
+}  
+.tbl_user_list {
+    width: 100%;
+}  
+.tbl_user_list th {
+    padding: 10px;
+    text-align: left;
+}   
+.tbl_user_list td {
+    padding: 5px;    
+}            

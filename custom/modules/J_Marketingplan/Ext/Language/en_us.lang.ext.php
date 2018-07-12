@@ -1,0 +1,16 @@
+<?php 
+ //WARNING: The contents of this file are auto-generated
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_USERS_J_MARKETINGPLAN_1_FROM_USERS_TITLE'] = 'Approved';
+$mod_strings['LBL_USERS_J_MARKETINGPLAN_1_FROM_J_MARKETINGPLAN_TITLE_ID'] = 'Approved Users ID';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_USERS_J_MARKETINGPLAN_1_FROM_USERS_TITLE'] = 'Approved';
+$mod_strings['LBL_USERS_J_MARKETINGPLAN_1_FROM_J_MARKETINGPLAN_TITLE_ID'] = 'Approved Users ID';
+$mod_strings['LBL_USERS_J_MARKETINGPLAN_2_FROM_USERS_TITLE'] = 'Checked By';
+$mod_strings['LBL_USERS_J_MARKETINGPLAN_2_FROM_J_MARKETINGPLAN_TITLE_ID'] = 'Checked By Users ID';
+
+?>

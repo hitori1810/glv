@@ -1,0 +1,62 @@
+<!--
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+-->
+<div class="longHelpTitle">Endpoint to create leads</div>
+<div class="summary">
+<h2>Summary:</h2>
+  This endpoint accepts a json payload of lead properties and creates new leads.
+</div>
+<div class="params">
+<h2>Query Parameters:</h2>
+<table>
+  <tr><th>Param</td><th>Description</td><th>Optional</td></tr>
+  <tr><td colspan="3">This endpoint does not accept any parameters.</td></tr>
+</table>
+</div>
+<div class="input">
+<h2>Input Example:</h2>
+<code class="codesample">
+  {
+  "first_name":"John",
+  "last_name":"Smith"
+  }
+</code>
+</div>
+<div class="output">
+  <h2>Output Example:</h2>
+<code class="codesample">
+    {
+    "id": "ecba9f86-4a4a-def6-359c-505a5b33f014",
+    "name": "John Smith",
+    "date_entered": "2012-09-19T23:54:54+0000",
+    "date_modified": "2012-09-19T23:54:54+0000",
+    "modified_user_id": "1",
+    "created_by": "1",
+    "deleted": 0,
+    "team_id": "1",
+    "team_set_id": "1",
+    "first_name": "John",
+    "last_name": "Smith",
+    "full_name": "John Smith",
+    "do_not_call": false,
+    "converted": false,
+    "lead_source": "Support Portal User Registration",
+    "status": "New",
+    "preferred_language": "en_us",
+    "email": [],
+    "my_favorite": false
+   }
+</code>
+</div>

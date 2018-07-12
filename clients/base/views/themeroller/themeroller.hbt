@@ -1,0 +1,57 @@
+{{!
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+}}
+<header class="subhead">
+    <button href="javascript:void(0)" class="button pull-right" name="refresh_button" style="margin-left: 10px">
+        <i class="icon-refresh"></i> {{str "LBL_RESET"}}</button>
+    <h1><small>{{str "LBL_COLORS"}}</small>
+    </h1>
+</header>
+<table class="table table-bordered table-striped">
+    <tbody>
+    {{#each lessVars.hex}}
+    <tr>
+        <td>{{str name}}</td>
+        <td class="swatch-col" style="background-color: {{value}}"><span class="swatch"></span></td>
+        <td>
+            <input type="text" name="{{name}}" rel="colorpicker" value="{{value}}" class="hexvar span10">
+        </td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
+<div class="row-fluid">
+    <div class="btn-toolbar pull-right">
+        <a href="javascript:void(0)" name="reset_button">{{str "LBL_RESET_THEME_LNK"}}</a>
+        <button href="javascript:void(0)" class="btn btn-primary" name="save_button" style="margin-left: 10px">
+                <i class="icon-upload"></i> {{str "LBL_SAVE_AND_DEPLOY_BTN"}}</button>
+
+    </div>
+</div>
+
+<div id="modal-confirm-reset" class="modal hide">
+    <div class="modal-header">
+      <a href="javascript:void(0)" class="close">x</a>
+      <h3>{{str "LBL_RESET_THEME_MODAL_TITLE"}}</h3>
+    </div>
+    <div class="modal-body">
+      <p>{{str "LBL_RESET_THEME_MODAL_INFO"}}</p>
+      <p>{{str "LBL_RESET_THEME_MODAL_CONFIRM"}}</p>
+    </div>
+    <div class="modal-footer">
+      <button href="javascript:void(0)" id="buttonYes" class="button btn-danger">{{str "LBL_YES"}}</button>
+      <button href="javascript:void(0)" id="buttonNo" class="button">{{str "LBL_NO"}}</button>
+    </div>
+</div>

@@ -1,0 +1,1232 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+	
+
+$app_list_strings = array (
+  'account_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'Analyst' => 'אנאליסט',
+    'Competitor' => 'מתחרה',
+    'Customer' => 'לקוח',
+    'Integrator' => 'אינטגרטור',
+    'Investor' => 'משקיע',
+    'Other' => 'אחר',
+    'Partner' => 'שותף',
+    'Press' => 'עיתונות',
+    'Prospect' => 'תחזית',
+    'Reseller' => 'ריסיילר',
+  ),
+  'activity_dom' => 
+  array (
+    'Call' => 'שיחה',
+    'Email' => 'דואר אלקטרוני',
+    'Meeting' => 'פגישה',
+    'Note' => 'פתק',
+    'Task' => 'משימה',
+  ),
+  'bopselect_type_dom' => 
+  array (
+    'Equals' => 'שווה ל',
+  ),
+  'bselect_type_dom' => 
+  array (
+    'bool_false' => 'לא נכון בעליל',
+    'bool_true' => 'נכון במדוייק',
+  ),
+  'bug_priority_dom' => 
+  array (
+    'High' => 'גבוה',
+    'Low' => 'נמוך',
+    'Medium' => 'בינוני',
+    'Urgent' => 'דחוף',
+  ),
+  'bug_resolution_dom' => 
+  array (
+    '' => '-ריק-',
+    'Accepted' => 'התקבל',
+    'Duplicate' => 'שוכפל',
+    'Fixed' => 'תוקן',
+    'Invalid' => 'לא תקף',
+    'Later' => 'אחר-כך',
+    'Out of Date' => 'עבר זמנו',
+  ),
+  'bug_status_dom' => 
+  array (
+    'Assigned' => 'הוקצה',
+    'Closed' => 'נסגר',
+    'New' => 'חדש',
+    'Pending' => 'תלוי ועומד',
+    'Rejected' => 'נדחה',
+  ),
+  'bug_type_dom' => 
+  array (
+    'Defect' => 'דפקט',
+    'Feature' => 'תכונה',
+  ),
+  'call_direction_dom' => 
+  array (
+    'Inbound' => 'נכנס',
+    'Outbound' => 'יוצא',
+  ),
+  'call_status_dom' => 
+  array (
+    'Held' => 'בוצע',
+    'Not Held' => 'לא בוצע',
+    'Planned' => 'מתוכנן',
+  ),
+  'campaign_status_dom' => 
+  array (
+    '' => '-ריק-',
+    'Active' => 'פעיל',
+    'Complete' => 'הושלם',
+    'In Queue' => 'בתור',
+    'Inactive' => 'לא פעיל',
+    'Planning' => 'מתוכנן',
+    'Sending' => 'שולח',
+  ),
+  'campaign_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'Email' => 'דואר אלקטרוני',
+    'Mail' => 'דואר',
+    'Print' => 'דפוס',
+    'Radio' => 'רדיו',
+    'Telesales' => 'מוקדנים',
+    'Television' => 'טלויזיה',
+    'Web' => 'ווב',
+  ),
+  'campainglog_activity_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'contact' => 'אנשי קשר נוצרו',
+    'invalid email' => 'הודעות מוקפצות,דואר אלקטרוני לא תקף',
+    'lead' => 'לידים נוצרו',
+    'link' => 'Click-thru Link',
+    'removed' => 'Opted Out',
+    'send error' => 'הודעות מוקפצות,אחרות',
+    'targeted' => 'הודעה נשלחה/נעשה ניסיון לשולחה',
+    'viewed' => 'הודעות שניצפו',
+  ),
+  'campainglog_target_type_dom' => 
+  array (
+    'Contacts' => 'אנשי קשר',
+    'Leads' => 'לידים',
+    'Prospects' => 'מטרות',
+    'Users' => 'משתמשים',
+  ),
+  'case_priority_dom' => 
+  array (
+    'P1' => 'גבוה',
+    'P2' => 'בינוני',
+    'P3' => 'נמוך',
+  ),
+  'case_relationship_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'Alternate Contact' => 'איש קשר אלטרנטיבי',
+    'Primary Contact' => 'איש קשר ראשי',
+  ),
+  'case_status_dom' => 
+  array (
+    'Assigned' => 'הוקצה',
+    'Closed' => 'נסגר',
+    'Duplicate' => 'העתק',
+    'New' => 'חדש',
+    'Pending Input' => 'תלוי ועומד',
+    'Rejected' => 'נדחה',
+  ),
+  'checkbox_dom' => 
+  array (
+    '' => '-ריק-',
+    1 => 'כן',
+    2 => 'לא',
+  ),
+  'contract_expiration_notice_dom' => 
+  array (
+    1 => 'יום',
+    3 => 'יומיים',
+    5 => '5 ימים',
+    7 => 'שבוע',
+    14 => 'שבועיים',
+    21 => '3 שבועות',
+    31 => 'חודש',
+  ),
+  'contract_payment_frequency_dom' => 
+  array (
+    'halfyearly' => 'חצי שנתי',
+    'monthly' => 'חודשי',
+    'quarterly' => 'רבעוני',
+    'yearly' => 'שנתי',
+  ),
+  'contract_status_dom' => 
+  array (
+    'inprogress' => 'בתהליך',
+    'notstarted' => 'טרם החל',
+    'signed' => 'נחתם',
+  ),
+  'cselect_type_dom' => 
+  array (
+    'Does not Equal' => 'לא שווה ל',
+    'Equals' => 'שווה ל',
+  ),
+  'document_category_dom' => 
+  array (
+    '' => '-ריק-',
+    'Knowledege Base' => 'מרכז הידע',
+    'Marketing' => 'שיווק',
+    'Sales' => 'מכירות',
+  ),
+  'document_status_dom' => 
+  array (
+    'Active' => 'פעיל',
+    'Draft' => 'טיוטה',
+    'Expired' => 'פג תוקף',
+    'FAQ' => 'שו"ת',
+    'Pending' => 'תלוי ועומד',
+    'Under Review' => 'בסקירה',
+  ),
+  'document_subcategory_dom' => 
+  array (
+    '' => '-ריק-',
+    'FAQ' => 'שו"ת',
+    'Marketing Collateral' => 'איש שווק אחר',
+    'Product Brochures' => 'עלון מוצרים',
+  ),
+  'document_template_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'eula' => 'EULA',
+    'license' => 'License Agreement',
+    'mailmerge' => 'מזג דואר',
+    'nda' => 'NDA',
+  ),
+  'dom_cal_month_long' => 
+  array (
+    1 => 'ינואר',
+    2 => 'פברואר',
+    3 => 'מרס',
+    4 => 'אפריל',
+    5 => 'מאי',
+    6 => 'יוני',
+    7 => 'יולי',
+    8 => 'אוגוסט',
+    9 => 'ספטמבר',
+    10 => 'אוקטובר',
+    11 => 'נובמבר',
+    12 => 'דצמבר',
+  ),
+  'dom_email_bool' => 
+  array (
+    'bool_false' => 'לא',
+    'bool_true' => 'כן',
+  ),
+  'dom_email_distribution' => 
+  array (
+    '' => '--כלום--',
+    'direct' => 'הוקצה ישירות',
+    'leastBusy' => 'הכי פחות עסוק',
+    'roundRobin' => 'על פי התור',
+  ),
+  'dom_email_editor_option' => 
+  array (
+    '' => 'פורמט דואר אלקטרוני בברירת המחדל',
+    'html' => 'HTML דואר אלקטרוני בפורמט',
+    'plain' => 'דואר אלקטרוני בפורמט טקסט פשוט',
+  ),
+  'dom_email_errors' => 
+  array (
+    1 => 'בגישה ישירה לפריטים בחר רק משתמש אחד.',
+    2 => 'כשאתה מקצה ישירות פריט ניתן לישם רק פריט ישיר',
+  ),
+  'dom_email_link_type' => 
+  array (
+    '' => '-ריק-',
+    'mailto' => 'External Email Client',
+    'sugar' => 'Sugar Email Client',
+  ),
+  'dom_email_server_type' => 
+  array (
+    '' => '--כלום--',
+    'imap' => 'IMAP',
+    'pop3' => 'pop3',
+  ),
+  'dom_email_status' => 
+  array (
+    'archived' => 'נשמר בארכיון',
+    'closed' => 'נסגר',
+    'draft' => 'טיוטה',
+    'read' => 'נקרא',
+    'replied' => 'השבתי',
+    'send_error' => 'שגיאה בשליחה',
+    'sent' => 'נשלח',
+    'unread' => 'לא נקרא',
+  ),
+  'dom_email_types' => 
+  array (
+    'archived' => 'נשמר בארכיון',
+    'draft' => 'טיוטה',
+    'inbound' => 'יוצא',
+    'out' => 'נשלח',
+  ),
+  'dom_int_bool' => 
+  array (
+    1 => 'כן',
+  ),
+  'dom_mailbox_type' => 
+  array (
+    'bounce' => 'הקפצה',
+    'bug' => 'באג',
+    'contact' => 'איש קשר',
+    'pick' => '--כלום--',
+    'sales' => 'מכירות',
+    'support' => 'תמיכה',
+    'task' => 'משימה',
+  ),
+  'dom_meeting_accept_options' => 
+  array (
+    'accept' => 'קבל',
+    'decline' => 'דחה',
+    'tentative' => 'על תנאי',
+  ),
+  'dom_meeting_accept_status' => 
+  array (
+    'accept' => 'התקבל',
+    'decline' => 'נדחה',
+    'none' => 'כלום',
+    'tentative' => 'על תנאי',
+  ),
+  'dom_report_types' => 
+  array (
+    'detailed_summary' => 'סיכום מפורט',
+    'summary' => 'סיכומים',
+    'tabular' => 'עמודות ושורות',
+  ),
+  'dom_switch_bool' => 
+  array (
+    '' => 'לא',
+    'off' => 'לא',
+    'on' => 'כן',
+  ),
+  'dom_timezones' => 
+  array (
+    -12 => '(GMT - 12) International Date Line West',
+    -11 => '(GMT - 11) Midway Island, Samoa',
+    -10 => '(GMT - 10) Hawaii',
+    -9 => '(GMT - 9) Alaska',
+    -8 => '(GMT - 8) San Francisco',
+    -7 => '(GMT - 7) Phoenix',
+    -6 => '(GMT - 6) Saskatchewan',
+    -5 => '(GMT - 5) New York',
+    -4 => '(GMT - 4) Santiago',
+    -3 => '(GMT - 3) Buenos Aires',
+    -2 => '(GMT - 2) Mid-Atlantic',
+    -1 => '(GMT - 1) Azores',
+    1 => '(GMT + 1) Madrid',
+    2 => '(GMT + 2) ירושלים',
+    3 => '(GMT + 3) Moscow',
+    4 => '(GMT + 4) Kabul',
+    5 => '(GMT + 5) Ekaterinburg',
+    6 => '(GMT + 6) Astana',
+    7 => '(GMT + 7) Bangkok',
+    8 => '(GMT + 8) Perth',
+    9 => '(GMT + 9) Seol',
+    10 => '(GMT + 10) Brisbane',
+    11 => '(GMT + 11) Solomone Is.',
+    12 => '(GMT + 12) Auckland',
+  ),
+  'dom_timezones_extra' => 
+  array (
+    -12 => '(GMT-12) International Date Line West',
+    -11 => '(GMT-11) Midway Island, Samoa',
+    -10 => '(GMT-10) Hawaii',
+    -9 => '(GMT-9) Alaska',
+    -8 => '(GMT-8) (PST)',
+    -7 => '(GMT-7) (MST)',
+    -6 => '(GMT-6) (CST)',
+    -5 => '(GMT-5) (EST)',
+    -4 => '(GMT-4) Santiago',
+    -3 => '(GMT-3) Buenos Aires',
+    -2 => '(GMT-2) Mid-Atlantic',
+    -1 => '(GMT-1) Azores',
+    1 => '(GMT+1) Madrid',
+    2 => '(GMT+2) Athens',
+    3 => '(GMT+3) Moscow',
+    4 => '(GMT+4) Kabul',
+    5 => '(GMT+5) Ekaterinburg',
+    6 => '(GMT+6) Astana',
+    7 => '(GMT+7) Bangkok',
+    8 => '(GMT+8) Perth',
+    9 => '(GMT+9) Seol',
+    10 => '(GMT+10) Brisbane',
+    11 => '(GMT+11) Solomone Is.',
+    12 => '(GMT+12) Auckland',
+  ),
+  'dselect_type_dom' => 
+  array (
+    'Does not Equal' => 'לא שווה',
+    'Equals' => 'שווה ל',
+    'Less Than' => 'פחות מ',
+    'More Than' => 'יותר מ',
+  ),
+  'dtselect_type_dom' => 
+  array (
+    'Less Than' => 'פחות מ',
+    'More Than' => 'יותר מ',
+  ),
+  'duration_intervals' => 
+  array (
+    15 => '15',
+    30 => '30',
+    45 => '45',
+  ),
+  'email_marketing_status_dom' => 
+  array (
+    '' => '-ריק-',
+    'active' => 'פעיל',
+    'inactive' => 'לא פעיל',
+  ),
+  'employee_status_dom' => 
+  array (
+    'Active' => 'פעיל',
+    'Leave of Absence' => 'חופשה',
+    'Terminated' => 'הסתיים',
+  ),
+  'forecast_schedule_status_dom' => 
+  array (
+    'Active' => 'פעיל',
+    'Inactive' => 'לא פעיל',
+  ),
+  'forecast_type_dom' => 
+  array (
+    'Direct' => 'ישיר',
+    'Rollup' => 'התקפל',
+  ),
+  'industry_dom' => 
+  array (
+    '' => '-ריק-',
+    'Apparel' => 'הלבשה',
+    'Banking' => 'בנקאות',
+    'Biotechnology' => 'ביוטכנולוגיה',
+    'Chemicals' => 'כימיקלים',
+    'Communications' => 'תקשורת',
+    'Construction' => 'בנייה',
+    'Consulting' => 'יעוץ',
+    'Education' => 'חינוך',
+    'Electronics' => 'אלקטרוניקה',
+    'Energy' => 'אנרגיה',
+    'Engineering' => 'הנדסה',
+    'Entertainment' => 'בידור',
+    'Environmental' => 'סביבה',
+    'Finance' => 'כספים',
+    'Government' => 'ממשלה',
+    'Healthcare' => 'בריאות',
+    'Hospitality' => 'בתי חולים',
+    'Insurance' => 'ביטוח',
+    'Machinery' => 'מכונאות',
+    'Manufacturing' => 'ייצור',
+    'Media' => 'מדיה',
+    'Not For Profit' => 'עמותה',
+    'Other' => 'אחר',
+    'Recreation' => 'בילוי',
+    'Retail' => 'קימעונאי',
+    'Shipping' => 'ספנות',
+    'Technology' => 'טכנולוגיה',
+    'Telecommunications' => 'טלקויוניקציה',
+    'Transportation' => 'תחבורה',
+    'Utilities' => 'שירות ציבורי',
+  ),
+  'language_pack_name' => 'עברית',
+  'layouts_dom' => 
+  array (
+    'Invoice' => 'חשבונית',
+    'Standard' => 'הצעה',
+    'Terms' => 'תנאים',
+  ),
+  'lead_source_dom' => 
+  array (
+    '' => '-ריק-',
+    'Cold Call' => 'שיחה יזומה',
+    'Conference' => 'ועידה',
+    'Direct Mail' => 'דיוור ישיר',
+    'Email' => 'דואר אלקטרוני',
+    'Employee' => 'עובד',
+    'Existing Customer' => 'לקוח קיים',
+    'Other' => 'אחר',
+    'Partner' => 'שותף',
+    'Public Relations' => 'יחסי ציבור',
+    'Self Generated' => 'שירות עצמי',
+    'Trade Show' => 'תערוכה',
+    'Web Site' => 'אתר אינטרנט',
+    'Word of mouth' => 'שמועה',
+  ),
+  'lead_status_dom' => 
+  array (
+    '' => '-ריק-',
+    'Assigned' => 'הוקצה',
+    'Converted' => 'הומר',
+    'Dead' => 'מת',
+    'In Process' => 'בתהליך',
+    'New' => 'חדש',
+    'Recycled' => 'מוחזר',
+  ),
+  'lead_status_noblank_dom' => 
+  array (
+    'Assigned' => 'הוקצה',
+    'Converted' => 'הומר',
+    'Dead' => 'מת',
+    'In Process' => 'בתהליך',
+    'New' => 'חדש',
+    'Recycled' => 'מוחזר',
+  ),
+  'meeting_status_dom' => 
+  array (
+    'Held' => 'בוצע',
+    'Not Held' => 'לא בוצע',
+    'Planned' => 'מתוכנן',
+  ),
+  'messenger_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'AOL' => 'AOL',
+    'MSN' => 'MSN',
+    'Yahoo!' => 'Yahoo!',
+  ),
+  'moduleList' => 
+  array (
+    'Bugs' => 'מעקב אחרי באגים',
+    'Cases' => 'אירועים',
+    'FAQ' => 'שו"ת',
+    'Home' => 'דף הבית',
+    'KBDocuments' => 'מרכז הידע',
+    'Newsletters' => 'עלון חדשות',
+    'Notes' => 'פתקים',
+    'Teams' => 'צוותים',
+    'Users' => 'משתמשים',
+  ),
+  'moduleListSingular' => 
+  array (
+    'Bugs' => 'מעקב אחר באג',
+    'Cases' => 'אירוע',
+    'Home' => 'דף הבית',
+    'Notes' => 'פתק',
+    'Teams' => 'צוותים',
+    'Users' => 'משתמש',
+  ),
+  'mselect_type_dom' => 
+  array (
+    'Equals' => 'שווה ל',
+    'in' => 'בתוך',
+  ),
+  'notifymail_sendtype' => 
+  array (
+    'SMTP' => 'SMTP',
+  ),
+  'opportunity_relationship_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'Business Decision Maker' => 'מקבח החלטות עיסקיות',
+    'Business Evaluator' => 'מעריך עסקי',
+    'Executive Sponsor' => 'נותן חסות',
+    'Influencer' => 'משפיע',
+    'Other' => 'אחר',
+    'Primary Decision Maker' => 'מקבל החלטות - ראשי',
+    'Technical Decision Maker' => 'קבל החלטו טכני',
+    'Technical Evaluator' => 'מאריך טכני',
+  ),
+  'opportunity_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'Existing Business' => 'עסקים קיימים',
+    'New Business' => 'עסקים חדשים',
+  ),
+  'order_stage_dom' => 
+  array (
+    'Cancelled' => 'בוטל',
+    'Confirmed' => 'מאושר',
+    'On Hold' => 'בהמתנה',
+    'Pending' => 'תלוי ועומד',
+    'Shipped' => 'נשלח',
+  ),
+  'payment_terms' => 
+  array (
+    '' => '-ריק-',
+    'Net 15' => 'שוטף 30',
+    'Net 30' => 'שוטף 60',
+  ),
+  'pricing_formula_dom' => 
+  array (
+    'Fixed' => 'תוקן',
+    'IsList' => 'רשום',
+    'PercentageDiscount' => 'הנחה באחוזים',
+    'PercentageMarkup' => 'עליית מחיר באחוזים',
+    'ProfitMargin' => 'שולי הרווח',
+  ),
+  'product_category_dom' => 
+  array (
+    '' => '-ריק-',
+    'Accounts' => 'חשבונות',
+    'Activities' => 'פעילויות',
+    'Bug Tracker' => 'מעקב אחר באגים',
+    'Calendar' => 'לוח שנה',
+    'Calls' => 'שיחות',
+    'Campaigns' => 'קמפיינים',
+    'Cases' => 'אירועים',
+    'Contacts' => 'אנשי קשר',
+    'Currencies' => 'מטבעוות',
+    'Dashboard' => 'לוח מחונים',
+    'Documents' => 'מסמכים',
+    'Emails' => 'דואר אלקטרוני',
+    'Feeds' => 'פידים',
+    'Forecasts' => 'תחזיות',
+    'Help' => 'עזרה',
+    'Home' => 'דף הבית',
+    'Leads' => 'לידים',
+    'Meetings' => 'פגישות',
+    'Notes' => 'פתקים',
+    'Opportunities' => 'הזדמנויות',
+    'Outlook Plugin' => 'Outlook Plugin',
+    'Product Catalog' => 'קטלוג מוצרים',
+    'Products' => 'מוצרים',
+    'Projects' => 'פרויקטים',
+    'Quotes' => 'הצעות מחיר',
+    'RSS' => 'RSS',
+    'Releases' => 'שיחרורים',
+    'Studio' => 'סטודיו',
+    'Upgrade' => 'עידכון',
+    'Users' => 'משתמשים',
+  ),
+  'product_status_dom' => 
+  array (
+    'Orders' => 'הזמנות',
+    'Quotes' => 'הצעות מחיר',
+    'Ship' => 'משלוח',
+  ),
+  'product_status_quote_key' => 'הצעות מחיר',
+  'product_template_status_dom' => 
+  array (
+    'Available' => 'זמין',
+    'Unavailable' => 'לא זמין',
+  ),
+  'project_task_priority_options' => 
+  array (
+    'High' => 'גבוה',
+    'Low' => 'נמוך',
+    'Medium' => 'בינוני',
+  ),
+  'project_task_status_options' => 
+  array (
+    'Completed' => 'הושלם',
+    'Deferred' => 'נענה',
+    'In Progress' => 'בתהליך',
+    'Not Started' => 'טרם החל',
+    'Pending Input' => 'תלוי ועומד',
+  ),
+  'project_task_utilization_options' => 
+  array (
+    25 => '25',
+    50 => '50',
+    75 => '75',
+    100 => '100',
+  ),
+  'prospect_list_type_dom' => 
+  array (
+    'default' => 'ברירת מחדל',
+    'exempt' => 'סדר רשימה - על פי ת.ז',
+    'exempt_address' => 'סדר רשימה - על פי כתבות דואר אלקטרוני',
+    'exempt_domain' => 'סדר רשימה - על פי שם מתחם',
+    'seed' => 'זרע',
+    'test' => 'בדיקה',
+  ),
+  'query_calc_oper_dom' => 
+  array (
+    '*' => 'X',
+    '+' => '+',
+    '-' => '-',
+    '/' => '/',
+  ),
+  'quote_relationship_type_dom' => 
+  array (
+    '' => '-ריק-',
+    'Business Decision Maker' => 'מקבח החלטות עיסקיות',
+    'Business Evaluator' => 'מעריך עסקי',
+    'Executive Sponsor' => 'נותן חסות',
+    'Influencer' => 'משפיע',
+    'Other' => 'אחר',
+    'Primary Decision Maker' => 'מקבל החלטות - ראשי',
+    'Technical Decision Maker' => 'מקבל החלטות טכני',
+    'Technical Evaluator' => 'מאריך טכני',
+  ),
+  'quote_stage_dom' => 
+  array (
+    'Closed Accepted' => 'נסגר והתקבל',
+    'Closed Dead' => 'נסגר ומת',
+    'Closed Lost' => 'נסגר ואבד',
+    'Confirmed' => 'אושר',
+    'Delivered' => 'נמסר',
+    'Draft' => 'טיוטה',
+    'Negotiation' => 'משא ומתן',
+    'On Hold' => 'בהמתנה',
+  ),
+  'quote_type_dom' => 
+  array (
+    'Orders' => 'הזמנות',
+    'Quotes' => 'הצעות מחיר',
+  ),
+  'record_type_display' => 
+  array (
+    'Accounts' => 'חשבון',
+    'Bugs' => 'באג',
+    'Cases' => 'אירוע',
+    'Contacts' => 'אנשי קשר',
+    'Leads' => 'ליד',
+    'Opportunities' => 'בזדמנות',
+    'ProductTemplates' => 'מוצר',
+    'Project' => 'פרויקט',
+    'ProjectTask' => 'משימה בפרויקט',
+    'Quotes' => 'הצעות מחיר',
+    'Tasks' => 'משימה',
+  ),
+  'record_type_display_notes' => 
+  array (
+    'Accounts' => 'חשבון',
+    'Bugs' => 'באג',
+    'Calls' => 'שיחה',
+    'Cases' => 'אירוע',
+    'Contacts' => 'איש קשר',
+    'Contracts' => 'חוזה',
+    'Emails' => 'דואר אלקטרוני',
+    'Leads' => 'ליד',
+    'Meetings' => 'פגישה',
+    'Opportunities' => 'הזדמנות',
+    'ProductTemplates' => 'מוצר',
+    'Products' => 'מוצר',
+    'Project' => 'פרויקט',
+    'ProjectTask' => 'משימה בפרויקט',
+    'Quotes' => 'הצעת מחיר',
+  ),
+  'reminder_max_time' => '3600',
+  'reminder_time_options' => 
+  array (
+    60 => '1 דקות לפני',
+    300 => '5 דקות לפני',
+    600 => '10 דקות לפני',
+    900 => '15 דקות לפני',
+    1800 => '30 דקות לפני',
+    3600 => '1 שעה לפני',
+  ),
+  'sales_probability_dom' => 
+  array (
+    'Closed Lost' => 'נסגר ואבד',
+    'Closed Won' => 'נסגר בהצלחה',
+    'Id. Decision Makers' => 'מקבל החלטות זהות',
+    'Needs Analysis' => 'נדרש ניתוח',
+    'Negotiation/Review' => 'משא ומתן',
+    'Perception Analysis' => 'אנליזה תפיסתית',
+    'Proposal/Price Quote' => 'הצעת מחיר',
+    'Prospecting' => 'תחזיות',
+    'Qualification' => 'הכשרה',
+    'Value Proposition' => 'ערך ההצעה',
+  ),
+  'sales_stage_dom' => 
+  array (
+    'Closed Lost' => 'נסגר ואבד',
+    'Closed Won' => 'נסגר בהצלחה',
+    'Id. Decision Makers' => 'ת.ז מקבל החלטות',
+    'Needs Analysis' => 'זקוק לבדיקה',
+    'Negotiation/Review' => 'משא ומתן',
+    'Perception Analysis' => 'ניתוח תפיסתי',
+    'Proposal/Price Quote' => 'הצעת מחיר',
+    'Prospecting' => 'תחזיות',
+    'Qualification' => 'הגבלות',
+    'Value Proposition' => 'הערכת עלויות',
+  ),
+  'salutation_dom' => 
+  array (
+    '' => '-ריק-',
+    'Dr.' => 'דןק.',
+    'Mr.' => 'מר.',
+    'Mrs.' => 'גברת.',
+    'Ms.' => 'עלמה.',
+    'Prof.' => 'פרופ.',
+  ),
+  'schedulers_times_dom' => 
+  array (
+    'completed' => 'הושלם',
+    'failed' => 'נכשך',
+    'in progress' => 'בתהליך',
+    'no curl' => 'לא רץ: אין cURL זמין',
+    'not run' => 'זמן ריצה עבר, לא הורץ',
+    'ready' => 'מוכן',
+  ),
+  'source_dom' => 
+  array (
+    '' => '-ריק-',
+    'Forum' => 'פורום',
+    'InboundEmail' => 'דואר אלקטרוני',
+    'Internal' => 'פנימי',
+    'Web' => 'ווב',
+  ),
+  'support_term_dom' => 
+  array (
+    '+1 year' => 'בעוד שנה',
+    '+2 years' => 'בעוד שנתיים',
+    '+6 months' => 'שישה חודשים',
+  ),
+  'task_priority_dom' => 
+  array (
+    'High' => 'גבוה',
+    'Low' => 'נמוך',
+    'Medium' => 'בינוני',
+  ),
+  'task_status_dom' => 
+  array (
+    'Completed' => 'הושלם',
+    'Deferred' => 'נענה',
+    'In Progress' => 'בתהליך',
+    'Not Started' => 'טרם החל',
+    'Pending Input' => 'תלוי ועומד',
+  ),
+  'tax_class_dom' => 
+  array (
+    'Non-Taxable' => 'לא חייב במס',
+    'Taxable' => 'חייב במס',
+  ),
+  'tselect_type_dom' => 
+  array (
+    14440 => '14440',
+    28800 => '28800',
+    43200 => '43200',
+    86400 => '86400',
+    172800 => '172800',
+    259200 => '259200',
+    345600 => '345600',
+    432000 => '432000',
+    604800 => '604800',
+    1209600 => '1209600',
+    1814400 => '1814400',
+    2592000 => '2592000',
+    5184000 => '5184000',
+    7776000 => '7776000',
+    10368000 => '10368000',
+    12960000 => '12960000',
+    15552000 => '15552000',
+  ),
+  'user_status_dom' => 
+  array (
+    'Active' => 'פעיל',
+    'Inactive' => 'לא פעיל',
+  ),
+  'wflow_action_datetime_type_dom' => 
+  array (
+    'Existing Value' => 'ערך קיים',
+    'Triggered Date' => 'תאריך מעורר לפעולה',
+  ),
+  'wflow_action_type_dom' => 
+  array (
+    'new' => 'חדש',
+    'update' => 'עדכן',
+    'update_rel' => 'עדכן רשומה קשורה',
+  ),
+  'wflow_address_type_dom' => 
+  array (
+    'bcc' => ':עותק נסתר',
+    'cc' => ':לידיעת',
+    'to' => ':אל',
+  ),
+  'wflow_address_type_invite_dom' => 
+  array (
+    'bcc' => ':עותק נסתר',
+    'cc' => ':לידיעת',
+    'invite_only' => 'מוזמנים בלבד',
+    'to' => ':אל',
+  ),
+  'wflow_address_type_to_only_dom' => 
+  array (
+    'to' => 'אל:',
+  ),
+  'wflow_adv_enum_type_dom' => 
+  array (
+    'advance' => 'מתקדם',
+    'retreat' => 'נסוג',
+  ),
+  'wflow_adv_team_type_dom' => 
+  array (
+    'current_team' => 'צוות נוכחי',
+    'team_id' => 'צוות זהות',
+  ),
+  'wflow_adv_user_type_dom' => 
+  array (
+    'assigned_user_id' => 'משתמש שהוקצה זהות',
+    'created_by' => 'נוצר על ידי',
+    'current_user' => 'משתמש נוכחי',
+    'modified_user_id' => 'משתמש ששונה זהות',
+  ),
+  'wflow_alert_type_dom' => 
+  array (
+    'Email' => 'דואר אלקטרוני',
+    'Invite' => 'הזמן',
+  ),
+  'wflow_array_type_dom' => 
+  array (
+    'future' => 'עתיד',
+    'past' => 'עבר',
+  ),
+  'wflow_fire_order_dom' => 
+  array (
+    'actions_alerts' => 'פעולות והתראות',
+    'alerts_actions' => 'התרעה ופעולה',
+  ),
+  'wflow_record_type_dom' => 
+  array (
+    'All' => 'הכל',
+    'New' => 'חדש',
+    'Update' => 'עדכון',
+  ),
+  'wflow_rel_type_dom' => 
+  array (
+    'all' => 'הכל',
+    'filter' => 'מסנן',
+  ),
+  'wflow_relate_type_dom' => 
+  array (
+    'Manager' => 'מנהל',
+    'Self' => 'עצמי',
+  ),
+  'wflow_relfilter_type_dom' => 
+  array (
+    'all' => 'הכל',
+    'any' => 'כל',
+  ),
+  'wflow_set_type_dom' => 
+  array (
+    'Advanced' => 'מתקדם',
+    'Basic' => 'בסיסי',
+  ),
+  'wflow_source_type_dom' => 
+  array (
+    'Custom Template' => 'תבנית מיוחדת',
+    'Normal Message' => 'הודעה רגילה',
+    'System Default' => 'ברירת מחדל של המערכת',
+  ),
+  'wflow_type_dom' => 
+  array (
+    'Normal' => 'נורמאלי',
+    'Time' => 'זמן',
+  ),
+  'wflow_user_type_dom' => 
+  array (
+    'current_user' => 'משתמש נוכחי',
+    'rel_user' => 'משתמש נוגע בדבר',
+    'rel_user_custom' => 'משתמש מובחר שנוגע בדבר',
+    'specific_role' => 'תפקיד מסויים',
+    'specific_team' => 'צוות מסויים',
+    'specific_user' => 'משתמש מסויים',
+  ),
+);
+
+$app_strings = array (
+  'ERROR_FULLY_EXPIRED' => 'רישון הגישה שלך למערכת פג לפני למעלה משלושים ימים ויש צורך בחידוש רישיון הגישה, רק מנהל המערכת יכול לבצע כניסה למערכת.',
+  'ERROR_LICENSE_EXPIRED' => 'יש צורך לעדכן את רישיון הגישה שלך למערכת, רק מנהל המערכת יכול להצע כניסה למערכת.',
+  'ERROR_NO_RECORD' => 'שגיאה באיחזור הרשומה.  ייתכן והרשומה נמחקה או שאינך מורשה לצפות בה..',
+  'ERR_CREATING_FIELDS' => 'שגיאה במלוי שדה מידע נוסף: ',
+  'ERR_CREATING_TABLE' => 'שגיאה ביצירת טבלה: ',
+  'ERR_DELETE_RECORD' => 'כדי למחוק את איש הקשר הזה יש לציין מספר רשומה.',
+  'ERR_EXPORT_DISABLED' => 'אופציית הייצוא מנוטרלת.',
+  'ERR_EXPORT_TYPE' => 'שגיאה בייצוא ',
+  'ERR_INVALID_AMOUNT' => 'אנא הזן סכום חוקי.',
+  'ERR_INVALID_DATE' => 'אנא הזן תאריך תקף.',
+  'ERR_INVALID_DATE_FORMAT' => 'פורמט תאריך חייב להיות: ',
+  'ERR_INVALID_DAY' => 'אנא הזן יום תקף.',
+  'ERR_INVALID_EMAIL_ADDRESS' => 'כתובת דואר אלקטרוני לא תקינה.',
+  'ERR_INVALID_HOUR' => 'אנא הזן שעה תקפה.',
+  'ERR_INVALID_MONTH' => 'אנא הזן חודש תקף.',
+  'ERR_INVALID_REQUIRED_FIELDS' => 'שדה חובה לא תקף:',
+  'ERR_INVALID_TIME' => 'אנא הזן זמן תקף.',
+  'ERR_INVALID_VALUE' => 'ערך לא תקף:',
+  'ERR_INVALID_YEAR' => 'אנא הזן שנה תקפה ובארבע ספרות.',
+  'ERR_MISSING_REQUIRED_FIELDS' => 'חסר שדה חובה:',
+  'ERR_NEED_ACTIVE_SESSION' => 'כדי לייצא את התוכן נדרש להיות פעיל במערכת. ',
+  'ERR_NOTHING_SELECTED' => 'לפני שתמשיך אנא בצע בחירתך.',
+  'ERR_OPPORTUNITY_NAME_DUPE' => 'הזדמנות בשם זהה כבר קיימת במערכת.  אנא הזן שם אחר.',
+  'ERR_OPPORTUNITY_NAME_MISSING' => 'שם ההזדמנות לא צויין.  אנא ציין שם להזדמנות.',
+  'ERR_PORTAL_LOGIN_FAILED' => 'לא מצליח ליצר מסך כניסה לפורטל. צור קשר עם מנהל המערכת',
+  'ERR_RESOURCE_MANAGEMENT_INFO' => 'חזרה לדף הראשי',
+  'ERR_SELF_REPORTING' => 'משתמש איננו יכול לדווח לעצמו.',
+  'ERR_SQS_NO_MATCH' => 'אין התאמה',
+  'ERR_SQS_NO_MATCH_FIELD' => 'אין התאמה לשדה:',
+  'LBL_ACCOUNT' => 'חשבון',
+  'LBL_ACCOUNTS' => 'חשבונות',
+  'LBL_ACCUMULATED_HISTORY_BUTTON_KEY' => 'H',
+  'LBL_ACCUMULATED_HISTORY_BUTTON_LABEL' => 'צפה בתקציר',
+  'LBL_ACCUMULATED_HISTORY_BUTTON_TITLE' => 'צפייה בתקציר [Alt+H]',
+  'LBL_ADDITIONAL_DETAILS' => 'פרטים נוספים',
+  'LBL_ADDITIONAL_DETAILS_CLOSE' => 'סגור',
+  'LBL_ADDITIONAL_DETAILS_CLOSE_TITLE' => 'קליק לבגירה',
+  'LBL_ADD_BUTTON' => 'הוסף',
+  'LBL_ADD_BUTTON_KEY' => 'A',
+  'LBL_ADD_BUTTON_TITLE' => 'הוסף [Alt+A]',
+  'LBL_ADD_DOCUMENT' => 'הוסף מסמך',
+  'LBL_ADD_TO_PROSPECT_LIST_BUTTON_KEY' => 'L',
+  'LBL_ADD_TO_PROSPECT_LIST_BUTTON_LABEL' => 'הוסף לרשימת מטרה',
+  'LBL_ADD_TO_PROSPECT_LIST_BUTTON_TITLE' => 'הוסף לרשימת מטרה',
+  'LBL_ADMIN' => 'מנהל מערכת',
+  'LBL_ALT_HOT_KEY' => 'Alt+',
+  'LBL_ARCHIVE' => 'ארכיון',
+  'LBL_ASSIGNED_TO' => 'הוקצה עבור:',
+  'LBL_ASSIGNED_TO_USER' => 'הוקצה למשתמש',
+  'LBL_BACK' => 'חזרה',
+  'LBL_BILL_TO_ACCOUNT' => 'התחשבנות עם חשבון',
+  'LBL_BILL_TO_CONTACT' => 'התחשבנות עם חשבון',
+  'LBL_BROWSER_TITLE' => 'SugarCRM - Commercial Open Source CRM - גרסה עברית',
+  'LBL_BUGS' => 'באגים',
+  'LBL_BY' => 'על ידי',
+  'LBL_CALLS' => 'שיחות',
+  'LBL_CAMPAIGNS_SEND_QUEUED' => 'שלח דואר אלקטרוני הממתין בתור למשלוח',
+  'LBL_CANCEL_BUTTON_KEY' => 'X',
+  'LBL_CANCEL_BUTTON_LABEL' => 'בטל',
+  'LBL_CANCEL_BUTTON_TITLE' => 'בטל [Alt+X]',
+  'LBL_CASE' => 'אירוע',
+  'LBL_CASES' => 'אירועים',
+  'LBL_CHANGE_BUTTON_KEY' => 'G',
+  'LBL_CHANGE_BUTTON_LABEL' => 'שנה',
+  'LBL_CHANGE_BUTTON_TITLE' => 'שנה [Alt+G]',
+  'LBL_CHANGE_PASSWORD' => 'שנה סיסמא',
+  'LBL_CHARSET' => 'UTF-8',
+  'LBL_CHECKALL' => 'בחר הכל',
+  'LBL_CLEARALL' => 'נקה הכל',
+  'LBL_CLEAR_BUTTON_KEY' => 'C',
+  'LBL_CLEAR_BUTTON_LABEL' => 'נקה',
+  'LBL_CLEAR_BUTTON_TITLE' => 'נקה [Alt+C]',
+  'LBL_CLOSEALL_BUTTON_KEY' => 'Q',
+  'LBL_CLOSEALL_BUTTON_LABEL' => 'סגור הכל',
+  'LBL_CLOSEALL_BUTTON_TITLE' => 'סגור הכל [Alt+I]',
+  'LBL_CLOSE_WINDOW' => 'סגור חלון',
+  'LBL_COMPOSE_EMAIL_BUTTON_KEY' => 'L',
+  'LBL_COMPOSE_EMAIL_BUTTON_LABEL' => 'חבר הודעת דואר אלקטרוני',
+  'LBL_COMPOSE_EMAIL_BUTTON_TITLE' => 'חבר הודעת דואר אלקטרוני [Alt+L]',
+  'LBL_CONTACT' => 'איש קשר',
+  'LBL_CONTACTS' => 'אנשי קשר',
+  'LBL_CONTACT_LIST' => 'רשימת אנשי קשר',
+  'LBL_CREATED' => 'נוצר על ידי',
+  'LBL_CREATED_BY_USER' => 'נוצר על ידי משתמש',
+  'LBL_CREATE_BUTTON_LABEL' => 'צור',
+  'LBL_CURRENT_USER_FILTER' => 'הפריטים שלי בלבד:',
+  'LBL_DATE_ENTERED' => 'נוצר בתאריך:',
+  'LBL_DATE_MODIFIED' => 'שונה לאחרונה:',
+  'LBL_DELETE' => 'מחק',
+  'LBL_DELETED' => 'נמחק',
+  'LBL_DELETE_BUTTON' => 'מחק',
+  'LBL_DELETE_BUTTON_KEY' => 'D',
+  'LBL_DELETE_BUTTON_LABEL' => 'מחק',
+  'LBL_DELETE_BUTTON_TITLE' => 'מחק [Alt+D]',
+  'LBL_DIRECT_REPORTS' => 'דוחות ישירים',
+  'LBL_DISPLAY_COLUMNS' => 'הצג עמודות',
+  'LBL_DONE_BUTTON_KEY' => 'X',
+  'LBL_DONE_BUTTON_LABEL' => 'בוצע',
+  'LBL_DONE_BUTTON_TITLE' => 'בוצע [Alt+X]',
+  'LBL_DST_NEEDS_FIXIN' => 'הישום דורש שעון קיץ קבוע.  גש בבקשה <a href="index.php?module=Administration&action=DstFix">Repair</a>בקונסולת הניהול וקבע שעון קיץ קבוע.',
+  'LBL_DUPLICATE_BUTTON' => 'שכפל',
+  'LBL_DUPLICATE_BUTTON_KEY' => 'U',
+  'LBL_DUPLICATE_BUTTON_LABEL' => 'שכפל',
+  'LBL_DUPLICATE_BUTTON_TITLE' => 'שכפל [Alt+U]',
+  'LBL_DUP_MERGE' => 'מצא כפילויות',
+  'LBL_EDIT_BUTTON' => 'ערוך',
+  'LBL_EDIT_BUTTON_KEY' => 'E',
+  'LBL_EDIT_BUTTON_LABEL' => 'ערוך',
+  'LBL_EDIT_BUTTON_TITLE' => 'ערוך [Alt+E]',
+  'LBL_EMAILS' => 'דואר אלקטרוני',
+  'LBL_EMAIL_PDF_BUTTON_KEY' => 'M',
+  'LBL_EMAIL_PDF_BUTTON_LABEL' => 'דואר כקובץ PDF',
+  'LBL_EMAIL_PDF_BUTTON_TITLE' => 'דואר כקובץ PDF [Alt+M]',
+  'LBL_EMPLOYEES' => 'עובדים',
+  'LBL_ENTER_DATE' => 'הכנס תאריך',
+  'LBL_EXPORT' => 'ייצא',
+  'LBL_EXPORT_ALL' => 'ייצא הכל',
+  'LBL_FULL_FORM_BUTTON_KEY' => 'F',
+  'LBL_FULL_FORM_BUTTON_LABEL' => 'טופס מלא',
+  'LBL_FULL_FORM_BUTTON_TITLE' => 'טופס מלא [Alt+F]',
+  'LBL_HIDE' => 'הסתר',
+  'LBL_HIDE_COLUMNS' => 'הסתר עמודות',
+  'LBL_ID' => 'זהות',
+  'LBL_IMPORT' => 'ייבא',
+  'LBL_IMPORT_PROSPECTS' => 'ייבוא מטרות',
+  'LBL_LAST_VIEWED' => 'נצפה לאחרונה',
+  'LBL_LEADS' => 'לידים',
+  'LBL_LISTVIEW_MASS_UPDATE_CONFIRM' => 'אתה בטוח שברצונך לעדכן את הרשימה כולה?',
+  'LBL_LISTVIEW_NO_SELECTED' => 'כדי להמשיך אנא בחר לפחות רשומה אחת.',
+  'LBL_LISTVIEW_OPTION_CURRENT' => 'עמוד נוכחי',
+  'LBL_LISTVIEW_OPTION_ENTIRE' => 'הרשימה כולה',
+  'LBL_LISTVIEW_OPTION_SELECTED' => 'רשומות שנבחרו',
+  'LBL_LISTVIEW_SELECTED_OBJECTS' => 'נבחרו: ',
+  'LBL_LIST_ACCOUNT_NAME' => 'שם חשבון',
+  'LBL_LIST_ASSIGNED_USER' => 'משתמש',
+  'LBL_LIST_CONTACT_NAME' => 'שם איש קשר',
+  'LBL_LIST_CONTACT_ROLE' => 'תפקיד איש קשר',
+  'LBL_LIST_EMAIL' => 'דואר אלקטרוני',
+  'LBL_LIST_NAME' => 'שם',
+  'LBL_LIST_OF' => 'מ',
+  'LBL_LIST_PHONE' => 'טלפון',
+  'LBL_LIST_TEAM' => 'צוות',
+  'LBL_LIST_USER_NAME' => 'שם משתמש',
+  'LBL_LOADING' => 'טוען ...',
+  'LBL_LOCALE_NAME_EXAMPLE_FIRST' => 'ישראל',
+  'LBL_LOCALE_NAME_EXAMPLE_LAST' => 'ישראלי',
+  'LBL_LOCALE_NAME_EXAMPLE_SALUTATION' => 'מר.',
+  'LBL_LOGIN_SESSION_EXCEEDED' => 'השרת עסוק מידי.אנא נסה במועד מאוחר יותר.',
+  'LBL_LOGIN_TO_ACCESS' => 'עליך להכנס למערכת על מנת לצפות באזור זה.',
+  'LBL_LOGOUT' => 'צא מהמערכת',
+  'LBL_MAILMERGE' => 'מיזוג דואר',
+  'LBL_MAILMERGE_KEY' => 'M',
+  'LBL_MASS_UPDATE' => 'עידכון מאסיבי',
+  'LBL_MEETINGS' => 'פגישות',
+  'LBL_MEMBERS' => 'חברים',
+  'LBL_MODIFIED' => 'שונה על ידי',
+  'LBL_MODIFIED_BY_USER' => 'שונה על ידי משתמש',
+  'LBL_MY_ACCOUNT' => 'החשבון שלי',
+  'LBL_NAME' => 'שם',
+  'LBL_NEW_BUTTON_KEY' => 'N',
+  'LBL_NEW_BUTTON_LABEL' => 'צור',
+  'LBL_NEW_BUTTON_TITLE' => 'צור [Alt+N]',
+  'LBL_NEXT_BUTTON_LABEL' => 'הבא',
+  'LBL_NONE' => '-כלום-',
+  'LBL_NOTES' => 'פתקים',
+  'LBL_NO_RECORDS_FOUND' => '-נצאו אפס רשומות-',
+  'LBL_OPENALL_BUTTON_KEY' => 'O',
+  'LBL_OPENALL_BUTTON_LABEL' => 'פתח הכל',
+  'LBL_OPENALL_BUTTON_TITLE' => 'פתח הכל [Alt+O]',
+  'LBL_OPENTO_BUTTON_KEY' => 'T',
+  'LBL_OPENTO_BUTTON_LABEL' => 'פתח אל: ',
+  'LBL_OPENTO_BUTTON_TITLE' => 'פתח אל: [Alt+T]',
+  'LBL_OPPORTUNITIES' => 'הזדמנויות',
+  'LBL_OPPORTUNITY' => 'הזדמנות',
+  'LBL_OPPORTUNITY_NAME' => 'שם ההזדמנות',
+  'LBL_OR' => 'או',
+  'LBL_PERCENTAGE_SYMBOL' => '%',
+  'LBL_PRODUCTS' => 'מוצרים',
+  'LBL_PRODUCT_BUNDLES' => 'חבילת מוצרים',
+  'LBL_PROJECTS' => 'פרויקטים',
+  'LBL_PROJECT_TASKS' => 'משימות בפרויקט',
+  'LBL_QUOTES' => 'הצעות מחיר',
+  'LBL_QUOTES_SHIP_TO' => 'הצעת מחיר נשלחה אל',
+  'LBL_QUOTE_TO_OPPORTUNITY_KEY' => 'O',
+  'LBL_QUOTE_TO_OPPORTUNITY_LABEL' => 'צור הזדמנות מהצעת מחיר',
+  'LBL_QUOTE_TO_OPPORTUNITY_TITLE' => 'צור הזדמנות מהצעת מחיר [Alt+O]',
+  'LBL_RELATED_RECORDS' => 'רשומות מקושרות',
+  'LBL_REMOVE' => 'הסר',
+  'LBL_REQUIRED_SYMBOL' => '*',
+  'LBL_SAVED' => 'נשמר',
+  'LBL_SAVED_LAYOUT' => 'תצורה נשמרה.',
+  'LBL_SAVED_VIEWS' => 'תוצאות שמורות',
+  'LBL_SAVE_BUTTON_KEY' => 'S',
+  'LBL_SAVE_BUTTON_LABEL' => 'שמור',
+  'LBL_SAVE_BUTTON_TITLE' => 'שמור [Alt+S]',
+  'LBL_SAVE_NEW_BUTTON_KEY' => 'V',
+  'LBL_SAVE_NEW_BUTTON_LABEL' => 'שמור וצור חדש',
+  'LBL_SAVE_NEW_BUTTON_TITLE' => 'שמור וצור חדש [Alt+V]',
+  'LBL_SAVING' => 'שומר',
+  'LBL_SAVING_LAYOUT' => 'שומר תצורה ...',
+  'LBL_SEARCH' => 'חיפוש',
+  'LBL_SEARCH_BUTTON_KEY' => 'Q',
+  'LBL_SEARCH_BUTTON_LABEL' => 'חיפוש',
+  'LBL_SEARCH_BUTTON_TITLE' => 'חיפוש [Alt+Q]',
+  'LBL_SEARCH_CRITERIA' => 'קריטריון חיפוש',
+  'LBL_SELECT_BUTTON_KEY' => 'T',
+  'LBL_SELECT_BUTTON_LABEL' => 'בחר',
+  'LBL_SELECT_BUTTON_TITLE' => 'בחר [Alt+T]',
+  'LBL_SELECT_CONTACT_BUTTON_KEY' => 'T',
+  'LBL_SELECT_CONTACT_BUTTON_LABEL' => 'בחר איש קשר',
+  'LBL_SELECT_CONTACT_BUTTON_TITLE' => 'בחר איש קשר [Alt+T]',
+  'LBL_SELECT_REPORTS_BUTTON_LABEL' => 'בחר מתוך דוחות',
+  'LBL_SELECT_REPORTS_BUTTON_TITLE' => 'בחר דוחות',
+  'LBL_SELECT_USER_BUTTON_KEY' => 'U',
+  'LBL_SELECT_USER_BUTTON_LABEL' => 'בחר משתמש',
+  'LBL_SELECT_USER_BUTTON_TITLE' => 'בחר משתמש [Alt+U]',
+  'LBL_SERVER_RESPONSE_RESOURCES' => 'משאבים שנוצלו ליצירת עמוד זה (שאילתות קבצים)',
+  'LBL_SERVER_RESPONSE_TIME' => 'זמן תגובה של השרת:',
+  'LBL_SERVER_RESPONSE_TIME_SECONDS' => 'שניות.',
+  'LBL_SHIP_TO_ACCOUNT' => 'נשלח לחשבון',
+  'LBL_SHIP_TO_CONTACT' => 'נשלח לאיש קשר',
+  'LBL_SHORTCUTS' => 'קיצורי דרך',
+  'LBL_SHOW' => 'הצג',
+  'LBL_SQS_INDICATOR' => '',
+  'LBL_STATUS' => 'סטאטוס:',
+  'LBL_STATUS_UPDATED' => 'הסטאטוס שלך לאירוע זה עודכן!',
+  'LBL_SUBJECT' => 'נושא',
+  'LBL_SYNC' => 'סנכרן',
+  'LBL_TASKS' => 'משימות',
+  'LBL_TEAM' => 'צוות',
+  'LBL_TEAMS_LINK' => 'צוות',
+  'LBL_TEAM_ID' => 'צוות זהות:',
+  'LBL_THOUSANDS_SYMBOL' => 'K',
+  'LBL_TRACK_EMAIL_BUTTON_KEY' => 'K',
+  'LBL_TRACK_EMAIL_BUTTON_LABEL' => 'ארכב דואר אלקטרוני',
+  'LBL_TRACK_EMAIL_BUTTON_TITLE' => 'ארכב דואר אלקטרוני [Alt+K]',
+  'LBL_UNAUTH_ADMIN' => 'הגישה מורשת למנהלים בלבד',
+  'LBL_UNDELETE' => 'בטל מחיקה',
+  'LBL_UNDELETE_BUTTON' => 'בטל מחיקה',
+  'LBL_UNDELETE_BUTTON_LABEL' => 'בטל מחיקה',
+  'LBL_UNDELETE_BUTTON_TITLE' => 'בטל מחיקה [Alt+D]',
+  'LBL_UNSYNC' => 'בטל סינכרון',
+  'LBL_UPDATE' => 'עדכן',
+  'LBL_USERS' => 'משתמשים',
+  'LBL_USERS_SYNC' => 'סנכרון משתמשים',
+  'LBL_USER_LIST' => 'רשימת משתמשים',
+  'LBL_VIEW_BUTTON' => 'צפה',
+  'LBL_VIEW_BUTTON_KEY' => 'V',
+  'LBL_VIEW_BUTTON_LABEL' => 'צפה',
+  'LBL_VIEW_BUTTON_TITLE' => 'צפה [Alt+V]',
+  'LBL_VIEW_PDF_BUTTON_KEY' => 'P',
+  'LBL_VIEW_PDF_BUTTON_LABEL' => 'הדפס כ PDF',
+  'LBL_VIEW_PDF_BUTTON_TITLE' => 'הדפס כ PDF [Alt+P]',
+  'LNK_ABOUT' => 'אודות',
+  'LNK_ADVANCED_SEARCH' => 'חיפוש מתקדם',
+  'LNK_BASIC_SEARCH' => 'חיפוש בסיסי',
+  'LNK_DELETE' => 'מחק',
+  'LNK_DELETE_ALL' => 'מחק בכל',
+  'LNK_EDIT' => 'ערוך',
+  'LNK_GET_LATEST' => 'קבל את האחרון',
+  'LNK_GET_LATEST_TOOLTIP' => 'החלף בגרסה האחרונה',
+  'LNK_HELP' => 'עזרה',
+  'LNK_LIST_END' => 'סוף',
+  'LNK_LIST_NEXT' => 'הבא',
+  'LNK_LIST_PREVIOUS' => 'הקודם',
+  'LNK_LIST_RETURN' => 'חזור לרשימה',
+  'LNK_LIST_START' => 'התחל',
+  'LNK_LOAD_SIGNED' => 'חתם',
+  'LNK_LOAD_SIGNED_TOOLTIP' => 'החלף במסמך חתום',
+  'LNK_PRINT' => 'הדפס',
+  'LNK_REMOVE' => 'הערה',
+  'LNK_RESUME' => 'התחיל מחדש',
+  'LNK_VIEW_CHANGE_LOG' => 'צפה ביומן השינויים',
+  'LOGIN_LOGO_ERROR' => 'אנא החלף את הלוגו בלוגו שלך.',
+  'NTC_CLICK_BACK' => 'כדי לתקן את השגיאה אנא הקש על כפתור "אחורה" בדפדפן שלך',
+  'NTC_DATE_FORMAT' => '(dd-mm-yyyy)',
+  'NTC_DATE_TIME_FORMAT' => '(dd-mm-yyyy 24:00)',
+  'NTC_DELETE_CONFIRMATION' => 'אתה בטוח שברצונך למחוק רשומה זו?',
+  'NTC_DELETE_CONFIRMATION_MULTIPLE' => 'אתה בטוח שברצונך למחוק רשומה/מות אלה?',
+  'NTC_LOGIN_MESSAGE' => 'אנא הזן שם משתמש וסיסמא:',
+  'NTC_NO_ITEMS_DISPLAY' => 'כלום',
+  'NTC_REMOVE_CONFIRMATION' => 'אתה בטוח שברצונך להסיר קשרים?',
+  'NTC_REQUIRED' => 'מצביע על שדה חובה',
+  'NTC_SUPPORT_SUGARCRM' => 'Support the SugarCRM open source project via SugarCRM Hebrew community at sugarcrm.org.il',
+  'NTC_TIME_FORMAT' => '(24:00)',
+  'NTC_WELCOME' => 'ברוך הבא',
+  'NTC_YEAR_FORMAT' => '(yyyy)',
+);
+

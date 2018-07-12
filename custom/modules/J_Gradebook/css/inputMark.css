@@ -1,0 +1,90 @@
+.overide{
+    /*    border: black 1px solid;*/
+}
+.title {
+    padding: 7px;
+    border: black 1px solid;
+    background: #ddd;
+}
+.content,.config,.gradebook_detail {
+    padding: 7px;
+    border: black 1px solid;
+    background: #fff;
+}
+.lable {
+    text-align: right;
+}
+.select_config {
+    width: 200px;
+}
+.td-mark {
+    width: 70px;
+    text-align: center;
+}
+.input_formula {
+    width: 100px;
+}
+.input_mark,.input_weight, .span_total {
+    width: 50px;
+    text-align: center;
+}
+.span_total {
+    height:35px;
+}
+.center{
+    text-align: center;
+}
+input[readonly], .readonly, .readonly:focus  {
+    color: #f00;
+    background-color: #dfdfdf;
+}
+
+.config_button {
+    height: 60px;
+    width: 100%;
+    text-align: center; 
+    padding: 15px;
+}
+
+.dialog_header {
+    width: 100%;
+}
+
+.right{
+    text-align: right;
+}
+
+.mid{
+    width:10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.label_comment {
+    width: 270px;
+}
+
+.select_comment{
+    width: 620px !important;
+}
+
+.text_comment {
+    width: 614px;
+    height: 100px;
+}
+
+thead tr td{
+    text-align: center;
+}
+
+td{
+    height: 26px;
+}
+
+select.readonly{
+    color: #f00;
+    background-color: #ddd;
+    cursor: no-drop;
+}

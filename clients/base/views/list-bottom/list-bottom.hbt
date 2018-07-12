@@ -1,0 +1,50 @@
+{{!
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+}}
+{{#if collection.length}}
+    {{#notEq collection.next_offset "-1"}}
+    <div class="block-footer">
+        {{#each meta.buttons}}
+        {{field ../this ../model}}
+        {{/each}}
+    </div>
+    {{/notEq}}
+{{else}}
+    <div class="block-footer">
+        {{#if context._dataFetched}}
+            {{#if context.attributes.isCreateEnabled}}
+                <a href="#{{buildRoute context model "create" route.options}}" rel="tooltip" title="{{str "LNK_CREATE" module}}">
+                    {{str "LBL_LISTVIEW_NO_RECORDS"}} {{str "LNK_CREATE_WHEN_EMPTY" module}}
+                </a>
+            {{else}}
+                {{str "LBL_LISTVIEW_NO_RECORDS"}}
+            {{/if}}
+        {{else}}
+            {{str "LBL_LOADING"}}
+        {{/if}}
+    </div>
+{{/if}}
+<ul class="nav nav-pills actions">
+    {{#if context.attributes.isCreateEnabled}}
+    <li>
+        <a href="#{{buildRoute context model "create" route.options}}" rel="tooltip" title="{{str "LNK_CREATE" module}}"><i
+                class="icon-plus"></i></a>
+    </li>
+    {{/if}}
+    <li>
+        <a href="javascript:void(0)" rel="tooltip" title="{{str "LBL_BASIC_SEARCH"}}" class="search"><i
+                class="icon-search"></i></a>
+    </li>
+</ul>

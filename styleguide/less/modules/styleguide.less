@@ -1,0 +1,87 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+// Styleguide.less
+// Do not add to bootstrap.less
+// ------------------------------------------------------------------------
+@import "../twitter-bootstrap/mixins.less";
+
+/* Special grid styles
+-------------------------------------------------- */
+.show-grid {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.show-grid [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  .border-radius(3px);
+  min-height: 30px;
+  line-height: 30px;
+}
+.show-grid:hover [class*="span"] {
+  background: #ddd;
+}
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="span"] {
+  background-color: #ccc;
+}
+
+/* Popover docs
+-------------------------------------------------- */
+.popover-well {
+  min-height: 160px;
+}
+.popover-well .popover {
+  display: block;
+}
+.popover-well .popover-wrapper {
+  width: 50%;
+  height: 160px;
+  float: left;
+  margin-left: 55px;
+  position: relative;
+}
+.popover-well .popover-menu-wrapper {
+  height: 80px;
+}
+
+
+/* Color swatches on LESS docs page
+-------------------------------------------------- */
+/* Sets the width of the td */
+.swatch-col {
+  width: 30px;
+}
+
+.swatch {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  margin: -6px 0;
+  .border-radius(3px);
+}
+
+.swatch-bordered {
+  width: 28px;
+  height: 18px;
+  border: 1px solid #eee;
+}
+
+.hero-unit {
+  padding: 20px;
+  font-size: 24px;
+}

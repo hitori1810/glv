@@ -1,0 +1,10 @@
+.input_readonly, .input_readonly:focus{
+     color: black; 
+     background-color: rgb(221, 221, 221);
+}
+.currency_readonly, .currency_readonly:focus{
+     font-weight: bold;
+     color: rgb(165, 42, 42); 
+     background-color: rgb(221, 221, 221);
+     text-align: right;
+}

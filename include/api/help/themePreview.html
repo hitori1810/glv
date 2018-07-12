@@ -1,0 +1,44 @@
+<!--
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+-->
+<div class="longHelpTitle">Run LessPHP and outputs the compiled css</div>
+<div class="summary">
+    <h2>Summary:</h2>
+    <p>This endpoint allows you to preview what would be the output bootstrap.css after compiling a theme. It interprets
+        the arguments as less variables and run LessPHP based on the set of arguments you furnished.</p>
+</div>
+<div class="params">
+<h2>Query Parameters:</h2>
+    <table>
+        <tr><th>Param</th><th>Description</th><th>Optional</th></tr>
+        <tr><td>platform</td><td>/themes/clients/***PLATFORM***/themeName/</td><td>true</td></tr>
+        <tr><td>themeName</td><td>/themes/clients/platform/***THEMENAME***/</td><td>true</td></tr>
+        <tr><td>min</td><td>Compress or not the css</td><td>true</td></tr>
+    </table>
+</div>
+<div class="input">
+    <h2>Input Example:</h2>
+    <code class="codesample">
+{
+    platform: 'portal',
+    themeName: 'default',
+    min: false
+}
+    </code>
+</div>
+<div class="output">
+    <h2>Output Example:</h2>
+    <p>.article { font-size: 16px; }</p>
+</div>

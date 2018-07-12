@@ -1,0 +1,725 @@
+
+.subhead {margin-top: 20px;}
+.subnav-fixed {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
+  border-color: #d5d5d5;
+  border-width: 0 0 1px; /* drop the border on the fixed edges */
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+     -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); /* IE6-9 */
+}
+.subnav-fixed .nav {
+  width: 938px;
+  margin: 0 auto;
+  padding: 0 1px;
+}
+
+#contentflex #headerbar {
+    height: 60px;
+    z-index: 1000;
+    border-bottom: 1px solid darken(@grayLighter,5%);
+    position: relative;
+    h1 {
+        float: left;
+        margin-top: 12px;
+        margin-left: 20px;
+        .rtlFloat(@direction,right);
+        .rtlMargin(@direction,12px 20px 0 0);
+    }
+
+    .btn-toolbar.pull-right,
+    .btn-toolbar.pull-left {
+      margin-top: 15px;
+    }
+    .btn-toolbar.pull-right > .btn, .btn-toolbar.pull-right > .btn-group {
+        margin: 0 14px 0 0;
+        .rtlMargin(@direction,0 0 0 8px);
+    }
+
+    .dropdown-toggle {
+        .box-shadow(none);
+    }
+
+    .span12 {
+        margin-left: 0px;
+    }
+
+    .drawerTrig {
+        padding: 4px 6px;
+
+        i[class*="icon-"]{
+        .opacity(20);
+        }
+
+        i.one {
+        position: relative;
+
+        }
+
+        i.two {
+        position: relative;
+
+        }
+
+    }
+}
+
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+.cube {
+  background: url('@{baseUrl}/img/badge_256f.png') 50% 11px no-repeat;
+  float: left;
+  height: 19px;
+  width: 56px;
+  margin-left: -20px;
+  z-index: 2000;
+  display: block;
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+  }
+
+.navbar .navbar-inner {
+  height: 44px;
+}
+.navbar .cube:hover {
+  text-decoration: none;
+}
+
+.navbar-fixed-top .cube:hover {
+  text-decoration: none;
+}
+
+.navbar .dropdown-menu li,
+.navbar .dropdown-menu li.divider {
+  padding: 0;
+}
+
+.navbar .dropdown-menu li a {
+  display: block;
+  padding: 8px;
+}
+
+.navbar a [class^="icon-"] {
+  color: @white !important;
+  font-size: 14px;
+}
+
+.navbar .nav.pull-right#userList {
+  margin: 0;
+}
+.navbar .nav.pull-right {
+    .rtlFloat(@direction,left);
+    .rtlMargin(@direction,0 10px 0 0);
+}
+.navbar .advanced {
+  position: absolute;
+  top: -9px;
+  right: -1px;
+  .rtlLeft(@direction,1px);
+  .rtlRight(@direction,auto);
+  display: none;
+}
+
+.navbar .advanced .btn {
+  line-height: 19px;
+  height: 18px;
+}
+.navbar .advanced .dropdown-menu li {
+  padding: 8px;
+}
+.navbar .advanced .dropdown-menu li.divider {
+  padding: 0;
+}
+//fix advanced drop down position
+.navbar .advanced .dropdown-menu {
+  right: 35px;
+  top: 35px;
+}
+.navbar .advanced.dropdown-toggle {
+  right: 31px;
+  top: 1px;
+  height: 24px;
+  .border-radii(0px,0px,3px,3px);
+  .rtlRight(@direction,auto);
+  .rtlLeft(@direction,21px);
+}
+//temp fix for sidecar
+#dcmenu.navbar .advanced.dropdown-toggle {
+   .rtlLeft(@direction,34px);
+}
+.navbar .advanced .caret {
+  margin-top: 10px;
+}
+.navbar .advanced .btn-group {
+  margin-right: 0;
+}
+
+.navbar .nav > li {
+    .rtlFloat(@direction,right);
+}
+.navbar .nav > li > a.btn {
+  padding: 4px 8px;
+  margin-top: 8px;
+}
+
+//avatar
+.avatar img {
+  .border-radius(3px);
+}
+.avatar.thumbnail {padding: 3px;}
+
+.navbar .avatar, li li .avatar, .avatar img  {
+  height: 24px;
+  width: 24px;
+}
+.avatar32 img {
+  height: 32px;
+  width: 32px;
+}
+.avatar68 img {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  z-index: 1;
+  height: 92px;
+  width: 92px;
+}
+.avatar42 img {
+  height: 42px;
+  width: 42px;
+  margin-right: 10px;
+}
+.pull-left .avatar {
+  margin-right: 10px;
+}
+.navbar .avatar {
+  margin-right: 10px;
+  margin-top: -3px;
+  float: left;
+  .border-radius(3px);
+  height: 24px;
+  width: 24px;
+  @shadow: 1px 1px 0 rgba(0,0,0,.6), -1px -1px 0 rgba(0,0,0,.6);
+  .box-shadow(@shadow);
+}
+
+.navbar form .btn {
+  margin-left: 0;
+  line-height: inherit;
+}
+
+.logo {
+  background: url('@{baseUrl}/img/sugar-red-sm.png') 0 0 no-repeat;
+  display: block;
+  margin: 14px 0 0 10px;
+  text-indent: -7000px;
+  height: 20px;
+  width: 150px;
+}
+
+#sActivity .tab-content {
+  padding-bottom: 100px;
+}
+
+
+.tabbar .active {
+  position: relative;
+}
+
+.tabbar .active:after, .tabbar .active:before {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  left: 100%;
+  position: absolute;
+  width: 0;
+}
+
+.tabbar .active:after {
+  border-width: 7px;
+  border-bottom-color: #fff;
+  top: 12px;
+}
+
+.tabbar .active:before {
+  border-width: 7px;
+  border-bottom-color: #aaa;
+  top: 10px;
+}
+.subnav .control-group {
+  margin: 0;
+}
+.subnav .control-group .btn-toolbar.pull-right {
+  margin: 0;
+}
+
+//54606: align `Email` label with its fields
+//896492a63d300e820c003aa8707c714ed1fb6e3b
+//.control-group.email .btn-mini {margin-right:0;width:auto;height:auto;}
+.control-group.email .controls.pull-left {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* blocks */
+.block {
+  margin-bottom: 20px;
+  position: relative;
+  display: block;
+}
+.span2 .block {
+  padding-right: 10px;
+}
+.block:first-child {border-top: none;}
+
+.block ul.list{
+  margin: 0 0 20px;
+  padding: 0;
+}
+.block .list li, .listed li  {
+  list-style: none;
+  margin: 0 0 15px;
+  position: relative;
+}
+.listed {margin: 0; padding: 0;}
+.listed li {border-bottom: 1px solid @grayLighter; margin: 0; padding: 5px;}
+
+.block .list li.active a {
+  background: @grayLighter;
+  color: @textColor;
+  display: block;
+  border: none;
+  padding: 4px;
+  margin: 0 0 0 -4px;
+}
+.block.tabs-left {
+  border: none;
+}
+.block.tabs-left .nav-tabs {
+  float: none;
+  margin: 9px 0;
+  padding: 0;
+  border: none;
+}
+.block.thumbnail .nav-tabs {margin: 0; border: none;}
+
+.block.thumbnail .nav-tabs li, .block.tabs-left .nav-tabs li{
+  border-bottom: 1px solid darken(@grayLighter, 5%);
+  margin-bottom: 10px;
+}
+
+.block.tabs-left .nav-tabs p {
+  margin: 0 80px 20px 55px;
+}
+
+.block.tabs-left .nav-tabs li li .avatar img {
+  margin: 3px 0 0;
+}
+
+.block.tabs-left .nav-tabs li li{
+  margin: 0;
+  padding: 10px;
+  border-top: 1px solid @grayLighter;
+  border-bottom: none;
+}
+.block.tabs-left .nav-tabs .commented {
+  background: @grayLighter;
+  margin: 10px 0 10px 50px;
+}
+.commented li {
+  border-top: 1px solid @white !important;
+}
+
+.block.tabs-left .nav-tabs li li p {
+  margin: 0 0 10px 36px;
+}
+
+.block.tabs-left .nav-tabs > li > a:hover, .block.tabs-left .nav-tabs > li > a {
+  background: none !important;
+  border: none !important;
+}
+
+.block.tabs-left .nav-tabs .on {
+
+}
+
+.bordered .tabs-left .nav-tabs > li > a, .bordered .tabs-left .nav-tabs .on > a, .bordered .tabs-left .nav-tabs .on {
+  padding: 4px;
+  margin: 4px -10px 4px 0;
+}
+
+.row-fluid > #charts.span12 {margin-left: 0 !important;}
+h4 i {color: @grayLight;}
+.drawerTrig.pull-right {
+  .border-radius(0 2px 2px 0);
+  position: relative;
+}
+
+.drawerTrig.pull-left {
+  .border-radius(2px);
+  margin-right: 0;
+  padding: 4px 4px 0 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.block.tabs-left .nav-tabs li .actions {
+  display: block;
+  top: -2px;
+}
+.block.tabs-left .nav-tabs li .actions a i {
+  padding: 4px;
+}
+
+.block.tabs-left .nav-tabs li.on .actions .icon-eye-open {
+  color: @grayDark;
+  .opacity(100);
+  background: @grayLight;
+  text-shadow: none;
+  .border-radius(4px);
+  padding-right: 100px;
+  margin-right: -96px;
+}
+
+.block .nav-tabs li {
+  list-style: none;
+  position: relative;
+}
+.block h4 {
+  padding: 0 0 10px;
+  font-weight: 600;
+  border-bottom: 1px solid @grayLight;
+  margin-bottom: 10px;
+}
+
+.span2 .block .actions {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.block .actions, article .actions, .subnav .actions {
+  position: absolute;
+  top: -5px;
+  right: 0;
+}
+
+.thumbnail .table {
+  margin-bottom: 0px;
+}
+
+.block-footer {
+  padding: 10px;
+  margin-bottom: 0;
+  text-align: center;
+  #gradient > .vertical(@grayLighter, @white);
+  border-top: 1px solid darken(@grayLighter, 15%);
+  .border-radius(0 0 6px 6px);
+  .box-shadow(inset 0 1px 2px rgba(0,0,0,.05));
+  .clearfix();
+  .btn {
+    margin: 0 auto !important;
+  }
+  a {
+    margin: 0 auto !important;
+    display: block;
+    cursor: pointer;
+    color: @textColor;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.span12 .block-footer {
+  .btn {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.thumbnail .actions {
+  position: absolute;
+  top: 3px;
+  right: 2px;
+}
+
+#stream tr .actions {
+  position: absolute;
+  bottom: 2px !important;
+  left: 0 !important;
+}
+
+#activity article {
+position: relative;
+}
+
+//55160: preview items should be split into separate lines
+//37a9b82e1792f1dafe2359d435bd6130c22136e3
+.card2 {
+  margin: 0 0 20px;
+  &>span[sfuuid] {
+    display:block;
+    clear:left;
+  }
+}
+
+.card2 .row-fluid .btn-small { margin-top: -4px; margin-right: 8px; height: 16px; width: 16px;}
+.card2 .row-fluid, .card2 span .row-fluid {
+  position: relative;
+  padding: 8px 0 0;
+}
+
+#folded .card2 .row-fluid [class*="span"] {padding: 0 0 10px 0;}
+.card2 .extend + .row-fluid, .card2 span:last-child .row-fluid {
+  border-bottom: none;
+}
+
+.card2 .input-append .add-on {
+  margin-top: -2px;
+}
+
+.btn-toolbar {
+    padding-left: 20px;
+    .rtlPadding(@direction,0 20px 0 0);
+}
+
+.actions li {
+  border-left: darken(@grayLighter, 5%) solid 1px;
+  padding: 0 1px;
+}
+.actions li a {
+ margin: 0;
+}
+.actions li:first-child {
+  border: none;
+}
+
+article .actions, tr .actions {
+  display: none;
+}
+article:hover .actions,  tr:hover .actions {
+  display: block;
+}
+
+.divleft {
+  border-left: 1px solid darken(@grayLighter, 4%);
+  padding-left: 2%;
+  margin-right: -2.3%;
+}
+.divleft .block {
+  margin-right: 15px;
+}
+.bordered {
+  border-right: @btnBorder 1px solid;
+  margin-right: -10px;
+}
+#drawer {
+  position: relative;
+}
+#thedrawer {
+  background: @black;
+  position: fixed;
+  z-index: 1020;
+  top: 46px;
+  left: 52px;
+  height: 100%;
+  padding: 20px;
+  #gradient > .vertical(lighten(@black, 20%), lighten(@black, 15%));
+  @shadow: inset 0 -1px 1px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.1);
+  .box-shadow(@shadow);
+}
+#thedrawer h4
+{
+color: @white;
+}
+
+.search-query {
+  .border-radius(4px);
+}
+
+.block ul.list ul {
+  margin: 10px 0 10px 20px;
+}
+.block ul.list ul li {
+  margin: 0 0 5px;
+}
+.block ul.list [class^="icon-"] {
+  margin-right: 5px;
+}
+
+.control-group .btn-toolbar {
+  margin: 0 0 0 5px !important;
+  display: inline;
+}
+
+#guages .row-fluid  {
+  padding: 10px 0 0;
+  border-bottom: 1px solid darken(@grayLighter, 5%);
+  margin: 0 3%;
+  width: 94%
+}
+#guages, #guages h4  {
+  border-bottom: 3px solid @grayLight;
+  margin: 0;
+}
+#guages {
+  margin-bottom: 10px;
+}
+
+#riskPreview .progress {
+  position: relative;
+}
+
+#riskPreview .progress, #riskPreview .progress .bar  {
+  height: 10px;
+  line-height: 20px;
+  text-align: left;
+}
+
+#projected_bottom_line.row-fluid {
+    padding-bottom: 20px;
+    border-bottom: none;
+    border-top: 2px solid darken(@grayLighter, 5%);
+    strong {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+.progress .bar b {
+  color: @gray;
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  font-weight: normal;
+}
+
+.navbar .nav {
+    .rtlFloat(@direction,right);
+    .rtlRight(@direction,0);
+    .rtlLeft(@direction,auto);
+}
+
+// Navbar updates in sidecar removed
+/*
+
+// Navbar search
+.navbar-search {
+  position: relative;
+  float: left;
+  margin-top: 8px;
+  margin-bottom: 0;
+  .search-query {
+    padding: 4px 9px;
+    #font > .sans-serif(13px, normal, 1);
+    color: @grayLighter;
+    background: @white;
+    border: 1px solid #111;
+    @shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0px rgba(255,255,255,.15);
+    .box-shadow(@shadow);
+    .transition(none);
+
+  // Placeholder text gets special styles; can't be bundled together though for some reason
+    .placeholder(@grayLighter);
+
+  // Hover states
+    &:hover {
+      color: @white;
+      background-color: @grayLight;
+      background-color: rgba(255,255,255,.5);
+    }
+  // Focus states (we use .focused since IE7-8 and down doesn't support :focus)
+    &:focus,
+    &.focused {
+      color: @grayDark;
+      text-shadow: 0 1px 0 @white;
+      background-color: @white;
+      border: 1px solid @gray;
+      outline: 0;
+    }
+  }
+}
+
+.navbar {
+  .btn,
+  .btn-group {
+    margin: 0 10px 0; // make buttons vertically centered in navbar
+  }
+  .btn-group .btn {
+    margin-top: 0; // then undo the margin here so we don't accidentally double it
+  }
+
+  .advanced .btn {
+    line-height: 19px;
+    height: 18px;
+    margin-right: 0px;
+  }
+}
+
+#profileThumb {
+  max-width: 24px; max-height: 24px;
+  margin-right: 10px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#searchDivider {
+  float: right;
+  margin: 0px;
+}
+*/
+
+/**
+ Aim is to create responsive navbar by:
+ - moving profile/logout links to + icon is width is too small
+ - hiding search input if width is even smaller
+ **/
+.profile.mediasmall, .logout.mediasmall, .divider.mediasmall {
+    display:none !important;
+}
+
+@media (max-width: 768px) {
+  .cube {
+    width: 30px !important;
+    margin-left: 0px !important;
+  }
+  #userActions.medialarge, .divider-vertical.medialarge {
+    display:none !important;
+  }
+  .divider-vertical.medialarge {
+      display:none !important;
+    }
+  .profile.mediasmall, .logout.mediasmall, .divider.mediasmall {
+      display:block !important;
+    }
+  .subnav {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  #searchForm {
+    display: none !important;
+  }
+}

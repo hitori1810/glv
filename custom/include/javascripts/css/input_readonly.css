@@ -1,0 +1,10 @@
+.input_readonly, .input_readonly:focus{
+     background-color: rgb(221, 221, 221);
+     color: rgb(165, 42, 42); 
+}
+.curency_readonly, .curency_readonly:focus{
+     font-weight: bold;
+     color: rgb(165, 42, 42); 
+     text-align: right; 
+     background-color: rgb(221, 221, 221);
+}

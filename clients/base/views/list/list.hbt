@@ -1,0 +1,40 @@
+{{!
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+}}
+                   {{#each meta.panels}}
+                    <table class="table table-striped">
+                        <thead>
+                        <tr role="row">
+                            {{#each fields}}
+                            <th class="{{#isSortable ../../module this}}sorting{{#eq ../../../collection.orderBy.columnName name}}{{{../../../../orderBy.direction}}}{{/eq}} orderBy{{name}}{{/isSortable}}"
+                                role="columnheader" data-fieldname="{{name}}" data-orderby="{{orderBy}}"
+                                style="width: {{width}}%">
+                                {{str label ../../module}}
+                            </th>
+                            {{/each}}
+                        </tr>
+                        </thead>
+                        <tbody role="alert" aria-live="polite" aria-relevant="all">
+                        {{#each ../collection.models}}
+                        <tr name="{{module}}_{{attributes.id}}"{{#if ../../collection.newRecords}}{{#unless old}} class="new"{{/unless}}{{/if}}>
+                            {{#each ../fields}}
+                            <td>{{field ../../../this ../this}}</td>
+                            {{/each}}
+                        </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+                    {{/each}}
+                    

@@ -1,0 +1,184 @@
+<!--
+/*
+ * Your installation or use of this SugarCRM file is subject to the applicable
+ * terms available at
+ * http://support.sugarcrm.com/06_Customer_Center/10_Master_Subscription_Agreements/.
+ * If you do not agree to all of the applicable terms or do not have the
+ * authority to bind the entity as an authorized representative, then do not
+ * install or use this SugarCRM file.
+ *
+ * Copyright (C) SugarCRM Inc. All rights reserved.
+ */
+-->
+<!-- BEGIN: main -->
+<script type="text/javascript" src="custom/include/js/survey_js/survey_workflow.js"></script>
+<link href="custom/include/css/survey_css/survey.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="custom/include/css/font-awesome/css/font-awesome.min.css"/>
+
+<script language="javascript">
+    SUGAR.util.doWhen(function () {
+        return $("#contentTable").length == 0;
+    }, SUGAR.themes.actionMenu);
+</script>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" id="">
+    <tr>
+        <td class="buttons" align="left" NOWRAP width="80%">
+            <div class="actionsContainer">
+                <form action="index.php" method="post" name="DetailView" id="formDetailView">
+                    <input type="hidden" name="module" value="bc_survey_automizer">
+                    <input type="hidden" name="record" value="{ID}">
+                    <input type="hidden" name="return_action">
+                    <input type="hidden" name="return_module">
+                    <input type="hidden" name="return_id">
+                    <input type="hidden" name="base_module" value="{BASE_MODULE}">
+                    <input type="hidden" name="module_tab">
+                    <input type="hidden" name="isDuplicate" value="false">
+                    <input type="hidden" name="action" value="EditView">
+                    <input type="hidden" name="sugar_body_only">
+                </form>
+                <tr>
+                    <td><h2>{NAME}</h2></td>
+                    <td align="right" width="20%">
+                        <a id="create_link" href="index.php?module=bc_survey_automizer&action=EditView&return_module=bc_survey_automizer&return_action=DetailView" class="utilsLink">
+                            Create
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr><td>
+                        <ul id="detail_header_action_menu" class="clickMenu fancymenu" >
+                            <li class="sugar_action_button" >
+                                <input title="" accessKey="" class="button primary" onclick="var _form = document.getElementById('formDetailView');
+                                        _form.return_module.value = 'bc_survey_automizer';
+                                        _form.return_action.value = 'DetailView';
+                                        _form.return_id.value = '';
+                                        _form.action.value = 'EditView';
+                                        SUGAR.ajaxUI.submitForm(_form);" type="button" name="Edit" id="edit_button" value="Edit"> 
+                                <ul class="subnav">
+                                    <li>
+                                        <input title="" accessKey="" class="button" onclick="var _form = document.getElementById('formDetailView');
+                                                _form.return_module.value = 'bc_survey_automizer';
+                                                _form.return_action.value = 'DetailView';
+                                                _form.isDuplicate.value = true;
+                                                _form.action.value = 'EditView';
+                                                _form.return_id.value = '{ID}';
+                                                SUGAR.ajaxUI.submitForm(_form);" type="button" name="Duplicate" value="Duplicate" id="duplicate_button"> 
+                                    </li>
+                                    <li>
+                                        <input title="" accessKey="" class="button" onclick="var _form = document.getElementById('formDetailView');
+                                                _form.return_module.value = 'bc_survey_automizer';
+                                                _form.return_action.value = 'ListView';
+                                                _form.action.value = 'Delete';
+                                                if (confirm('Are you sure you want to delete this record?'))
+                                                    SUGAR.ajaxUI.submitForm(_form);" type="submit" name="Delete" value="Delete" id="delete_button">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="detail view">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+        <tr>
+            <td width="25%" scope="row"><slot>{MOD.LBL_NAME}</slot></td>
+        <td width="25%"><slot>{NAME}&nbsp;</slot></td>
+        <td width="25%" scope="row"><slot>{MOD.LBL_STATUS}</slot></td>
+        <td width="25%"><slot>{STATUS}&nbsp;</slot></td>
+    </tr><tr>
+<td scope="row"><slot>{MOD.LBL_FLOW_MODULE}</slot></td>
+<td><slot>{BASE_MODULE}&nbsp;</slot></td>
+<td scope="row"><slot>{MOD.LBL_FLOW_RUN_ON}</slot></td>
+<td><slot>{TYPE}&nbsp;</slot></td>
+</tr>
+<tr>
+    <td scope="row"><slot>{MOD.LBL_RUN_WHEN}</slot></td>
+<td><slot>{RECORD_TYPE}&nbsp;</slot></td>
+<td><slot>&nbsp;</slot></td>
+<td><slot>&nbsp;</slot></td>
+</tr>
+<tr>
+    <td scope="row" valign="top" ><slot>{MOD.LBL_DESCRIPTION}</slot></td>
+<td colspan='3'><slot>{DESCRIPTION}&nbsp;</slot></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<h2>Condition</h2>
+<table id="workflow_condition">
+    <tr>
+        <td></td>
+    </tr>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%" border="0" id="condtion_table" class="list view footable-loaded footable">
+    <thead>
+        <tr class="pagination" role="presentation">
+            <td colspan="20" align="right"><span class="footable-toggle"></span>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                    <tr>
+                        <td align="left">
+                            <ul class="clickMenu fancymenu SugarActionMenu">
+                                <li class="sugar_action_button">
+                                    <a id="condition_create_button" onclick="workflow_condition('{BASE_MODULE}')">Create</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr></table>
+            </td>
+        </tr>
+        <tr height="20" id="table_head">
+            <th scope="col" width="10%">No</th>
+            <th scope="col" width="10%">Module</th>
+            <th scope="col" width="10%">Fields</th>
+            <th scope="col" width="10%">Operator</th>
+            <th scope="col" width="10%">Type</th>
+            <th scope="col" width="10%">Value</th>
+            <th scope="col" width="10%">Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
+</table>
+<br>
+<br>
+<h2>Action</h2>
+<table cellpadding="0" cellspacing="0" width="100%" border="0" id="action_table" class="list view footable-loaded footable">
+    <tbody>
+        <tr class="pagination" role="presentation">
+            <td colspan="20" align="right"><span class="footable-toggle"></span>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <thead>
+                            <td colspan="20" align="right"><span class="footable-toggle"></span>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                    <tr>
+                                        <td align="left">
+                                            <ul class="clickMenu fancymenu SugarActionMenu">
+                                                <li class="sugar_action_button">
+                                                    <a id="action_create_button" onclick="workflow_action('{BASE_MODULE}')">Create</a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr></table>
+                            </td>
+                        <tr height="20" id="table_head">
+                            <th scope="col" width="10%">No</th>
+                            <th scope="col" width="10%">Recipient Type</th>
+                            <th scope="col" width="10%">Module</th>
+                            <th scope="col" width="10%">Email Fields</th>
+                            <th scope="col" width="10%">Survey Title</th>
+                            <th scope="col" width="10%">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+</table>

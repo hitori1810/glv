@@ -1,0 +1,669 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+.yui-skin-sam {
+//yui.css
+    yui-ac {
+        position: relative;
+        font-family: arial;
+        font-size: 100%;
+    }
+
+    .yui-ac-input {
+        position: relative !important;
+        width: auto !important;
+    }
+
+    .yui-ac-container {
+        float: left;
+        width: 100%;
+    }
+
+    .yui-ac-content {
+        position: absolute;
+        border: 1px solid #808080;
+        width: 160px;
+        background: #fff;
+        overflow: hidden;
+        z-index: 9050;
+    }
+
+    .yui-ac-shadow {
+        position: absolute;
+        margin: .3em;
+        width: 100%;
+        background: #000;
+        -moz-opacity: 0.10;
+        opacity: .10;
+        filter: alpha(opacity = 10);
+        z-index: 9049;
+    }
+
+    .yui-ac iframe {
+        opacity: 0;
+        filter: alpha(opacity = 0);
+        padding-right: .3em;
+        padding-bottom: .3em;
+    }
+
+    .yui-ac-content ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .yui-ac-content li {
+        margin: 0 !important;
+        padding: 2px 5px;
+        cursor: default;
+        white-space: nowrap;
+        list-style: none !important;
+        zoom: 1;
+    }
+
+    .yui-ac-content li.yui-ac-prehighlight {
+        background: #B3D4FF;
+    }
+
+    .yui-ac-content li.yui-ac-highlight {
+        background: #426FD9;
+        color: #FFF;
+    }
+
+    .yui-calcontainer {
+        position: relative;
+        float: left;
+        _overflow: hidden;
+    }
+
+    .yui-calcontainer iframe {
+        position: absolute;
+        border: none;
+        margin: 0;
+        padding: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+    }
+
+    .yui-calcontainer iframe.fixedsize {
+        width: 50em;
+        height: 50em;
+        top: -1px;
+        left: -1px;
+    }
+
+    .yui-calcontainer.multi .groupcal {
+        z-index: 1;
+        float: left;
+        position: relative;
+    }
+
+    .yui-calcontainer .title {
+        position: relative;
+        z-index: 1;
+    }
+
+    .yui-calcontainer .close-icon {
+        position: absolute;
+        z-index: 1;
+        text-indent: -10000em;
+        overflow: hidden;
+    }
+
+    .yui-calendar {
+        position: relative;
+    }
+
+    .yui-calendar .calnavleft {
+        position: absolute;
+        z-index: 1;
+        text-indent: -10000em;
+        overflow: hidden;
+    }
+
+    .yui-calendar .calnavright {
+        position: absolute;
+        z-index: 1;
+        text-indent: -10000em;
+        overflow: hidden;
+    }
+
+    .yui-calendar .calheader {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .yui-calcontainer .yui-cal-nav-mask {
+        position: absolute;
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        _width: 0;
+        _height: 0;
+        left: 0;
+        top: 0;
+        display: none;
+    }
+
+    .yui-calcontainer .yui-cal-nav {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        display: none;
+    }
+
+    .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn {
+        display: -moz-inline-box;
+        display: inline-block;
+    }
+
+    .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button {
+        display: block;
+        display: inline-block;
+        overflow: visible;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .yui-calendar .calbody a:hover {
+        background: inherit;
+    }
+
+    p#clear {
+        clear: left;
+        padding-top: 10px;
+    }
+
+    .yui-calcontainer {
+        background-color: #f2f2f2;
+        border: 1px solid #808080;
+        padding: 10px;
+    }
+
+    .yui-calcontainer.multi {
+        padding: 0 5px 0 5px;
+    }
+
+    .yui-calcontainer.multi .groupcal {
+        background-color: transparent;
+        border: none;
+        padding: 10px 5px 10px 5px;
+        margin: 0;
+    }
+
+    .yui-calcontainer .title {
+        border-bottom: 1px solid #cccccc;
+        font: 100% sans-serif;
+        color: #000;
+        font-weight: bold;
+        height: auto;
+        padding: .4em;
+        margin: 0 -10px 10px -10px;
+        top: 0;
+        left: 0;
+        text-align: left;
+    }
+
+    .yui-calcontainer.multi .title {
+        margin: 0 -5px 0 -5px;
+    }
+
+    .yui-calcontainer.withtitle {
+        padding-top: 0;
+    }
+
+    .yui-calcontainer .calclose {
+        width: 25px;
+        height: 15px;
+        top: .4em;
+        right: .4em;
+        cursor: pointer;
+    }
+
+    .yui-calendar {
+        border-spacing: 0;
+        border-collapse: collapse;
+        font: 100% sans-serif;
+        text-align: center;
+        margin: 0;
+    }
+
+    .yui-calendar .calhead {
+        background: transparent;
+        border: none;
+        vertical-align: middle;
+        padding: 0;
+    }
+
+    .yui-calendar .calheader {
+        background: transparent;
+        font-weight: bold;
+        padding: 0 0 .6em 0;
+        text-align: center;
+    }
+
+    .yui-calendar .calheader img {
+        border: none;
+    }
+
+    .yui-calendar .calnavleft {
+        background: url("@{baseUrl}/img/sprite.png") repeat scroll 0 -450px transparent;
+        width: 25px;
+        height: 15px;
+        top: 0;
+        bottom: 0;
+        left: -10px;
+        margin-left: .4em;
+        cursor: pointer;
+    }
+
+    .yui-calendar .calnavright {
+        background: url("@{baseUrl}/img/sprite.png") repeat scroll 0 -500px transparent;
+        width: 25px;
+        height: 15px;
+        top: 0;
+        bottom: 0;
+        right: -10px;
+        margin-right: .4em;
+        cursor: pointer;
+    }
+
+    .yui-calendar .calweekdayrow {
+        height: 2em;
+    }
+
+    .yui-calendar .calweekdayrow th {
+        padding: 0;
+        border: none;
+    }
+
+    .yui-calendar .calweekdaycell {
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+        width: 2em;
+    }
+
+    .yui-calendar .calfoot {
+        background-color: #f2f2f2;
+    }
+
+    .yui-calendar .calrowhead, .yui-calendar .calrowfoot
+    {
+        color: #a6a6a6;
+        font-size: 85%;
+        font-style: normal;
+        font-weight: normal;
+        border: none;
+    }
+
+    .yui-calendar .calrowhead {
+        text-align: right;
+        padding: 0 2px 0 0;
+    }
+
+    .yui-calendar .calrowfoot {
+        text-align: left;
+        padding: 0 0 0 2px;
+    }
+
+    .yui-calendar td.calcell {
+        border: 1px solid #cccccc;
+        background: #fff;
+        padding: 1px;
+        height: 1.6em;
+        line-height: 1.6em;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .yui-calendar td.calcell a {
+        color: #0066cc;
+        display: block;
+        height: 100%;
+        text-decoration: none;
+    }
+
+    .yui-calendar td.calcell.today {
+        background-color: #000;
+    }
+
+    .yui-calendar td.calcell.today a {
+        background-color: #fff;
+    }
+
+    .yui-calendar td.calcell.oom {
+        background-color: #cccccc;
+        color: #a6a6a6;
+        cursor: default;
+    }
+
+    .yui-calendar td.calcell.selected {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .yui-calendar td.calcell.selected a {
+        background-color: #b3d4ff;
+        color: #000;
+    }
+
+    .yui-calendar td.calcell.calcellhover {
+        background-color: #426fd9;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .yui-calendar td.calcell.calcellhover a {
+        background-color: #426fd9;
+        color: #fff;
+    }
+
+    .yui-calendar td.calcell.previous {
+        color: #e0e0e0;
+    }
+
+    .yui-calendar td.calcell.restricted {
+        text-decoration: line-through;
+    }
+
+    .yui-calendar td.calcell.highlight1 {
+        background-color: #ccff99;
+    }
+
+    .yui-calendar td.calcell.highlight2 {
+        background-color: #99ccff;
+    }
+
+    .yui-calendar td.calcell.highlight3 {
+        background-color: #ffcccc;
+    }
+
+    .yui-calendar td.calcell.highlight4 {
+        background-color: #ccff99;
+    }
+
+    .yui-calendar a.calnav {
+        border: 1px solid #f2f2f2;
+        padding: 0 4px;
+        color: #000;
+        zoom: 1;
+    }
+
+    .yui-calendar a.calnav:hover {
+        border-color: #A0A0A0;
+        cursor: pointer;
+    }
+
+    .yui-calcontainer .yui-cal-nav-mask {
+        background-color: #000;
+        opacity: 0.25;
+        filter: alpha(opacity = 25);
+    }
+
+    .yui-calcontainer .yui-cal-nav {
+        font-family: arial, helvetica, clean, sans-serif;
+        font-size: 93%;
+        border: 1px solid #808080;
+        left: 50%;
+        margin-left: -7em;
+        width: 14em;
+        padding: 0;
+        top: 2.5em;
+        background-color: #f2f2f2;
+    }
+
+    .yui-calcontainer.withtitle .yui-cal-nav {
+        top: 4.5em;
+    }
+
+    .yui-calcontainer.multi .yui-cal-nav {
+        width: 16em;
+        margin-left: -8em;
+    }
+
+    .yui-calcontainer .yui-cal-nav-y, .yui-calcontainer .yui-cal-nav-m, .yui-calcontainer .yui-cal-nav-b
+    {
+        padding: 5px 10px 5px 10px;
+    }
+
+    .yui-calcontainer .yui-cal-nav-b {
+        text-align: center;
+    }
+
+    .yui-calcontainer .yui-cal-nav-e {
+        margin-top: 5px;
+        padding: 5px;
+        background-color: #F2F2F2;
+        border-top: 1px solid black;
+        display: none;
+    }
+
+    .yui-calcontainer .yui-cal-nav label {
+        display: block;
+        font-weight: bold;
+    }
+
+    .yui-calcontainer .yui-cal-nav-mc {
+        width: 100%;
+        _width: auto;
+    }
+
+    .yui-calcontainer .yui-cal-nav-y input.yui-invalid {
+        background-color: #FFEE69;
+        border: 1px solid #000;
+    }
+
+    .yui-calcontainer .yui-cal-nav-yc {
+        width: 4em;
+    }
+
+    .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn {
+        border: 1px solid #808080;
+        background-color: #ccc;
+        margin: auto .15em;
+    }
+
+    .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button {
+        padding: 0 8px;
+        font-size: 93%;
+        line-height: 2;
+        line-height: 1.7;
+        min-height: 2em;
+        min-height: auto;
+        color: #000;
+    }
+
+    .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default {
+        background-color: #426fd9;
+        border: 1px solid #326A9C;
+        -moz-border-radius :  4px 4px 4px 4px;
+    }
+
+    .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default button {
+        color: #fff;
+        background-color: #356EA1;
+        text-shadow: -1px -1px #254F74;
+    }
+
+
+    .yui-dialog .container-close{
+        background:transparent url(@{baseUrl}/img/sugar-yui-sprites.png) repeat-x scroll 6px -67px;
+    }
+
+
+
+/*Custom SugarCRM theme */
+    .mask {
+        background-color: #000;
+        opacity: .25;
+        filter: alpha(opacity = 25);
+        z-index: 1030 !important;
+    }
+
+    .yui-navset.detailview_tabs
+    {
+        position: inherit;
+    }
+
+
+    .yui-calcontainer {
+        border: none;
+        padding: 10px 0 0;
+    }
+
+    .cal_panel {
+        width: 190px;
+    }
+
+    .cal_panel.yui-panel .ft, .cal_panel.yui-panel .bd {
+        background-color:#f2f2f2;
+    }
+
+    .cal_panel.yui-panel .ft, .cal_panel.yui-panel .bd {
+        background-color:#f2f2f2;
+    }
+
+    .cal_panel.yui-panel .bd {
+        padding-top:5px;
+        padding-bottom:0px;
+        float: left;
+    }
+
+    .callnav_today {
+        text-align: center;
+    }
+
+    .callnav_today a, .callnav_today a:link, .callnav_today a:visited  {
+        color: #000000;
+        text-decoration:none;
+        background-color: #fff;
+        border: 1px solid #bbb;
+        padding: 2px;
+        float: left;
+        margin-left: 54px;
+        margin-right: 54px;
+        width: 55px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
+    .yui-panel {
+        position: relative;
+        left: 0;
+        top: 0;
+        border-style: solid;
+        border-width: 1px 0;
+        border-color: #808080;
+        z-index: 1;
+        border-width: 1px;
+        zoom: 1;
+        _zoom: normal;
+    }
+
+    .yui-module {
+        border : 1px solid #C0C0C0;
+    }
+
+    .yui-overlay,.yui-panel-container {
+        visibility: hidden;
+        position: absolute;
+        z-index: 21;
+    }
+
+    .yui-dialog .ft {
+        border-top: none;
+        padding: 0 10px 10px 10px;
+        font-size: 100%;
+    }
+
+    .yui-dialog .ft .button-group {
+        display: block;
+        clear: both;
+        text-align: right;
+    }
+
+    .yui-module .hd, .yui-panel .hd, .yui-panel .bd, .yui-panel .ft
+    {
+        border-style: solid;
+        border-width: 0 1px;
+        border-color: #808080;
+        margin: 0 -1px;
+        margin: 0;
+        border: 0;
+    }
+
+
+//stye.css
+
+
+    .yui-dialog .ft span.default button
+    {
+
+    }
+
+
+
+    .yui-module.yui-overlay.yui-panel{
+        box-shadow: #444 0px 2px 10px;
+        -moz-box-shadow: #444 0px 2px 10px;
+        -webkit-box-shadow: #444 0px 2px 10px;
+        border-color: #666;
+    }
+    .yui-module .hd, .yui-panel .hd {
+        background-color: #ddd;
+        background-image: -moz-linear-gradient(center top,
+        #eeeeee 0%,
+        #cccccc 100%
+        );
+        background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #eeeeee),
+            color-stop(1, #cccccc)
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc');
+        border-bottom: 1px solid #999999;
+        border-top: 1px solid #ffffff;
+        color: #666;
+        text-shadow: 0 1px #FFFFFF;
+        padding: 6px 8px;
+    }
+
+    .yui-module .hd .title, .yui-panel .hd .title {
+        position: absolute;
+        top: 0px;
+    }
+    .yui-module .ft, .yui-panel .ft {
+
+    }
+
+    .yui-dialog .container-close {
+        top: 6px;
+    }
+
+    .yui-panel-container.shadow .underlay {
+        background-color: transparent !important;
+    }
+
+
+}

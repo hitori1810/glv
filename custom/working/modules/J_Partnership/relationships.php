@@ -1,0 +1,136 @@
+<?php
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+$relationships = array (
+  'j_partnership_modified_user' => 
+  array (
+    'id' => '9bd66eb8-980f-9b6e-603e-55e8f8da6b23',
+    'relationship_name' => 'j_partnership_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'J_Partnership',
+    'rhs_table' => 'j_partnership',
+    'rhs_key' => 'modified_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => NULL,
+    'lhs_subpanel' => NULL,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => true,
+  ),
+  'j_partnership_created_by' => 
+  array (
+    'id' => '9c05fa11-e1ee-d254-b018-55e8f8f3912b',
+    'relationship_name' => 'j_partnership_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'J_Partnership',
+    'rhs_table' => 'j_partnership',
+    'rhs_key' => 'created_by',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => NULL,
+    'lhs_subpanel' => NULL,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => true,
+  ),
+  'j_partnership_assigned_user' => 
+  array (
+    'id' => '9c9b6361-c326-c803-0f91-55e8f83c2899',
+    'relationship_name' => 'j_partnership_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'J_Partnership',
+    'rhs_table' => 'j_partnership',
+    'rhs_key' => 'assigned_user_id',
+    'join_table' => NULL,
+    'join_key_lhs' => NULL,
+    'join_key_rhs' => NULL,
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => NULL,
+    'lhs_subpanel' => NULL,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => true,
+  ),
+  'j_partnership_j_discount_1' => 
+  array (
+    'id' => 'af4f3a85-4bc0-50ec-6334-55e8f8bdd41c',
+    'relationship_name' => 'j_partnership_j_discount_1',
+    'lhs_module' => 'J_Partnership',
+    'lhs_table' => 'j_partnership',
+    'lhs_key' => 'id',
+    'rhs_module' => 'J_Discount',
+    'rhs_table' => 'j_discount',
+    'rhs_key' => 'id',
+    'join_table' => 'j_partnership_j_discount_1_c',
+    'join_key_lhs' => 'j_partnership_j_discount_1j_partnership_ida',
+    'join_key_rhs' => 'j_partnership_j_discount_1j_discount_idb',
+    'relationship_type' => 'one-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => 'default',
+    'lhs_subpanel' => NULL,
+    'from_studio' => true,
+    'is_custom' => true,
+    'relationship_only' => false,
+    'for_activities' => false,
+  ),
+  'j_partnership_j_payment_1' => 
+  array (
+    'rhs_label' => 'Payment',
+    'lhs_label' => 'Partnership',
+    'rhs_subpanel' => 'default',
+    'lhs_module' => 'J_Partnership',
+    'rhs_module' => 'J_Payment',
+    'relationship_type' => 'one-to-many',
+    'readonly' => true,
+    'deleted' => false,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => true,
+    'relationship_name' => 'j_partnership_j_payment_1',
+  ),
+);

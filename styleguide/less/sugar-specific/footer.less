@@ -1,0 +1,72 @@
+/* Footer
+-------------------------------------------------- */
+footer {
+  .border-radius(0);
+  border: none;
+  border-top: 1px solid darken(@grayLighter, 8%);
+	padding: 0;
+	height: inherit;
+	position: fixed;
+    /*Bug#55849: Language selector is broken in IE9;
+	remove z-index attribute*/
+	/*z-index: @zindexFixedNavbar;*/
+    .row-fluid {
+        .span5:first-child {
+            .rtlFloat(@direction,right);
+            .logo {
+                .rtlMargin(@direction,14px 10px 0 0);
+            }
+        }
+        .span5:nth-child(2) {
+                  .rtlMargin(@direction,0);
+              }
+        .span2 {
+            text-align: center;
+            .rtlFloat(@direction,right);
+        }
+    }
+}
+footer p {
+  margin-bottom: 0;
+  color: #555;
+}
+footer .btn-toolbar.pull-right {
+    margin: 8px 25px 0 0;
+    height: 20px;
+    .rtlFloat(@direction,left);
+    .rtlMargin(@direction,8px 0 0 0);
+}
+footer .btn-toolbar.pull-left {margin: 8px 0 0 8px; height: 20px;}
+
+#arrow {
+    height:20px;
+    width:25px;
+    background-color:#fff;
+    right:0px;
+    position:fixed;
+    cursor:pointer;
+    z-index:1031;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    .rtlRight(@direction,auto);
+    .rtlLeft(@direction,0px);
+}
+
+#arrow.up {
+    background-color: transparent !important;
+    border: 0 none !important;
+    bottom: 11px;
+}
+
+#arrow.up i.icon-chevron-down {
+    margin-left: 4px;
+    .rtlMargin(@direction,0 4px 0 0);
+}
+
+#arrow i.icon-chevron-up {
+    margin-left: 6px;
+    .rtlMargin(@direction,0 7px 0 0);
+}

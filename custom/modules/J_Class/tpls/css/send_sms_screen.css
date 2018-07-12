@@ -1,0 +1,36 @@
+.tbl{
+    width: 60%;
+    margin: 0 auto;
+    border: 1px dotted #e3e3e8;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.tbl td{
+    padding: 15px;
+/*    border: 1px solid black;*/
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table,div{
+    font-size: 15px;
+}
+
+.student_list td{
+   border: 1px solid #e3e3e8;
+}
+
+.chk_attendance,.custom_checkbox,.checkall_custom_checkbox{
+    width:15px;
+    height:15px;
+}
+
+
+.tr_not_in_class{
+    background-color: bisque;
+}
+

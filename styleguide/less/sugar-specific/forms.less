@@ -1,0 +1,332 @@
+.input-append {
+	position:relative;
+	display:inline-block;
+	.add-on {
+		border:none;
+		background:transparent !important;
+		margin-left:-26px;
+		position:relative;
+		/*
+		top:0;
+		right:0;
+		*/
+
+	}
+	&.textarea,
+	&.select,
+	&.checkbox,
+	&.radio {
+		padding-left:0;
+	    .add-on {
+	    	top:-0px;
+	    	right:0;
+	    	background:transparent !important;
+	    	border:none;
+	    }
+	}
+
+
+
+	&.checkbox,
+	&.radio {
+		.add-on {
+			margin-left:0;
+		}
+	}
+
+	&.textarea {
+		.add-on {
+			position:absolute;
+		}
+	}
+
+	&.widget {
+		width:100%;
+		.add-on {
+			position: absolute;
+			top: 1px;
+			right: 0;
+		}
+
+	}
+	&.textarea {
+		display:inline;
+	}
+	&.file {
+        display: block;
+        width: 100%;
+        .add-on {
+			position: absolute;
+			right: 0px;
+			top: 0px;	
+        }
+	}
+	&.select .add-on {
+	}
+	input{
+	  .border-radius(@inputBorderRadius);
+	}
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: none;
+}
+
+.chzn-container-multi .search-field {
+	float:none !important;
+}
+
+.chzn-container {
+	margin-top:-1px;
+	.chzn-container-multi {
+		height:28px;
+	}
+}
+
+.chzn-container-multi {
+	.search-field {
+		height:27px;
+	}
+	.chzn-choices .search-field input {	
+		height:22px !important;
+	}
+}
+
+/* To maintain same size of input boxes, substructing 27px for .add-on exclamation */
+
+.control-group.error {
+/*
+	input.input-mini       { width: 33px; }
+	input.input-small      { width: 63px; }
+	input.input-medium     { width: 127px; }
+	input.input-large      { width: 183px; }
+	input.input-xlarge     { width: 243px; }
+	input.input-xxlarge    { width: 503px; }
+*/
+	&>div:first-child,
+	&>div:first-child label,
+	&> label {
+		font-weight:500;
+		color:@errorText;
+	}
+	.input-append label {
+		color:@errorText;
+	}
+	.chzn-choices,
+	.chzn-container-single > a.chzn-single {
+		border-color:@errorText;
+	}
+	.chzn-container-single > a > div > b {
+		margin-left: -18px;
+	}
+    .help-block {
+        font-weight:normal;
+    }
+    input[type=file] {
+	  border-color: @inputBorder;
+	}
+}
+
+.control-group {
+	margin-bottom:0;
+	.wide {
+		text-align:left;
+	}
+	label {
+		display:inline-block;
+		float:none;
+		input {
+			display:inline-block;
+			float:none;
+		}
+	}
+}
+
+#header .control-group label.hide {
+    display: none;
+}
+
+.form-horizontal .help-block {
+	margin-top:0;
+}
+
+.form-actions {
+	border:none;
+	background:transparent;
+}
+
+@media (max-width: 480px) {
+	.row > .empty,
+	.row-fluid > .empty {
+		display:none !important;
+	}
+}
+@media (max-width: 768px) {
+	.row > .empty,
+	.row-fluid > .empty {
+		display:none !important;
+	}
+}
+
+#content .control-group label {
+    padding: 0 1em 0 0;
+    .rtlPadding(@direction,0 0 0 1em);
+    display:inline-block;
+}
+
+input[type=radio] {
+    display:inline-block;
+}
+
+/* bug: 56864 */
+.btn-group > .btn.active {
+  z-index: 0;
+}
+
+.signup-footer,
+.login-footer {
+  width: 74%;
+  margin-left: 13%;
+  text-align: left;
+}
+
+.signup,
+.login {
+  padding:20px;
+  -webkit-box-shadow:inset 0 -1px 10px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.8), 0 2px 1px rgba(0,0,0,.1);
+  -moz-box-shadow:inset 0 -1px 10px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.8), 0 2px 1px rgba(0,0,0,.1);
+  box-shadow:inset 0 -1px 10px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.8), 0 2px 1px rgba(0,0,0,.1);
+
+  .brand {
+    margin-bottom:10px;
+  }
+}
+
+.tooltip-inner {
+  word-wrap: break-word;
+}
+
+/* Editable URLs */
+.urleditable-wrap {
+	height:30px;
+	a.btn-mini.urleditable:not(:hover) {
+	  background:transparent;
+	  border-color:transparent;
+	  -webkit-box-shadow:none;
+	  -moz-box-shadow:none;
+	  box-shadow:none;
+	}
+	.urleditable {
+		.icon-pencil {
+			visibility:hidden;
+		}
+	}
+	form {
+		display:inline;
+			input {
+			  width:210px;
+			}
+	}
+	.editable-trigger {
+		margin-right:6px;
+	}
+	&:hover .icon-pencil {
+		visibility:visible;
+	}
+	.urleditable-field {
+		&> a {
+			width:210px;
+			overflow:hidden;
+			display:inline-block;
+			text-overflow:ellipsis;
+		}
+		form {
+			top:-3px;
+			input {
+				padding-top:0px;
+				top:2px;
+				left:1px;
+				height:20px;
+			}
+		}
+	}
+
+}
+
+
+
+/* Customize look of upload button */
+.upload-field-custom {
+	overflow: hidden;
+	display: inline-block;
+	position: relative; 
+	vertical-align: middle;
+	text-align: center;
+	height:18px !important;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		font-size: 70px;
+
+		/* Loses tab index in webkit if width is set to 0 */
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	/*
+	&.focus { 
+	  outline: 2px solid yellow;
+	  }
+	*/
+
+	&:active strong {
+		color:#ffffff;
+	}
+
+	span {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  display: inline-block;
+
+	  /* Adjust button text vertical alignment */
+	  padding-top: .45em;
+
+	  &> strong {
+	  	white-space:nowrap;
+
+	  }
+	}
+
+	&,
+	& span {
+		width: 100px;
+	}
+}  
+
+.file-upload-status {
+  padding:0 0 0 .5em;
+  position:relative;
+  top:2 px;
+}
+
+.datepicker {
+  span.year.active:hover,
+  span.year.active,
+  span.month.active:hover,
+  span.month.active,
+  td > .active,
+  td > .active:hover {
+    color:@white;
+    background-color: @gray;
+    border-color: darken(@gray,10%);
+          @shadow: inset 0 1px 1px rgba(0,0,0,.5);
+          .box-shadow(@shadow);
+  }
+}
+
+

@@ -1,0 +1,237 @@
+/*
+    glDatePicker default style
+
+    http://code.gautamlad.com/glDatePicker/
+    https://github.com/glad/glDatePicker/
+*/
+
+/* Calendar container div */
+.gldp-default
+{
+    float:left;
+/*    background-color:#ccc !important;*/
+    font-size:0.8em !important;
+    border:solid 1px #888;
+}
+
+/* Table style */
+.gldp-default table
+{
+    border-spacing:1px;
+    border-collapse:inherit;
+}
+
+/* Default row height */
+.gldp-default tr
+{
+    line-height:28px;
+}
+
+/* Default style of cell */
+.gldp-default td
+{
+    margin:0;
+    padding:0;
+    width:33px;
+    text-align:center;
+}
+
+/* Previous and Next arrows */
+.gldp-default-prevnext
+{
+    font-family:"times new roman";
+    color:#222;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Month Year title */
+.gldp-default-monyear
+{
+    color:#222;
+    font-size:0.9em !important;
+    font-weight:bold;
+}
+
+/* Days of the week (Sun, Mon, ...) */
+.gldp-default-dow
+{
+/*    background-color:#f82200;*/
+    color:#000;
+    font-size:0.8em !important;
+    font-weight:bolder !important;
+}
+
+/* Selectable days */
+.gldp-default-day
+{
+    background-color:#fff;
+    color:#222;
+    border:solid 1px #fff;
+    font-weight:bold;
+}
+.gldp-default-day-hover
+{
+    background-color:#fff;
+    color:#f82200;
+    border:solid 1px #f82200;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Selected days */
+.gldp-default-selected
+{
+    background-color:#fee;
+    color:#222;
+    border:solid 1px #f82200;
+}
+
+/*selected modifry*/
+.gldp-default-timesheet
+{
+    background-color:#FFFF01;
+    color:red;
+/*    border:solid 1px #008faf;*/
+}
+.gldp-default-timesheet-hover
+{
+    border:solid 1px red;
+}
+
+/* Today */
+.gldp-default-today
+{
+    background-color:#92D14F;
+    color:#000;
+    border:solid 1px #000;
+}
+
+.leave_day
+{
+    background-color:#4E92D3;
+    color:#000;
+}
+
+.leave_half_day{
+    background-color: #8EB4E3;
+    color:black;   
+}
+.public_day{
+    background-color: #BFBFBF;
+    color:red;   
+}
+
+
+
+
+.gldp-default-today-hover
+{
+    background-color:#fff;
+    color:#f82200;
+    border:solid 1px #f82200;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Weekends */
+.gldp-default-sat, .gldp-default-sun
+{
+    background-color:#fff;
+    color:#004f8f;
+    border:solid 1px #fff;
+    font-weight:bold;
+}
+.gldp-default-sat-hover, .gldp-default-sun-hover
+{
+    background-color:#fff;
+    color:#004f8f;
+    border:solid 1px #f82200;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Non-selectable day.  Includes:previous/next month days and days that fall in the allowOld and endDate conditions */
+.gldp-default-noday
+{
+    background-color:#fff;
+    border:solid 1px #fff;
+    color:#666;
+    cursor:wait;
+}
+/*-------------------------------------------------------------- ADDED BY HOC BUI ------------------------------------*/
+table.main_timesheet{
+/*    border-collapse: collapse;*/
+}
+.warning{
+    border: 1px solid red;
+}
+.highlight1{
+   /*background-color:blue ;*/
+   font-weight: bold;
+   font-size: 20px;
+   border: none;
+   color: black;
+   width: 300px;
+/*   line-height: 110%;*/
+/*   border-bottom: 1px solid black;*/
+}
+div#added_entries{
+    border-top: 1px solid blue;    
+/*    padding-top: 10px;*/
+    background-color: #E8EEF6;
+}
+.title{
+    line-height: 22px;
+    
+}
+table.main_timesheet .timesheets th{
+/*    background-color: #eee;*/
+    font-weight: bold;
+}
+table.main_timesheet .timesheets td{
+    padding: 4px 8px !important;
+}
+
+table.main_timesheet .btnAddRow, table.main_timesheet .btnDelRow, table.main_timesheet #btnSave {
+    font-weight: bold;
+    
+}
+div#result{
+    background-color: #F7E6E6;
+    padding: 10px;
+}
+.timesheet_day_legend, .haft_day_leave_legend, .full_day_leave_legend, .public_day_legend, .today_c_legend{
+    line-height: 22px;
+    height: 22px;
+    border: 1px solid #000;
+}
+.timesheet_day_legend{
+    background-color: #FFFF01;
+    color:red;
+}
+
+/*pendding date*/
+.haft_day_leave_legend{
+    background-color: #8EB4E3;
+}
+
+.full_day_leave_legend{
+    background-color: #538FD5;
+}
+/*leaving haft day*/
+.public_day_legend{
+    background-color:#BFBFBF;
+/*    font-weight: bold;*/
+    color:red;
+}
+.today_c_legend{
+    background-color: #95D34C;
+}
+
+
+
+.disable{
+    background-color: #EAE8E8;
+    color:#000 !important;
+}

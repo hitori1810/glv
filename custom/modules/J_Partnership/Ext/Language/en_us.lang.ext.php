@@ -1,0 +1,20 @@
+<?php 
+ //WARNING: The contents of this file are auto-generated
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_PARTNERSHIP_J_DISCOUNT_1_FROM_J_DISCOUNT_TITLE'] = 'Schema Partnership';
+$mod_strings['LBL_J_PARTNERSHIP_J_PAYMENT_1_FROM_J_PAYMENT_TITLE'] = 'Payment';
+$mod_strings['LBL_J_DISCOUNT_J_PARTNERSHIP_1_FROM_J_DISCOUNT_TITLE'] = 'Discount';
+$mod_strings['LBL_J_DISCOUNT_J_PARTNERSHIP_1_FROM_J_PARTNERSHIP_TITLE_ID'] = 'Discount ID';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_PARTNERSHIP_J_DISCOUNT_1_FROM_J_DISCOUNT_TITLE'] = 'Do Not Apply With Discount';
+
+
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_J_PARTNERSHIP_J_DISCOUNT_1_FROM_J_DISCOUNT_TITLE'] = 'Schema Partnership';
+$mod_strings['LBL_J_PARTNERSHIP_J_PAYMENT_1_FROM_J_PAYMENT_TITLE'] = 'Payment';
+
+?>

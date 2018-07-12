@@ -1,0 +1,462 @@
+/**
+ * 
+ * LICENSE: The contents of this file are subject to the license agreement ("License") which is included
+ * in the installation package (LICENSE.txt). By installing or using this file, you have unconditionally
+ * agreed to the terms and conditions of the License, and you may not use this file except in compliance
+ * with the License.
+ *
+ * @author     Original Author Biztech Co.
+ */
+.survey-section, .survey-view-section {
+    margin: 0 auto;
+    width: 1170px;
+}
+.survey-view-section .survey-form-body {
+    display: inline-block;
+    padding: 2%;
+    width: 96%;
+}
+.survey-view-section td {
+    font-size: 12px;
+    padding: 4px;
+    vertical-align: top;
+}
+
+.survey-view-section td .theme-option {background: none ;  border: medium none; display: inline-block;  padding: 0;  width: auto;}
+.survey-view-section .panel-inner {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #4e8ccf !important;
+    margin: 10px 0;
+    width: 100%;
+}
+.survey-section input[type="text"], .survey-section input[type="password"], .survey-section textarea, .survey-section .input-text {
+    border: 1px solid #a1a1a1;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+    color: #333333;
+    font-family: arial;
+    font-size: 14px;
+    height: 24px;
+    line-height: 26px;
+    padding: 1px;
+    width: 98%;
+}
+.survey-section select.input-text {
+    height: 30px;
+    line-height: 30px;
+}
+.survey-section textarea {
+    height: 142px;
+    line-height: normal;
+}
+.survey-section label em {
+    color: #ff0000;
+}
+.survey-section label {
+    color: #222222;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    width: 100%;
+}
+.survey-add-page .remove-btn {
+    background: url("../img/remove-icon.jpg") no-repeat scroll right center #d44d47;
+    border: medium none;
+    color: #ffffff;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 35px 0 5px;
+    text-transform: uppercase;
+}
+.survey-add-page .remove-btn:hover, .survey-add-page .remove-btn:active, .survey-add-page .remove-btn:focus {
+    background: url("../img/remove-icon.jpg") no-repeat scroll right center #e15c55;
+    font-weight: bold;
+}
+.survey-add-page .add-btn-design {
+    background: url("../img/add-blue.jpg") no-repeat scroll right center rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    font-size: 0;
+    font-weight: bold;
+    height: 28px;
+    vertical-align: top;
+    width: 30px;
+}
+.survey-add-page .remove-btn-1-design {
+    background: url("../img/remove-icon.jpg") no-repeat scroll right center rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    font-size: 0;
+    font-weight: bold;
+    height: 28px;
+    vertical-align: top;
+    width: 30px;
+}
+.survey-add-page {
+    background: none repeat scroll 0 0 #f8f8f8;
+    border: 1px solid #ededed;
+    float: left;
+    margin-bottom: 20px;
+    width: 1168px;
+}
+.survey-add-page .survey-title {
+    background: none repeat scroll 0 0 #ededed;
+    float: left;
+    padding: 12px 20px;
+    width: 1128px;
+}
+.survey-add-page .survey-title .f-left {
+    float: left;
+}
+.survey-add-page .survey-title .f-left label {
+    color: #0d0d0d;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 3px;
+    width: auto;
+}
+.survey-view-section .survey-title .f-left label {
+    color: #0d0d0d;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+.survey-view-section .survey-add-page {
+    display: inline-block;
+    float: none;
+	background:#f4f9fc;
+}
+.survey-view-section .survey-add-page .survey-title { background:#c9dfec; padding: 8px 20px;  }
+.survey-add-page .survey-title .f-left .input-text {
+    width: 810px;
+}
+.survey-add-page .survey-title .f-right {
+    float: right;
+}
+.survey-add-page .survey-title .f-right .remove-btn {
+    float: right;
+}
+.survey-add-page .survey-body {
+    float: left;
+    padding: 20px;
+    width: 1128px;
+}
+.survey-add-page .survey-body ul {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #dddddd;
+    float: left;
+    margin: 0 0 20px;
+    padding: 2%;
+    width: 96%;
+}
+.survey-add-page .survey-body li {
+    float: left;
+    margin: 0 20px 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+.survey-add-page .survey-body li.s-title {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.survey-add-page .survey-body li.s-type {
+    width: 834px;
+}
+.survey-add-page .survey-body li.s-required {
+    width: 95px;
+}
+.survey-add-page .survey-body li.s-add-que {
+    border-left: 1px solid #ededed;
+    margin-right: 0;
+    padding-left: 20px;
+    width: 92px;
+}
+.survey-add-page .survey-body li.s-option {
+    float: left;
+    margin-right: 0;
+    margin-top: 15px;
+    width: 100%;
+}
+.survey-add-page .survey-body li.s-option ul {
+    border: medium none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.survey-add-page .survey-body li.s-option li {
+    /*    margin-bottom: 10px;
+    margin-right: 10px;
+        width: 33.83%;*/
+    width: 32.83%;
+    padding-right: 0px;
+    margin: 0px 0 15px;
+}
+.survey-add-page .survey-body li.s-option .f-left {
+    float: left;
+    width: 270px;
+}
+.survey-add-page .survey-body li.s-option .f-right {
+    float: left;
+    margin-left: 10px;
+    padding-top: 18px;
+}
+.survey-add-page .survey-body input[type="checkbox"] {
+    margin: 5px 20px;
+}
+.survey-add-page .survey-body span {
+    float: left;
+    width: 100%;
+}
+.survey-form {
+    background: none repeat scroll 0 0 #f8f8f8;
+    border: 1px solid #c9dfec;
+    float: left;
+    margin-bottom: 20px;
+    width: 1168px;
+}
+.survey-form .title {
+    background: none repeat scroll 0 0 #c9dfec;
+    color: #0c0c0c;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    width: 1128px;
+}
+.survey-form .survey-form-body {
+    background: none repeat scroll 0 0 #f4f9fc;
+    float: left;
+    padding: 20px;
+    width: 1128px;
+}
+.survey-form ul {
+    margin: 0;
+    padding: 0;
+}
+.survey-form li {
+     display: inline-block;
+    margin: 0 20px 15px 0;
+    padding: 0;
+    vertical-align: top;
+    width: 540px;
+}
+.survey-form li.s-search {
+    margin: 0;
+	width: 565px;
+}
+.survey-form li.s-search .sqsEnabled {
+    width: 495px;
+}
+.survey-form li.s-search span {
+    float: left;
+}
+.survey-form li.s-search button{
+    margin-top: 0 !important;
+}
+.survey-form .firstChild {
+    background: url("../img/search-icon.jpg") no-repeat scroll right center rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    float: left;
+    font-size: 0;
+    font-weight: bold;
+    height: 28px;
+    width: 27px;
+}
+.survey-form .lastChild {
+    background: url("../img/remove-btn01.jpg") no-repeat scroll right center rgba(0, 0, 0, 0);
+    border: medium none;
+    color: rgba(0, 0, 0, 0);
+    float: left;
+    font-size: 0;
+    font-weight: bold;
+    height: 28px;
+    margin-left: 10px;
+    width: 28px;
+}
+.survey-form li.textarea {
+    float: left;
+    width: 100%;
+}
+.survey-form li.textarea .pull-left { width: 100%;}
+.survey-form li.textarea textarea {
+    width: 1124px;
+}
+.survey-section .btn-box {
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    float: left;
+    margin: 0 0 20px;
+    padding: 20px 0;
+    width: 100%;
+	text-align:right;
+}
+
+.error-msg {color: #ff0000; margin-top: 8px; display: inline-block; font-size: 12px; }
+
+.survey-section .btn-box .add-page {
+    background: url("../img/add-blue.jpg") no-repeat scroll right center #508dd0;
+    border: medium none;
+    color: #ffffff;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 35px 0 5px;
+    text-transform: uppercase;
+}
+.survey-section .btn-box .add-page:hover {
+    background: url("../img/add-blue.jpg") no-repeat scroll right center #609de0;
+    font-weight: bold;
+}
+.survey-view-section .edit-icon {
+    background: url("../img/edit-icon.jpg") no-repeat scroll right center #508dd0;
+    border: medium none;
+    color: #ffffff;
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    padding: 0 35px 0 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.blue-btn {border: medium none;   color: #ffffff !important;  float: left;    font-family: Arial,Verdana,Helvetica,sans-serif;  font-size: 12px;    font-weight: bold  !important;   height: 30px;    line-height: 30px;    margin-left:10px;  padding: 0 35px 0 5px !important;    text-decoration: none !important;    text-transform: uppercase;}
+
+.blue-btn.analyse-btn {background: url("../img/analyse-btn.jpg") no-repeat scroll right center #508dd0;}
+.blue-btn.preview-btn {background: url("../img/preview-btn.jpg") no-repeat scroll right center #508dd0;}
+
+.blue-btn.analyse-btn:hover {background: url("../img/analyse-btn.jpg") no-repeat scroll right center #609de0;}
+.blue-btn.preview-btn:hover {background: url("../img/preview-btn.jpg") no-repeat scroll right center #609de0; cursor: pointer}
+
+.blue-btn.create-survey-btn {background: url("../img/add-blue.jpg") no-repeat scroll right center #508dd0;}
+.blue-btn.create-survey-btn:hover {background: url("../img/add-blue.jpg") no-repeat scroll right center #609de0;cursor: pointer}
+
+.survey-view-section .edit-icon:hover, .survey-view-section .edit-icon:active, .survey-view-section .edit-icon:focus {
+    background: url("../img/edit-icon.jpg") no-repeat scroll right center #609de0;
+    font-weight: bold;
+}
+.survey-section .action_buttons .save {
+    background: url("../img/save-green.jpg") no-repeat scroll right center #4cc46b;
+    border: medium none;
+    color: #ffffff;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 35px 0 5px;
+    text-transform: uppercase;
+}
+.survey-section .action_buttons .save:hover {
+    background: url("../img/save-green.jpg") no-repeat scroll right center #50ce71;
+    font-weight: bold;
+}
+.survey-section .action_buttons .cancel {
+    background: url("../img/cancel-btn.jpg") no-repeat scroll right center #c2c2c2;
+    border: medium none;
+    color: #ffffff;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    padding: 0 35px 0 5px;
+    text-transform: uppercase;
+}
+.survey-section .action_buttons .cancel:hover {
+    background: url("../img/cancel-btn.jpg") no-repeat scroll right center #bbbaba;
+    font-weight: bold;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+#targetLayer {
+    color: #c0c0c0;
+    float: left;
+    font-weight: bold;
+    text-align: left;
+    width: 200px;
+    margin-bottom: 20px;
+}
+.theme-option {
+    background: none repeat scroll 0 0 #f6f6f6  ;
+    //border: 1px solid #dddddd;
+    display: inline-block;
+    padding: 2%;
+    width: 96%;
+}
+.theme-option h1 {
+    display: inline-block;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.theme-option .option {
+    float: left;
+    margin-right: 10px;
+}
+.theme-option .option label {
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    width: auto;
+}
+.theme-option .option-1 label {
+    background: none repeat scroll 0 0 #60bae3;
+}
+.theme-option .option-2 label {
+    background: none repeat scroll 0 0 #eeeeee;
+    color: #777777;
+}
+.theme-option .option-3 label {
+    background: none repeat scroll 0 0 #7376b8;
+    color: #ffffff;
+}
+.theme-option .option-4 label {
+    background: none repeat scroll 0 0 #ffc5be;
+    color: #bd655a;
+}
+
+
+.survey-form li.li-full-width {  width: 100%;}
+
+.upload-logo .button-box{ float:left; width: 300px}
+.file-input {  position: relative; float:left;  margin-right: 10px;}
+.file-input span { background: url("../img/add-blue.jpg") no-repeat scroll right center #508dd0;   border: medium none;   color: #ffffff;  font-weight: bold;  height: 30px;  line-height: 30px;  padding: 0 44px 0 5px;    text-transform: uppercase; float:left; position: absolute; left:0; top:0; }
+.file-input input { padding: 4px; float: left; margin: 0;}
+.file-input  .note .label1{
+    //background: #ffc8c8;
+    //color: #952b2b;
+    float: left;
+    font-size: 12px;
+    margin: 5px 0px;
+    padding: 6px;
+    width: auto;
+    font-weight: bold;
+}
+
+.upload-logo .button-box .remove-btn01 {margin-top: 2px; }
+.upload-logo .button-box .error-msg{ width: 100%; clear: both; margin: 5px 0;}
+
+.remove-btn01 { background: url("../img/remove-icon.jpg") no-repeat scroll right center #d44d47;  border: medium none;   color: #ffffff !important;   float: left;  font-weight: bold;   height: 30px;  line-height: 30px;   padding: 0 35px 0 10px;  text-decoration: none !important;  text-transform: uppercase; }
+
+.survey-view-section table.panel-inner td { padding:10px;}
+
+.survey-view-section table.panel-inner .panel-sub { background:#f6f5f5; margin-bottom:20px; border: 1px solid #dddddd; }
+
+.plus-image:hover{
+    cursor: pointer;
+}

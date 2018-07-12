@@ -1,0 +1,42 @@
+.page-header { margin: 30px 0; }
+
+.page-footer {
+    margin: 60px 0;
+    border-top: 1px dotted #e3e3e8;
+    width: 100%;
+}
+.pull-right { float: right; } 
+
+.table {
+    width: 100%;
+}
+
+.table td, .table th {
+    padding: 5px;
+}
+
+.table tr, .table th {
+    border-bottom: 1px dotted #d3d3d8;
+}
+
+.table tr:last-child {
+    border: 0px;
+}
+.edit_tr:hover
+{
+    background-color:#80C8E5 !important;
+    /*cursor:pointer;*/
+}
+.row_cancel span{
+    position: relative;
+    top: -7px;
+    font-size: 13px;
+}
+.row_cancel, .row_save, .row_edit{
+    cursor:pointer;
+    display: inline;
+    padding: 15px 5px 0px 1px;  
+    text-decoration: none !important;
+    position: relative;
+    top: 2px;
+}

@@ -1,0 +1,27 @@
+<?php
+// created: 2018-06-05 09:22:40
+$mod_strings = array (
+  'LBL_CONTACT_NAME' => 'Student:',
+  'LBL_CONTACTS' => 'Student',
+  'LBL_CONTACTS_SUBPANEL_TITLE' => 'Student',
+  'LBL_LIST_CONTACT' => 'Student',
+  'LBL_OPPORTUNITY' => 'Enrollment',
+  'LBL_ACCOUNT' => 'Corporate',
+  'LBL_CASE' => 'Feedback',
+  'LBL_CALL_TYPE' => 'Type',
+  'LBL_EDITVIEW_PANEL1' => 'New Panel 1',
+  'LBL_CALLS_J_CLASS_1_FROM_J_CLASS_TITLE' => 'Class Related',
+  'LNK_NEW_CALL' => 'Log Call',
+  'LBL_MODULE_NAME' => 'Call',
+  'LBL_MODULE_NAME_SINGULAR' => 'Call',
+  'LBL_NEW_FORM_TITLE' => 'Create Appointment',
+  'LNK_CALL_LIST' => 'View Call',
+  'LNK_IMPORT_CALLS' => 'Import Call',
+  'LBL_LIST_FORM_TITLE' => 'Call List',
+  'LBL_SEARCH_FORM_TITLE' => 'Call Search',
+  'LBL_LEADS' => 'HV Tiềm năng',
+  'LBL_PROJECTS' => 'Dự án',
+  'LBL_NOTES' => 'Ghi chú',
+  'LBL_LEADS_SUBPANEL_TITLE' => 'Lead',
+  'LBL_LIST_MY_CALLS' => 'My Call',
+);

@@ -1,0 +1,29 @@
+/**
+ * 
+ * LICENSE: The contents of this file are subject to the license agreement ("License") which is included
+ * in the installation package (LICENSE.txt). By installing or using this file, you have unconditionally
+ * agreed to the terms and conditions of the License, and you may not use this file except in compliance
+ * with the License.
+ *
+ * @author     Original Author Biztech Co.
+ */
+#indivisual_report_main_div #individual{font-size: 14px; text-align: center; padding-top: 20px;}
+#indivisual_report h2.title{ background: #508dd0 none repeat scroll 0 0; color: #fff; padding: 10px 10px 10px 20px;}
+
+#indivisual_report .middle-content{max-height: 350px; overflow: auto; padding: 10px 3%;}
+#indivisual_report .send-receive-time { background: #e4f0fc none repeat scroll 0 0; border-bottom: 1px solid #508dd0; font-size: 14px; padding: 10px 20px; }
+#indivisual_report .send-receive-time .send-date,
+#indivisual_report .send-receive-time .receive-date{font-size: 14px; margin-bottom: 5px;}
+#indivisual_report .send-receive-time .send-date label { float: left; min-width: 158px; }
+
+#indivisual_report_main_div{width: 700px;background: #FDFDFD;top: 15%;left: 26%;position: fixed;z-index: 9999;min-height: 15%;min-width: 30%;box-shadow: 0 0 10px 1px #424142;-moz-box-shadow: 0 0 10px 1px #424142;-webkit-box-shadow: 0 0 10px 1px #424142;}
+#indivisual_report_main_div .close_link{position: absolute;top: -25px;right: -25px;width: 45px;height: 45px;background: transparent url('../../images/close.png') -40px 0px;cursor: pointer;display: inline;}
+.cursor{cursor: pointer;}
+
+#indivisual_report_main_div #individual{font-size: 14px; text-align: center; padding-top: 20px;}
+
+.que-rwo { border-bottom: 1px solid #eeeeee; display: inline-block; margin:15px 0; padding-bottom: 5px; width: 94%;}
+.que-rwo p { display: inline-block; font-size: 13px; margin-bottom: 5px; width: 100%;}
+.que-rwo p label,
+.que-rwo span label { background: #dddddd; border-radius: 3px; display: inline-block; font-size: 12px; font-weight: bold; margin-right: 5px; padding: 3px 5px; width: 51px;}
+.que-rwo:last-child { border-bottom: medium none; margin-bottom: 0px; padding-bottom: 0px;}

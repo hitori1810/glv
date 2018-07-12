@@ -1,0 +1,118 @@
+
+/* Buttons
+-----------------*/
+.btn-link {
+  color: @linkColor; 
+  font-weight: normal;
+}
+.btn-invisible.btn-link:hover {
+  text-decoration: underline; 
+  background: none; 
+  border-color: transparent; 
+  .box-shadow(none);
+  text-shadow:none;
+  color: @linkColor !important;
+}
+
+//nutmeg from racerx
+button, input[type=submit], input[type=reset], input[type=button], .button, .buttons .button, .yui-button button
+{
+    display: inline-block;
+    padding: 4px 10px 4px;
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: #262627;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    vertical-align: top;
+    background-color: #ebebea;
+    background-image: -moz-linear-gradient(top, #ffffff, #cdcccb);
+    background-image: -ms-linear-gradient(top, #ffffff, #cdcccb);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#cdcccb));
+    background-image: -webkit-linear-gradient(top, #ffffff, #cdcccb);
+    background-image: -o-linear-gradient(top, #ffffff, #cdcccb);
+    background-image: linear-gradient(top, #ffffff, #cdcccb);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cdcccb', GradientType=0);
+    border-color: #cdcccb #cdcccb #a8a6a4;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.075);
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    *margin-left: .3em;
+}
+
+.button.primary,.yui-dialog .ft span.default button  {
+    background-color: #1574d2;
+    background-image: -moz-linear-gradient(top, #177ee5, #1264b7);
+    background-image: -ms-linear-gradient(top, #177ee5, #1264b7);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#177ee5), to(#1264b7));
+    background-image: -webkit-linear-gradient(top, #177ee5, #1264b7);
+    background-image: -o-linear-gradient(top, #177ee5, #1264b7);
+    background-image: linear-gradient(top, #177ee5, #1264b7);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#177ee5', endColorstr='#1264b7', GradientType=0);
+    border-color: #1264b7 #1264b7 #0b3e71;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    color: #ffffff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover,
+button:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus,
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected]
+{
+    color: #313130;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.button.primary:hover,.button.primary:focus ,button.primary[selected],.yui-dialog .ft span.default button:hover{
+    background-color: #1264b7;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+}
+
+button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled]
+{
+    border-color: #c1c1c1;
+    color: #999;
+    text-shadow: none;
+    background-image: -moz-linear-gradient(center top, 
+    #e7e7e7 0%,
+    #dcdcdc 100%
+    );
+    background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #e7e7e7),
+    color-stop(1, #dcdcdc)
+   );
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e7e7e7', endColorstr='#dcdcdc');
+}
+
+div.action_buttons input+input {
+    margin-left: 5px;
+}
+
+span.id-ff.multiple button {
+    padding: 6px 3px 2px 4px;
+}
+button.id-ff-remove {
+    padding: 7px 3px 0px;
+}

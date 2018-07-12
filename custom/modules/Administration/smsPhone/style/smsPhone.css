@@ -1,0 +1,57 @@
+div#field_panels, div#settings {
+	margin-top:10px;
+}
+
+div.field_panel {
+	float:left;
+	min-width:200px;
+	min-height:50px;
+	border:#CCCCCC solid 1px;
+	margin-top:5px; 
+	padding:3px;
+	}
+div.mover {
+	float:left; 
+}
+div.mover div {
+	text-align:center;
+	padding:2px 10px 2px 10px;
+	border:#CCC solid 1px;
+	cursor:pointer;
+	margin:10px;
+	font-size:15px;
+	font-weight:bold;
+}
+select#module {
+	width:200px; 
+}
+#response {
+	color:red;
+}
+
+div.item {
+	padding:3px;border:#CCC solid 1px;margin:2px 1px 2px 1px;cursor:pointer;
+}
+div.item_sel {
+	padding:3px;border:#CCC solid 1px;margin:2px 1px 2px 1px;cursor:pointer;background-color:#FFCCFF;
+}
+
+span.link {
+	margin-left:10px;text-decoration:underline;color:#150FBF;cursor:pointer;
+}
+
+div.recipient {
+	padding-top:1px;
+	padding-bottom:1px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-top:2px;
+	margin-right:2px;
+	float:left;
+	background-color: #FF9;
+	-moz-border-radius: 50%;
+	border:#ccc solid 1px;
+}
+
+ 
+

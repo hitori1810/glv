@@ -1,0 +1,406 @@
+/**
+ * 
+ * LICENSE: The contents of this file are subject to the license agreement ("License") which is included
+ * in the installation package (LICENSE.txt). By installing or using this file, you have unconditionally
+ * agreed to the terms and conditions of the License, and you may not use this file except in compliance
+ * with the License.
+ *
+ * @author     Original Author Biztech Co.
+ */
+body {
+    background: url(../../survey-img/theme-2-bg.png) no-repeat scroll 0 0 #70b0ac;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #777777;
+}
+.top-section { background-color: #fff; }
+.header .survey-header h2 { color: #33aab9;text-shadow: 1px 0 #fff;font-size: 25px;}
+.top-section {
+    /*background: url(../../survey-img/theme-2-hdrbg.png) repeat scroll 0 0 transparent;*/
+    /*background-color: #ffc5be;
+    border-bottom: 5px solid #33aab9;
+    padding: 15px 0;*/
+}
+.question-section {
+    background-color: #33aab9;
+    color: #fff;
+    padding: 3px 5px;
+}
+
+.header .logo{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	max-width: 100%;
+	border-bottom: 5px solid #33aab9;
+	padding-bottom: 15px;
+}
+.header .survey-header{
+    padding: 30px 0 0 0;
+	width: 100%;
+	max-width: 100%;
+	text-align: left;
+}
+.bx-wrapper .bx-prev, 
+.bx-wrapper .bx-next,
+.button { background:#ccc; color:#777 !important;}
+
+.bx-wrapper .bx-prev:hover, 
+.bx-wrapper .bx-next:hover, 
+.button:hover {  background:#c6c5c5;}
+.page-no { background: #55c1cf;display: none;}
+/*.survey-container {
+    padding: 0 24px;
+}*/
+
+.survey-form .form-header {
+  padding: 0;
+  min-height: 0;
+  background: none !important;
+  border-bottom: 0 dotted #afe2e9 !important;
+  border-top: 0 !important;
+}
+.survey-form .form-header h1 { 
+    color: #6D6D6D;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.survey-form .questions { color:#000;}
+.survey-form.form-desc{
+	border-bottom: 3px dashed #afe2e9;
+}
+.survey-form.form-desc .form-body{
+    padding: 30px 0;
+}
+.action-block {
+    background: none;
+    border-top: medium none;
+    margin: 0;
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+}
+.action-block .button.btn-submit,
+.button {
+    background: url(../../survey-img/next-arr.png) no-repeat scroll 82% center #55c1cf!important;
+    color: #ffffff !important;
+    border-radius: 5px;
+    padding: 21px 50px 22px 15px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 2px;
+}
+.action-block .bx-prev.button{
+    background: url(../../survey-img/back-arr.png) no-repeat scroll 14% center #8d8d8d!important;
+    padding: 21px 15px 22px 45px;
+    left: 0;
+    position: absolute;
+}
+.survey-form .form-body{
+    padding: 20px 0;
+}
+.survey-form .form-body .option.checkbox-list,
+.survey-form .form-body .option.select-list,
+.survey-form .form-body .option.multiselect-list,
+.survey-form .form-body .option.radio-list,
+.survey-form .form-body .option.input-list ul{
+    padding-left: 20px;
+}
+.container,
+.header{
+    width: 100%;
+    border:0;
+    box-shadow: none;
+}.main-container,
+.main-container:after,
+.main-container:before{
+    background: #fff;
+    border-radius: 0px;
+    width: 786px;
+    border: 1px solid #ebebeb; 
+}
+.main-container{
+    position: relative;
+    background: #fff;
+    padding: 25px;
+    border-radius: 0px;
+    margin: 90px auto;
+}
+
+.main-container:after,
+.main-container:before{
+    content: '';
+    height: 100%;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    z-index: -1;
+    box-shadow: 0 0 5px #474747;
+}
+.main-container:before{
+	top: 10px;
+   	left: 15px;
+}
+.header{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+.main-container .clip .clip-0{
+	display: block;
+	position: absolute;
+	display: block;
+    position: absolute;
+    top: -11px;
+    left: -5px;
+    z-index: 999;
+}
+.main-container .clip .clip-1,
+.main-container .clip .clip-2,
+.main-container .clip .clip-3,
+.main-container .clip .clip-4{
+	display: none;
+}
+.survey-form .progress-bar{
+	margin: 30px 0 0;
+	width: 100%;
+	position: relative;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+.survey-form .progress-bar li{
+	font-size: 14px;
+	width: 24%;
+    text-align: center;
+    color: #666;
+    cursor: default;
+    margin: 0 0;
+    padding: 10px 10px 10px 30px;
+    min-width: 180px;
+    /*float: left;*/
+    position: relative;
+    background-color: #afe2e9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+.survey-form .progress-bar li.active{
+	color: #fff;
+    background-color: #33aab9;
+}
+.survey-form .progress-bar li:first-of-type:before{
+	right: auto;
+    left: 0;
+    border-left: 17px solid #fff;
+    z-index: 0;
+}
+.survey-form .progress-bar li:before,
+.survey-form .progress-bar li:after{
+	content: " ";
+    position: absolute;
+    top: 0;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 17px solid #afe2e9;
+    z-index: 2;
+    transition: border-color 0.2s ease;
+}
+.survey-form .progress-bar li.active:after{
+	border-left: 17px solid #33aab9;
+}
+.survey-form .progress-bar li a{
+	display: none;
+}
+.survey-form .progress-bar li:before{
+	right: auto;
+    left: 0;
+    border-left: 17px solid #fff;
+    z-index: 0;
+}
+.survey-form .progress-bar li{
+	font-size: 14px;
+    text-align: center;
+    color: #286F78;
+    cursor: pointer;
+}
+.tooltip, .tooltip_bottom{
+    background-color:rgba(51, 170, 185, 0.88);
+}
+.ui-slider-range{
+   background: rgba(51, 170, 185, 0.88); 
+}
+.progress-bar section div.equal{
+   background: rgba(51, 170, 185, 0.88); 
+}
+.tooltip:before, .tooltip_bottom:before{
+    border-top: 9px solid rgba(51, 170, 185, 0.88);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+.btm-link{
+    text-align: center;
+    width: 100%;
+    padding-top: 115px;
+}
+.btm-link a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 12px;
+    line-height: 28px;
+}
+@media only screen and (min-width:1024px) and (max-width: 1200px){
+    .main-container,
+    .main-container:after,
+    .main-container:before{
+        width: 700px;
+    }
+    .survey-form .progress-bar li{
+    	min-width: 158px;
+    }
+}
+@media only screen and (min-width:768px) and (max-width: 1023px){
+    .main-container,
+    .main-container:after,
+    .main-container:before{
+        width: 650px;
+    }
+    .main-container{
+        padding: 20px 18px;
+    }
+    .main-container .clip .clip-1, .main-container .clip .clip-2{
+        top:-106px;
+    }
+   
+    .survey-form .progress-bar li{
+    	min-width: 150px;
+    }
+    .survey-form .progress-bar{
+        margin: 15px 0;
+    }
+    .survey-form .form-body{
+        padding: 15px 0;
+    }
+    .bx-wrapper .bx-viewport .bxslider .active-slide{
+        width: 100%;
+    }
+    .survey-form .questions{
+        font-size: 14px;
+    }
+    .survey-form li label{
+        font-size: 13px; 
+    }
+    .button{
+        padding: 18px 47px 19px 12px;
+        font-size: 14px;
+    }
+    .btm-link{
+        padding-top: 80px;
+    }
+}
+@media only screen and (min-width:0 ) and (max-width: 767px){
+    body{
+        padding: 20px;
+        font-size: 11px;
+    }
+    .main-container,
+    .main-container:after,
+    .main-container:before{
+        width: 100%;
+    }
+    .main-container{
+        margin: 40px 0;
+        float: none;
+        right: auto;
+        padding: 0px;
+    }
+    .survey-container{
+    	padding: 0 20px;
+    }
+    .header .survey-header{
+        padding: 10px 20px 0 20px;
+    }
+    .header .survey-header h2{
+        font-size: 23px;
+    }
+    .survey-form .progress-bar{
+        margin: 12px 0;
+    }
+    .survey-form .progress-bar li{
+    	width: 20%;
+    	min-width: 56px;
+    	padding: 13px 10px 13px 18px;
+    	font-size: 10px;
+    }
+    
+    .survey-form .form-header{
+        padding: 0px;
+    }
+    .survey-form .form-body{
+        padding: 12px 0;
+    }
+    .survey-form .questions{
+        font-size: 13px;
+    }
+    .survey-form .form-body .option.checkbox-list,
+    .survey-form .form-body .option.select-list,
+    .survey-form .form-body .option.multiselect-list,
+    .survey-form .form-body .option.radio-list,
+    .survey-form .form-body .option.input-list ul{
+        padding-left: 0;
+    }
+    .survey-form .two-col li{
+        width: 100%;
+    }
+    .action-block .button.btn-submit,
+    .button{
+        background: url(../../survey-img/next-arr.png) no-repeat scroll center center #55c1cf !important;
+        padding: 17px 24px 17px 15px;
+        font-size: 0;
+    }
+    .action-block .bx-prev.button{
+        background: url(../../survey-img/back-arr.png) no-repeat scroll center center #8d8d8d !important;
+        padding: 17px 24px 17px 15px;
+    }
+    .survey-form li label{
+        font-size: 12px;
+    }
+    .btm-link{
+        padding-top: 70px;
+    }
+}
+.matrix-tbl-contner{
+    overflow-x:auto;
+    max-width: 750px; 
+}
+
+.survey_tmp_matrix{
+    width: 100%;
+    padding: 0 0 15px 0;
+}
+.survey_tmp_matrix tbody{
+    overflow-x: auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.survey_tmp_matrix tbody .row th,
+.survey_tmp_matrix tbody .row td{
+    padding: 5px 10px;
+    text-align: center;
+    white-space: nowrap;
+    display: table-cell !important;
+    /*word-wrap:normal;*/
+    /*display: block;*/
+}
+
+.survey_tmp_matrix tbody .row{
+    box-sizing:border-box;
+    display: table-row !important;
+}

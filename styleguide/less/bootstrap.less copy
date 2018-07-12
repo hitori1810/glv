@@ -1,0 +1,102 @@
+/*!
+ * Bootstrap v2.0.4
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+// CSS Reset
+@import "reset.less";
+@import "reset-sugar.less";
+
+// Core variables and mixins
+//@import "variables.less";
+@import "fixed_variables.less"; // Modify this to defined colors, font-sizes, etc (non customizable in studio)
+@import "mixins.less";
+@import "mixins-sugar.less";
+
+// Grid system and page structure
+@import "scaffolding.less";
+@import "grid.less";
+@import "layouts.less";
+
+// Base CSS
+@import "type.less";
+@import "type-sugar.less";
+@import "code.less";
+@import "code-sugar.less";
+@import "forms.less";
+@import "forms-sugar.less";
+@import "slider.less";
+@import "tables.less";
+@import "tables-sugar.less";
+
+// Components: common
+@import "font-awesome.less"; //ext lib: http://fortawesome.github.com/Font-Awesome/
+@import "font-awesome-sugar.less";
+@import "dropdowns.less";
+@import "wells.less";
+@import "component-animations.less";
+//@import "component-animations-sugar.less";
+@import "close.less";
+
+// Components: Buttons & Alerts
+@import "buttons.less";
+//@import "buttons-sugar.less"; //had to inline these changes inside native buttons.less 
+@import "button-groups.less";
+@import "button-groups-sugar.less";
+@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+@import "alerts-sugar.less";
+
+// Components: Nav
+@import "navs.less";
+@import "navs-sugar.less";
+@import "navbar.less";
+@import "navbar-sugar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+
+// Components: Popovers
+@import "modals.less";
+@import "modals-sugar.less";
+@import "tooltip.less";
+@import "tooltip-sugar.less";
+@import "tiptip.less"; //ext lib: http://code.drewwilson.com/entry/tiptip-jquery-plugin
+@import "popovers.less";
+@import "popovers-sugar.less";
+
+// Components: Misc
+@import "thumbnails.less";
+@import "thumbnails-sugar.less";
+@import "labels-badges.less";
+@import "labels-badges-sugar.less";
+@import "progress-bars.less";
+@import "progress-bars-sugar.less";
+@import "accordion.less";
+@import "carousel.less";
+@import "hero-unit.less";
+@import "chosen.less"; //ext lib: http://harvesthq.github.com/chosen/
+@import "datepicker.less"; //ext lib: http://www.eyecon.ro/bootstrap-datepicker
+@import "charts.less";
+@import "datatables.less"; //ext lib: http://datatables.net/
+@import "datatables-sugar.less";
+@import "colorpicker.less"; //ext lib: http://www.eyecon.ro/bootstrap-colorpicker/
+@import "jstree.less"; //ext lib: http://www.jstree.com/
+@import "toggle.less"; //ext lib: http://acidjs.wemakesites.net/css3-iphone-buttons.html
+
+// Projects and Modules
+@import "tour.less";
+
+// Sugar
+@import "sugar.less";
+
+// Utility classes
+@import "utilities.less";
+@import "utilities-sugar.less";
+
+// Responsive
+@import "responsive.less";

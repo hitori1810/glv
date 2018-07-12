@@ -1,0 +1,1232 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+
+
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+	
+
+$app_list_strings = array (
+  'wflow_adv_user_type_dom' => 
+  array (
+    'modified_user_id' => 'Përdoruesi që ka modifikuar për herë te fundit aktivizimin e regjistrimeve',
+    'created_by' => 'Përdoruesi që krijoi aktivizimin e regjistrimeve',
+    'current_user' => 'Përdoruesi i qasur',
+    'assigned_user_id' => 'Përdoruesi caktohet në shkaktimin e të dhënave',
+  ),
+  'wflow_adv_team_type_dom' => 
+  array (
+    'team_id' => 'Grupi aktual i aktivizimit të regjistrimit',
+    'current_team' => 'Grupi i Përdoruesit të qasur',
+  ),
+  'wflow_adv_enum_type_dom' => 
+  array (
+    'retreat' => 'Lëviz mbrapa shpalosjen nga',
+    'advance' => 'Lëviz përpara shpalosjen nga',
+  ),
+  'wflow_record_type_dom' => 
+  array (
+    'All' => 'Regjistrime të reja dhe rinovuara',
+    'New' => 'Vetëm regjistrime të reja',
+    'Update' => 'Vetëm regjistrime të rinovuara',
+  ),
+  'prospect_list_type_dom' => 
+  array (
+    'seed' => 'fillim',
+    'exempt_domain' => 'Shtypja e listës - Nga Sfera',
+    'exempt_address' => 'Shtypja e listës - Nga Email Adresa',
+    'exempt' => 'Shtypja e listës - Nga identifikimi',
+    'default' => 'Çaktivizuar',
+    'test' => 'Testo',
+  ),
+  'campainglog_activity_type_dom' => 
+  array (
+    'targeted' => 'Mesazhi është dërguar/ Është provuar',
+    'send error' => 'Mesazhet e refuzuara,Tjera',
+    'invalid email' => 'Mesazhet e refuzuara,Email jovalid',
+    'link' => 'Shtyp përmes lidhjes',
+    '' => '',
+    'viewed' => 'Mesazhet e para',
+    'removed' => 'e zgjedhur jashtë',
+    'lead' => 'Udhëheqjet e krijuara',
+    'contact' => 'Kontakted e krijuara',
+  ),
+  'checkbox_dom' => 
+  array (
+    '' => '',
+    1 => 'Po',
+    2 => 'Jo',
+  ),
+  'account_type_dom' => 
+  array (
+    '' => '',
+    'Partner' => 'Partner',
+    'Analyst' => 'Analist',
+    'Competitor' => 'Konkurent',
+    'Customer' => 'Konsumator',
+    'Integrator' => 'Integrues',
+    'Investor' => 'Investitor',
+    'Press' => 'shtypi',
+    'Prospect' => 'Prospekti',
+    'Reseller' => 'Rishitës',
+    'Other' => 'Tjetër',
+  ),
+  'industry_dom' => 
+  array (
+    '' => '',
+    'Media' => 'Media',
+    'Apparel' => 'Veshje',
+    'Banking' => 'Veprime bankare',
+    'Biotechnology' => 'Bioteknlogjia',
+    'Chemicals' => 'Kimikale',
+    'Communications' => 'Komunikim',
+    'Construction' => 'Ndërtimtari',
+    'Consulting' => 'Konsultim',
+    'Education' => 'Edukimi',
+    'Electronics' => 'Elektronika',
+    'Energy' => 'Energjia',
+    'Engineering' => 'Inxhinjeri',
+    'Entertainment' => 'Dëfrimi',
+    'Environmental' => 'Mjedisi',
+    'Finance' => 'Financa',
+    'Government' => 'Publike',
+    'Healthcare' => 'Kujdesi mjeksor',
+    'Hospitality' => 'Mikpritja',
+    'Insurance' => 'Sigurimi',
+    'Machinery' => 'Maqineria',
+    'Manufacturing' => 'Prodhimtaria',
+    'Not For Profit' => 'Jo profitabile',
+    'Recreation' => 'Rikrijim',
+    'Retail' => 'Rishitje',
+    'Shipping' => 'Transporti',
+    'Technology' => 'Teknologjia',
+    'Telecommunications' => 'Telekomunikimi',
+    'Transportation' => 'Transporti',
+    'Utilities' => 'Shërbimet',
+    'Other' => 'Tjetër',
+  ),
+  'lead_source_dom' => 
+  array (
+    '' => '',
+    'Partner' => 'Partner',
+    'Email' => 'Email',
+    'Cold Call' => 'Thirje ftohtë',
+    'Existing Customer' => 'Konsumator ekzitues',
+    'Self Generated' => 'E vetëgjenruar',
+    'Employee' => 'Punëtorët',
+    'Public Relations' => 'Mardhënie publike',
+    'Direct Mail' => 'Mail direkt',
+    'Conference' => 'Konferencë',
+    'Trade Show' => 'Ekspozimi i tregtisë',
+    'Web Site' => 'Ueb faqe',
+    'Word of mouth' => 'Fjalë e gojës',
+    'Other' => 'Tjetër',
+  ),
+  'opportunity_type_dom' => 
+  array (
+    '' => '',
+    'Existing Business' => 'Biznes ekzistues',
+    'New Business' => 'Biznes i ri',
+  ),
+  'opportunity_relationship_type_dom' => 
+  array (
+    '' => '',
+    'Primary Decision Maker' => 'Vendimmarës kryesor',
+    'Business Decision Maker' => 'Vendimarës biznesi',
+    'Business Evaluator' => 'Vlerësues biznesi',
+    'Technical Decision Maker' => 'Vendimmarës teknik',
+    'Technical Evaluator' => 'Vlerësues teknik',
+    'Executive Sponsor' => 'Sponzor ekzekutiv',
+    'Influencer' => 'Influencues',
+    'Other' => 'Tjetër',
+  ),
+  'case_relationship_type_dom' => 
+  array (
+    '' => '',
+    'Primary Contact' => 'Kontakti primar',
+    'Alternate Contact' => 'Kontakti alternativ',
+  ),
+  'payment_terms' => 
+  array (
+    '' => '',
+    'Net 15' => 'Net 15',
+    'Net 30' => 'Net 30',
+  ),
+  'sales_probability_dom' => 
+  array (
+    'Prospecting' => '10',
+    'Qualification' => '20',
+    'Needs Analysis' => '25',
+    'Value Proposition' => '30',
+    'Id. Decision Makers' => '40',
+    'Perception Analysis' => '50',
+    'Proposal/Price Quote' => '65',
+    'Negotiation/Review' => '80',
+    'Closed Won' => '100',
+    'Closed Lost' => '',
+  ),
+  'activity_dom' => 
+  array (
+    'Email' => 'Email',
+    'Call' => 'Thirje',
+    'Meeting' => 'Mbledhje',
+    'Task' => 'Detyrë',
+    'Note' => 'Shënim',
+  ),
+  'salutation_dom' => 
+  array (
+    '' => '',
+    'Mr.' => 'Zotëri',
+    'Ms.' => 'Zonjushë',
+    'Mrs.' => 'Zonjë',
+    'Dr.' => 'Doktor',
+    'Prof.' => 'Profesor',
+  ),
+  'lead_status_dom' => 
+  array (
+    '' => '',
+    'New' => 'I ri',
+    'Assigned' => 'Drejtuar',
+    'In Process' => 'Në proces e sipër',
+    'Converted' => 'I konvertuar',
+    'Recycled' => 'ricikluar',
+    'Dead' => 'Vdekur',
+  ),
+  'messenger_type_dom' => 
+  array (
+    '' => '',
+    'MSN' => 'MSN',
+    'Yahoo!' => 'Yahoo!',
+    'AOL' => 'AOL',
+  ),
+  'project_task_utilization_options' => 
+  array (
+    25 => '25',
+    50 => '50',
+    75 => '75',
+    100 => '100',
+  ),
+  'quote_relationship_type_dom' => 
+  array (
+    '' => '',
+    'Primary Decision Maker' => 'Vendimmarës kryesor',
+    'Business Decision Maker' => 'Vendimarës biznesi',
+    'Business Evaluator' => 'Vlerësues biznesi',
+    'Technical Decision Maker' => 'Vendimmarës teknik',
+    'Technical Evaluator' => 'Vlerësues teknik',
+    'Executive Sponsor' => 'Sponzor ekzekutiv',
+    'Influencer' => 'Influencues',
+    'Other' => 'Tjetër',
+  ),
+  'bug_resolution_dom' => 
+  array (
+    '' => '',
+    'Accepted' => 'I pranuar',
+    'Duplicate' => 'Dublo',
+    'Fixed' => 'Fiks',
+    'Out of Date' => 'Jashtë datës',
+    'Invalid' => 'Jo valide',
+    'Later' => 'Më vonë',
+  ),
+  'source_dom' => 
+  array (
+    '' => '',
+    'Forum' => 'Forum',
+    'InboundEmail' => 'Email',
+    'Internal' => 'I brendshëm',
+    'Web' => 'Ueb',
+  ),
+  'product_category_dom' => 
+  array (
+    '' => '',
+    'RSS' => 'RSS',
+    'Studio' => 'Studio',
+    'Accounts' => 'llogaritë',
+    'Activities' => 'Aktivitetet',
+    'Bug Tracker' => 'Gjyrmues i gabimeve',
+    'Calendar' => 'Kalendari',
+    'Calls' => 'Thirjet',
+    'Campaigns' => 'fushatat',
+    'Cases' => 'rastet',
+    'Contacts' => 'Kontaktet',
+    'Currencies' => 'Monedhat',
+    'Dashboard' => 'Paneli',
+    'Documents' => 'Dokumentacionet',
+    'Emails' => 'Emailet',
+    'Feeds' => 'Furnizimet',
+    'Forecasts' => 'Parashikimet',
+    'Help' => 'ndihmë',
+    'Home' => 'Ballina',
+    'Leads' => 'udhëheqjet',
+    'Meetings' => 'Mbledhjet',
+    'Notes' => 'Shënimet',
+    'Opportunities' => 'Mundësite',
+    'Outlook Plugin' => 'Vendosja e pikëpamjes',
+    'Product Catalog' => 'Katalogu i produkteve',
+    'Products' => 'Produktet',
+    'Projects' => 'Projektet',
+    'Quotes' => 'Kuotat',
+    'Releases' => 'Publikimet',
+    'Upgrade' => 'Rindërto',
+    'Users' => 'Përdoruesit',
+  ),
+  'campaign_status_dom' => 
+  array (
+    '' => '',
+    'Planning' => 'Planifikim',
+    'Active' => 'aktive',
+    'Inactive' => 'pasive',
+    'Complete' => 'Plotëso',
+    'In Queue' => 'Në radhë',
+    'Sending' => 'Dërgim',
+  ),
+  'campaign_type_dom' => 
+  array (
+    '' => '',
+    'Mail' => 'Mail',
+    'Email' => 'Email',
+    'Radio' => 'Radio',
+    'Telesales' => 'Teleshitjet',
+    'Print' => 'Shtyp',
+    'Web' => 'Uebi',
+    'Television' => 'Televizion',
+  ),
+  'notifymail_sendtype' => 
+  array (
+    'SMTP' => 'SMTP',
+  ),
+  'dom_timezones' => 
+  array (
+    -9 => '(GMT - 9) Alaska',
+    -6 => '(GMT - 6) Saskatchewan',
+    -5 => '(GMT - 5) New York',
+    -4 => '(GMT - 4) Santiago',
+    -3 => '(GMT - 3) Buenos Aires',
+    -1 => '(GMT - 1) Azores',
+    1 => '(GMT + 1) Madrid',
+    4 => '(GMT + 4) Kabul',
+    5 => '(GMT + 5) Ekaterinburg',
+    6 => '(GMT + 6) Astana',
+    7 => '(GMT + 7) Bangkok',
+    8 => '(GMT + 8) Perth',
+    9 => '(GMT + 9) Seol',
+    10 => '(GMT + 10) Brisbane',
+    11 => '(GMT + 11) Solomone Is.',
+    -12 => '(GMT - 12) Linja e datës ndërkombtare perendimore',
+    -11 => '(GMT - 11) Samoa',
+    -10 => '(GMT - 10) Havai',
+    -8 => '(GMT - 8) San Francisko',
+    -7 => '(GMT - 7) Foniks',
+    -2 => '(GMT - 2) Atlantiku i mesëm',
+    2 => '(GMT + 2) Atina',
+    3 => '(GMT + 3) Moska',
+    12 => '(GMT + 12) Aukland',
+  ),
+  'dom_email_server_type' => 
+  array (
+    'imap' => 'IMAP',
+    'pop3' => 'POP3',
+    '' => '--asnjëra--',
+  ),
+  'dom_email_editor_option' => 
+  array (
+    'html' => 'HTML Email',
+    '' => 'Format i çaktivizuar i emailit',
+    'plain' => 'Email i Thjeshtë i Tekstit',
+  ),
+  'document_category_dom' => 
+  array (
+    '' => '',
+    'Marketing' => 'marketingu',
+    'Knowledege Base' => 'baza e njohurisë',
+    'Sales' => 'Shitjet',
+  ),
+  'document_subcategory_dom' => 
+  array (
+    '' => '',
+    'Marketing Collateral' => 'marketingu kolateral',
+    'Product Brochures' => 'Broshurë e produkteve',
+    'FAQ' => 'pyetje më shpesh të parashtruara',
+  ),
+  'document_template_type_dom' => 
+  array (
+    '' => '',
+    'eula' => 'EULA',
+    'nda' => 'NDA',
+    'mailmerge' => 'Bashkim i  maileve',
+    'license' => 'Kontrata e licencës',
+  ),
+  'query_calc_oper_dom' => 
+  array (
+    '+' => '(+) Plus',
+    '-' => '(-) Minus',
+    '*' => '(X) Shumëzuar me',
+    '/' => '(/) Pjestuar me',
+  ),
+  'wflow_alert_type_dom' => 
+  array (
+    'Email' => 'Email',
+    'Invite' => 'Fto',
+  ),
+  'wflow_address_type_dom' => 
+  array (
+    'cc' => 'CC:',
+    'bcc' => 'BCC:',
+    'to' => 'Tek',
+  ),
+  'wflow_address_type_invite_dom' => 
+  array (
+    'cc' => 'CC:',
+    'bcc' => 'BCC:',
+    'to' => 'tek',
+    'invite_only' => '( Fto vetëm )',
+  ),
+  'dom_timezones_extra' => 
+  array (
+    -11 => '(GMT-11) Midway Island, Samoa',
+    -10 => '(GMT-10) Hawaii',
+    -9 => '(GMT-9) Alaska',
+    -8 => '(GMT-8) (PST)',
+    -7 => '(GMT-7) (MST)',
+    -6 => '(GMT-6) (CST)',
+    -5 => '(GMT-5) (EST)',
+    -4 => '(GMT-4) Santiago',
+    -3 => '(GMT-3) Buenos Aires',
+    -2 => '(GMT-2) Mid-Atlantic',
+    -1 => '(GMT-1) Azores',
+    1 => '(GMT+1) Madrid',
+    2 => '(GMT+2) Athens',
+    3 => '(GMT+3) Moscow',
+    4 => '(GMT+4) Kabul',
+    5 => '(GMT+5) Ekaterinburg',
+    6 => '(GMT+6) Astana',
+    7 => '(GMT+7) Bangkok',
+    8 => '(GMT+8) Perth',
+    9 => '(GMT+9) Seol',
+    10 => '(GMT+10) Brisbane',
+    11 => '(GMT+11) Solomone Is.',
+    12 => '(GMT+12) Auckland',
+    -12 => '(GMT-12) datë ndërkombëtare Line West',
+  ),
+  'duration_intervals' => 
+  array (
+    15 => '15',
+    30 => '30',
+    45 => '45',
+  ),
+  'email_marketing_status_dom' => 
+  array (
+    '' => '',
+    'active' => 'Active',
+    'inactive' => 'pasive',
+  ),
+  'language_pack_name' => 'Gjuhë angleze (SHB)',
+  'reminder_max_time' => '3600',
+  'product_status_quote_key' => 'Kuotat',
+  'moduleList' => 
+  array (
+    'Home' => 'Ballina',
+    'Bugs' => 'Gjyrmues i gabimeve',
+    'Cases' => 'rastet',
+    'Notes' => 'Shënimet',
+    'Newsletters' => 'Buletinet',
+    'Teams' => 'Grupet',
+    'Users' => 'Përdoruesit',
+    'KBDocuments' => 'baza e njohurisë',
+    'FAQ' => 'pyetje më shpesh të parashtruara',
+  ),
+  'moduleListSingular' => 
+  array (
+    'Home' => 'Ballina',
+    'Bugs' => 'Gabimi',
+    'Cases' => 'rastet',
+    'Notes' => 'Shënimi',
+    'Teams' => 'Grupi',
+    'Users' => 'Përdoruesi',
+  ),
+  'sales_stage_dom' => 
+  array (
+    'Prospecting' => 'Kërkimet',
+    'Qualification' => 'Kualifikimi',
+    'Needs Analysis' => 'Nevoitet analizë',
+    'Value Proposition' => 'Vlera e propozimit',
+    'Id. Decision Makers' => 'Id e vendimarrësve',
+    'Perception Analysis' => 'Analiza e perceptimit',
+    'Proposal/Price Quote' => 'Kuota e propozimit/çmimit',
+    'Negotiation/Review' => 'Negocimi/ Shqyrtimi',
+    'Closed Won' => 'Fitim i mbyllur',
+    'Closed Lost' => 'Humbje e mbyllur',
+  ),
+  'reminder_time_options' => 
+  array (
+    60 => '1 minutë para',
+    300 => '5 minuta para',
+    600 => '10 minuta para',
+    900 => '15 minuta para',
+    1800 => '30 minuta para',
+    3600 => '1 orë para',
+  ),
+  'task_priority_dom' => 
+  array (
+    'High' => 'I lartë',
+    'Medium' => 'Mesatar',
+    'Low' => 'I ulët',
+  ),
+  'task_status_dom' => 
+  array (
+    'Not Started' => 'Nuk ka filluar',
+    'In Progress' => 'Në progres',
+    'Completed' => 'Ka përfunduar',
+    'Pending Input' => 'të hyrat e pezulluara',
+    'Deferred' => 'I shtyrë',
+  ),
+  'meeting_status_dom' => 
+  array (
+    'Planned' => 'Planifikuar',
+    'Held' => 'I mbajtur',
+    'Not Held' => 'I pambajtur',
+  ),
+  'call_status_dom' => 
+  array (
+    'Planned' => 'Planifikuar',
+    'Held' => 'I mbajtur',
+    'Not Held' => 'I pambajtur',
+  ),
+  'call_direction_dom' => 
+  array (
+    'Inbound' => 'përbrenda',
+    'Outbound' => 'për jashtë',
+  ),
+  'lead_status_noblank_dom' => 
+  array (
+    'New' => 'I ri',
+    'Assigned' => 'Drejtuar',
+    'In Process' => 'Në proces e sipër',
+    'Converted' => 'I konvertuar',
+    'Recycled' => 'ricikluar',
+    'Dead' => 'Vdekur',
+  ),
+  'case_status_dom' => 
+  array (
+    'New' => 'I ri',
+    'Assigned' => 'Drejtuar',
+    'Closed' => 'I mbyllur',
+    'Pending Input' => 'Të hyra të pezulluara',
+    'Rejected' => 'Anuluar',
+    'Duplicate' => 'Dublo',
+  ),
+  'case_priority_dom' => 
+  array (
+    'P1' => 'I lartë',
+    'P2' => 'Mesatar',
+    'P3' => 'I ulët',
+  ),
+  'user_status_dom' => 
+  array (
+    'Active' => 'aktive',
+    'Inactive' => 'pasive',
+  ),
+  'employee_status_dom' => 
+  array (
+    'Active' => 'aktive',
+    'Terminated' => 'e ndërpritura',
+    'Leave of Absence' => 'Largim i mungesave',
+  ),
+  'project_task_priority_options' => 
+  array (
+    'High' => 'I lartë',
+    'Medium' => 'Mesatar',
+    'Low' => 'I ulët',
+  ),
+  'project_task_status_options' => 
+  array (
+    'Not Started' => 'Nuk ka filluar',
+    'In Progress' => 'Në progres',
+    'Completed' => 'Ka përfunduar',
+    'Pending Input' => 'Të hyrat e pezulluara',
+    'Deferred' => 'I shtyrë',
+  ),
+  'record_type_display' => 
+  array (
+    'Accounts' => 'llogaria',
+    'Opportunities' => 'Mundësia',
+    'Cases' => 'rasti',
+    'Leads' => 'udhëheqje',
+    'Contacts' => 'Kontaktet',
+    'ProductTemplates' => 'Produkti',
+    'Quotes' => 'Kuotat',
+    'Bugs' => 'Gabimi',
+    'Project' => 'Projekti',
+    'ProjectTask' => 'Detyra projektuese',
+    'Tasks' => 'Detyrë',
+  ),
+  'record_type_display_notes' => 
+  array (
+    'Accounts' => 'llogaria',
+    'Contacts' => 'Kontakti',
+    'Opportunities' => 'Mundësia',
+    'Cases' => 'rasti',
+    'Leads' => 'udhëheqje',
+    'ProductTemplates' => 'Produkti',
+    'Quotes' => 'Kuota',
+    'Products' => 'Produkti',
+    'Contracts' => 'Kontrata',
+    'Bugs' => 'Gabimi',
+    'Emails' => 'Emaili',
+    'Project' => 'Projekti',
+    'ProjectTask' => 'Detyra projektuese',
+    'Meetings' => 'Mbledhja',
+    'Calls' => 'Thirje',
+  ),
+  'product_status_dom' => 
+  array (
+    'Quotes' => 'Kuotat',
+    'Orders' => 'E porositur',
+    'Ship' => 'Transportuar',
+  ),
+  'pricing_formula_dom' => 
+  array (
+    'Fixed' => 'Çmimi fiks',
+    'ProfitMargin' => 'Fitimi margjinal',
+    'PercentageMarkup' => 'Shënimet mbi koston',
+    'PercentageDiscount' => 'Lirimi nga lista',
+    'IsList' => 'Njejtë si lista',
+  ),
+  'product_template_status_dom' => 
+  array (
+    'Available' => 'Në magazinë',
+    'Unavailable' => 'Jashtë magazinës',
+  ),
+  'tax_class_dom' => 
+  array (
+    'Taxable' => 'E tatimuar',
+    'Non-Taxable' => 'e pataimuar',
+  ),
+  'support_term_dom' => 
+  array (
+    '+6 months' => '6 muaj',
+    '+1 year' => '1 vit',
+    '+2 years' => '2 vite',
+  ),
+  'quote_type_dom' => 
+  array (
+    'Quotes' => 'Kuota',
+    'Orders' => 'Porosi',
+  ),
+  'quote_stage_dom' => 
+  array (
+    'Draft' => 'Skicë',
+    'Negotiation' => 'Nogocimi',
+    'Delivered' => 'E dërguar',
+    'On Hold' => 'Në pritje',
+    'Confirmed' => 'Konfirmuar',
+    'Closed Accepted' => 'Afër e pranuar',
+    'Closed Lost' => 'Humbje e mbyllur',
+    'Closed Dead' => 'Afër e vdekur',
+  ),
+  'order_stage_dom' => 
+  array (
+    'Pending' => 'Pezull',
+    'Confirmed' => 'Konfirmuar',
+    'On Hold' => 'Në pritje',
+    'Shipped' => 'Transportuar',
+    'Cancelled' => 'Anuluar',
+  ),
+  'layouts_dom' => 
+  array (
+    'Standard' => 'Prpopzimet',
+    'Invoice' => 'Faktura',
+    'Terms' => 'Kushtet e pagesës',
+  ),
+  'bug_priority_dom' => 
+  array (
+    'Urgent' => 'Urgjente',
+    'High' => 'I lartë',
+    'Medium' => 'Mesatar',
+    'Low' => 'I ulët',
+  ),
+  'bug_status_dom' => 
+  array (
+    'New' => 'I ri',
+    'Assigned' => 'Drejtuar',
+    'Closed' => 'I mbyllur',
+    'Pending' => 'Pezull',
+    'Rejected' => 'Anuluar',
+  ),
+  'bug_type_dom' => 
+  array (
+    'Defect' => 'Defekt',
+    'Feature' => 'Ardhmëri',
+  ),
+  'dom_cal_month_long' => 
+  array (
+    1 => 'Janar',
+    2 => 'Skurt',
+    3 => 'Mars',
+    4 => 'Prill',
+    5 => 'Maj',
+    6 => 'Qershor',
+    7 => 'Korrik',
+    8 => 'Gusht',
+    9 => 'Shtator',
+    10 => 'Tetor',
+    11 => 'Nëntor',
+    12 => 'Dhjetor',
+  ),
+  'dom_report_types' => 
+  array (
+    'tabular' => 'Reshtat dhe kolonat',
+    'summary' => 'Përmbledhje',
+    'detailed_summary' => 'Përmbledhje me detaje',
+  ),
+  'dom_email_types' => 
+  array (
+    'out' => 'dërguar',
+    'archived' => 'Arkivuar',
+    'draft' => 'Në skicë',
+    'inbound' => 'përbrenda',
+  ),
+  'dom_email_status' => 
+  array (
+    'archived' => 'Arkivuar',
+    'closed' => 'I mbyllur',
+    'draft' => 'Në skicë',
+    'read' => 'e lexuar',
+    'replied' => 'e përgjigjur',
+    'sent' => 'e dërguar',
+    'send_error' => 'Dërgo gabim',
+    'unread' => 'E palexuar',
+  ),
+  'dom_mailbox_type' => 
+  array (
+    'pick' => 'Krijo (çdonjë)',
+    'bug' => 'Krijo gabim',
+    'support' => 'Krijo rast',
+    'contact' => 'Krijo kontakt',
+    'sales' => 'krijo udhëheqje',
+    'task' => 'Krijo detyrë',
+    'bounce' => 'Kthimi i Trajtimit',
+  ),
+  'dom_email_distribution' => 
+  array (
+    '' => '--asnjëra--',
+    'direct' => 'drejtim direkt',
+    'roundRobin' => 'Rotull-Robin',
+    'leastBusy' => 'Më pak i zënët',
+  ),
+  'dom_email_errors' => 
+  array (
+    1 => 'Zgjidhni vetëm një përdorues kur caktimi i artikujve është i drejtpërdrejtë.',
+    2 => 'Ju duhet të caktoni vetëm artikujt të kontrolluar kur caktimi i artikujve është i drejtpërdrejtë.',
+  ),
+  'dom_email_bool' => 
+  array (
+    'bool_true' => 'Po',
+    'bool_false' => 'Jo',
+  ),
+  'dom_int_bool' => 
+  array (
+    1 => 'Po',
+  ),
+  'dom_switch_bool' => 
+  array (
+    'on' => 'Po',
+    'off' => 'Jo',
+    '' => 'Jo',
+  ),
+  'dom_email_link_type' => 
+  array (
+    '' => 'Gabimi i Sistemit të Postës së Klientit',
+    'sugar' => 'Klienti i mailit SugarCRM',
+    'mailto' => 'Klient i emailit të jashtëm',
+  ),
+  'schedulers_times_dom' => 
+  array (
+    'not run' => 'Koha e Kaluar e Nxituar, Nuk është e realizuar',
+    'ready' => 'Gati',
+    'in progress' => 'Në progres',
+    'failed' => 'dështuar',
+    'completed' => 'Ka përfunduar',
+    'no curl' => 'Nuk është drejtuar: Nuk ka asnjë URL të disponueshëm',
+  ),
+  'forecast_schedule_status_dom' => 
+  array (
+    'Active' => 'aktive',
+    'Inactive' => 'pasive',
+  ),
+  'forecast_type_dom' => 
+  array (
+    'Direct' => 'Direkt',
+    'Rollup' => 'Mbështjell',
+  ),
+  'document_status_dom' => 
+  array (
+    'Active' => 'aktive',
+    'Draft' => 'Skicë',
+    'FAQ' => 'pyetje më shpesh të parashtruara',
+    'Expired' => 'Skaduar',
+    'Under Review' => 'Në shqyrtim',
+    'Pending' => 'Pezull',
+  ),
+  'dom_meeting_accept_options' => 
+  array (
+    'accept' => 'Prano',
+    'decline' => 'Refuzo',
+    'tentative' => 'Tentativa',
+  ),
+  'dom_meeting_accept_status' => 
+  array (
+    'accept' => 'I pranuar',
+    'decline' => 'I refuzuar',
+    'tentative' => 'Tentativa',
+    'none' => 'Asnjëra',
+  ),
+  'wflow_type_dom' => 
+  array (
+    'Normal' => 'Kur është ruajtur regjistrimi',
+    'Time' => 'Pas kalimit të kohës',
+  ),
+  'mselect_type_dom' => 
+  array (
+    'Equals' => 'Është',
+    'in' => 'është një nga',
+  ),
+  'cselect_type_dom' => 
+  array (
+    'Equals' => 'Është i barabrtë',
+    'Does not Equal' => 'Nuk është i barabartë',
+  ),
+  'dselect_type_dom' => 
+  array (
+    'Equals' => 'Është i barabrtë',
+    'Less Than' => 'Më i vogël se',
+    'More Than' => 'Më i madh se',
+    'Does not Equal' => 'Nuk është i barabartë',
+  ),
+  'bselect_type_dom' => 
+  array (
+    'bool_true' => 'Po',
+    'bool_false' => 'Jo',
+  ),
+  'bopselect_type_dom' => 
+  array (
+    'Equals' => 'Është i barabrtë',
+  ),
+  'tselect_type_dom' => 
+  array (
+    14440 => '4 orë',
+    28800 => '8 orë',
+    43200 => '12 orë',
+    86400 => '1 ditë',
+    172800 => '2 ditë',
+    259200 => '3 ditë',
+    345600 => '4 ditë',
+    432000 => '5 ditë',
+    604800 => '1 javë',
+    1209600 => '2 javë',
+    1814400 => '3 javë',
+    2592000 => '30 ditë',
+    5184000 => '60 ditë',
+    7776000 => '90 ditë',
+    10368000 => '120 ditë',
+    12960000 => '150 ditë',
+    15552000 => '180 ditë',
+  ),
+  'dtselect_type_dom' => 
+  array (
+    'More Than' => 'ishte më shumë se',
+    'Less Than' => 'është më pak se',
+  ),
+  'wflow_source_type_dom' => 
+  array (
+    'Normal Message' => 'Mesazh normal',
+    'Custom Template' => 'Shabllon i zakonshëm',
+    'System Default' => 'Sistem i çaktivizuar',
+  ),
+  'wflow_user_type_dom' => 
+  array (
+    'current_user' => 'Përdorues aktual',
+    'rel_user' => 'Përdorues të lidhur me',
+    'rel_user_custom' => 'Përdorues të lidhur aktual',
+    'specific_team' => 'Grup specifik',
+    'specific_role' => 'Rol specifik',
+    'specific_user' => 'Përdorues specifik',
+  ),
+  'wflow_array_type_dom' => 
+  array (
+    'future' => 'Vlera e re',
+    'past' => 'Vlera e vjetër',
+  ),
+  'wflow_relate_type_dom' => 
+  array (
+    'Self' => 'Përdorues',
+    'Manager' => 'Menaxheri i përdoruesit',
+  ),
+  'wflow_address_type_to_only_dom' => 
+  array (
+    'to' => 'Tek',
+  ),
+  'wflow_action_type_dom' => 
+  array (
+    'update' => 'Rinovo regjistrimin',
+    'update_rel' => 'Rinovo regjistrimet e lidhura',
+    'new' => 'Regjistrim i ri',
+  ),
+  'wflow_action_datetime_type_dom' => 
+  array (
+    'Triggered Date' => 'Data e shkrepjes',
+    'Existing Value' => 'Vlera ekzistuese',
+  ),
+  'wflow_set_type_dom' => 
+  array (
+    'Basic' => 'Opcione bazike',
+    'Advanced' => 'Opcionet e avancuara',
+  ),
+  'wflow_rel_type_dom' => 
+  array (
+    'all' => 'Të gjitha',
+    'filter' => 'Filtër i lidhur',
+  ),
+  'wflow_relfilter_type_dom' => 
+  array (
+    'all' => 'Të gjitha të lidhura',
+    'any' => 'çdo një e lidhur',
+  ),
+  'wflow_fire_order_dom' => 
+  array (
+    'alerts_actions' => 'Alarmet pastaj veprimet',
+    'actions_alerts' => 'Veprimet pastaj alarmet',
+  ),
+  'campainglog_target_type_dom' => 
+  array (
+    'Contacts' => 'Kontaktet',
+    'Users' => 'Përdoruesit',
+    'Prospects' => 'synimet',
+    'Leads' => 'udhëheqjet',
+  ),
+  'contract_status_dom' => 
+  array (
+    'notstarted' => 'Nuk ka filluar',
+    'inprogress' => 'Në progres',
+    'signed' => 'Nënshkruar',
+  ),
+  'contract_payment_frequency_dom' => 
+  array (
+    'monthly' => 'Mujore',
+    'quarterly' => 'Semestrale',
+    'halfyearly' => 'Gjysëmvjetore',
+    'yearly' => 'Vjetore',
+  ),
+  'contract_expiration_notice_dom' => 
+  array (
+    1 => '1 ditë',
+    3 => '3 ditë',
+    5 => '5 ditë',
+    7 => '1 javë',
+    14 => '2 javë',
+    21 => '3 javë',
+    31 => '1 muaj',
+  ),
+);
+
+$app_strings = array (
+  'NTC_CLICK_BACK' => 'Ju lutem klikoni butonin mbrapa shfletuesit dhe rregulloni gabimin.',
+  'NTC_REQUIRED' => 'Tregon patjetër të shkruhet',
+  'NTC_SUPPORT_SUGARCRM' => 'Mbështetje të projektit SugarCRM me burim të hapur me një donacion nëpërmjet PayPal - është e shpejtë, e lirë dhe e sigurtë!',
+  'LOGIN_LOGO_ERROR' => 'Ju lutemi zëvendësoni logon e SugarCRM.',
+  'ERROR_FULLY_EXPIRED' => 'Licenca e kompanisë suaj për SugarCRM ka mbaruar për më shumë se 30 ditë, dhe duhen të sillen deri tani. Vetëm administratorët mund të logohen.',
+  'ERROR_LICENSE_EXPIRED' => 'Licenca e kompanisë suaj për SugarCRM ka mbaruar për më shumë se 30 ditë, dhe duhen të sillen deri tani. Vetëm administratorët mund të logohen.',
+  'ERROR_NO_RECORD' => 'Gabim në marrje të rekordit. Ky proces mund të fshihet ose ju mund të mos jetë i autorizuar për të parë atë.',
+  'LBL_ACCUMULATED_HISTORY_BUTTON_KEY' => 'H',
+  'LBL_ADD_BUTTON_KEY' => 'A',
+  'LBL_ADD_TO_PROSPECT_LIST_BUTTON_KEY' => 'L',
+  'LBL_CANCEL_BUTTON_KEY' => 'X',
+  'LBL_CHANGE_BUTTON_KEY' => 'G',
+  'LBL_CHARSET' => 'UTF-8',
+  'LBL_CLEAR_BUTTON_KEY' => 'C',
+  'LBL_CLOSEALL_BUTTON_KEY' => 'Q',
+  'LBL_COMPOSE_EMAIL_BUTTON_KEY' => 'L',
+  'LBL_DELETE_BUTTON_KEY' => 'D',
+  'LBL_DONE_BUTTON_KEY' => 'X',
+  'LBL_DUPLICATE_BUTTON_KEY' => 'U',
+  'LBL_EDIT_BUTTON_KEY' => 'E',
+  'LBL_VIEW_BUTTON_KEY' => 'V',
+  'LBL_EMAIL_PDF_BUTTON_KEY' => 'M',
+  'LBL_ID' => 'ID',
+  'LBL_LIST_EMAIL' => 'Email',
+  'LBL_LOCALE_NAME_EXAMPLE_FIRST' => 'John',
+  'LBL_LOCALE_NAME_EXAMPLE_LAST' => 'Doe',
+  'LBL_MAILMERGE_KEY' => 'M',
+  'LBL_NEW_BUTTON_KEY' => 'N',
+  'LBL_OPENALL_BUTTON_KEY' => 'O',
+  'LBL_OPENTO_BUTTON_KEY' => 'T',
+  'LBL_PERCENTAGE_SYMBOL' => '%',
+  'LBL_QUOTE_TO_OPPORTUNITY_KEY' => 'O',
+  'LBL_REQUIRED_SYMBOL' => '*',
+  'LBL_SAVE_BUTTON_KEY' => 'S',
+  'LBL_FULL_FORM_BUTTON_KEY' => 'F',
+  'LBL_SAVE_NEW_BUTTON_KEY' => 'V',
+  'LBL_SEARCH_BUTTON_KEY' => 'Q',
+  'LBL_SELECT_BUTTON_KEY' => 'T',
+  'LBL_SELECT_CONTACT_BUTTON_KEY' => 'T',
+  'LBL_SELECT_USER_BUTTON_KEY' => 'U',
+  'LBL_SQS_INDICATOR' => '',
+  'LBL_THOUSANDS_SYMBOL' => 'K',
+  'LBL_TRACK_EMAIL_BUTTON_KEY' => 'K',
+  'LBL_VIEW_PDF_BUTTON_KEY' => 'P',
+  'NTC_TIME_FORMAT' => '(24:00)',
+  'LBL_LIST_TEAM' => 'Grupi',
+  'LBL_TEAM' => 'Grupi',
+  'LBL_TEAM_ID' => 'Id e grupit',
+  'ERR_CREATING_FIELDS' => 'Gabim gjatë mbushjes së fushave shtesë të detajuara',
+  'ERR_CREATING_TABLE' => 'Gabim gjatë krijimit të tabelës',
+  'ERR_DELETE_RECORD' => 'Duhet përcaktuar numrin e regjistrimit për të fshirë konaktin',
+  'ERR_EXPORT_DISABLED' => 'eksportimi i çaktivizuar',
+  'ERR_EXPORT_TYPE' => 'gabim gjatë eksportim',
+  'ERR_INVALID_AMOUNT' => 'Ju lutemi vendosni një sasi valide',
+  'ERR_INVALID_DATE_FORMAT' => 'Formati i datës duhet të jetë:',
+  'ERR_INVALID_DATE' => 'Ju lutemi vendosni datë valide',
+  'ERR_INVALID_DAY' => 'Ju lutem vednosni ditë valide',
+  'ERR_INVALID_EMAIL_ADDRESS' => 'Nuk është email adresë valide',
+  'ERR_INVALID_HOUR' => 'Ju lutemi vendosni një orë valide',
+  'ERR_INVALID_MONTH' => 'Ju lutemi vendosni një muaj valid',
+  'ERR_INVALID_TIME' => 'Ju lutemi vendosni një kohë valide',
+  'ERR_INVALID_YEAR' => 'Ju lutemi vendosni një vit valid me 4 numra',
+  'ERR_NEED_ACTIVE_SESSION' => 'Sesion aktiv është i nevojshëm për të eksportuar përmbajtien.',
+  'ERR_MISSING_REQUIRED_FIELDS' => 'Mungojnë fushat e nevojshme:',
+  'ERR_INVALID_REQUIRED_FIELDS' => 'Fushë  e nevojshme jo valide',
+  'ERR_INVALID_VALUE' => 'Vlerë jo valide:',
+  'ERR_NOTHING_SELECTED' => 'Ju lutemi bëni një zgjedhje para se të vazhdoni.',
+  'ERR_OPPORTUNITY_NAME_DUPE' => 'Mundësi me emër të njëjtë % tashmë ekziston. Ju lutemi shënoni një emër tjetër  poshtë.',
+  'ERR_OPPORTUNITY_NAME_MISSING' => 'Emri i mundësisë nuk ishte e shënuar. Ju lutemi shënoni poshtë një emër të mundësisë.',
+  'ERR_SELF_REPORTING' => 'Përdoruesi nuk mund ti raportojë vetes së tij ose saj.',
+  'ERR_SQS_NO_MATCH_FIELD' => 'Nuk ka asnjë përshtatje për fushën:',
+  'ERR_SQS_NO_MATCH' => 'Asjnë përputhje',
+  'ERR_PORTAL_LOGIN_FAILED' => 'E pamundër të krijoj sesion të hyrjes së portalit. Ju lutemi kontaktoni administratorin tuaj.',
+  'ERR_RESOURCE_MANAGEMENT_INFO' => 'Ktheu në Ballinë',
+  'LBL_ACCOUNT' => 'Llogari',
+  'LBL_ACCOUNTS' => 'llogaritë',
+  'LBL_ACCUMULATED_HISTORY_BUTTON_LABEL' => 'Shih përmbatjen',
+  'LBL_ACCUMULATED_HISTORY_BUTTON_TITLE' => 'Shih përmbatjen [Alt+H]',
+  'LBL_ADD_BUTTON_TITLE' => 'Add [Alt+A]',
+  'LBL_ADD_BUTTON' => 'shto',
+  'LBL_ADD_DOCUMENT' => 'Shto dokumentacion',
+  'LBL_ADD_TO_PROSPECT_LIST_BUTTON_LABEL' => 'Shto në listën e synimeve',
+  'LBL_ADD_TO_PROSPECT_LIST_BUTTON_TITLE' => 'Shto në listën e synimeve',
+  'LBL_ADDITIONAL_DETAILS_CLOSE_TITLE' => 'Shtyp për ta mbyll',
+  'LBL_ADDITIONAL_DETAILS_CLOSE' => 'Mbyll',
+  'LBL_ADDITIONAL_DETAILS' => 'Detaje plotësuese',
+  'LBL_ADMIN' => 'Administratori',
+  'LBL_ALT_HOT_KEY' => 'Alt+',
+  'LBL_ARCHIVE' => 'Arkiva',
+  'LBL_ASSIGNED_TO_USER' => 'Drejtuar përdoruesit',
+  'LBL_ASSIGNED_TO' => 'drejtuar:',
+  'LBL_BACK' => 'Kthe',
+  'LBL_BILL_TO_ACCOUNT' => 'Llogaria për faturën',
+  'LBL_BILL_TO_CONTACT' => 'Kontakti për faturën',
+  'LBL_BROWSER_TITLE' => 'SugarCRM - Burim i hapur komercial CRM',
+  'LBL_BUGS' => 'gabimet',
+  'LBL_BY' => 'nga',
+  'LBL_CALLS' => 'Thirjet',
+  'LBL_CAMPAIGNS_SEND_QUEUED' => 'Dërgo emaile fushatash të radhitura',
+  'LBL_CANCEL_BUTTON_LABEL' => 'Anulo',
+  'LBL_CANCEL_BUTTON_TITLE' => 'Anulo [Alt+X]',
+  'LBL_CASE' => 'rasti',
+  'LBL_CASES' => 'rastet',
+  'LBL_CHANGE_BUTTON_LABEL' => 'ndrysho',
+  'LBL_CHANGE_BUTTON_TITLE' => 'Ndrysho [Alt+G]',
+  'LBL_CHECKALL' => 'Verifiko të gjitha',
+  'LBL_CLEAR_BUTTON_LABEL' => 'Fshi',
+  'LBL_CLEAR_BUTTON_TITLE' => 'Fshi [Alt+C]',
+  'LBL_CLEARALL' => 'Fshi të gjitha',
+  'LBL_CLOSE_WINDOW' => 'Mbyll dritaren',
+  'LBL_CLOSEALL_BUTTON_LABEL' => 'Mbyll të gjitha',
+  'LBL_CLOSEALL_BUTTON_TITLE' => 'Mbyll të gjitha [Alt+I]',
+  'LBL_COMPOSE_EMAIL_BUTTON_LABEL' => 'Ndërto email',
+  'LBL_COMPOSE_EMAIL_BUTTON_TITLE' => 'Ndërto email [Alt+L]',
+  'LBL_CONTACT_LIST' => 'Lista e kontakteve',
+  'LBL_CONTACT' => 'Kontakt',
+  'LBL_CONTACTS' => 'Kontaktet',
+  'LBL_CREATE_BUTTON_LABEL' => 'Krijo',
+  'LBL_CREATED_BY_USER' => 'Krijuar nga përdoruesi',
+  'LBL_CREATED' => 'Krijuar nga',
+  'LBL_CURRENT_USER_FILTER' => 'Vetëm artikujt e mia',
+  'LBL_DATE_ENTERED' => 'Data e krijuar',
+  'LBL_DATE_MODIFIED' => 'Modifikimi i fundit',
+  'LBL_DELETE_BUTTON_LABEL' => 'Fshi',
+  'LBL_DELETE_BUTTON_TITLE' => 'Fshi [Alt+D]',
+  'LBL_DELETE_BUTTON' => 'Fshi',
+  'LBL_DELETE' => 'Fshi',
+  'LBL_DELETED' => 'E fshirë',
+  'LBL_DIRECT_REPORTS' => 'Raportet direkte',
+  'LBL_DONE_BUTTON_LABEL' => 'E bërë',
+  'LBL_DONE_BUTTON_TITLE' => 'E bërë [Alt+X]',
+  'LBL_DST_NEEDS_FIXIN' => 'Aplikimi kërkon që të aplikohetndreqja e kohës së ruajtjes së dritës së ditës . Ju lutemi shkoni në lidhjen e Riparim në tastierën e admin dhe apiko ndreqje të kohës së ruajtjes së dritës së ditës.',
+  'LBL_DUPLICATE_BUTTON_LABEL' => 'Dublo',
+  'LBL_DUPLICATE_BUTTON_TITLE' => 'Dublo [Alt+U]',
+  'LBL_DUPLICATE_BUTTON' => 'Dublo',
+  'LBL_EDIT_BUTTON_LABEL' => 'Ndrysho',
+  'LBL_EDIT_BUTTON_TITLE' => 'Ndrysho [Alt+E]',
+  'LBL_EDIT_BUTTON' => 'Ndrysho',
+  'LBL_VIEW_BUTTON_LABEL' => 'Shih',
+  'LBL_VIEW_BUTTON_TITLE' => 'Shih [Alt+V]',
+  'LBL_VIEW_BUTTON' => 'Shih',
+  'LBL_EMAIL_PDF_BUTTON_LABEL' => 'Email si PDF',
+  'LBL_EMAIL_PDF_BUTTON_TITLE' => 'Email si PDF [Alt+M]',
+  'LBL_EMAILS' => 'Emailet',
+  'LBL_EMPLOYEES' => 'Puntorët',
+  'LBL_ENTER_DATE' => 'Data e nisjes',
+  'LBL_EXPORT_ALL' => 'Eksporto të gjitha',
+  'LBL_EXPORT' => 'Eksporto',
+  'LBL_HIDE' => 'fsheh',
+  'LBL_IMPORT_PROSPECTS' => 'Importo synimet',
+  'LBL_IMPORT' => 'Importo',
+  'LBL_LAST_VIEWED' => 'Shikuar i fundit',
+  'LBL_LEADS' => 'udhëheqjet',
+  'LBL_LIST_ACCOUNT_NAME' => 'Emri i llogarisë',
+  'LBL_LIST_ASSIGNED_USER' => 'Përdorues',
+  'LBL_LIST_CONTACT_NAME' => 'Emri i kontaktit',
+  'LBL_LIST_CONTACT_ROLE' => 'roli i kontaktit',
+  'LBL_LIST_NAME' => 'Emri',
+  'LBL_LIST_OF' => 'i',
+  'LBL_LIST_PHONE' => 'Telefoni',
+  'LBL_LIST_USER_NAME' => 'Emri i përdoruesit',
+  'LBL_LISTVIEW_MASS_UPDATE_CONFIRM' => 'A jeni i sigurt që dëshironi të rinovoni listën e tërë?',
+  'LBL_LISTVIEW_NO_SELECTED' => 'Ju lutemi selektoni së paku një regjistrim për të vazhduar.',
+  'LBL_LISTVIEW_OPTION_CURRENT' => 'Faqen aktuale',
+  'LBL_LISTVIEW_OPTION_ENTIRE' => 'List i tërë',
+  'LBL_LISTVIEW_OPTION_SELECTED' => 'Regjistrimet e selektuara',
+  'LBL_LISTVIEW_SELECTED_OBJECTS' => 'Selektuara:',
+  'LBL_LOCALE_NAME_EXAMPLE_SALUTATION' => 'Zr.',
+  'LBL_LOGOUT' => 'Dalje',
+  'LBL_MAILMERGE' => 'Bashkim i  maileve',
+  'LBL_MASS_UPDATE' => 'Masa e rinovuar',
+  'LBL_MEETINGS' => 'Mbledhjet',
+  'LBL_MEMBERS' => 'Antarët',
+  'LBL_MODIFIED_BY_USER' => 'Modifikuar nga përdoruesi',
+  'LBL_MODIFIED' => 'Modifikuar nga',
+  'LBL_MY_ACCOUNT' => 'Llogaritë e mia',
+  'LBL_NAME' => 'Emri',
+  'LBL_NEW_BUTTON_LABEL' => 'Krijo',
+  'LBL_NEW_BUTTON_TITLE' => 'Krijo [Alt+N]',
+  'LBL_NEXT_BUTTON_LABEL' => 'Vijues',
+  'LBL_NONE' => 'asnjëra',
+  'LBL_NOTES' => 'Shënimet',
+  'LBL_OPENALL_BUTTON_LABEL' => 'Hap të gjitha',
+  'LBL_OPENALL_BUTTON_TITLE' => 'Hap të gjitha [Alt+O]',
+  'LBL_OPENTO_BUTTON_LABEL' => 'I hap',
+  'LBL_OPENTO_BUTTON_TITLE' => 'I hap: [Alt+T]',
+  'LBL_OPPORTUNITIES' => 'Mundësite',
+  'LBL_OPPORTUNITY_NAME' => 'Emri i mundësisë',
+  'LBL_OPPORTUNITY' => 'Mundësi',
+  'LBL_OR' => 'ose',
+  'LBL_PRODUCT_BUNDLES' => 'pako të produkteve',
+  'LBL_PRODUCTS' => 'Produktet',
+  'LBL_PROJECT_TASKS' => 'Detyrat e projektit',
+  'LBL_PROJECTS' => 'Projektet',
+  'LBL_QUOTE_TO_OPPORTUNITY_LABEL' => 'Krijo mundësi nga kuota',
+  'LBL_QUOTE_TO_OPPORTUNITY_TITLE' => 'Krijo mundësi nga kuota [Alt+O]',
+  'LBL_QUOTES_SHIP_TO' => 'Kuotat ( transport deri)',
+  'LBL_QUOTES' => 'Kuotat',
+  'LBL_RELATED_RECORDS' => 'Regjistrimet e lidhura',
+  'LBL_REMOVE' => 'Largo',
+  'LBL_SAVE_BUTTON_LABEL' => 'Ruaj',
+  'LBL_SAVE_BUTTON_TITLE' => 'Ruaj [Alt+S]',
+  'LBL_FULL_FORM_BUTTON_LABEL' => 'formë e plotë',
+  'LBL_FULL_FORM_BUTTON_TITLE' => 'Formë e plotë [Alt+F]',
+  'LBL_SAVE_NEW_BUTTON_LABEL' => 'Ruaj dhe krijo të re',
+  'LBL_SAVE_NEW_BUTTON_TITLE' => 'Ruaj dhe krijo të re [Alt+V]',
+  'LBL_SEARCH_BUTTON_LABEL' => 'Kërkim',
+  'LBL_SEARCH_BUTTON_TITLE' => 'Kërkim [Alt+Q]',
+  'LBL_SEARCH' => 'Kërkim',
+  'LBL_SELECT_BUTTON_LABEL' => 'Selekto',
+  'LBL_SELECT_BUTTON_TITLE' => 'Selekto [Alt+T]',
+  'LBL_SELECT_CONTACT_BUTTON_LABEL' => 'Selekto kontaktin',
+  'LBL_SELECT_CONTACT_BUTTON_TITLE' => 'Selekto kontaktin [Alt+T]',
+  'LBL_SELECT_REPORTS_BUTTON_LABEL' => 'Selekto nga raportet',
+  'LBL_SELECT_REPORTS_BUTTON_TITLE' => 'Selekto raportet',
+  'LBL_SELECT_USER_BUTTON_LABEL' => 'Selekto përdoruesin',
+  'LBL_SELECT_USER_BUTTON_TITLE' => 'Selekto përdoruesin [Alt+U]',
+  'LBL_SERVER_RESPONSE_RESOURCES' => 'Burimet e përdorura për të ndërtuar këtë faqe (pyetjet, dosjet)',
+  'LBL_SERVER_RESPONSE_TIME_SECONDS' => 'sekonda.',
+  'LBL_SERVER_RESPONSE_TIME' => 'Koha e reagimit të serverit:',
+  'LBL_SHIP_TO_ACCOUNT' => 'Llogaria për transportin,',
+  'LBL_SHIP_TO_CONTACT' => 'Kontakti për transportin',
+  'LBL_SHORTCUTS' => 'Shkurtimet',
+  'LBL_SHOW' => 'trego',
+  'LBL_STATUS_UPDATED' => 'Statusi juaj për këtë ndodhi është rinovuar.',
+  'LBL_STATUS' => 'Statusi',
+  'LBL_SUBJECT' => 'Subjekti',
+  'LBL_SYNC' => 'Sinkronizim',
+  'LBL_TASKS' => 'Detyrat',
+  'LBL_TEAMS_LINK' => 'Grupi',
+  'LBL_TRACK_EMAIL_BUTTON_LABEL' => 'Emaili i arkivuar',
+  'LBL_TRACK_EMAIL_BUTTON_TITLE' => 'Emaili i arkivuar',
+  'LBL_UNAUTH_ADMIN' => 'Qasje e pautorizuar në administratë',
+  'LBL_UNDELETE_BUTTON_LABEL' => 'Mos fshi',
+  'LBL_UNDELETE_BUTTON_TITLE' => 'Mos fshi [Alt+D]',
+  'LBL_UNDELETE_BUTTON' => 'Mos fshi',
+  'LBL_UNDELETE' => 'Mos fshi',
+  'LBL_UNSYNC' => 'Mos sinkronizo',
+  'LBL_UPDATE' => 'Rifresko',
+  'LBL_USER_LIST' => 'Lista e përdoruesve',
+  'LBL_USERS_SYNC' => 'Sinkronizimi i përdoruesve',
+  'LBL_USERS' => 'Përdoruesit',
+  'LBL_VIEW_PDF_BUTTON_LABEL' => 'Shtyp si PDF',
+  'LBL_VIEW_PDF_BUTTON_TITLE' => 'Shtyp si PDF [Alt+P]',
+  'LNK_ABOUT' => 'Rreth',
+  'LNK_ADVANCED_SEARCH' => 'Avancuar',
+  'LNK_BASIC_SEARCH' => 'Bazike',
+  'LNK_DELETE_ALL' => 'fshi të gjitha',
+  'LNK_DELETE' => 'fshi',
+  'LNK_EDIT' => 'ndrysho',
+  'LNK_GET_LATEST' => 'Mer të fundit',
+  'LNK_GET_LATEST_TOOLTIP' => 'Zavendëso me versionin e fundit',
+  'LNK_HELP' => 'ndihmë',
+  'LNK_LIST_END' => 'Përfundim',
+  'LNK_LIST_NEXT' => 'Vijues',
+  'LNK_LIST_PREVIOUS' => 'Mëparshëm',
+  'LNK_LIST_RETURN' => 'Kthehu në listë',
+  'LNK_LIST_START' => 'Fillim',
+  'LNK_LOAD_SIGNED' => 'Nënshkrim',
+  'LNK_LOAD_SIGNED_TOOLTIP' => 'Zëvendësuar me dokument të nënshkruar',
+  'LNK_PRINT' => 'Shtyp',
+  'LNK_REMOVE' => 'Largo',
+  'LNK_RESUME' => 'Rezyme',
+  'LNK_VIEW_CHANGE_LOG' => 'Shih ndryshimin e hyrjes',
+  'NTC_DATE_FORMAT' => '(vvvvv-mm-dd)',
+  'NTC_DATE_TIME_FORMAT' => '(vvvv-mm-dd 24:00)',
+  'NTC_DELETE_CONFIRMATION_MULTIPLE' => 'A jeni të sigurt që dëshironi të fshini regjistrimin-et e selektuar',
+  'NTC_DELETE_CONFIRMATION' => 'A jeni të sigurtë që dëshironi të fshini këtë regjistrim?',
+  'NTC_LOGIN_MESSAGE' => 'Ju lutemi shtypni emrin e përdoruesit dhe fjalëkalimin:',
+  'NTC_NO_ITEMS_DISPLAY' => 'asnjë',
+  'NTC_REMOVE_CONFIRMATION' => 'A jeni të sigurt që dëshironi të largoni këtë lidhje?',
+  'NTC_WELCOME' => 'Mirësevini',
+  'NTC_YEAR_FORMAT' => '(vvvv)',
+  'LBL_DUP_MERGE' => 'Gjej dublimet',
+  'LBL_LOADING' => 'ngarkimi...',
+  'LBL_SAVING_LAYOUT' => 'Ruajtje të formatit...',
+  'LBL_SAVED_LAYOUT' => 'Formati është ruajtur',
+  'LBL_SAVED' => 'E ruajtur',
+  'LBL_SAVING' => 'Ruatje',
+  'LBL_DISPLAY_COLUMNS' => 'shfaq kolonat',
+  'LBL_HIDE_COLUMNS' => 'fsheh kolonat',
+  'LBL_SEARCH_CRITERIA' => 'Kriteriumi i kërkimit',
+  'LBL_SAVED_VIEWS' => 'Pamjet e ruajtura',
+  'LBL_NO_RECORDS_FOUND' => 'O regjistrime të gjetura',
+  'LBL_LOGIN_SESSION_EXCEEDED' => 'Severi është shumë i zënë. Ju lutemi provojni përsësri më vonë.',
+  'LBL_CHANGE_PASSWORD' => 'Ndrysho fjalëkalimin',
+  'LBL_LOGIN_TO_ACCESS' => 'Ju lutemi hyni që të keni qasje në këtë hapsirë.',
+);
+

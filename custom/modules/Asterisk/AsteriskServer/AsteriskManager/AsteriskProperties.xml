@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<AsteriskProperties>
+  <AsteriskProperty>
+    <Asterisk>172.16.0.50|</Asterisk>
+    <username>crmatlantic|</username>
+    <password>Crmatlantic@123|</password>
+    <internalchannel>SIP|</internalchannel>
+    <externalchannel>DAHDI|</externalchannel>
+    <dbname>none|</dbname>
+    <dbusername>none|</dbusername>
+    <dbpassword>none|</dbpassword>
+    <url>http://crm-test.atlantic.edu.vn|</url>
+    <crmusername>none|</crmusername>
+    <crmpassword>none</crmpassword>
+    <sc>?</sc>
+  </AsteriskProperty>
+</AsteriskProperties>

@@ -1,0 +1,91 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+/*sugar mods*/
+.dataTables_wrapper {
+  overflow-x: auto;
+}
+
+table.table.dataTable tfoot tr.overall th {
+  font-weight: bold;
+}
+
+table th.nosort.select-all {
+  padding:0;
+  .btn-group {
+  	position: absolute;
+  	top: 0;
+  }
+}
+
+//centering checkbox in btn-group
+.select-all .btn-group > .btn:first-child {
+  padding-top: 7px;
+  padding-bottom: 1px;
+}
+
+table.dataTable {
+  margin-top: 10px;
+}
+
+table tbody tr:last-child td:last-child, table tbody tr:last-child td:first-child,
+table tfoot tr:last-child td:last-child, table tfoot tr:last-child td:first-child {
+  .border-radius(0 0 4px 4px)
+}
+table th {
+  white-space: nowrap;
+}
+table.datatable tbody td {
+  white-space: nowrap;
+  max-width: 100px;
+  overflow-x: hidden;
+}
+table th, table td {
+  position: relative;
+}
+
+table.datatable tr td .actions {
+  //position: absolute;
+  top: 8px;
+  right: 8px;
+}
+table.datatable tr td .actions a:hover {
+  color: @grayDark;
+}
+
+table th {
+  min-width: 20px;
+  color: @tableHeader !important;
+}
+table th .btn-group {
+  margin: 0 0 0 -10px;
+}
+table th .btn input {
+ margin: -2px 0 0 0;
+}
+table th .toggle-all {
+  margin: 10px;
+}
+table td .btn-toolbar {
+  margin: -5px 0 -10px;
+}
+.dblclick input {
+  padding: 3px 3px 2px;
+  position: absolute;
+  top: 1px;
+  width: 80% !important;
+}
+table tfoot td {
+  font-weight: bold;
+  border-top: 2px solid @grayLight !important;
+}

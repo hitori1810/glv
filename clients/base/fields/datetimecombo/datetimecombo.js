@@ -1,0 +1,27 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+({extendsFrom:'DateField',stripIsoTZ:true,showAmPm:false,timeValue:'',serverTimeFormat:'H:i:s',_render:function(value){var self=this,viewName;self._presetDateValues();app.view.fields.DateField.prototype._render.call(self);viewName=self._getViewName();$(function(){if(self._isEditView(viewName)){self._setupTimepicker();}});},format:function(value){var jsDate,output,myUser=app.user,d,parts,before24Hours;if(this.stripIsoTZ){value=app.date.stripIsoTimeDelimterAndTZ(value);}
+if(this._isNewEditViewWithNoValue(value)){jsDate=this._setDateIfDefaultValue();if(!jsDate){return value;}}else if(!value){return value;}else{if(!this._verifyDateString(value)){return value;}
+jsDate=new Date(value);}
+before24Hours=jsDate.getHours();value=app.date.format(jsDate,this.usersDatePrefs)+' '+app.date.format(jsDate,this.userTimePrefs);if(this.view.name==='edit'){jsDate=app.date.roundTime(jsDate);}
+value={date:app.date.format(jsDate,this.usersDatePrefs),time:app.date.format(jsDate,this.userTimePrefs),amPm:this.showAmPm?(before24Hours<12?'am':'pm'):''};this.timeValue=value['time'];this.dateValue=value['date'];this.$(".datepicker").datepicker('update',this.dateValue);return value;},unformat:function(value){var jsDate;if(value){jsDate=app.date.parse(value,this.serverDateFormat+' '+this.serverTimeFormat);if(jsDate){return this._setServerDateString(jsDate);}else{app.logger.error("Issue setting the server date string for value: "+value);return value;}}
+return value;},_setupTimepicker:function(){this.$(".ui-timepicker-input").attr('placeholder',this.userTimePrefs);this.$(".ui-timepicker-input").timepicker({'timeFormat':this.userTimePrefs,'scrollDefaultNow':true,'step':15});this.$('.ui-timepicker-input').on({changeTime:_.bind(this.changeTime,this),blur:_.bind(this._handleTimepickerBlur,this)});},changeTime:function(ev){var model=this.model,fieldName=this.name,timeValue='',hrsMins={},dateValue='',timeParts,hour,hours,minutes;hrsMins=this._getHoursMinutes($(ev.currentTarget));dateValue=this._getDatepickerValue();this._setDatepickerValue(dateValue);model.set(fieldName,this._buildUnformatted(dateValue,hrsMins.hours,hrsMins.minutes),{silent:true});},_forceRoundedTime:function(timepicker,timeAsDate,hrsMins){var minutes,hours;if(this.view.name==='edit'){timeAsDate=app.date.roundTime(timeAsDate);minutes=this._forceTwoDigits(timeAsDate.getMinutes().toString());hours=this._forceTwoDigits(timeAsDate.getHours().toString());this._setTimepickerValue($(timepicker),hours,minutes);hrsMins.hours=hours;hrsMins.minutes=minutes;}
+return hrsMins;},_handleTimepickerBlur:function(ev){var dateValue,hrsMins,timeAsDate,hours,minutes,timepicker=ev.currentTarget;hrsMins=this._getHoursMinutes($(ev.currentTarget));timeAsDate=this._getTimepickerValueAsDate($(timepicker));hrsMins=this._forceRoundedTime(timepicker,timeAsDate,hrsMins);this._setTimeValue();dateValue=this._getDatepickerValue();this.model.set(this.name,this._buildUnformatted(dateValue,hrsMins.hours,hrsMins.minutes),{silent:true});},_setTimeValue:function(){this.timeValue=this.$('.ui-timepicker-input').val();this.timeValue=(this.timeValue)?this.timeValue:'';},_getTimepickerValue:function($timepickerElement){var timeValue=$timepickerElement.val();this.timeValue=timeValue;return timeValue;},_getTimepickerValueAsDate:function($timepickerElement){return this.$($timepickerElement).timepicker('getTime');},_setTimepickerValue:function($timepickerElement,hours,minutes){var date=new Date();if(!hours&&!minutes){date.setHours(0,0,0,0);}
+else{if(minutes){date.setMinutes(minutes);}
+if(hours){date.setHours(hours);}}
+$timepickerElement.timepicker('setTime',date);this.timeValue=$timepickerElement.val();},_setDateIfDefaultValue:function(){var value,jsDate;if(this.def.display_default){jsDate=app.date.parseDisplayDefault(this.def.display_default);this.model.set(this.name,this._setServerDateString(jsDate),{silent:true});}else{return null;}
+return jsDate;},_getHoursMinutes:function(el){var timeParts,hour,hours,minutes,timeValue,amPm=null;timeValue=this._getTimepickerValue(el)||'';timeParts=timeValue.toLowerCase().match(/(\d+)(?::(\d\d?))?\s*([pa]?)/);if(!timeParts){return this._setIfNoTime(null,null);}
+hour=parseInt(timeParts[1]*1,10);if(!_.isEmpty(timeParts[3])){amPm=(timeParts[3]==='a')?'am':'pm';if(hour==12){hours=(timeParts[3]=='a')?0:hour;}else{hours=(hour+(timeParts[3]=='p'?12:0));}}
+else{hours=hour;}
+minutes=(timeParts[2]*1||0);minutes=this._forceTwoDigits(minutes.toString());hours=this._forceTwoDigits(hours.toString());return this._setIfNoTime(hours,minutes,amPm);},_setIfNoTime:function(h,m,ampm){var o={};o.amPm=ampm?ampm:'am';if(!h&&!m){o.amPm='am';}
+o.hours=h?h:'00';o.minutes=m?m:'00';o.hours=o.hours==='12'&&o.amPm==='am'?'00':o.hours;o.hours=o.hours==='00'&&o.amPm==='pm'?'12':o.hours;return o;}})

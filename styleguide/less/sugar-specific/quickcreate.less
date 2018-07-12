@@ -1,0 +1,97 @@
+/*********************************************************************************
+ * By installing or using this file, you are confirming on behalf of the entity
+ * subscribed to the SugarCRM Inc. product ("Company") that Company is bound by
+ * the SugarCRM Inc. Master Subscription Agreement (“MSA”), which is viewable at:
+ * http://www.sugarcrm.com/master-subscription-agreement
+ *
+ * If Company is not bound by the MSA, then by installing or using this file
+ * you are agreeing unconditionally that Company will be bound by the MSA and
+ * certifying that you have authority to bind Company accordingly.
+ *
+ * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
+ ********************************************************************************/
+
+
+#globalLinksModule {
+  float: right;
+  height: 43px;
+  .rtlFloat(@direction,left);
+}
+
+
+#globalLinksModule:hover {
+    background-color:  lighten(@NavigationBar,20%);;
+}
+
+#globalLinksCtrl img{
+  border: 0px;
+}
+
+
+#quickCreate {
+  float: right;
+    .rtlFloat(@direction,left);
+}
+
+#quickCreate ul.clickMenu {
+  background: none;
+  border: 0px none;
+  padding-right: 0px;
+  font-family: Arial;
+}
+
+
+#quickCreate ul.clickMenu > li {
+  width: 50px;
+  height: 43px;
+
+}
+#quickCreate ul.clickMenu li > span {
+  background: url('@{baseUrl}/img/quickcreate.png') no-repeat center center;
+  height: 43px;
+  width: 50px;
+}
+#globalLinksModule ul.clickMenu li:hover span,
+#quickCreate ul.clickMenu > li:hover {
+  background-color:  lighten(@NavigationBar,20%); // "transparent" is default to differentiate :hover from .active
+    color: lighten(desaturate(@BorderColor, 100%),100%);
+}
+ul#globalLinksSubnav li { min-width: 120px;}
+ul#globalLinksSubnav, ul#quickCreateULSubnav,
+#quickCreate ul.clickMenu li ul.subnav, #globalLinksModule ul.clickMenu li ul.subnav{
+  top: 43px;
+  right: 0;
+  left: auto;
+  padding: 10px 0px;
+  border: 1px solid #999;
+  width: auto;
+  .rtlLeft(@direction,0);
+  .rtlRight(@direction,auto);
+}
+
+#quickCreate ul.clickMenu li ul.subnav {
+  width: auto;
+}
+
+#globalLinksSubnav li a, #quickCreateULSubnav li a,
+#quickCreate ul.clickMenu li ul.subnav li a, #globalLinksModule ul.clickMenu li ul.subnav li a {
+  padding: 4px 10px !important;
+  color: #666666;
+  line-height: 1.45;
+  .rtlFloat(@direction,right);
+  .rtlTextAlign(@direction,right);
+}
+#quickCreateULSubnav li.moduleMenuOverFlowLess a, #quickCreateULSubnav li.moduleMenuOverFlowMore a,
+#quickCreate ul.clickMenu li ul.subnav li.moduleMenuOverFlowMore a, #quickCreate ul.clickMenu li ul.subnav li.moduleMenuOverFlowLess a {
+  color: #999 !important;
+}
+
+#quickCreate ul.clickMenu li ul.subnav li a:hover, #globalLinksModule ul.clickMenu li ul.subnav li a:hover, #quickCreate ul.clickMenu li ul.subnav li.moduleMenuOverFlowMore a:hover, #quickCreate ul.clickMenu li ul.subnav li.moduleMenuOverFlowLess a:hover {
+  color: #fff !important;
+}
+
+
+#quickCreate ul.clickMenu li ul.subnav li.moduleMenuOverFlowMore a img, #quickCreate ul.clickMenu li ul.subnav li.moduleMenuOverFlowLess a img
+{
+  opacity: .6;
+}
