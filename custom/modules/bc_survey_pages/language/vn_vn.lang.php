@@ -1,6 +1,0 @@
-<?php
-// created: 2018-05-24 16:09:21
-$mod_strings = array (
-  'LBL_BC_SURVEY_PAGES_BC_SURVEY_FROM_BC_SURVEY_TITLE' => 'Khảo sát',
-  'LBL_BC_SURVEY_PAGES_BC_SURVEY_TEMPLATE_FROM_BC_SURVEY_TEMPLATE_TITLE' => 'Mẫu khảo sát',
-);
