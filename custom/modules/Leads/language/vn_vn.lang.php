@@ -1,5 +1,5 @@
 <?php
-// created: 2018-05-24 16:09:10
+// created: 2018-07-12 17:01:45
 $mod_strings = array (
   'LBL_GENDER' => 'Giới tính',
   'LBL_NATIONALITY' => 'Quốc tịch',
@@ -39,7 +39,7 @@ $mod_strings = array (
   'LBL_LEADS_J_PTRESULT_1_FROM_J_PTRESULT_TITLE' => 'Thi đầu vào',
   'LBL_J_PTRESULT_LEADS_1_FROM_J_PTRESULT_TITLE' => 'Thi đầu vào',
   'LBL_LEAD_SOURCE' => 'Nguồn',
-  'LBL_REMOVE' => 'Xóa',
+  'LBL_REMOVE' => 'Hủy',
   'LBL_LEAD_DEMO' => 'Demo',
   'LBL_LEAD_PT' => 'Thi đầu vào',
   'LBL_RELATIONSHIP' => 'Mối quan hệ',
@@ -59,16 +59,15 @@ $mod_strings = array (
   'LBL_GRADE' => 'Khối',
   'LBL_PAYMENT' => 'Khoản thu',
   'LBL_PROSPECT_LIST' => 'Danh sách KH',
-  'LBL_C_CONTACTS_LEADS_1_FROM_C_CONTACTS_TITLE' => 'Người liên hệ',
+  'LBL_C_CONTACTS_LEADS_1_FROM_C_CONTACTS_TITLE' => 'Học viên',
   'LBL_J_SCHOOL_LEADS_1_FROM_J_SCHOOL_TITLE' => 'Trường học',
   'LBL_LEADS_CONTACTS_1_FROM_CONTACTS_TITLE' => 'Học viên',
   'LBL_CREATE_TARGET_LIST' => 'Tạo mới',
-  'LBL_SELECT_TARGET_LIST' => 'Thêm vào',  
+  'LBL_SELECT_TARGET_LIST' => 'Thêm vào',
   'LBL_BC_SURVEY_LEADS_FROM_BC_SURVEY_TITLE' => 'Khảo sát',
   'LBL_LAST_NAME_PLACEHOLDER' => 'Nguyễn Văn',
   'LBL_FIRST_NAME_PLACEHOLDER' => 'An',
   'LBL_PREFER_LEVEL' => 'Mục tiêu học tập',
   'LBL_COPY_TO_STUDENT' => 'Sao chép vào liên hệ học viên',
   'LBL_COPIED_TO_STUDENT' => 'Đã sao chép vào liên hệ học viên',
-  'LBL_REMOVE' => 'Hủy',
 );

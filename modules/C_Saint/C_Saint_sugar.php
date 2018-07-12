@@ -24,7 +24,7 @@ class C_Saint_sugar extends Basic {
 	var $module_dir = 'C_Saint';
 	var $object_name = 'C_Saint';
 	var $table_name = 'c_saint';
-	var $importable = false;
+	var $importable = true;
 		var $id;
 		var $name;
 		var $date_entered;

@@ -1,5 +1,5 @@
 <?php
-// created: 2018-05-24 16:09:26
+// created: 2018-07-12 17:01:47
 $mod_strings = array (
   'LBL_LEAD_SOURCE' => 'Nguồn khách hàng',
   'LBL_GRADEBOOK_DETAIL' => 'Bảng điểm',
@@ -73,7 +73,7 @@ $mod_strings = array (
   'LBL_COMPANY_NAME' => 'Tên công ty',
   'LBL_OFFICE_PHONE' => 'Điện thoại văn phòng:',
   'LBL_CONTACTS_C_CONTACTS_1_FROM_C_CONTACTS_TITLE' => 'Người quản lý',
-  'LBL_C_CONTACTS_CONTACTS_1_FROM_C_CONTACTS_TITLE' => 'Người quản lý',
+  'LBL_C_CONTACTS_CONTACTS_1_FROM_C_CONTACTS_TITLE' => 'Học viên',
   'LBL_CONTRACTS' => 'Hợp đồng',
   'LBL_STUDENT_SITUATION' => 'Quá trình học',
   'LBL_MEETINGS' => 'Meetings',
@@ -174,21 +174,19 @@ $mod_strings = array (
   'LBL_CONVERTED_LEAD' => 'Hồ sơ HVTN: ',
   'LBL_OLD_LEAD_SOURCE' => 'Nguồn khách hàng (cũ)',
   'LBL_BC_SURVEY_CONTACTS_FROM_BC_SURVEY_TITLE' => 'Khảo sát',
-  'LBL_LOYALTY' => 'Mức trung thành',    
-  'LBL_SCHOOL_NAME' => 'Trường học', 
+  'LBL_LOYALTY' => 'Mức trung thành',
+  'LBL_SCHOOL_NAME' => 'Trường học',
   'LBL_LAST_NAME_PLACEHOLDER' => 'Nguyễn Văn',
   'LBL_FIRST_NAME_PLACEHOLDER' => 'An',
-  'LBL_PREFER_LEVEL' => 'Mục tiêu học tập',
   'LNK_NEW_RECORD' => 'Tạo khoản thu',
   'LNK_CREATE_ENROLLMENT' => 'Đăng ký học',
   'LBL_STATUS_DESCRIPTION' => 'Mô tả trạng thái',
   'LBL_REASON' => 'Lý do',
   'LBL_AVATAR' => 'Ảnh đại diện',
-  'LBL_CONTACT_STATUS' => 'Trạng thái',
   'LBL_C_CONTACTS_CONTACTS_1_NAME' => 'Phụ huynh',
   'LBL_COPY_TO_STUDENT' => 'Sao chép vào liên hệ học viên',
   'LBL_COPY_SUCCESS' => 'Đã sao chép !',
   'LBL_REMOVE' => 'Hủy',
   'LBL_CONFIRM_REMOVE_PT' => 'Bạn có chắc chắn muốn xóa sinh viên hiện tại khỏi PT này không?',
-  'LBL_CONFIRM_REMOVE_DEMO' => 'Bạn có chắc chắn muốn xóa sinh viên hiện tại khỏi Demo này không?'
+  'LBL_CONFIRM_REMOVE_DEMO' => 'Bạn có chắc chắn muốn xóa sinh viên hiện tại khỏi Demo này không?',
 );

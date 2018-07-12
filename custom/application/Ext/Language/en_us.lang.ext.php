@@ -66,7 +66,7 @@ $app_list_strings['moduleList']['C_FieldHighlighter'] = 'Field Highlighter';
  * Copyright (C) 2004-2013 SugarCRM Inc.  All rights reserved.
  ********************************************************************************/
 
-
+                                                            
 $app_list_strings['moduleList']['C_Saint'] = 'Saint';
 $app_list_strings['moduleList']['C_Grade'] = 'Grade';
 $app_list_strings['moduleList']['C_Class'] = 'Class';
