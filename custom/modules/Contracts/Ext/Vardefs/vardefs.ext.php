@@ -84,6 +84,49 @@ $dictionary["Contract"]["fields"]["c_contacts_contracts_1c_contacts_ida"] = arra
 );
 
 
+// created: 2017-08-10 11:53:30
+$dictionary["Contract"]["fields"]["j_coursefee_contracts_1"] = array (
+  'name' => 'j_coursefee_contracts_1',
+  'type' => 'link',
+  'relationship' => 'j_coursefee_contracts_1',
+  'source' => 'non-db',
+  'module' => 'J_Coursefee',
+  'bean_name' => 'J_Coursefee',
+  'side' => 'right',
+  'vname' => 'LBL_J_COURSEFEE_CONTRACTS_1_FROM_J_COURSEFEE_TITLE',
+  'id_name' => 'j_coursefee_contracts_1j_coursefee_ida',
+  'link-type' => 'one',
+);
+$dictionary["Contract"]["fields"]["j_coursefee_contracts_1_name"] = array (
+  'name' => 'j_coursefee_contracts_1_name',
+  'type' => 'relate',
+  'source' => 'non-db',
+  'vname' => 'LBL_J_COURSEFEE_CONTRACTS_1_FROM_J_COURSEFEE_TITLE',
+  'save' => true,
+  'id_name' => 'j_coursefee_contracts_1j_coursefee_ida',
+  'link' => 'j_coursefee_contracts_1',
+  'table' => 'j_coursefee',
+  'module' => 'J_Coursefee',
+  'rname' => 'name',
+);
+$dictionary["Contract"]["fields"]["j_coursefee_contracts_1j_coursefee_ida"] = array (
+  'name' => 'j_coursefee_contracts_1j_coursefee_ida',
+  'type' => 'id',
+  'source' => 'non-db',
+  'vname' => 'LBL_J_COURSEFEE_CONTRACTS_1_FROM_CONTRACTS_TITLE_ID',
+  'id_name' => 'j_coursefee_contracts_1j_coursefee_ida',
+  'link' => 'j_coursefee_contracts_1',
+  'table' => 'j_coursefee',
+  'module' => 'J_Coursefee',
+  'rname' => 'id',
+  'reportable' => false,
+  'side' => 'right',
+  'massupdate' => false,
+  'duplicate_merge' => 'disabled',
+  'hideacl' => true,
+);
+
+
 // Add field - 15/07/2014 - created by MTN
 $dictionary['Contract']['fields']['contract_id']=array (
 	'required' => false,
@@ -111,6 +154,7 @@ $dictionary['Contract']['fields']['account_address']=array (
 	'name' => 'account_address',
 	'vname' => 'LBL_ACCOUNT_ADDRESS',
 	'type' => 'text',
+    'source' => 'non-db',
 	'massupdate' => 0,
 	'no_default' => false,
 	'comments' => '',
@@ -134,6 +178,7 @@ $dictionary['Contract']['fields']['account_tax_code']=array (
 	'name' => 'account_tax_code',
 	'vname' => 'LBL_ACCOUNT_TAX_CODE',
 	'type' => 'varchar',
+    'source' => 'non-db',
 	'massupdate' => 0,
 	'no_default' => false,
 	'comments' => '',
@@ -155,6 +200,7 @@ $dictionary['Contract']['fields']['account_phone']=array (
 	'name' => 'account_phone',
 	'vname' => 'LBL_ACCOUNT_PHONE',
 	'type' => 'varchar',
+    'source' => 'non-db',
 	'massupdate' => 0,
 	'no_default' => false,
 	'comments' => '',
@@ -176,6 +222,7 @@ $dictionary['Contract']['fields']['account_fax']=array (
 	'name' => 'account_fax',
 	'vname' => 'LBL_ACCOUNT_FAX',
 	'type' => 'varchar',
+    'source' => 'non-db',
 	'massupdate' => 0,
 	'no_default' => false,
 	'comments' => '',
@@ -197,6 +244,7 @@ $dictionary['Contract']['fields']['account_bank_number']=array (
 	'name' => 'account_bank_number',
 	'vname' => 'LBL_ACCOUNT_BANK_NUMBER',
 	'type' => 'varchar',
+    'source' => 'non-db',
 	'massupdate' => 0,
 	'no_default' => false,
 	'comments' => '',
@@ -218,6 +266,7 @@ $dictionary['Contract']['fields']['account_bank_name']=array (
 	'name' => 'account_bank_name',
 	'vname' => 'LBL_ACCOUNT_BANK_NAME',
 	'type' => 'varchar',
+    'source' => 'non-db',
 	'massupdate' => 0,
 	'no_default' => false,
 	'comments' => '',

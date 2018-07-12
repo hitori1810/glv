@@ -4,7 +4,7 @@
 
  // created: 2016-11-25 10:58:12
 $layout_defs["Contracts"]["subpanel_setup"]['contracts_j_class_1'] = array (
-  'order' => 100,
+  'order' => 29,
   'module' => 'J_Class',
   'subpanel_name' => 'default',
   'sort_order' => 'asc',
@@ -13,15 +13,15 @@ $layout_defs["Contracts"]["subpanel_setup"]['contracts_j_class_1'] = array (
   'get_subpanel_data' => 'contracts_j_class_1',
   'top_buttons' =>
   array (
-//    0 =>
-//    array (
-//      'widget_class' => 'SubPanelTopButtonQuickCreate',
-//    ),
-//    1 =>
-//    array (
-//      'widget_class' => 'SubPanelTopSelectButton',
-//      'mode' => 'MultiSelect',
-//    ),
+    0 =>
+    array (
+      'widget_class' => 'SubPanelTopCreateButton',
+    ),
+    1 =>
+    array (
+      'widget_class' => 'SubPanelTopSelectButton',
+      'mode' => 'MultiSelect',
+    ),
   ),
 );
 
@@ -61,30 +61,6 @@ $layout_defs["Contracts"]["subpanel_setup"]["payment_paymentdetails"] = array (
     'top_buttons' =>
     array (
     ),
-);
-
-
- // created: 2014-12-02 16:49:45
-$layout_defs["Contracts"]["subpanel_setup"]['c_classes_contracts_1'] = array (
-  'order' => 100,
-  'module' => 'C_Classes',
-  'subpanel_name' => 'default',
-  'sort_order' => 'asc',
-  'sort_by' => 'id',
-  'title_key' => 'LBL_C_CLASSES_CONTRACTS_1_FROM_C_CLASSES_TITLE',
-  'get_subpanel_data' => 'c_classes_contracts_1',
-  'top_buttons' => 
-  array (
-//    0 => 
-//    array (
-//      'widget_class' => 'SubPanelTopButtonQuickCreate',
-//    ),
-//    1 => 
-//    array (
-//      'widget_class' => 'SubPanelTopSelectButton',
-//      'mode' => 'MultiSelect',
-//    ),
-  ),
 );
 
 
