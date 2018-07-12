@@ -1615,7 +1615,7 @@ $app_list_strings['record_type_display_notes']['Contacts']='Học viên';
 $app_list_strings['moduleList']['Meetings']='Lịch hẹn';
 $app_list_strings['moduleList']['J_Class']='Lớp';
 $app_list_strings['moduleList']['J_Feedback']='Phản hồi';
-$app_strings['LBL_GROUPTAB0_1527137856'] = 'Tư vấn';
+$app_strings['LBL_GROUPTAB0_1527137856'] = 'GLV';
 
 $app_strings['LBL_GROUPTAB1_1527137856'] = 'Đăng ký';
 

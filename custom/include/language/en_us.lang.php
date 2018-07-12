@@ -1617,7 +1617,7 @@ $app_list_strings['moduleList']['J_Voucher']='Voucher Code';
 $app_list_strings['moduleListSingular']['J_Voucher']='Voucher Code';
 $app_list_strings['moduleList']['J_Payment']='Enrollment & Payment';
 $app_list_strings['moduleListSingular']['J_Payment']='Enrollment & Payment';  
-$app_strings['LBL_GROUPTAB0_1527137856'] = 'Sale';
+$app_strings['LBL_GROUPTAB0_1527137856'] = 'GLV';
 
 $app_strings['LBL_GROUPTAB1_1527137856'] = 'Enrollment';
 

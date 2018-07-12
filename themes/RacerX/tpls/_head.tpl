@@ -27,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="{sugar_getjspath file='custom/include/javascripts/MultipleSelect/multiple-select.css'}"/>
     <link rel="stylesheet" type="text/css" href="{sugar_getjspath file='custom/include/css/CustomStyle.css'}"/>
     <link rel="stylesheet" type="text/css" href="{sugar_getjspath file='custom/include/javascripts/alertifyjs/alertify.min.css'}"/>
-    <link rel="stylesheet" type="text/css" href="{sugar_getjspath file='custom/include/javascripts/Spinner/Spinner.css'}"/>
-    <link rel="stylesheet" type="text/css" href="{sugar_getjspath file='modules/Notifications/tpls/notifications.css'}" />
+    <link rel="stylesheet" type="text/css" href="{sugar_getjspath file='custom/include/javascripts/Spinner/Spinner.css'}"/>   
     {/if}
     {$SUGAR_JS}
     {sugar_getscript file="custom/include/javascripts/alertifyjs/alertify.min.js"}
@@ -47,24 +46,11 @@
     {sugar_getscript file="custom/include/javascripts/CustomMultiSelectFields.js"}    
     {sugar_getscript file="custom/modules/C_DuplicationDetection/js/duplicationHandler.js"}  
     {sugar_getscript file="custom/modules/C_FieldHighlighter/js/FieldHighlighterHandler.js" script_tag_attrs="async defer"}  
-    {sugar_getscript file="modules/Notifications/tpls/notifications.js" script_tag_attrs="async defer"}
     {sugar_getscript file="custom/modules/C_HelpTextConfig/js/HelpTextConfigHandler.js" script_tag_attrs="async defer"}
         
     {if $smarty.get.action neq 'repair'}<script type="text/javascript" src="index.php?entryPoint=GetJSLanguage"></script>{/if}
     
-      
-    {literal}
-    <script type="text/javascript">
-    //LOCK-DATA VARIABLE - Add By Lap Nguyen
-     var sugar_config_lock_info     = '{/literal}{$sugar_config_lock_info}{literal}';
-     var sugar_config_lock_date     = '{/literal}{$sugar_config_lock_date}{literal}';
-     var except_lock_for_user_name  = '{/literal}{$except_lock_for_user_name}{literal}';
-     var current_user_name          = '{/literal}{$current_user_name}{literal}';
-     var is_admin                   = '{/literal}{$is_admin}{literal}';
-     var max_tabs                   = '{/literal}{$default_max_tabs}{literal}';
-     var maximum_sms                = '{/literal}{$maximum_sms_messages}{literal}';
-    </script>
-    {/literal}
+                
     {sugar_getscript file="themes/RacerX/js/util.js"}
 
     {literal}
