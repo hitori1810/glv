@@ -1619,6 +1619,10 @@ $app_list_strings['c_classgroup_status_options'] = array(
 $app_list_strings['c_class_status_options'] = array(
     'active' => 'Đang học',
     'inactive' => 'Đã kết thúc',       
+);      
+$app_list_strings['contact_guardian_rela_options'] = array(
+    'father' => 'Bố',
+    'mother' => 'Mẹ',       
 );       
 $app_list_strings['moduleList']['Contacts']='Thiếu nhi';
 $app_list_strings['record_type_display']['Contacts']='Thiếu nhi';

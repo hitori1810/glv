@@ -1,17 +1,6 @@
 <?php
 include_once("custom/include/utils.php");
 
-function getdiscount(){
-    $options = array();
-    $sql  = "SELECT id, `name` FROM j_discount ";
-    $result = $GLOBALS['db']->query($sql);
-    while($discount = $GLOBALS['db']->fetchByAssoc($result)){
-        $options[$discount['id']] = $discount['name'];
-    }
-    return $options;
-
-}
-
 /**
 * CustomUtils
 * Modified By Thanh Le At 04/2015
@@ -136,35 +125,7 @@ function get_string_between($string, $start = "'", $end = "'"){
     $ini += strlen($start);
     $len = strpos($string,$end,$ini) - $ini;
     return substr($string,$ini,$len);
-}
-function checkDataLockDate($input_date_time){
-    global $current_user, $timedate, $sugar_config;
-    if($sugar_config['lock_info']){
-        if(!empty($sugar_config['except_lock_for_user_name'])){
-            $count_match = 0;
-            $user_name = explode(",", $sugar_config['except_lock_for_user_name']);
-            for($i = 0; $i<count($user_name); $i++){
-                if($user_name[$i] == $current_user->user_name)
-                    $count_match++;
-            }
-            if($count_match > 0) return true;
-        }
-
-        if($current_user->isAdmin())
-            return true;
-        else{
-            $splited            = explode('-',$GLOBALS['sugar_config']['lock_date']);
-            $input_date_db      = $timedate->to_db_date($input_date_time, false);
-            $check_date_time    = strtotime('first day of next month '.$input_date_db) + ( (intval($splited[0]) - 1) * 86400 ) + ( (intval($splited[1])) * 3600 );
-            $now_date           = strtotime('+7hour '. $timedate->nowDb());
-            if($now_date > $check_date_time)
-                return false;
-            else return true;
-        }
-
-    }else return true;
-
-}
+}       
 function getUserId($profile_url){
     $COOKIEFILE = 'cookie.txt';
     $ch = curl_init();
@@ -185,4 +146,16 @@ function getUserId($profile_url){
     $result = curl_exec($ch);
     preg_match_all('!\d+!', $result, $userId);
     return $userId[0][0];
+}
+
+function getSaintListOptions(){
+    $options = array();
+    $sql = "SELECT id, name
+    FROM c_saint
+    WHERE deleted <> 1";
+    $result = $GLOBALS['db']->query($sql);
+    while($row = $GLOBALS['db']->fetchByAssoc($result)){
+        $options[$row['id']] = $row['name'];
+    }
+    return $options;
 }

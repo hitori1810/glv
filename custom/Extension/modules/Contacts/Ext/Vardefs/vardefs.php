@@ -99,13 +99,55 @@ $dictionary['Contact']['fields']['gender']=array (
     'studio' => 'visible',
     'dbType' => 'enum',
     'required'=>true,
-);                                    
+);                                            
+$dictionary['Contact']['fields']['saint']=array (
+    'name' => 'saint',
+    'vname' => 'LBL_SAINT',
+    'type' => 'enum',
+    'len' => '100',
+    'comment' => '',    
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+    'function' => 'getSaintListOptions',
+);                                     
+$dictionary['Contact']['fields']['guardian_saint_1']=array (
+    'name' => 'guardian_saint_1',
+    'vname' => 'LBL_GUARDIAN_SAINT_1',
+    'type' => 'enum',
+    'len' => '100',
+    'comment' => '',    
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+    'function' => 'getSaintListOptions',
+);                                  
+$dictionary['Contact']['fields']['guardian_rela_1']=array (
+    'name' => 'guardian_rela_1',
+    'vname' => 'LBL_GUARDIAN_RELA_1',
+    'type' => 'enum',
+    'len' => '100',
+    'comment' => '',    
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+    'default' => 'father',
+    'options' => 'contact_guardian_rela_options',
+);                                  
+$dictionary['Contact']['fields']['guardian_rela_2']=array (
+    'name' => 'guardian_rela_2',
+    'vname' => 'LBL_GUARDIAN_RELA_2',
+    'type' => 'enum',
+    'len' => '100',
+    'comment' => '',    
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+    'default' => 'mother',
+    'options' => 'contact_guardian_rela_options',
+);                             
 $dictionary['Contact']['fields']['guardian_name']=array (
     'name' => 'guardian_name',
     'vname' => 'LBL_GUARDIAN_NAME',
     'type' => 'varchar',
     'len' => '100',
-    'comment' => '',
+    'comment' => '',                      
     'merge_filter' => 'disabled',
     'unified_search' => true,
 );
@@ -116,7 +158,17 @@ $dictionary['Contact']['fields']['other_mobile']=array (
     'dbType' => 'varchar',
     'len' => '100',
     'unified_search' => true,
-);
+);                                    
+$dictionary['Contact']['fields']['guardian_saint_2']=array (
+    'name' => 'guardian_saint_2',
+    'vname' => 'LBL_GUARDIAN_SAINT_2',
+    'type' => 'enum',
+    'len' => '100',
+    'comment' => '',    
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+    'function' => 'getSaintListOptions',
+);   
 $dictionary['Contact']['fields']['guardian_name_2']=array (
     'name' => 'guardian_name_2',
     'vname' => 'LBL_GUARDIAN_NAME_2',
@@ -125,7 +177,133 @@ $dictionary['Contact']['fields']['guardian_name_2']=array (
     'comment' => '',
     'merge_filter' => 'disabled',
     'unified_search' => true,
-);   
+);  
+$dictionary['Contact']['fields']['family_no']=array (
+    'name' => 'family_no',
+    'vname' => 'LBL_FAMILY_NO',
+    'type' => 'varchar',
+    'len' => '100',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+); 
+$dictionary['Contact']['fields']['address_no']=array (
+    'name' => 'address_no',
+    'vname' => 'LBL_ADDRESS_NO',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+); 
+$dictionary['Contact']['fields']['address_quarter']=array (
+    'name' => 'address_quarter',
+    'vname' => 'LBL_ADDRESS_QUARTER',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+); 
+$dictionary['Contact']['fields']['address_ward']=array (
+    'name' => 'address_ward',
+    'vname' => 'LBL_ADDRESS_WARD',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+);  
+$dictionary['Contact']['fields']['baptism_date'] = array(
+    'name' => 'baptism_date',
+    'vname' => 'LBL_BAPTISM_DATE',
+    'massupdate' => false,
+    'type' => 'date',    
+    'key' => 'dob',
+    'enable_range_search' => true,
+    'options' => 'date_range_search_dom',
+);
+$dictionary['Contact']['fields']['baptism_place']=array (
+    'name' => 'baptism_place',
+    'vname' => 'LBL_BAPTISM_PLACE',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+);  
+$dictionary['Contact']['fields']['baptism_godparent']=array (
+    'name' => 'baptism_godparent',
+    'vname' => 'LBL_BAPTISM_GODPARENT',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+);  
+$dictionary['Contact']['fields']['eucharist_date'] = array(
+    'name' => 'eucharist_date',
+    'vname' => 'LBL_EUCHARIST_DATE',
+    'massupdate' => false,
+    'type' => 'date',    
+    'key' => 'dob',
+    'enable_range_search' => true,
+    'options' => 'date_range_search_dom',
+); 
+$dictionary['Contact']['fields']['eucharist_place']=array (
+    'name' => 'eucharist_place',
+    'vname' => 'LBL_EUCHARIST_PLACE',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+);  
+$dictionary['Contact']['fields']['eucharist_godparent']=array (
+    'name' => 'eucharist_godparent',
+    'vname' => 'LBL_EUCHARIST_GODPARENT',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+); 
+$dictionary['Contact']['fields']['confirmation_date'] = array(
+    'name' => 'confirmation_date',
+    'vname' => 'LBL_CONFIRMATION_DATE',
+    'massupdate' => false,
+    'type' => 'date',    
+    'key' => 'dob',
+    'enable_range_search' => true,
+    'options' => 'date_range_search_dom',
+);         
+$dictionary['Contact']['fields']['confirmation_place']=array (
+    'name' => 'confirmation_place',
+    'vname' => 'LBL_CONFIRMATION_PLACE',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+);  
+$dictionary['Contact']['fields']['confirmation_godparent']=array (
+    'name' => 'confirmation_godparent',
+    'vname' => 'LBL_CONFIRMATION_GODPARENT',
+    'type' => 'varchar',
+    'len' => '255',
+    'comment' => '',
+    'merge_filter' => 'disabled',
+    'unified_search' => true,
+);  
+$dictionary['Contact']['fields']['graduation_date'] = array(
+    'name' => 'graduation_date',
+    'vname' => 'LBL_GRADUATION_DATE',
+    'massupdate' => false,
+    'type' => 'date',    
+    'key' => 'dob',
+    'enable_range_search' => true,
+    'options' => 'date_range_search_dom',
+); 
 
 //Custom Relationship JUNIOR. Student - SMS  By Lap Nguyen
 $dictionary['Contact']['fields']['contacts_sms'] = array (
@@ -215,10 +393,14 @@ $dictionary['Contact']['fields']['dob_date'] = array(
     'enable_range_search' => true,
     'options' => 'date_range_search_dom',
 );
+$dictionary['Contact']['fields']['team_name']['required']=false;
+$dictionary['Contact']['fields']['lead_source']['required']=false;
+$dictionary['Contact']['fields']['student_type']['required']=false;
+$dictionary['Contact']['fields']['first_name']['required']=false;
 $dictionary['Contact']['fields']['last_name']['required']=false;
 $dictionary['Contact']['fields']['last_name']['importable']=true;
 $dictionary['Contact']['fields']['first_name']['importable']='required';
-$dictionary['Contact']['fields']['phone_mobile']['required']=true;
+$dictionary['Contact']['fields']['phone_mobile']['required']=false;
 $dictionary['Contact']['fields']['email1']['required']=false;     
 
 $dictionary['Contact']['fields']['phone_work']['unified_search']=false;

@@ -63,18 +63,13 @@ array (
                     'newTab' => false,
                     'panelDefault' => 'expanded',
                 ),
-                'LBL_PORTAL_INFORMATION' => 
-                array (
-                    'newTab' => false,
-                    'panelDefault' => 'expanded',
-                ),
-                'LBL_PANEL_ASSIGNMENT' => 
+                'LBL_EDITVIEW_PANEL1' => 
                 array (
                     'newTab' => false,
                     'panelDefault' => 'expanded',
                 ),
             ),
-            'syncDetailEditViews' => false,
+            'syncDetailEditViews' => true,
         ),
         'panels' => 
         array (
@@ -86,7 +81,7 @@ array (
                     array (
                         'name' => 'contact_id',
                         'label' => 'LBL_CONTACT_ID',
-                        'customCode' => '<input type="text" class="input_readonly" name="contact_idd" id="contact_id" maxlength="255" value="{$fields.contact_id.value}" title="{$MOD.LBL_CONTACT_ID}" size="30" readonly>',
+//                        'customCode' => '<input type="text" class="input_readonly" name="contact_idd" id="contact_id" maxlength="255" value="{$fields.contact_id.value}" title="{$MOD.LBL_CONTACT_ID}" size="30" readonly>',
                     ),
                     1 => 'picture',
                 ),
@@ -96,8 +91,9 @@ array (
                     array (
                         'name' => 'full_student_name',
                         'customLabel' => '{$MOD.LBL_FULL_NAME} <span class="required">*</span>',
-                        'customCode' => '    
-                        <input name="last_name" id="last_name" placeholder="{$MOD.LBL_LAST_NAME_PLACEHOLDER}" style="margin-right: 3px;" size="20" type="text"  value="{$fields.last_name.value}">
+                        'customCode' => ' 
+                        {$SELECT_SAINT_HTML}   
+                        &nbsp;<input name="last_name" id="last_name" placeholder="{$MOD.LBL_LAST_NAME_PLACEHOLDER}" style="margin-right: 3px;" size="20" type="text"  value="{$fields.last_name.value}">
                         &nbsp;<input name="first_name" id="first_name" placeholder="{$MOD.LBL_FIRST_NAME_PLACEHOLDER}" style="width:120px !important; margin-right: 3px;" size="15" type="text" value="{$fields.first_name.value}">
                         <div id = "dialogDuplicationLocated"></div>',
                     ),
@@ -112,12 +108,6 @@ array (
                 array (
                     0 => 
                     array (
-                        'name' => 'email1',
-                        'studio' => 'false',
-                        'label' => 'LBL_EMAIL_ADDRESS',
-                    ),
-                    1 => 
-                    array (
                         'name' => 'gender',
                         'studio' => 'visible',
                         'label' => 'LBL_GENDER',
@@ -125,6 +115,11 @@ array (
                         array (
                             'required' => true,
                         ),
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'place_of_birth',
+                        'label' => 'LBL_PLACE_OF_BIRTH',
                     ),
                 ),
                 3 => 
@@ -134,12 +129,9 @@ array (
                         'name' => 'phone_mobile',
                         'label' => 'LBL_MOBILE_PHONE',
                     ),
+                    1 => 'phone_home',
                 ),
                 4 => 
-                array (
-                    0 => 'facebook',
-                ),
-                5 => 
                 array (
                     0 => 
                     array (
@@ -150,21 +142,9 @@ array (
                             'cols' => 55,
                         ),
                     ),
-                ),
-                6 => 
-                array (
-                    0 => 
+                    1 => 
                     array (
-                        'name' => 'primary_address_street',
-                        'hideLabel' => true,
-                        'type' => 'address',
-                        'displayParams' => 
-                        array (
-                            'key' => 'primary',
-                            'rows' => 2,
-                            'cols' => 30,
-                            'maxlength' => 150,
-                        ),
+                        'name' => 'contact_status',
                     ),
                 ),
             ),
@@ -172,83 +152,171 @@ array (
             array (
                 0 => 
                 array (
-                    0 => 'guardian_name',
-                    1 => 'other_mobile',
+                    0 => 
+                    array (
+                        'name' => 'guardian_rela_1',
+                        'comment' => '',
+                        'label' => 'LBL_GUARDIAN_RELA_1',
+                    ),
                 ),
                 1 => 
                 array (
-                    0 => 'other_mobile',
-                    1 => 'email_parent_1',
-                ),
-                2 => 
-                array (
-                    0 => 'guardian_name_2',
-                    1 => 
+                    0 => 
                     array (
-                        'name' => 'phone_other',
-                        'comment' => 'Other phone number for the contact',
-                        'label' => 'LBL_OTHER_PHONE',
+                        'name' => 'guardian_name',    
+                        'label' => 'LBL_GUARDIAN_NAME',
+                        'customCode' => '
+                        {$SELECT_PARENT_1_SAINT_HTML}
+                        &nbsp;<input name="guardian_name" id="guardian_name" style="margin-right: 3px;" size="20" type="text"  value="{$fields.guardian_name.value}">
+                        ',
                     ),
-                ),
+                    1 => 'other_mobile',
+                ),   
                 3 => 
                 array (
                     0 => 
                     array (
-                        'name' => 'phone_other',
-                        'comment' => 'Other phone number for the contact',
-                        'label' => 'LBL_OTHER_PHONE',
+                        'name' => 'guardian_rela_2',
+                        'comment' => '',
+                        'label' => 'LBL_GUARDIAN_RELA_2',
                     ),
-                    1 => 'email_parent_2',
+                ),
+                4 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'guardian_name_2',    
+                        'label' => 'LBL_GUARDIAN_NAME_2',
+                        'customCode' => '
+                        {$SELECT_PARENT_2_SAINT_HTML}
+                        &nbsp;<input name="guardian_name_2" id="guardian_name_2" style="margin-right: 3px;" size="20" type="text"  value="{$fields.guardian_name_2.value}">
+                        ',
+                    ),   
+                    1 => 'phone_other',
+                ),     
+                6 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'primary_address_street',         
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'address_no',
+                        'comment' => '',
+                        'label' => 'LBL_ADDRESS_NO',
+                    ),
+                ),
+                7 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'family_no',
+                        'comment' => '',
+                        'label' => 'LBL_FAMILY_NO',
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'address_quarter',
+                        'comment' => '',
+                        'label' => 'LBL_ADDRESS_QUARTER',
+                    ),
+                ),
+                8 => 
+                array (
+                    0 => 
+                    array (                              
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'address_ward',
+                        'comment' => '',
+                        'label' => 'LBL_ADDRESS_WARD',
+                    ),
                 ),
             ),
-            'lbl_portal_information' => 
+            'lbl_editview_panel1' => 
             array (
                 0 => 
                 array (
                     0 => 
                     array (
-                        'name' => 'portal_name',
-                        'customCode' => '<table border="0" cellspacing="0" cellpadding="0"><tr><td>
-                        {if !empty($fields.portal_name.value)}
-                        <input class="input_readonly" id="portal_name" name="portal_name" type="text" size="30" maxlength="{$fields.portal_name.len|default:\'30\'}" value="{$fields.portal_name.value}" autocomplete="off">
-                        {else}
-                        <input class="input_readonly" id="portal_name" name="portal_name" type="text" size="30" maxlength="{$fields.portal_name.len|default:\'30\'}" value="Auto-Generate" autocomplete="off">
-                        {/if}
-                        <input type="hidden" id="portal_name_existing" value="{$fields.portal_name.value}" autocomplete="off">
-                        </td><tr><tr><td><input type="hidden" id="portal_name_verified" value="true"></td></tr></table>',
+                        'name' => 'baptism_date',
+                        'label' => 'LBL_BAPTISM_DATE',
                     ),
-                    1 => 'portal_active',
+                    1 => '',
                 ),
                 1 => 
-                array (
-                    0 => 'portal_active',
-                ),
-            ),
-            'LBL_PANEL_ASSIGNMENT' => 
-            array (
-                0 => 
-                array (
+                array ( 
                     0 => 
                     array (
-                        'name' => 'contact_status',     
+                        'name' => 'baptism_place',
+                        'comment' => '',
+                        'label' => 'LBL_BAPTISM_PLACE',
                     ),
-                ),
-                1 => 
-                array (
-                    0 => 'status_description',
+                    1 => 
+                    array (
+                        'name' => 'baptism_godparent',
+                        'comment' => '',
+                        'label' => 'LBL_BAPTISM_GODPARENT',
+                    ),
                 ),
                 2 => 
                 array (
                     0 => 
                     array (
-                        'name' => 'assigned_user_name',
-                        'customLabel' => '{$MOD.LBL_FIRST_EC}',
-                        'displayParams' => 
-                        array (
-                            'required' => true,
-                        ),
+                        'name' => 'eucharist_date',
+                        'label' => 'LBL_EUCHARIST_DATE',
                     ),
-                    1 => 'team_name',
+                    1 => '',
+                ),
+                3 => 
+                array ( 
+                    0 =>  
+                    array (
+                        'name' => 'eucharist_place',
+                        'comment' => '',
+                        'label' => 'LBL_EUCHARIST_PLACE',
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'eucharist_godparent',
+                        'comment' => '',
+                        'label' => 'LBL_EUCHARIST_GODPARENT',
+                    ),
+                ),
+                4 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'confirmation_date',
+                        'label' => 'LBL_CONFIRMATION_DATE',
+                    ),
+                    1 => '',
+                ),
+                5 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'confirmation_place',
+                        'comment' => '',
+                        'label' => 'LBL_CONFIRMATION_PLACE',
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'confirmation_godparent',
+                        'comment' => '',
+                        'label' => 'LBL_CONFIRMATION_GODPARENT',
+                    ),
+                ),
+                6 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'graduation_date',
+                        'label' => 'LBL_GRADUATION_DATE',
+                    ),
+                    1 => '',
                 ),
             ),
         ),

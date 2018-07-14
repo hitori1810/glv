@@ -54,12 +54,7 @@ array (
                     'newTab' => false,
                     'panelDefault' => 'expanded',
                 ),
-                'LBL_PORTAL_INFORMATION' => 
-                array (
-                    'newTab' => false,
-                    'panelDefault' => 'expanded',
-                ),
-                'LBL_PANEL_ASSIGNMENT' => 
+                'LBL_EDITVIEW_PANEL1' => 
                 array (
                     'newTab' => false,
                     'panelDefault' => 'expanded',
@@ -75,7 +70,7 @@ array (
                 array (
                     0 => 
                     array (
-                        'name' => 'contact_id',       
+                        'name' => 'contact_id',
                     ),
                     1 => 'picture',
                 ),
@@ -83,7 +78,7 @@ array (
                 array (
                     0 => 
                     array (
-                        'name' => 'name',
+                        'name' => 'full_student_name',
                         'label' => 'LBL_FULL_NAME',
                     ),
                     1 => 
@@ -97,15 +92,14 @@ array (
                 array (
                     0 => 
                     array (
-                        'name' => 'email1',
-                        'studio' => 'false',
-                        'label' => 'LBL_EMAIL_ADDRESS',
-                    ),
-                    1 => 
-                    array (
                         'name' => 'gender',
                         'studio' => 'visible',
                         'label' => 'LBL_GENDER',
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'place_of_birth',
+                        'label' => 'LBL_PLACE_OF_BIRTH',
                     ),
                 ),
                 3 => 
@@ -115,17 +109,14 @@ array (
                         'name' => 'phone_mobile',
                         'label' => 'LBL_MOBILE_PHONE',
                     ),
-                ),
-                4 => 
-                array (
-                    0 => 
+                    1 => 
                     array (
-                        'name' => 'facebook',
-                        'comment' => 'URL of website for the company',
-                        'label' => 'LBL_FACEBOOK',
+                        'name' => 'phone_home',
+                        'comment' => 'Home phone number of the contact',
+                        'label' => 'LBL_HOME_PHONE',
                     ),
                 ),
-                5 => 
+                4 => 
                 array (
                     0 => 
                     array (
@@ -133,18 +124,9 @@ array (
                         'comment' => 'Full text of the note',
                         'label' => 'LBL_DESCRIPTION',
                     ),
-                ),
-                6 => 
-                array (
-                    0 => 
+                    1 => 
                     array (
-                        'name' => 'primary_address_street',
-                        'label' => 'LBL_PRIMARY_ADDRESS',
-                        'type' => 'address',
-                        'displayParams' => 
-                        array (
-                            'key' => 'primary',
-                        ),
+                        'name' => 'contact_status',
                     ),
                 ),
             ),
@@ -154,104 +136,170 @@ array (
                 array (
                     0 => 
                     array (
-                        'name' => 'guardian_name',
+                        'name' => 'guardian_rela_1',
                         'comment' => '',
-                        'label' => 'LBL_GUARDIAN_NAME',
-                    ),
-                    1 => 
-                    array (
-                        'name' => 'other_mobile',
+                        'label' => 'LBL_GUARDIAN_RELA_1',
                     ),
                 ),
                 1 => 
                 array (
-                    0 => '',
-                    1 => 'email_parent_1',
+                    0 => 
+                    array (                                 
+                        'name' => 'guardian_name',  
+                        'label' => 'LBL_GUARDIAN_NAME',
+                        'customCode' => '{$GUARDIAN_NAME}'
+                    ),
+                    1 => 
+                    array (   
+                        'name' => 'other_mobile',                             
+                    ),
+                ),   
+                3 => 
+                array (
+                    0 => 
+                    array (                               
+                        'name' => 'guardian_rela_2',
+                        'comment' => '',
+                        'label' => 'LBL_GUARDIAN_RELA_2',
+                    ),
                 ),
-                2 => 
+                4 => 
+                array (
+                    0 => 
+                    array (                                
+                        'name' => 'guardian_name_2',      
+                        'label' => 'LBL_GUARDIAN_NAME_2',
+                        'customCode' => '{$GUARDIAN_NAME_2}'
+                    ),
+                    1 => 
+                    array (  
+                        'name' => 'phone_other',                             
+                    ),
+                ),      
+                6 => 
                 array (
                     0 => 
                     array (
-                        'name' => 'guardian_name_2',
-                        'comment' => '',
-                        'label' => 'LBL_GUARDIAN_NAME_2',
+                        'name' => 'primary_address_street',
+                        'label' => 'LBL_PRIMARY_ADDRESS',          
+                        'customCode' => '{$field.primary_address_street.value}'
                     ),
                     1 => 
                     array (
-                        'name' => 'phone_other',
-                        'comment' => 'Other phone number for the contact',
-                        'label' => 'LBL_OTHER_PHONE',
+                        'name' => 'address_no',
+                        'comment' => '',
+                        'label' => 'LBL_ADDRESS_NO',
                     ),
                 ),
-                3 => 
+                7 => 
                 array (
-                    0 => '',
-                    1 => 'email_parent_2',
+                    0 => 
+                    array (
+                        'name' => 'family_no',
+                        'comment' => '',
+                        'label' => 'LBL_FAMILY_NO',
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'address_quarter',
+                        'comment' => '',
+                        'label' => 'LBL_ADDRESS_QUARTER',
+                    ),
+                ),
+                8 => 
+                array (
+                    0 =>                                
+                    array (                            
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'address_ward',   
+                        'label' => 'LBL_ADDRESS_WARD',
+                    ),
                 ),
             ),
-            'lbl_portal_information' => 
+            'lbl_editview_panel1' => 
             array (
                 0 => 
                 array (
                     0 => 
                     array (
-                        'name' => 'portal_name',
-                        'label' => 'LBL_PORTAL_NAME',
-                        'hideIf' => 'empty($PORTAL_ENABLED)',
-                        'customCode' => '<a href="index.php?module=Users&return_module=Users&action=DetailView&record={$fields.user_id.value}">{$fields.portal_name.value}</a> {$portalLoginPanel}',
-                    ),
-                    1 => 
-                    array (
-                        'name' => 'portal_active',
-                        'label' => 'LBL_PORTAL_ACTIVE',
-                        'hideIf' => 'empty($PORTAL_ENABLED)',
-                    ),
-                ),
-                1 => 
-                array (
-                    0 => 
-                    array (
-                        'name' => 'password_generated',
-                        'label' => 'LBL_PASS_GENERATED',
-                        'customCode' => '{$fields.password_generated.value} {$portalResetPanel}',
+                        'name' => 'baptism_date',
+                        'label' => 'LBL_BAPTISM_DATE',
                     ),
                     1 => '',
                 ),
-            ),
-            'LBL_PANEL_ASSIGNMENT' => 
-            array (
-                0 => 
+                1 => 
                 array (
                     0 => 
                     array (
-                        'name' => 'contact_status',   
+                        'name' => 'eucharist_place',
+                        'comment' => '',
+                        'label' => 'LBL_EUCHARIST_PLACE',
                     ),
-                ),
-                1 => 
-                array (
-                    0 => 'status_description',
+                    1 => 
+                    array (
+                        'name' => 'eucharist_godparent',
+                        'comment' => '',
+                        'label' => 'LBL_EUCHARIST_GODPARENT',
+                    ),
                 ),
                 2 => 
                 array (
                     0 => 
                     array (
-                        'name' => 'assigned_user_name',
+                        'name' => 'eucharist_date',
+                        'label' => 'LBL_EUCHARIST_DATE',
                     ),
-                    1 => 
-                    array (
-                        'name' => 'date_modified',
-                        'label' => 'LBL_DATE_MODIFIED',
-                        'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
-                    ),
+                    1 => '',
                 ),
                 3 => 
                 array (
-                    0 => 'team_name',
+                    0 => 
+                    array (
+                        'name' => 'baptism_place',
+                        'comment' => '',
+                        'label' => 'LBL_BAPTISM_PLACE',
+                    ),
                     1 => 
                     array (
-                        'name' => 'date_entered',
-                        'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
+                        'name' => 'baptism_godparent',
+                        'comment' => '',
+                        'label' => 'LBL_BAPTISM_GODPARENT',
                     ),
+                ),
+                4 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'confirmation_date',
+                        'label' => 'LBL_CONFIRMATION_DATE',
+                    ),
+                    1 => '',
+                ),
+                5 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'confirmation_place',
+                        'comment' => '',
+                        'label' => 'LBL_CONFIRMATION_PLACE',
+                    ),
+                    1 => 
+                    array (
+                        'name' => 'confirmation_godparent',
+                        'comment' => '',
+                        'label' => 'LBL_CONFIRMATION_GODPARENT',
+                    ),
+                ),
+                6 => 
+                array (
+                    0 => 
+                    array (
+                        'name' => 'graduation_date',
+                        'label' => 'LBL_GRADUATION_DATE',
+                    ),
+                    1 => '',
                 ),
             ),
         ),
