@@ -159,3 +159,15 @@ function getSaintListOptions(){
     }
     return $options;
 }
+
+function getGradeOptions(){
+    $options = array();
+    $sql = "SELECT id, name
+    FROM c_grade
+    WHERE deleted <> 1";
+    $result = $GLOBALS['db']->query($sql);
+    while($row = $GLOBALS['db']->fetchByAssoc($result)){
+        $options[$row['id']] = $row['name'];
+    }
+    return $options;
+}

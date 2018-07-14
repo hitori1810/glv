@@ -51,6 +51,13 @@ $dictionary['C_Class'] = array(
             'reportable' => 0,
             'len' => '50',
         ),
+        'grade' => 
+        array (
+            'name' => 'grade',
+            'type' => 'enum',
+            'vname' => 'LBL_GRADE',
+            'function' => 'getGradeOptions',
+        ),
     ),
     'relationships'=>array (
     ),

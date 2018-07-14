@@ -4,4 +4,5 @@ $mod_strings = array (
   'LBL_NAME' => 'Tên lớp',          
   'LBL_STATUS' => 'Tình trạng',          
   'LBL_SHORT_NAME' => 'Viết tắt',          
+  'LBL_GRADE' => 'Khối',          
 );
